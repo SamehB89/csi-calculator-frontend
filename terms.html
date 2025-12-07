@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - CSI Crew Calculator</title>
+    <meta name="description" content="Terms of Service for CSI Crew Calculator - Construction planning and crew management tool">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo-container">
+                <img src="assets/logo.png" alt="SAMEH Logo" class="logo-image">
+                <span class="logo-text">CSI Calculator</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Browse</a>
+                <a href="crew-calculator.html">Calculator</a>
+                <a href="ai-planner.html">AI Planner</a>
+                <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()">🌙</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <main class="legal-page glass-card animate-fadeInUp">
+            <h1 class="page-title text-gradient">Terms of Service</h1>
+            <p class="last-updated">Last Updated: December 2024</p>
+
+            <section>
+                <h2>1. Acceptance of Terms</h2>
+                <p>By accessing or using CSI Crew Calculator ("the Service"), you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our Service.</p>
+            </section>
+
+            <section>
+                <h2>2. Description of Service</h2>
+                <p>CSI Crew Calculator is a construction planning tool that provides:</p>
+                <ul>
+                    <li>Crew requirement calculations based on CSI codes</li>
+                    <li>Productivity and duration estimates</li>
+                    <li>AI-powered construction planning assistance</li>
+                    <li>Access to construction industry standard data</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>3. Use of Service</h2>
+                <h3>3.1 Permitted Use</h3>
+                <p>You may use the Service for personal or commercial construction planning purposes. The calculations provided are estimates and should be verified by qualified professionals.</p>
+                
+                <h3>3.2 Prohibited Use</h3>
+                <p>You agree not to:</p>
+                <ul>
+                    <li>Use the Service for any unlawful purpose</li>
+                    <li>Attempt to gain unauthorized access to our systems</li>
+                    <li>Interfere with the proper functioning of the Service</li>
+                    <li>Copy, modify, or distribute our content without permission</li>
+                    <li>Use automated systems to access the Service without permission</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>4. Disclaimer of Warranties</h2>
+                <p><strong>THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND.</strong></p>
+                <p>We do not warrant that:</p>
+                <ul>
+                    <li>The Service will meet your specific requirements</li>
+                    <li>The calculations will be 100% accurate</li>
+                    <li>The Service will be uninterrupted or error-free</li>
+                    <li>Any errors will be corrected</li>
+                </ul>
+                <p><strong>All calculations are estimates and should be verified by qualified construction professionals before use in actual projects.</strong></p>
+            </section>
+
+            <section>
+                <h2>5. Limitation of Liability</h2>
+                <p>To the maximum extent permitted by law, we shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to:</p>
+                <ul>
+                    <li>Loss of profits or revenue</li>
+                    <li>Loss of data</li>
+                    <li>Project delays or cost overruns</li>
+                    <li>Any damages arising from reliance on our calculations</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>6. Intellectual Property</h2>
+                <p>All content, features, and functionality of the Service, including but not limited to text, graphics, logos, and software, are owned by us and protected by intellectual property laws.</p>
+            </section>
+
+            <section>
+                <h2>7. Third-Party Services</h2>
+                <p>The Service may include advertisements from Google AdSense/AdMob and AI functionality from Google Gemini. Your use of these features is subject to their respective terms and policies.</p>
+            </section>
+
+            <section>
+                <h2>8. Modifications to Service</h2>
+                <p>We reserve the right to modify, suspend, or discontinue the Service at any time without notice. We may also update these Terms from time to time.</p>
+            </section>
+
+            <section>
+                <h2>9. Governing Law</h2>
+                <p>These Terms shall be governed by and construed in accordance with the laws of Egypt, without regard to its conflict of law provisions.</p>
+            </section>
+
+            <section>
+                <h2>10. Contact Information</h2>
+                <p>For questions about these Terms, please contact:</p>
+                <p><strong>Email:</strong> contact@csi-calculator.com</p>
+                <p><strong>Developer:</strong> Sameh Badawy Sayed</p>
+            </section>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p class="footer-text">
+                CSI Crew Calculator • Built with <span class="footer-heart">❤️</span> by <span class="footer-author">Sameh Badawy Sayed</span>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            document.getElementById('themeToggle').textContent = newTheme === 'dark' ? '☀️' : '🌙';
+        }
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            const btn = document.getElementById('themeToggle');
+            if (btn) btn.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+        });
+    </script>
+</body>
+</html>

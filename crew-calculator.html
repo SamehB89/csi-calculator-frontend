@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crew Calculator - CSI Data Manager</title>
+    <meta name="description" content="Calculate crew requirements and productivity for construction activities">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/crew-calculator.css">
+    <link rel="stylesheet" href="css/lang-toggle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="js/i18n.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo-container">
+                <img src="assets/logo.png" alt="SAMEH Logo" class="logo-image">
+                <span class="logo-text">CSI Calculator</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" data-i18n="home" data-icon="🏠">
+                    <span>Browse</span>
+                </a>
+                <a href="crew-calculator.html" class="active" data-i18n="crewCalculator" data-icon="🧮">
+                    <span>Calculator</span>
+                </a>
+                <a href="ai-planner.html" data-i18n="aiPlanner" data-icon="🤖">
+                    <span>AI Planner</span>
+                </a>
+                <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">
+                    🌙
+                </button>
+                <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()">
+                    <span id="langIcon">EN</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="calculator-container">
+        <h2 class="page-title" data-i18n="pageTitle">⚡ حاسبة فريق العمل والإنتاجية</h2>
+
+        <!-- Step 1: Division Selection -->
+        <div class="section-card glass-card">
+            <div class="section-header">
+                <h3><span data-i18n="divisionSelection">🔍 اختيار التقسيم الهرمي</span></h3>
+                <p class="section-subtitle" data-i18n="divisionSelectionSubtitle">اختر التقسيمات للوصول إلى العنصر
+                    المطلوب</p>
+            </div>
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="mainDivision">
+                        <span class="label-icon">1️⃣</span>
+                        <span data-i18n="mainDivision">القسم الرئيسي (Main Division)</span>
+                    </label>
+                    <select id="mainDivision" class="form-select" onchange="loadSubDivision1()">
+                        <option value="">-- اختر القسم الرئيسي --</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="subDivision1">
+                        <span class="label-icon">2️⃣</span>
+                        <span data-i18n="subDivision1">القسم الفرعي الأول (Sub-Division 1)</span>
+                    </label>
+                    <select id="subDivision1" class="form-select" onchange="loadSubDivision2()" disabled>
+                        <option value="">-- اختر القسم الفرعي الأول --</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="subDivision2">
+                        <span class="label-icon">3️⃣</span>
+                        <span data-i18n="subDivision2">القسم الفرعي الثاني (Sub-Division 2)</span>
+                    </label>
+                    <select id="subDivision2" class="form-select" onchange="loadItems()" disabled>
+                        <option value="">-- اختر القسم الفرعي الثاني --</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="itemDescription">
+                        <span class="label-icon">4️⃣</span>
+                        <span data-i18n="itemDescription">وصف العنصر (Item Description)</span>
+                    </label>
+                    <select id="itemDescription" class="form-select" onchange="loadItemDetails()" disabled>
+                        <option value="">-- اختر وصف العنصر --</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 2: Item Details Display -->
+        <div id="itemDetailsSection" class="section-card glass-card" style="display: none;">
+            <div class="section-header">
+                <h3><span data-i18n="itemDetails">📊 تفاصيل العنصر</span></h3>
+            </div>
+
+            <div class="item-info-grid">
+                <div class="info-card">
+                    <div class="info-icon">📈</div>
+                    <div class="info-content">
+                        <span class="info-label" data-i18n="dailyOutput">الإنتاج اليومي</span>
+                        <span class="info-value" id="dailyOutput">--</span>
+                        <span class="info-unit" id="dailyOutputUnit"></span>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">👷</div>
+                    <div class="info-content">
+                        <span class="info-label" data-i18n="manHours">ساعات العمل</span>
+                        <span class="info-value" id="manHours">--</span>
+                        <span class="info-unit" data-i18n="perUnit">ساعة/وحدة</span>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">🚜</div>
+                    <div class="info-content">
+                        <span class="info-label" data-i18n="equipHours">ساعات المعدات</span>
+                        <span class="info-value" id="equipHours">--</span>
+                        <span class="info-unit" data-i18n="perUnit">ساعة/وحدة</span>
+                    </div>
+                </div>
+
+                <div class="info-card full-width crew-structure-card">
+                    <div class="info-icon">👥</div>
+                    <div class="info-content">
+                        <span class="info-label crew-structure-title" data-i18n="crewStructure">تركيبة الفريق</span>
+                        <div class="crew-structure-inline" id="crewStructureInline">--</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Crew Details Table -->
+            <div class="crew-details-section">
+                <h4><span data-i18n="crewDetailsTitle">👥 تفاصيل أعضاء الفريق</span></h4>
+                <div class="table-wrapper">
+                    <table class="crew-table" id="crewDetailsTable">
+                        <thead>
+                            <tr>
+                                <th data-i18n="crewMember">Crew Member</th>
+                                <th data-i18n="quantity">Quantity</th>
+                                <th data-i18n="descriptionAndRole">الوصف والوظيفة</th>
+                            </tr>
+                        </thead>
+                        <tbody id="crewTableBody">
+                            <!-- Will be populated dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 3: Quantity Input -->
+        <div id="quantitySection" class="section-card glass-card" style="display: none;">
+            <div class="section-header">
+                <h3><span data-i18n="quantityInput">🔢 إدخال الكمية</span></h3>
+            </div>
+
+            <div class="quantity-input-grid">
+                <div class="form-group">
+                    <label for="quantity" data-i18n="requiredQuantity">الكمية المطلوبة</label>
+                    <input type="number" id="quantity" class="form-input" data-i18n-placeholder="enterQuantity" placeholder="أدخل الكمية"
+                        min="0" step="0.01">
+                    <span class="input-unit" id="quantityUnit"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="hoursPerDay" data-i18n="hoursPerDay">ساعات العمل اليومية</label>
+                    <input type="number" id="hoursPerDay" class="form-input" value="8" min="1" max="24" step="0.5">
+                    <span class="input-unit" data-i18n="hourPerDay">ساعة/يوم</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="numberOfCrews" data-i18n="numberOfCrews">عدد فرق العمل</label>
+                    <input type="number" id="numberOfCrews" class="form-input" value="1" min="1" step="1">
+                    <span class="input-unit" data-i18n="crew">فريق</span>
+                </div>
+            </div>
+
+            <button class="btn btn-primary calculate-btn" onclick="calculateCrew()">
+                <span class="btn-icon">🧮</span>
+                <span data-i18n="calculateBtn">احسب متطلبات الفريق</span>
+            </button>
+        </div>
+
+        <!-- Step 4: Results -->
+        <div id="resultsSection" class="section-card glass-card" style="display: none;">
+            <div class="section-header">
+                <h3><span data-i18n="results">✅ النتائج والحسابات</span></h3>
+            </div>
+
+            <div id="resultsContent">
+                <!-- Results will be populated here -->
+            </div>
+        </div>
+
+        <!-- Error Display -->
+        <div id="errorMessage" class="error-message" style="display: none;"></div>
+    </div>
+
+    <script>
+        const API_BASE = 'http://localhost:5000/api';
+        let currentItemData = null;
+
+        // Theme Toggle
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            const btn = document.getElementById('themeToggle');
+            btn.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+        }
+
+        window.addEventListener('load', () => {
+            // Load saved theme
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            const btn = document.getElementById('themeToggle');
+            if (btn) btn.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+            
+            loadMainDivisions();
+            applyLanguage();
+        });
+
+        async function loadMainDivisions() {
+            try {
+                const response = await fetch(`${API_BASE}/divisions`);
+                const divisions = await response.json();
+
+                const select = document.getElementById('mainDivision');
+                select.innerHTML = '<option value="">-- اختر القسم الرئيسي --</option>';
+
+                divisions.forEach(div => {
+                    const option = document.createElement('option');
+                    option.value = div.code;
+                    option.textContent = `${div.code} - ${div.name}`;
+                    select.appendChild(option);
+                });
+            } catch (error) {
+                showError('فشل تحميل الأقسام الرئيسية: ' + error.message);
+            }
+        }
+
+        async function loadSubDivision1() {
+            const mainCode = document.getElementById('mainDivision').value;
+            const sub1Select = document.getElementById('subDivision1');
+            const sub2Select = document.getElementById('subDivision2');
+            const itemSelect = document.getElementById('itemDescription');
+
+            sub1Select.innerHTML = '<option value="">-- اختر القسم الفرعي الأول --</option>';
+            sub2Select.innerHTML = '<option value="">-- اختر القسم الفرعي الثاني --</option>';
+            itemSelect.innerHTML = '<option value="">-- اختر وصف العنصر --</option>';
+            sub1Select.disabled = true;
+            sub2Select.disabled = true;
+            itemSelect.disabled = true;
+            hideItemDetails();
+
+            if (!mainCode) return;
+
+            try {
+                const response = await fetch(`${API_BASE}/subdivisions1?main_code=${mainCode}`);
+                const subdivisions = await response.json();
+
+                subdivisions.forEach(sub => {
+                    if (sub.code && sub.name) {
+                        const option = document.createElement('option');
+                        option.value = sub.code;
+                        option.textContent = `${sub.code} - ${sub.name}`;
+                        sub1Select.appendChild(option);
+                    }
+                });
+
+                sub1Select.disabled = false;
+            } catch (error) {
+                showError('فشل تحميل الأقسام الفرعية الأولى: ' + error.message);
+            }
+        }
+
+        async function loadSubDivision2() {
+            const sub1Code = document.getElementById('subDivision1').value;
+            const sub2Select = document.getElementById('subDivision2');
+            const itemSelect = document.getElementById('itemDescription');
+            const mainCode = document.getElementById('mainDivision').value;
+
+            sub2Select.innerHTML = '<option value="">-- اختر القسم الفرعي الثاني --</option>';
+            itemSelect.innerHTML = '<option value="">-- اختر وصف العنصر --</option>';
+            sub2Select.disabled = true;
+            itemSelect.disabled = true;
+            hideItemDetails();
+
+            if (!sub1Code) return;
+
+            try {
+                const response = await fetch(`${API_BASE}/subdivisions2?sub1_code=${sub1Code}&main_code=${mainCode}`);
+                const subdivisions = await response.json();
+
+                subdivisions.forEach(sub => {
+                    if (sub.code && sub.name) {
+                        const option = document.createElement('option');
+                        option.value = sub.code;
+                        option.textContent = `${sub.code} - ${sub.name}`;
+                        sub2Select.appendChild(option);
+                    }
+                });
+
+                sub2Select.disabled = false;
+            } catch (error) {
+                showError('فشل تحميل الأقسام الفرعية الثانية: ' + error.message);
+            }
+        }
+
+        async function loadItems() {
+            const sub2Code = document.getElementById('subDivision2').value;
+            const itemSelect = document.getElementById('itemDescription');
+
+            itemSelect.innerHTML = '<option value="">-- اختر وصف العنصر --</option>';
+            itemSelect.disabled = true;
+            hideItemDetails();
+
+            if (!sub2Code) return;
+
+            try {
+                const response = await fetch(`${API_BASE}/items?sub2_code=${sub2Code}`);
+                const data = await response.json();
+                
+                let itemsList = [];
+                if (Array.isArray(data)) {
+                    itemsList = data;
+                } else if (data && Array.isArray(data.items)) {
+                    itemsList = data.items;
+                }
+
+                itemsList.forEach(item => {
+                    if (item.description) {
+                        const option = document.createElement('option');
+                        option.value = item.item_code;
+                        option.textContent = item.description;
+                        option.dataset.fullCode = item.full_code;
+                        itemSelect.appendChild(option);
+                    }
+                });
+
+                itemSelect.disabled = false;
+            } catch (error) {
+                showError('فشل تحميل العناصر: ' + error.message);
+            }
+        }
+
+        async function loadItemDetails() {
+            const itemCode = document.getElementById('itemDescription').value;
+
+            if (!itemCode) {
+                hideItemDetails();
+                return;
+            }
+
+            try {
+                const response = await fetch(`${API_BASE}/item-details?item_code=${itemCode}`);
+                currentItemData = await response.json();
+
+                displayItemDetails(currentItemData);
+            } catch (error) {
+                showError('فشل تحميل تفاصيل العنصر: ' + error.message);
+            }
+        }
+
+        function displayItemDetails(data) {
+            document.getElementById('itemDetailsSection').style.display = 'block';
+            document.getElementById('quantitySection').style.display = 'block';
+
+            document.getElementById('dailyOutput').textContent = data.productivity.daily_output || '--';
+            document.getElementById('dailyOutputUnit').textContent = data.item.unit ? `${data.item.unit}/يوم` : '';
+            document.getElementById('manHours').textContent = data.productivity.man_hours || '--';
+            document.getElementById('equipHours').textContent = data.productivity.equip_hours || '--';
+
+            if (data.crew_details && data.crew_details.length > 0) {
+                const laborCrew = [];
+                const equipmentCrew = [];
+
+                data.crew_details.forEach(crew => {
+                    const crewLine = `${crew.quantity} × ${crew.description}`;
+                    const isEquipment = ['crane', 'truck', 'pump', 'vibrator', 'tool',
+                        'dozer', 'loader', 'excavator', 'mixer', 'compressor']
+                        .some(word => crew.description.toLowerCase().includes(word));
+
+                    if (isEquipment) {
+                        equipmentCrew.push(crewLine);
+                    } else {
+                        laborCrew.push(crewLine);
+                    }
+                });
+
+                let crewHtml = '';
+                if (laborCrew.length > 0) {
+                    crewHtml += laborCrew.map(line => `<div class="crew-line">${line}</div>`).join('');
+                }
+                if (laborCrew.length > 0 && equipmentCrew.length > 0) {
+                    crewHtml += '<hr class="crew-separator">';
+                }
+                if (equipmentCrew.length > 0) {
+                    crewHtml += equipmentCrew.map(line => `<div class="crew-line">${line}</div>`).join('');
+                }
+
+                document.getElementById('crewStructureInline').innerHTML = crewHtml;
+            } else {
+                document.getElementById('crewStructureInline').textContent = '--';
+            }
+
+            document.getElementById('quantityUnit').textContent = data.item.unit || '';
+
+            const tbody = document.getElementById('crewTableBody');
+            tbody.innerHTML = '';
+
+            if (data.crew_details && data.crew_details.length > 0) {
+                data.crew_details.forEach(crew => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td class="crew-number">Crew Member no.${crew.crew_number}</td>
+                        <td class="crew-qty">${crew.quantity}</td>
+                        <td class="crew-desc">${crew.description}</td>
+                    `;
+                    tbody.appendChild(row);
+                });
+            } else {
+                tbody.innerHTML = '<tr><td colspan="3" class="no-data">لا توجد بيانات فريق متاحة</td></tr>';
+            }
+
+            document.getElementById('itemDetailsSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function hideItemDetails() {
+            document.getElementById('itemDetailsSection').style.display = 'none';
+            document.getElementById('quantitySection').style.display = 'none';
+            document.getElementById('resultsSection').style.display = 'none';
+        }
+
+        async function calculateCrew() {
+            const quantity = parseFloat(document.getElementById('quantity').value);
+            const hoursPerDay = parseFloat(document.getElementById('hoursPerDay').value);
+            const numberOfCrews = parseInt(document.getElementById('numberOfCrews').value);
+
+            if (!quantity || quantity <= 0) {
+                showError(t('invalidQuantity'));
+                return;
+            }
+
+            if (!numberOfCrews || numberOfCrews < 1) {
+                showError(t('invalidCrews'));
+                return;
+            }
+
+            if (!currentItemData) {
+                showError(t('noItemSelected'));
+                return;
+            }
+
+            try {
+                const response = await fetch(`${API_BASE}/calculate-crew`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        item_code: currentItemData.item.full_code,
+                        quantity: quantity,
+                        hours_per_day: hoursPerDay,
+                        number_of_crews: numberOfCrews
+                    })
+                });
+
+                if (!response.ok) {
+                    const error = await response.json();
+                    showError(error.error || 'حدث خطأ في الحسابات');
+                    return;
+                }
+
+                const results = await response.json();
+                displayResults(results);
+
+                document.getElementById('resultsSection').scrollIntoView({ behavior: 'smooth' });
+            } catch (error) {
+                showError('فشل حساب متطلبات الفريق: ' + error.message);
+            }
+        }
+
+        function displayResults(data) {
+            const resultsSection = document.getElementById('resultsSection');
+            const resultsContent = document.getElementById('resultsContent');
+
+            const html = `
+                <div class="results-grid">
+                    <div class="result-card">
+                        <div class="result-icon">👥</div>
+                        <div class="result-content">
+                            <span class="result-label">${t('numberOfCrewsResult')}</span>
+                            <span class="result-value">${data.input.number_of_crews}</span>
+                            <span class="result-unit">${t('crew')}</span>
+                        </div>
+                    </div>
+
+                    <div class="result-card">
+                        <div class="result-icon">📈</div>
+                        <div class="result-content">
+                            <span class="result-label">${t('totalDailyOutput')}</span>
+                            <span class="result-value">${data.calculations.adjusted_daily_output.toFixed(2)}</span>
+                            <span class="result-unit">${data.item.unit}${t('perDay')}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="result-card">
+                        <div class="result-icon">⏱️</div>
+                        <div class="result-content">
+                            <span class="result-label">${t('totalDays')}</span>
+                            <span class="result-value">${data.calculations.total_days.toFixed(2)}</span>
+                            <span class="result-unit">${t('day')}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="result-card">
+                        <div class="result-icon">👷</div>
+                        <div class="result-content">
+                            <span class="result-label">${t('totalManHours')}</span>
+                            <span class="result-value">${data.calculations.total_man_hours.toFixed(2)}</span>
+                            <span class="result-unit">${t('hour')}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="result-card">
+                        <div class="result-icon">🚜</div>
+                        <div class="result-content">
+                            <span class="result-label">${t('totalEquipHours')}</span>
+                            <span class="result-value">${data.calculations.total_equip_hours.toFixed(2)}</span>
+                            <span class="result-unit">${t('hour')}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="result-card">
+                        <div class="result-icon">👤</div>
+                        <div class="result-content">
+                            <span class="result-label">${t('totalLabor')}</span>
+                            <span class="result-value">${data.crew.total_labor_count}</span>
+                            <span class="result-unit">${t('worker')}</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="crew-breakdown">
+                    <h4>👷 ${t('laborBreakdown')}</h4>
+                    <table class="crew-table">
+                        <thead>
+                            <tr>
+                                <th>${t('position')}</th>
+                                <th>${t('count')}</th>
+                                <th>${t('totalHours')}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${data.crew.labor.map(member => `
+                                <tr>
+                                    <td>${member.position}</td>
+                                    <td>${member.count}</td>
+                                    <td>${member.total_hours.toFixed(2)} ${t('hour')}</td>
+                                </tr>
+                            `).join('')}
+                        </tbody>
+                    </table>
+                </div>
+                
+                ${data.crew.equipment.length > 0 ? `
+                    <div class="crew-breakdown">
+                        <h4>🚜 ${t('equipmentBreakdown')}</h4>
+                        <table class="crew-table">
+                            <thead>
+                                <tr>
+                                    <th>${t('equipment')}</th>
+                                    <th>${t('count')}</th>
+                                    <th>${t('operatingHours')}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${data.crew.equipment.map(equip => `
+                                    <tr>
+                                        <td>${equip.position}</td>
+                                        <td>${equip.count}</td>
+                                        <td>${equip.total_hours.toFixed(2)} ${t('hour')}</td>
+                                    </tr>
+                                `).join('')}
+                            </tbody>
+                        </table>
+                    </div>
+                ` : ''}
+            `;
+
+            resultsContent.innerHTML = html;
+            resultsSection.style.display = 'block';
+        }
+
+        function showError(message) {
+            const errorDiv = document.getElementById('errorMessage');
+            errorDiv.textContent = '❌ ' + message;
+            errorDiv.style.display = 'block';
+
+            setTimeout(() => {
+                errorDiv.style.display = 'none';
+            }, 5000);
+        }
+    </script>
+    
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p class="footer-text">
+                CSI Crew Calculator • Built with <span class="footer-heart">❤️</span> by <span class="footer-author">Sameh Badawy Sayed</span>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

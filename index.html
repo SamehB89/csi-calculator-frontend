@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSI Crew Calculator - Browse Database</title>
+    <meta name="description" content="Browse CSI construction database with crew and productivity data">
+    <meta name="theme-color" content="#667eea">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="assets/icon-192.png">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lang-toggle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="js/i18n.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo-container">
+                <img src="assets/logo.png" alt="SAMEH Logo" class="logo-image">
+                <span class="logo-text">CSI Calculator</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="active" data-i18n="home" data-icon="🏠">
+                    <span>Browse</span>
+                </a>
+                <a href="crew-calculator.html" data-i18n="crewCalculator" data-icon="🧮">
+                    <span>Calculator</span>
+                </a>
+                <a href="ai-planner.html" data-i18n="aiPlanner" data-icon="🤖">
+                    <span>AI Planner</span>
+                </a>
+                <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">
+                    🌙
+                </button>
+                <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()">
+                    <span id="langIcon">EN</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <main id="browse-page" class="animate-fadeInUp">
+            <h2 class="page-title text-gradient" data-i18n="browseTitle">🔍 CSI Construction Database</h2>
+
+            <div class="filters glass-card mb-3">
+                <div class="filter-row">
+                    <input type="text" id="search-input" class="form-input" data-i18n-placeholder="searchPlaceholder"
+                        placeholder="Search items..." onkeyup="searchItems()">
+                    <select id="division-filter" class="form-select">
+                        <option value="" data-i18n="allDivisions">All Divisions</option>
+                    </select>
+                    <select id="subdiv1-filter" class="form-select" disabled>
+                        <option value="" data-i18n="selectSub1">Select Sub-Division 1</option>
+                    </select>
+                    <select id="subdiv2-filter" class="form-select" disabled>
+                        <option value="" data-i18n="selectSub2">Select Sub-Division 2</option>
+                    </select>
+                    <button class="btn btn-primary" onclick="searchItems()" data-i18n="searchBtn">
+                        🔍 Search
+                    </button>
+                </div>
+            </div>
+
+            <div class="content-grid">
+                <div class="sidebar glass-card" id="divisions-list">
+                    <h3 data-i18n="divisions">📂 Divisions</h3>
+                    <!-- Divisions will be loaded here -->
+                </div>
+                <div class="results-area glass-card">
+                    <div id="results-header">
+                        <h3 data-i18n="items">📋 Items</h3>
+                        <span id="results-count" class="results-badge">0 items found</span>
+                    </div>
+                    <div id="items-table-container">
+                        <table id="items-table">
+                            <thead>
+                                <tr>
+                                    <th data-i18n="code">Code</th>
+                                    <th data-i18n="description">Description</th>
+                                    <th data-i18n="unit">Unit</th>
+                                    <th data-i18n="output">Output</th>
+                                    <th data-i18n="actions">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Items will be loaded here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Details Modal -->
+    <div id="details-modal" class="modal">
+        <div class="modal-content glass-card">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title">Item Details</h2>
+            <div id="modal-body">
+                <!-- Details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p class="footer-text">
+                CSI Crew Calculator • Built with <span class="footer-heart">❤️</span> by <span class="footer-author">Sameh Badawy Sayed</span>
+            </p>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script>
+        // Theme Toggle
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            
+            // Update icon
+            const btn = document.getElementById('themeToggle');
+            btn.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+        }
+        
+        // Load saved theme
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            const btn = document.getElementById('themeToggle');
+            if (btn) btn.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+            
+            // Register Service Worker for PWA
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('/sw.js')
+                    .then((reg) => console.log('Service Worker registered'))
+                    .catch((err) => console.log('SW registration failed:', err));
+            }
+        });
+    </script>
+</body>
+
+</html>

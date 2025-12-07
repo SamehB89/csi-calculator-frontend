@@ -1,0 +1,67 @@
+/* ========================================
+   Language Toggle Button Styles
+   ======================================== */
+
+.lang-toggle {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 15px;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+.lang-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+}
+
+.lang-toggle:active {
+    transform: translateY(0);
+}
+
+/* RTL/LTR Support */
+[dir="ltr"] .lang-toggle {
+    margin-left: 15px;
+    margin-right: 0;
+}
+
+[dir="rtl"] .lang-toggle {
+    margin-right: 15px;
+    margin-left: 0;
+}
+
+[dir="ltr"] .input-unit {
+    left: auto;
+    right: 16px;
+}
+
+[dir="rtl"] .input-unit {
+    left: 16px;
+    right: auto;
+}
+
+[dir="ltr"] .crew-table th,
+[dir="ltr"] .crew-table td {
+    text-align: left;
+}
+
+[dir="rtl"] .crew-table th,
+[dir="rtl"] .crew-table td {
+    text-align: right;
+}
+
+[dir="ltr"] .error-message {
+    border-left: none;
+    border-right: 5px solid #c53030;
+}
+
+[dir="rtl"] .error-message {
+    border-left: 5px solid #c53030;
+    border-right: none;
+}

@@ -1,0 +1,78 @@
+/* ========================================
+   Google AdSense Ad Units Styling
+   ======================================== */
+
+/* Ad Container */
+.ad-container {
+    width: 100%;
+    margin: 1.5rem 0;
+    text-align: center;
+    min-height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive Ad */
+.ad-responsive {
+    display: block;
+    width: 100%;
+    max-width: 728px;
+    height: auto;
+    min-height: 90px;
+    margin: 0 auto;
+}
+
+/* In-article Ad */
+.ad-in-article {
+    margin: 2rem auto;
+    padding: 1rem;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-md);
+}
+
+/* Sidebar Ad */
+.ad-sidebar {
+    position: sticky;
+    top: 80px;
+    margin-bottom: 1rem;
+}
+
+/* Footer Ad */
+.ad-footer {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Ad Label */
+.ad-label {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.25rem;
+}
+
+/* Hide ads on print */
+@media print {
+    .ad-container,
+    .ad-responsive,
+    .ad-in-article,
+    .ad-sidebar,
+    .ad-footer {
+        display: none !important;
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .ad-container {
+        min-height: 50px;
+    }
+    
+    .ad-sidebar {
+        position: relative;
+        top: 0;
+    }
+}
