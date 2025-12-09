@@ -1,7 +1,7 @@
 // CSI Crew Calculator - Service Worker
 // Enables offline support and PWA functionality
 
-const CACHE_NAME = 'csi-calculator-v1';
+const CACHE_NAME = 'csi-calculator-v2';
 const STATIC_ASSETS = [
     '/',
     '/index.html',
