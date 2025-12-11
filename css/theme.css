@@ -448,6 +448,41 @@ body {
     .container {
         padding: 0 1rem;
     }
+    
+    /* Mobile-friendly content grid */
+    .content-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem;
+    }
+    
+    .sidebar {
+        max-height: 300px;
+        overflow-y: auto;
+    }
+    
+    /* Mobile filters */
+    .filters .filter-row {
+        flex-direction: column;
+    }
+    
+    .form-input,
+    .form-select,
+    .btn {
+        width: 100%;
+    }
+    
+    /* Mobile table */
+    #items-table-container {
+        overflow-x: auto;
+    }
+    
+    table {
+        font-size: 0.85rem;
+    }
+    
+    th, td {
+        padding: 0.5rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -726,4 +761,48 @@ body {
 
 [data-theme="dark"] .view-btn:hover {
     filter: brightness(1.1);
+}
+
+/* ========== Modal Dark Mode Fix ========== */
+[data-theme="dark"] .modal-content {
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+    border-color: #404040 !important;
+}
+
+[data-theme="dark"] .modal-content * {
+    color: #e5e5e5 !important;
+}
+
+[data-theme="dark"] .modal-content h1,
+[data-theme="dark"] .modal-content h2,
+[data-theme="dark"] .modal-content h3,
+[data-theme="dark"] .modal-content h4,
+[data-theme="dark"] .modal-content h5 {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .modal-content .close-modal {
+    color: #a3a3a3 !important;
+}
+
+[data-theme="dark"] .modal-content .close-modal:hover {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .modal-content .detail-item label {
+    color: #a3a3a3 !important;
+}
+
+[data-theme="dark"] .modal-content .crew-card {
+    background: #262626 !important;
+    border-color: #404040 !important;
+}
+
+[data-theme="dark"] .modal-content .crew-card h4 {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .modal-content .crew-card p {
+    color: #a3a3a3 !important;
 }

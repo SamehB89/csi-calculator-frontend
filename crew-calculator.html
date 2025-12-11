@@ -359,7 +359,7 @@
                 itemsList.forEach(item => {
                     if (item.description) {
                         const option = document.createElement('option');
-                        option.value = item.item_code;
+                        option.value = item.full_code; // Use full_code for uniqueness
                         option.textContent = item.description;
                         option.dataset.fullCode = item.full_code;
                         itemSelect.appendChild(option);
@@ -381,7 +381,7 @@
             }
 
             try {
-                const response = await fetch(`${API_BASE}/item-details?item_code=${itemCode}`);
+                const response = await fetch(`${API_BASE}/item-details?full_code=${encodeURIComponent(itemCode)}`);
                 currentItemData = await response.json();
 
                 displayItemDetails(currentItemData);

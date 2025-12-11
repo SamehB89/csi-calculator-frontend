@@ -1,0 +1,38 @@
+/* Filters Styling */
+.filters {
+    margin-bottom: 2rem;
+}
+
+.filter-row {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.filter-row > * {
+    flex: 1;
+    min-width: 200px;
+}
+
+.filter-row .btn {
+    flex: 0 0 auto;
+    min-width: 120px;
+}
+
+/* Results Badge */
+.results-badge {
+    background: var(--primary-gradient);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-full);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Page Title */
+.page-title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+}
