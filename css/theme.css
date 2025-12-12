@@ -496,6 +496,132 @@ body {
     }
 }
 
+/* ========== Enhanced Mobile Responsive Fixes ========== */
+
+/* Mobile filters - stack all elements */
+@media (max-width: 768px) {
+    .filter-row {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .filter-row > * {
+        width: 100% !important;
+    }
+    
+    /* Sidebar adjustments */
+    .sidebar {
+        order: 2;
+        max-height: 200px;
+    }
+    
+    .results-area {
+        order: 1;
+    }
+    
+    /* Hide sidebar ads on mobile */
+    .ad-sidebar {
+        display: none;
+    }
+    
+    /* Reduce ad heights on mobile */
+    .ad-container .ad-responsive {
+        height: 60px !important;
+    }
+}
+
+/* AI Planner Mobile Fixes */
+@media (max-width: 768px) {
+    .planner-container {
+        grid-template-columns: 1fr !important;
+        padding: 0 1rem;
+        gap: 1rem;
+    }
+    
+    .chat-section,
+    .gantt-section {
+        height: auto !important;
+        min-height: 50vh;
+        max-height: 70vh;
+    }
+    
+    .quick-actions {
+        padding: 0.75rem;
+    }
+    
+    .quick-action-btn {
+        font-size: 0.7rem;
+        padding: 0.4rem 0.75rem;
+    }
+    
+    .gantt-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .gantt-bar-label {
+        min-width: auto;
+        width: 100%;
+    }
+    
+    .gantt-bar-track {
+        width: 100%;
+    }
+    
+    .input-area {
+        padding: 0.75rem;
+    }
+    
+    .input-area input {
+        font-size: 16px; /* Prevent zoom on iOS */
+    }
+    
+    .send-btn {
+        padding: 0 1rem;
+    }
+    
+    .chat-result-table {
+        font-size: 0.75rem;
+    }
+    
+    .chat-result-table th,
+    .chat-result-table td {
+        padding: 0.4rem 0.5rem;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 375px) {
+    .container {
+        padding: 0 0.5rem;
+    }
+    
+    .navbar .container {
+        padding: 0 0.5rem;
+    }
+    
+    .section-header {
+        padding: 1rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1rem;
+    }
+    
+    .page-title {
+        font-size: 1.25rem;
+    }
+    
+    /* Scroll long tables horizontally */
+    .chat-result-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
 /* ========== Dark Mode Text Contrast Fixes ========== */
 /* Rule: Dark background = Light text (white/light gray) */
 
