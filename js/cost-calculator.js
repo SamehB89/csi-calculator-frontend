@@ -439,10 +439,13 @@ function loadImage(url) {
 async function generateCostPDFContent() {
     const costSection = document.getElementById('costSection');
     const resultsSection = document.getElementById('resultsSection');
-    const actions = document.querySelector('.cost-actions');
+    const elementsToHide = document.querySelectorAll('.cost-actions, .calculate-btn');
     
-    // Hide actions button
-    if (actions) actions.style.display = 'none';
+    // Hide elements
+    elementsToHide.forEach(el => {
+        el.setAttribute('data-original-display', el.style.display || '');
+        el.style.display = 'none';
+    });
     
     try {
         const { jsPDF } = window.jspdf;
@@ -555,6 +558,9 @@ async function generateCostPDFContent() {
         console.error('PDF Generation Error:', err);
         showError('فشل في إنشاء ملف PDF');
     } finally {
-        if (actions) actions.style.display = 'flex';
+        // Restore elements
+        elementsToHide.forEach(el => {
+            el.style.display = el.getAttribute('data-original-display');
+        });
     }
 }
