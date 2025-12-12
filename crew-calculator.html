@@ -12,9 +12,12 @@
     <link rel="stylesheet" href="css/crew-calculator.css">
     <link rel="stylesheet" href="css/lang-toggle.css">
     <link rel="stylesheet" href="css/ads.css">
+    <link rel="stylesheet" href="css/cost-calculator.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="js/i18n.js"></script>
     <script src="js/ads.js"></script>
+    <script src="js/cost-calculator.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 
 <body>
@@ -201,7 +204,7 @@
 
             <button class="btn btn-primary calculate-btn" onclick="calculateCrew()">
                 <span class="btn-icon">🧮</span>
-                <span data-i18n="calculateBtn">احسب متطلبات الفريق</span>
+                <span data-i18n="calculateBtn">احسب متطلبات الفريق والمدة الزمنية للنشاط</span>
             </button>
         </div>
 
@@ -214,6 +217,168 @@
             <div id="resultsContent">
                 <!-- Results will be populated here -->
             </div>
+
+            <!-- Button to show cost calculator -->
+            <button id="showCostBtn" class="btn btn-primary calculate-btn" onclick="showCostSection()" style="margin-top: 1rem; display: none;">
+                <span class="btn-icon">💰</span>
+                <span data-i18n="calculateDetailedCost">احسب التكلفة التفصيلية</span>
+            </button>
+        </div>
+
+        <!-- Step 5: Cost Calculator (NEW!) -->
+        <div id="costSection" class="section-card glass-card" style="display: none;">
+            <div class="section-header">
+                <h3><span data-i18n="costCalculatorTitle">💰 حساب التكلفة التفصيلية</span></h3>
+                <p class="section-subtitle" data-i18n="enterMarketPrices">أدخل الأسعار الفعلية من السوق المحلي</p>
+            </div>
+                <div class="cost-category" id="currencySection">
+                    <label data-i18n="currencyLabel" class="input-label">العملة</label>
+                    <select id="currencySelect" class="cost-input">
+                        <option value="EGP" data-i18n="currencyEGP">ج.م.</option>
+                        <option value="USD" data-i18n="currencyUSD">دولار أمريكي</option>
+                        <option value="EUR" data-i18n="currencyEUR">يورو</option>
+                        <option value="GBP" data-i18n="currencyGBP">جنيه إسترليني</option>
+                        <option value="CNY" data-i18n="currencyCNY">يوان صيني</option>
+                        <option value="SAR" data-i18n="currencySAR">ريال سعودي</option>
+                        <option value="KWD" data-i18n="currencyKWD">دينار كويتي</option>
+                        <option value="QAR" data-i18n="currencyQAR">ريال قطري</option>
+                        <option value="OTHER" data-i18n="currencyOther">Other</option>
+                    </select>
+                    <input type="text" id="customCurrency" class="cost-input hidden" placeholder="" data-i18n-placeholder="currencyOther" />
+                </div>
+
+            <!-- Labor Costs -->
+            <div class="cost-category">
+                <h4 data-i18n="laborCostTitle">👷 تكلفة العمالة</h4>
+                <p class="category-note" data-i18n="laborCostNote">أدخل سعر اليوم الواحد لكل نوع عامل</p>
+                <div id="laborCostInputs" class="cost-inputs-grid">
+                    <!-- Will be populated dynamically based on crew results -->
+                </div>
+                <div class="subtotal-row">
+                    <span>إجمالي تكلفة العمالة:</span>
+                    <span id="laborTotalCost" class="subtotal-value">0 ج.م</span>
+                </div>
+            </div>
+
+            <!-- Equipment Costs -->
+            <div class="cost-category">
+                <h4 data-i18n="equipmentCostTitle">🚜 تكلفة المعدات</h4>
+                <p class="category-note" data-i18n="equipmentCostNote">أدخل سعر الساعة الواحدة لكل معدة</p>
+                <div id="equipmentCostInputs" class="cost-inputs-grid">
+                    <!-- Will be populated dynamically based on equipment results -->
+                </div>
+                <div class="subtotal-row">
+                    <span>إجمالي تكلفة المعدات:</span>
+                    <span id="equipmentTotalCost" class="subtotal-value">0 ج.م</span>
+                </div>
+            </div>
+
+            <!-- Materials (Optional) -->
+            <div class="cost-category materials-section">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="includeMaterials" onchange="toggleMaterialsSection()">
+                    <span data-i18n="materialsTitle">📦 إضافة تكلفة المواد الخام (اختياري)</span>
+                </label>
+                <div id="materialsCostSection" style="display: none;">
+                    <p class="category-note" data-i18n="materialsNote">أدخل تكلفة المواد الخام للكمية الإجمالية</p>
+                    <div class="cost-input-item material-input">
+                        <label>
+                            <span class="input-label" data-i18n="materialsInputLabel">تكلفة المواد الإجمالية</span>
+                            <span class="input-hint" id="materialsHint"></span>
+                        </label>
+                        <div class="input-with-unit">
+                            <input type="number" id="materialsCost" class="cost-input" placeholder="0" min="0" oninput="calculateTotalCost()">
+                            <span class="unit">ج.م</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="subtotal-row" id="materialsSubtotalRow" style="display: none;">
+                    <span>إجمالي تكلفة المواد:</span>
+                    <span id="materialsTotalCost" class="subtotal-value">0 ج.م</span>
+                </div>
+            </div>
+
+            <!-- Profit & Tax -->
+            <div class="cost-category modifiers-section">
+                <h4 data-i18n="modifiersTitle">📊 هامش الربح والضرائب</h4>
+                <div class="modifiers-grid">
+                    <div class="modifier-item">
+                        <label data-i18n="profitMarginLabel">هامش الربح (%)</label>
+                        <input type="number" id="profitMargin" class="cost-input" value="15" min="0" max="100" oninput="calculateTotalCost()">
+                    </div>
+                    <div class="modifier-item">
+                        <label data-i18n="vatRateLabel">ضريبة القيمة المضافة (%)</label>
+                        <input type="number" id="vatRate" class="cost-input" value="14" min="0" max="100" oninput="calculateTotalCost()">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cost Summary -->
+            <!-- Cost Summary -->
+            <div class="cost-summary">
+                <h4 data-i18n="costSummaryTitle">📋 ملخص التكلفة</h4>
+                <div class="summary-grid">
+                    <div class="summary-line">
+                        <span data-i18n="summaryLabor">تكلفة العمالة:</span>
+                        <span id="summaryLabor">0 ج.م</span>
+                    </div>
+                    <div class="summary-line">
+                        <span data-i18n="summaryEquipment">تكلفة المعدات:</span>
+                        <span id="summaryEquipment">0 ج.م</span>
+                    </div>
+                    <div class="summary-line" id="summaryMaterialsRow" style="display: none;">
+                        <span data-i18n="summaryMaterials">تكلفة المواد:</span>
+                        <span id="summaryMaterials">0 ج.م</span>
+                    </div>
+                    <div class="summary-line summary-subtotal">
+                        <span data-i18n="summaryBaseCost">التكلفة الأساسية:</span>
+                        <span id="summaryBaseCost">0 ج.م</span>
+                    </div>
+                    <div class="summary-line">
+                        <span><span data-i18n="summaryProfit">هامش الربح</span> (<span id="profitPercent">15</span>%):</span>
+                        <span id="summaryProfit">0 ج.م</span>
+                    </div>
+                    <div class="summary-line">
+                        <span data-i18n="summaryBeforeVat">الإجمالي قبل الضريبة:</span>
+                        <span id="summaryBeforeVat">0 ج.م</span>
+                    </div>
+                    <div class="summary-line">
+                        <span><span data-i18n="summaryVat">ضريبة القيمة المضافة</span> (<span id="vatPercent">14</span>%):</span>
+                        <span id="summaryVat">0 ج.م</span>
+                    </div>
+                    
+                    <!-- New Overall Cost Row -->
+                    <div class="summary-line summary-subtotal">
+                         <span data-i18n="summaryOverallCost">التكلفة الإجمالية:</span>
+                         <span id="summaryOverallCost">0 ج.م</span>
+                    </div>
+
+                    <div class="summary-line summary-total">
+                        <span>💸 <span data-i18n="grandTotal">الإجمالي النهائي:</span></span>
+                        <span id="summaryGrandTotal">0 ج.م</span>
+                    </div>
+                    <div class="summary-line unit-price">
+                        <span data-i18n="unitPrice">سعر الوحدة:</span>
+                        <span id="summaryUnitPrice">0 ج.م/<span id="unitLabel">وحدة</span></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="cost-actions">
+                <button class="btn btn-primary" onclick="generateCostPDF()">
+                    <span class="btn-icon">📄</span>
+                    <span data-i18n="exportPDF">تصدير PDF</span>
+                </button>
+                <button class="btn btn-secondary" onclick="savePricesToStorage()">
+                    <span class="btn-icon">💾</span>
+                    <span data-i18n="savePrices">حفظ الأسعار</span>
+                </button>
+                <button class="btn btn-outline" onclick="loadSavedPrices()">
+                    <span class="btn-icon">📥</span>
+                    <span data-i18n="loadPrices">استرجاع الأسعار</span>
+                </button>
+            </div>
         </div>
 
         <!-- Error Display -->
@@ -225,6 +390,8 @@
             ? 'http://localhost:5000/api'
             : '/api';
         let currentItemData = null;
+        // Shared variable for cost calculator
+        window.currentCrewResults = null;
 
         // Theme Toggle
         function toggleTheme() {
@@ -617,6 +784,21 @@
 
             resultsContent.innerHTML = html;
             resultsSection.style.display = 'block';
+            
+            // Store results for cost calculator
+            window.currentCrewResults = data;
+            
+            // Show cost calculator button
+            const costBtn = document.getElementById('showCostBtn');
+            if (costBtn) {
+                costBtn.style.display = 'block';
+            }
+            
+            // Hide cost section if previously shown (reset)
+            const costSection = document.getElementById('costSection');
+            if (costSection) {
+                costSection.style.display = 'none';
+            }
         }
 
         function showError(message) {

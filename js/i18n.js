@@ -56,7 +56,7 @@ const translations = {
         requiredQuantity: 'الكمية المطلوبة',
         hoursPerDay: 'ساعات العمل اليومية',
         numberOfCrews: 'عدد فرق العمل',
-        calculateBtn: 'احسب متطلبات الفريق',
+        calculateBtn: 'احسب متطلبات الفريق والمدة الزمنية للنشاط',
 
         // Results Section
         results: 'النتائج والحسابات',
@@ -95,6 +95,52 @@ const translations = {
         invalidCrews: 'عدد فرق العمل يجب أن يكون واحد على الأقل',
         noItemSelected: 'لم يتم اختيار عنصر',
         noCrewData: 'لا توجد بيانات فريق متاحة',
+        
+        inputPlaceholder: 'Type a message...',
+        
+        // Cost Calculator
+        calculateDetailedCost: 'احسب التكلفة التفصيلية',
+        costCalculatorTitle: '💰 حساب التكلفة التفصيلية',
+        enterMarketPrices: 'أدخل الأسعار الفعلية من السوق المحلي',
+        laborCostTitle: '👷 تكلفة العمالة',
+        laborCostNote: 'أدخل سعر اليوم الواحد لكل نوع عامل',
+        equipmentCostTitle: '🚜 تكلفة المعدات',
+        equipmentCostNote: 'أدخل سعر الساعة الواحدة لكل معدة',
+        materialsTitle: '📦 إضافة تكلفة المواد الخام (اختياري)',
+        materialsNote: 'أدخل تكلفة المواد الخام للكمية الإجمالية',
+        materialsInputLabel: 'تكلفة المواد الإجمالية',
+        modifiersTitle: '📊 هامش الربح والضرائب',
+        profitMarginLabel: 'هامش الربح (%)',
+        vatRateLabel: 'ضريبة القيمة المضافة (%)',
+        costSummaryTitle: '🧾 ملخص التكلفة التقديري',
+        summaryLabor: 'تكلفة العمالة',
+        summaryEquipment: 'تكلفة المعدات',
+        summaryMaterials: 'تكلفة المواد',
+        summaryBaseCost: 'التكلفة الأساسية',
+        summaryProfit: 'هامش الربح',
+        summaryBeforeVat: 'الإجمالي قبل الضريبة',
+        summaryVat: 'ضريبة القيمة المضافة',
+        summaryOverallCost: 'التكلفة الإجمالية',
+        grandTotal: 'الإجمالي النهائي',
+        unitPrice: 'سعر الوحدة',
+        savePrices: 'حفظ الأسعار',
+        loadPrices: 'استرجاع الأسعار',
+        exportPDF: 'تصدير PDF',
+        pricesSaved: 'تم حفظ الأسعار بنجاح!',
+        pricesLoaded: 'تم استرجاع الأسعار المحفوظة!',
+        
+        // Currency
+        currencyLabel: 'العملة',
+        currencyEGP: 'جنيه مصري (ج.م.)',
+        currencyUSD: 'دولار أمريكي ($)',
+        currencyEUR: 'يورو (€)',
+        currencyGBP: 'جنيه إسترليني (£)',
+        currencyCNY: 'يوان صيني (¥)',
+        currencySAR: 'ريال سعودي (ر.س.)',
+        currencyKWD: 'دينار كويتي (د.ك.)',
+        currencyQAR: 'ريال قطري (ر.ق.)',
+        currencyOther: 'عملة',
+        pdfGenerated: 'تم إنشاء التقرير بنجاح (PDF)!',
         
         // AI Planner
         experimentalWarning: 'تحت الإنشاء - تجريبي'
@@ -152,7 +198,8 @@ const translations = {
         requiredQuantity: 'Required Quantity',
         hoursPerDay: 'Hours Per Day',
         numberOfCrews: 'Number of Crews',
-        calculateBtn: 'Calculate Crew Requirements',
+        // Updated translation as requested
+        calculateBtn: 'Calculate Crew Requirements & Activity Duration',
 
         // Results Section
         results: 'Results & Calculations',
@@ -192,6 +239,50 @@ const translations = {
         noItemSelected: 'No item selected',
         noCrewData: 'No crew data available',
         
+        // Cost Calculator
+        calculateDetailedCost: 'Calculate Detailed Cost',
+        costCalculatorTitle: '💰 Cost Calculator',
+        enterMarketPrices: 'Enter actual local market prices',
+        laborCostTitle: '👷 Labor Cost',
+        laborCostNote: 'Enter daily rate for each worker type',
+        equipmentCostTitle: '🚜 Equipment Cost',
+        equipmentCostNote: 'Enter hourly rate for each equipment',
+        materialsTitle: '📦 Add Raw Materials Cost (Optional)',
+        materialsNote: 'Enter total materials cost for the required quantity',
+        materialsInputLabel: 'Total Materials Cost',
+        modifiersTitle: '📊 Profit Margin & Taxes',
+        profitMarginLabel: 'Profit Margin (%)',
+        vatRateLabel: 'VAT Rate (%)',
+        costSummaryTitle: '🧾 Estimated Cost Summary',
+        summaryLabor: 'Labor Cost',
+        summaryEquipment: 'Equipment Cost',
+        summaryMaterials: 'Materials Cost',
+        summaryBaseCost: 'Base Cost',
+        summaryProfit: 'Profit Margin',
+        summaryBeforeVat: 'Total Before Tax',
+        summaryVat: 'VAT',
+        summaryOverallCost: 'Overall Cost',
+        grandTotal: 'Grand Total',
+        unitPrice: 'Unit Price',
+        savePrices: 'Save Prices',
+        loadPrices: 'Load Prices',
+        exportPDF: 'Export PDF',
+        pricesSaved: 'Prices saved successfully!',
+        pricesLoaded: 'Saved prices loaded successfully!',
+
+        // Currency
+        currencyLabel: 'Currency',
+        currencyEGP: 'Egyptian Pound (E.G.P)',
+        currencyUSD: 'US Dollar ($)',
+        currencyEUR: 'Euro (€)',
+        currencyGBP: 'British Pound (£)',
+        currencyCNY: 'Chinese Yuan (¥)',
+        currencySAR: 'Saudi Riyal (SAR)',
+        currencyKWD: 'Kuwaiti Dinar (KWD)',
+        currencyQAR: 'Qatari Riyal (QAR)',
+        currencyOther: 'Currency',
+        pdfGenerated: 'Report generated successfully (PDF)!',
+
         // AI Planner
         experimentalWarning: 'Under Construction - Experimental'
     }
