@@ -1,41 +1,29 @@
 // ========================================
 // Google AdSense Integration
-// Replace YOUR_PUBLISHER_ID and SLOT_IDs after approval
+// Auto ads are enabled in AdSense dashboard
+// Publisher ID: ca-pub-5429423113977975
 // ========================================
 
-// Initialize AdSense
+// Initialize AdSense (Auto ads handle everything automatically)
 function initAdsense() {
-    // This will be populated after AdSense approval
-    console.log('AdSense: Ready for integration');
+    console.log('✅ AdSense Auto ads initialized');
+    console.log('Publisher ID: ca-pub-5429423113977975');
+    
+    // Auto ads script is already loaded in HTML <head>
+    // No manual intervention needed - Google handles ad placement
 }
 
-// Insert responsive ad
-function insertAd(containerId, slotId) {
+// Optional: Manual ad insertion for specific placements
+function insertManualAd(containerId, slotId) {
     const container = document.getElementById(containerId);
     if (!container) return;
     
-    // Placeholder until AdSense approval
-    container.innerHTML = `
-        <div class="ad-placeholder" style="
-            background: linear-gradient(135deg, #667eea22, #764ba222);
-            border: 2px dashed var(--border-color);
-            border-radius: 8px;
-            padding: 1rem;
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 0.85rem;
-        ">
-            <p>📢 Ad Space</p>
-            <small>Support us by allowing ads</small>
-        </div>
-    `;
-    
-    // After AdSense approval, replace with:
+    // For future manual ad units, uncomment and add slot ID:
     /*
     container.innerHTML = `
         <ins class="adsbygoogle"
              style="display:block"
-             data-ad-client="ca-pub-YOUR_PUBLISHER_ID"
+             data-ad-client="ca-pub-5429423113977975"
              data-ad-slot="${slotId}"
              data-ad-format="auto"
              data-full-width-responsive="true"></ins>
@@ -44,29 +32,17 @@ function insertAd(containerId, slotId) {
     */
 }
 
-// Insert in-article ad
-function insertInArticleAd(containerId) {
-    insertAd(containerId, 'IN_ARTICLE_SLOT_ID');
-}
-
-// Insert sidebar ad
-function insertSidebarAd(containerId) {
-    insertAd(containerId, 'SIDEBAR_SLOT_ID');
-}
-
-// Auto-insert ads when DOM is ready
+// Initialize on page load
 document.addEventListener('DOMContentLoaded', () => {
-    // Find all ad containers and populate
-    document.querySelectorAll('[data-ad-slot]').forEach(container => {
-        const slotType = container.getAttribute('data-ad-slot');
-        insertAd(container.id, slotType);
-    });
+    initAdsense();
+    
+    // Auto ads will place ads automatically
+    // No need to manually insert ads when Auto ads is ON
+    console.log('🎯 Waiting for Auto ads to load...');
 });
 
 // Export for external use
 window.CSI_Ads = {
     init: initAdsense,
-    insertAd: insertAd,
-    insertInArticleAd: insertInArticleAd,
-    insertSidebarAd: insertSidebarAd
+    insertManualAd: insertManualAd
 };
