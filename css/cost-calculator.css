@@ -444,3 +444,52 @@
 [data-theme="dark"] .cost-summary {
     background-color: #1f2937 !important;
 }
+
+/* ========================================
+   PDF Export High Contrast Styles
+   ======================================== */
+.pdf-exporting .glass-card,
+.pdf-exporting .section-card,
+.pdf-exporting .result-card,
+.pdf-exporting .info-card {
+    background: #ffffff !important;
+    backdrop-filter: none !important;
+    box-shadow: none !important;
+    border: 1px solid #000000 !important;
+    color: #000000 !important;
+}
+
+.pdf-exporting h1, 
+.pdf-exporting h2, 
+.pdf-exporting h3, 
+.pdf-exporting h4, 
+.pdf-exporting h5, 
+.pdf-exporting h6,
+.pdf-exporting p, 
+.pdf-exporting span, 
+.pdf-exporting div, 
+.pdf-exporting label, 
+.pdf-exporting th, 
+.pdf-exporting td {
+    color: #000000 !important;
+    text-shadow: none !important;
+}
+
+.pdf-exporting .subtotal-row,
+.pdf-exporting .summary-total {
+    background: #f0f0f0 !important;
+    color: #000000 !important;
+    border: 1px solid #000000 !important;
+}
+
+.pdf-exporting .subtotal-row span,
+.pdf-exporting .summary-total span {
+    color: #000000 !important;
+}
+
+/* Force table borders to be visible in PDF */
+.pdf-exporting table, 
+.pdf-exporting th, 
+.pdf-exporting td {
+    border-color: #000000 !important;
+}

@@ -439,9 +439,11 @@ function loadImage(url) {
 async function generateCostPDFContent() {
     const costSection = document.getElementById('costSection');
     const resultsSection = document.getElementById('resultsSection');
-    const elementsToHide = document.querySelectorAll('.cost-actions, .calculate-btn');
+    // Add PDF exporting class for high contrast styles
+    document.body.classList.add('pdf-exporting');
     
-    // Hide elements
+    // Hide visibility of specified elements
+    const elementsToHide = document.querySelectorAll('.cost-actions, .calculate-btn');
     elementsToHide.forEach(el => {
         el.setAttribute('data-original-display', el.style.display || '');
         el.style.display = 'none';
@@ -558,6 +560,9 @@ async function generateCostPDFContent() {
         console.error('PDF Generation Error:', err);
         showError('فشل في إنشاء ملف PDF');
     } finally {
+        // Remove PDF exporting class
+        document.body.classList.remove('pdf-exporting');
+
         // Restore elements
         elementsToHide.forEach(el => {
             el.style.display = el.getAttribute('data-original-display');
