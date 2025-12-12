@@ -6,7 +6,7 @@
 
 // Currency symbol mapping
 const currencySymbols = {
-    EGP: { ar: 'ج.م.', en: 'E.G.P' },
+    EGP: { ar: 'ج.م.', en: 'EGP' },
     USD: { ar: '$', en: '$' },
     EUR: { ar: '€', en: '€' },
     GBP: { ar: '£', en: '£' },
