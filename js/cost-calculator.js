@@ -71,6 +71,7 @@ function generateLaborCostInputs() {
     }
     
     labor.forEach((member, index) => {
+        const currencyUnit = getCurrencyUnit('day');
         const itemHtml = `
             <div class="cost-input-item" data-type="labor" data-index="${index}">
                 <label>
@@ -87,8 +88,8 @@ function generateLaborCostInputs() {
                            placeholder="0" 
                            min="0" 
                            oninput="calculateTotalCost()">
-                    <span class="unit">${t('hourPerDay') || 'ج/يوم'}</span>
-                    <span class="auto-calculation" id="laborCalc_${index}">= 0 ج.م</span>
+                    <span class="unit labor-unit">${currencyUnit}</span>
+                    <span class="auto-calculation" id="laborCalc_${index}">= 0 ${getCurrencySymbol()}</span>
                 </div>
             </div>
         `;
@@ -111,6 +112,7 @@ function generateEquipmentCostInputs() {
     }
     
     equipment.forEach((equip, index) => {
+        const currencyUnit = getCurrencyUnit('hour');
         const itemHtml = `
             <div class="cost-input-item" data-type="equipment" data-index="${index}">
                 <label>
@@ -127,8 +129,8 @@ function generateEquipmentCostInputs() {
                            placeholder="0" 
                            min="0" 
                            oninput="calculateTotalCost()">
-                    <span class="unit">${t('perUnit') || 'ج/ساعة'}</span>
-                    <span class="auto-calculation" id="equipCalc_${index}">= 0 ج.م</span>
+                    <span class="unit equipment-unit">${currencyUnit}</span>
+                    <span class="auto-calculation" id="equipCalc_${index}">= 0 ${getCurrencySymbol()}</span>
                 </div>
             </div>
         `;
@@ -278,6 +280,41 @@ function formatCurrency(value) {
     }).format(value) + ' ' + symbol;
 }
 
+// Get currency symbol based on current selection
+function getCurrencySymbol() {
+    const lang = window.currentLang || 'ar';
+    if (selectedCurrency === 'OTHER' && customCurrencySymbol) {
+        return customCurrencySymbol;
+    }
+    return currencySymbols[selectedCurrency]?.[lang] || currencySymbols[selectedCurrency]?.ar || 'ج.م.';
+}
+
+// Get currency unit with time period (day/hour)
+function getCurrencyUnit(period) {
+    const lang = window.currentLang || 'ar';
+    const symbol = getCurrencySymbol();
+    
+    if (period === 'day') {
+        return lang === 'ar' ? `${symbol}/يوم` : `${symbol}/Day`;
+    } else if (period === 'hour') {
+        return lang === 'ar' ? `${symbol}/ساعة` : `${symbol}/Hour`;
+    }
+    return symbol;
+}
+
+// Update all unit labels when currency changes
+function updateCurrencyUnits() {
+    // Update labor units
+    document.querySelectorAll('.labor-unit').forEach(el => {
+        el.textContent = getCurrencyUnit('day');
+    });
+    
+    // Update equipment units
+    document.querySelectorAll('.equipment-unit').forEach(el => {
+        el.textContent = getCurrencyUnit('hour');
+    });
+}
+
 // Initialize currency selector
 function initCurrencySelector() {
     const currencySelect = document.getElementById('currencySelect');
@@ -295,6 +332,7 @@ function initCurrencySelector() {
                 customCurrencySymbol = '';
             }
             
+            updateCurrencyUnits();
             calculateTotalCost();
         });
     }
@@ -302,6 +340,7 @@ function initCurrencySelector() {
     if (customInput) {
         customInput.addEventListener('input', function() {
             customCurrencySymbol = this.value.trim();
+            updateCurrencyUnits();
             calculateTotalCost();
         });
     }
