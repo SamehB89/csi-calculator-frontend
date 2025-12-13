@@ -802,11 +802,18 @@ body {
 }
 
 [data-theme="dark"] .info-value,
-[data-theme="dark"] .result-value,
 [data-theme="dark"] .stat-value,
 [data-theme="dark"] .info-icon,
 [data-theme="dark"] .result-icon {
     color: #ffffff !important;
+}
+
+/* Result cards have light background, so use black text */
+[data-theme="dark"] .result-value,
+[data-theme="dark"] .result-card .result-value,
+[data-theme="dark"] .result-card .result-label,
+[data-theme="dark"] .result-card .result-unit {
+    color: #000000 !important;
 }
 
 [data-theme="dark"] .info-label,

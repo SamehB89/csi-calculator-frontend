@@ -143,7 +143,40 @@ const translations = {
         pdfGenerated: 'تم إنشاء التقرير بنجاح (PDF)!',
         
         // AI Planner
-        experimentalWarning: 'تحت الإنشاء - تجريبي'
+        experimentalWarning: 'تحت الإنشاء - تجريبي',
+        
+        // Landing Page
+        heroTitle: 'خطّط مشروعك باحترافية',
+        heroSubtitle: 'احسب احتياجات فريق العمل • المدة الزمنية • التكلفة التفصيلية للعناصر الإنشائية باستخدام نظام CSI العالمي',
+        startNow: 'ابدأ الآن',
+        knowMore: 'اعرف المزيد',
+        whyUseUs: 'لماذا تستخدم CSI Calculator؟',
+        benefitPlanningTitle: 'تخطيط احترافي',
+        benefitPlanningDesc: 'احصل على تركيبة فريق العمل المثالية ومعدلات الإنتاج لكل عنصر إنشائي',
+        benefitCostingTitle: 'تسعير دقيق',
+        benefitCostingDesc: 'احسب التكلفة التفصيلية للعمالة والمعدات بناءً على أسعارك المحلية',
+        benefitTimeTitle: 'توفير الوقت',
+        benefitTimeDesc: 'احصل على نتائج فورية بدلاً من ساعات البحث في المراجع والجداول',
+        howItWorks: 'كيف يعمل؟',
+        step1Title: 'اختر القسم الرئيسي',
+        step1Desc: '16 قسم رئيسي للعناصر الإنشائية',
+        step2Title: 'حدد القسم الفرعي',
+        step2Desc: 'تصنيفات تفصيلية لكل قسم',
+        step3Title: 'اختر العنصر',
+        step3Desc: 'وصف دقيق للعنصر المطلوب',
+        step4Title: 'أدخل الكمية',
+        step4Desc: 'واحصل على النتائج فوراً',
+        exampleTitle: 'مثال عملي: أساسات اللبشة',
+        walkthroughHeader: 'رحلة حساب تكلفة أساسات خرسانية',
+        walkthroughSubheader: 'شاهد كيف يمكنك الوصول للنتائج في ثوانٍ',
+        mainDivisionLabel: 'القسم الرئيسي',
+        subDiv1Label: 'القسم الفرعي الأول',
+        subDiv2Label: 'القسم الفرعي الثاني',
+        itemLabel: 'وصف العنصر',
+        tryNow: 'جرّب بنفسك الآن',
+        ctaTitle: 'جاهز للبدء؟',
+        ctaSubtitle: 'ابدأ بحساب احتياجات مشروعك الآن مجاناً',
+        startCalculating: 'ابدأ الحساب'
     },
     en: {
         // Navbar
@@ -284,7 +317,40 @@ const translations = {
         pdfGenerated: 'Report generated successfully (PDF)!',
 
         // AI Planner
-        experimentalWarning: 'Under Construction - Experimental'
+        experimentalWarning: 'Under Construction - Experimental',
+        
+        // Landing Page
+        heroTitle: 'Plan Your Project Professionally',
+        heroSubtitle: 'Calculate crew requirements • Duration • Detailed costs for construction elements using the international CSI system',
+        startNow: 'Start Now',
+        knowMore: 'Know More',
+        whyUseUs: 'Why Use CSI Calculator?',
+        benefitPlanningTitle: 'Professional Planning',
+        benefitPlanningDesc: 'Get the ideal crew composition and production rates for each construction element',
+        benefitCostingTitle: 'Accurate Costing',
+        benefitCostingDesc: 'Calculate detailed labor and equipment costs based on your local prices',
+        benefitTimeTitle: 'Save Time',
+        benefitTimeDesc: 'Get instant results instead of hours searching through references and tables',
+        howItWorks: 'How It Works?',
+        step1Title: 'Select Main Division',
+        step1Desc: '16 main construction divisions',
+        step2Title: 'Choose Sub-Division',
+        step2Desc: 'Detailed classifications for each',
+        step3Title: 'Pick the Item',
+        step3Desc: 'Precise item description',
+        step4Title: 'Enter Quantity',
+        step4Desc: 'And get instant results',
+        exampleTitle: 'Practical Example: Raft Foundation',
+        walkthroughHeader: 'Journey to Calculate Foundation Costs',
+        walkthroughSubheader: 'See how you can get results in seconds',
+        mainDivisionLabel: 'Main Division',
+        subDiv1Label: 'Sub-Division 1',
+        subDiv2Label: 'Sub-Division 2',
+        itemLabel: 'Item Description',
+        tryNow: 'Try It Yourself Now',
+        ctaTitle: 'Ready to Start?',
+        ctaSubtitle: 'Start calculating your project needs now for free',
+        startCalculating: 'Start Calculating'
     }
 };
 
