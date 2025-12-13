@@ -57,7 +57,7 @@ self.addEventListener('activate', (event) => {
     self.clients.claim();
 });
 
-// Fetch event - serve from cache, fallback to network
+// Fetch event - Network First Strategy (Always get latest version)
 self.addEventListener('fetch', (event) => {
     // Skip API requests - always fetch from network
     if (event.request.url.includes('/api/')) {
@@ -65,25 +65,26 @@ self.addEventListener('fetch', (event) => {
     }
     
     event.respondWith(
-        caches.match(event.request)
-            .then((cachedResponse) => {
-                if (cachedResponse) {
-                    return cachedResponse;
+        // Try network first
+        fetch(event.request)
+            .then((networkResponse) => {
+                // Cache successful GET requests
+                if (event.request.method === 'GET' && networkResponse.status === 200) {
+                    const responseClone = networkResponse.clone();
+                    caches.open(CACHE_NAME)
+                        .then((cache) => {
+                            cache.put(event.request, responseClone);
+                        });
                 }
-                
-                return fetch(event.request)
-                    .then((networkResponse) => {
-                        // Cache successful GET requests
-                        if (event.request.method === 'GET' && networkResponse.status === 200) {
-                            const responseClone = networkResponse.clone();
-                            caches.open(CACHE_NAME)
-                                .then((cache) => {
-                                    cache.put(event.request, responseClone);
-                                });
+                return networkResponse;
+            })
+            .catch(() => {
+                // Network failed, fallback to cache
+                return caches.match(event.request)
+                    .then((cachedResponse) => {
+                        if (cachedResponse) {
+                            return cachedResponse;
                         }
-                        return networkResponse;
-                    })
-                    .catch(() => {
                         // Return offline page if available
                         if (event.request.mode === 'navigate') {
                             return caches.match('/index.html');

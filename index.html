@@ -232,10 +232,28 @@
             // Apply language
             applyLanguage();
             
-            // Register Service Worker for PWA
+            // Register Service Worker with Auto-Update
             if ('serviceWorker' in navigator) {
                 navigator.serviceWorker.register('/sw.js')
-                    .then((reg) => console.log('Service Worker registered'))
+                    .then((registration) => {
+                        console.log('Service Worker registered');
+                        
+                        // Check for updates every 60 seconds
+                        setInterval(() => {
+                            registration.update();
+                        }, 60000);
+                        
+                        // Auto-reload when new version is available
+                        registration.addEventListener('updatefound', () => {
+                            const newWorker = registration.installing;
+                            newWorker.addEventListener('statechange', () => {
+                                if (newWorker.state === 'activated' && navigator.serviceWorker.controller) {
+                                    console.log('New version available! Reloading...');
+                                    window.location.reload();
+                                }
+                            });
+                        });
+                    })
                     .catch((err) => console.log('SW registration failed:', err));
             }
         });
