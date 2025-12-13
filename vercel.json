@@ -1,6 +1,19 @@
 {
   "buildCommand": "echo 'No build needed for static site'",
   "outputDirectory": ".",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "destination": "https://csi-calc.vercel.app/:path*",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "csi-calculator-frontend.vercel.app"
+        }
+      ]
+    }
+  ],
   "rewrites": [
     {
       "source": "/api/:path*",
