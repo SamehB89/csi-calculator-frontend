@@ -305,7 +305,7 @@ const translations = {
 
         // Currency
         currencyLabel: 'Currency',
-        currencyEGP: 'Egyptian Pound (E.G.P)',
+        currencyEGP: 'Egyptian Pound (EGP)',
         currencyUSD: 'US Dollar ($)',
         currencyEUR: 'Euro (€)',
         currencyGBP: 'British Pound (£)',
