@@ -315,6 +315,11 @@ const translations = {
         currencyQAR: 'Qatari Riyal (QAR)',
         currencyOther: 'Currency',
         pdfGenerated: 'Report generated successfully (PDF)!',
+        
+        // Subtotals
+        laborSubtotal: 'Labor Total Cost:',
+        equipmentSubtotal: 'Equipment Total Cost:',
+        materialsSubtotal: 'Materials Total Cost:',
 
         // AI Planner
         experimentalWarning: 'Under Construction - Experimental',
