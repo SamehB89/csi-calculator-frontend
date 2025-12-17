@@ -1,4 +1,4 @@
-<!-- Cache bust: 2025-12-17 19:00:00 -->
+<!-- Cache bust: 2025-12-17 19:30:00 -->
 <!DOCTYPE html>
 <html lang="ar" dir="rtl" data-theme="light">
 
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/ads.css">
     <link rel="stylesheet" href="css/cost-calculator.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <script src="js/i18n.js?v=2"></script>
+    <script src="js/i18n.js?v=3"></script>
     <script src="js/ads.js"></script>
     <script src="js/cost-calculator.js?v=2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
@@ -71,7 +71,7 @@
                         <span class="label-icon">1️⃣</span>
                         <span data-i18n="mainDivision">القسم الرئيسي (Main Division)</span>
                     </label>
-                    <select id="mainDivision" class="form-select" onchange="loadSubDivision1()">
+                    <select id="mainDivision" class="form-select" onchange="loadMainDivisions() && loadSubDivision1()">
                         <option value="">-- اختر القسم الرئيسي --</option>
                     </select>
                 </div>
@@ -390,7 +390,7 @@
         const isVercel = window.location.hostname.includes('vercel.app');
         const isMobileApp = window.location.protocol === 'https:' && window.location.hostname === 'localhost';
 
-        const API_BASE = isLocalhost ? 'http://localhost:5000/api'
+        const API_BASE = isLocalhost ? 'http://localhost:5000/api' 
             : (isVercel || isMobileApp) ? 'https://web-production-90db2.up.railway.app/api'
             : '/api';
             
