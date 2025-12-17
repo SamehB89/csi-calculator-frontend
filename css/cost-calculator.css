@@ -9,8 +9,11 @@
     padding: 1.5rem;
     margin-bottom: 1.5rem;
     border: 1px solid var(--border-color);
+<<<<<<< HEAD
     max-width: 100%;
     overflow-x: auto;
+=======
+>>>>>>> 35cbe6c (feat: Implement a detailed cost calculator with UI for labor, equipment, materials, profit, and tax, integrated into the crew calculator.)
 }
 
 .cost-category h4 {
@@ -29,7 +32,10 @@
 .cost-inputs-grid {
     display: grid;
     gap: 1rem;
+<<<<<<< HEAD
     max-width: 100%;
+=======
+>>>>>>> 35cbe6c (feat: Implement a detailed cost calculator with UI for labor, equipment, materials, profit, and tax, integrated into the crew calculator.)
 }
 
 .cost-input-item {
@@ -41,15 +47,21 @@
     background: var(--bg-primary);
     border-radius: var(--radius-sm);
     border: 1px solid var(--border-color);
+<<<<<<< HEAD
     max-width: 100%;
+=======
+>>>>>>> 35cbe6c (feat: Implement a detailed cost calculator with UI for labor, equipment, materials, profit, and tax, integrated into the crew calculator.)
 }
 
 .cost-input-item label {
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
+<<<<<<< HEAD
     min-width: 0; /* Allow text to wrap */
     word-wrap: break-word;
+=======
+>>>>>>> 35cbe6c (feat: Implement a detailed cost calculator with UI for labor, equipment, materials, profit, and tax, integrated into the crew calculator.)
 }
 
 .input-label {
@@ -71,7 +83,10 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
+<<<<<<< HEAD
     flex-shrink: 0;
+=======
+>>>>>>> 35cbe6c (feat: Implement a detailed cost calculator with UI for labor, equipment, materials, profit, and tax, integrated into the crew calculator.)
 }
 
 .cost-input {
@@ -122,9 +137,12 @@
     border-radius: var(--radius-sm);
     color: white;
     font-weight: 600;
+<<<<<<< HEAD
     max-width: 100%;
     flex-wrap: wrap;
     gap: 0.5rem;
+=======
+>>>>>>> 35cbe6c (feat: Implement a detailed cost calculator with UI for labor, equipment, materials, profit, and tax, integrated into the crew calculator.)
 }
 
 .subtotal-value {
@@ -185,7 +203,10 @@
     border-radius: var(--radius-lg);
     padding: 1.5rem;
     border: 2px solid var(--primary-color);
+<<<<<<< HEAD
     max-width: 100%;
+=======
+>>>>>>> 35cbe6c (feat: Implement a detailed cost calculator with UI for labor, equipment, materials, profit, and tax, integrated into the crew calculator.)
 }
 
 .cost-summary h4 {
@@ -205,9 +226,12 @@
     align-items: center;
     padding: 0.5rem 0;
     border-bottom: 1px solid var(--border-color);
+<<<<<<< HEAD
     flex-wrap: wrap;
     gap: 0.5rem;
     max-width: 100%;
+=======
+>>>>>>> 35cbe6c (feat: Implement a detailed cost calculator with UI for labor, equipment, materials, profit, and tax, integrated into the crew calculator.)
 }
 
 .summary-line:last-child {
@@ -216,14 +240,20 @@
 
 .summary-line span:first-child {
     color: var(--text-secondary);
+<<<<<<< HEAD
     flex: 1;
     min-width: 0;
+=======
+>>>>>>> 35cbe6c (feat: Implement a detailed cost calculator with UI for labor, equipment, materials, profit, and tax, integrated into the crew calculator.)
 }
 
 .summary-line span:last-child {
     font-weight: 600;
     color: var(--text-primary);
+<<<<<<< HEAD
     flex-shrink: 0;
+=======
+>>>>>>> 35cbe6c (feat: Implement a detailed cost calculator with UI for labor, equipment, materials, profit, and tax, integrated into the crew calculator.)
 }
 
 .summary-subtotal {
@@ -293,17 +323,26 @@
 @media (max-width: 768px) {
     .cost-input-item {
         grid-template-columns: 1fr;
+<<<<<<< HEAD
         gap: 0.75rem;
+=======
+>>>>>>> 35cbe6c (feat: Implement a detailed cost calculator with UI for labor, equipment, materials, profit, and tax, integrated into the crew calculator.)
     }
     
     .input-with-unit {
         justify-content: flex-start;
+<<<<<<< HEAD
         width: 100%;
+=======
+>>>>>>> 35cbe6c (feat: Implement a detailed cost calculator with UI for labor, equipment, materials, profit, and tax, integrated into the crew calculator.)
     }
     
     .cost-input {
         width: 100%;
+<<<<<<< HEAD
         max-width: 200px;
+=======
+>>>>>>> 35cbe6c (feat: Implement a detailed cost calculator with UI for labor, equipment, materials, profit, and tax, integrated into the crew calculator.)
     }
     
     .modifiers-grid {
@@ -321,6 +360,7 @@
     .summary-total {
         font-size: 1rem;
     }
+<<<<<<< HEAD
     
     .subtotal-row {
         font-size: 0.9rem;
@@ -329,6 +369,8 @@
     .summary-line {
         font-size: 0.9rem;
     }
+=======
+>>>>>>> 35cbe6c (feat: Implement a detailed cost calculator with UI for labor, equipment, materials, profit, and tax, integrated into the crew calculator.)
 }
 
 /* Animation for cost section */
@@ -472,6 +514,7 @@
 [data-theme="dark"] .cost-summary {
     background-color: #1f2937 !important;
 }
+<<<<<<< HEAD
 
 /* ========================================
    PDF Export High Contrast Styles
@@ -521,3 +564,5 @@
 .pdf-exporting td {
     border-color: #000000 !important;
 }
+=======
+>>>>>>> 35cbe6c (feat: Implement a detailed cost calculator with UI for labor, equipment, materials, profit, and tax, integrated into the crew calculator.)

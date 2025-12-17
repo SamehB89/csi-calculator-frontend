@@ -1,4 +1,4 @@
-<!-- Cache bust: 2025-12-12 19:17:12 -->
+<!-- Cache bust: 2025-12-17 19:00:00 -->
 <!DOCTYPE html>
 <html lang="ar" dir="rtl" data-theme="light">
 
@@ -315,7 +315,6 @@
             </div>
 
             <!-- Cost Summary -->
-            <!-- Cost Summary -->
             <div class="cost-summary">
                 <h4 data-i18n="costSummaryTitle">📋 ملخص التكلفة</h4>
                 <div class="summary-grid">
@@ -387,9 +386,16 @@
     </div>
 
     <script>
-        const API_BASE = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
-            ? 'http://localhost:5000/api'
+        const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+        const isVercel = window.location.hostname.includes('vercel.app');
+        const isMobileApp = window.location.protocol === 'https:' && window.location.hostname === 'localhost';
+
+        const API_BASE = isLocalhost ? 'http://localhost:5000/api'
+            : (isVercel || isMobileApp) ? 'https://web-production-90db2.up.railway.app/api'
             : '/api';
+            
+        console.log('🔧 Configured API_BASE:', API_BASE);
+        
         let currentItemData = null;
         // Shared variable for cost calculator
         window.currentCrewResults = null;
@@ -785,26 +791,17 @@
 
             resultsContent.innerHTML = html;
             resultsSection.style.display = 'block';
-            
+
             // Store results for cost calculator
             window.currentCrewResults = data;
-            
-            // Show cost calculator button
-            const costBtn = document.getElementById('showCostBtn');
-            if (costBtn) {
-                costBtn.style.display = 'block';
-            }
-            
-            // Hide cost section if previously shown (reset)
-            const costSection = document.getElementById('costSection');
-            if (costSection) {
-                costSection.style.display = 'none';
-            }
+
+            // Show cost button
+            document.getElementById('showCostBtn').style.display = 'inline-flex';
         }
 
         function showError(message) {
             const errorDiv = document.getElementById('errorMessage');
-            errorDiv.textContent = '❌ ' + message;
+            errorDiv.textContent = '⚠️ ' + message;
             errorDiv.style.display = 'block';
 
             setTimeout(() => {
@@ -812,22 +809,6 @@
             }, 5000);
         }
     </script>
-    
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="container mb-3">
-             <div class="ad-container ad-footer">
-                <div class="ad-responsive" style="height: 90px; background: rgba(0,0,0,0.05); display: flex; align-items: center; justify-content: center; border-radius: 8px;">
-                     <span class="ad-label">Advertisement</span>
-                </div>
-            </div>
-        </div>
-        <div class="footer-content">
-            <p class="footer-text">
-                CSI Crew Calculator • Built with <span class="footer-heart">❤️</span> by <span class="footer-author">Sameh Badawy Sayed</span>
-            </p>
-        </div>
-    </footer>
 </body>
 
 </html>

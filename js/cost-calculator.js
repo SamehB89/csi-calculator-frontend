@@ -71,7 +71,10 @@ function generateLaborCostInputs() {
     }
     
     labor.forEach((member, index) => {
+<<<<<<< HEAD
         const currencyUnit = getCurrencyUnit('day');
+=======
+>>>>>>> 35cbe6c (feat: Implement a detailed cost calculator with UI for labor, equipment, materials, profit, and tax, integrated into the crew calculator.)
         const itemHtml = `
             <div class="cost-input-item" data-type="labor" data-index="${index}">
                 <label>
@@ -88,8 +91,13 @@ function generateLaborCostInputs() {
                            placeholder="0" 
                            min="0" 
                            oninput="calculateTotalCost()">
+<<<<<<< HEAD
                     <span class="unit labor-unit">${currencyUnit}</span>
                     <span class="auto-calculation" id="laborCalc_${index}">= 0 ${getCurrencySymbol()}</span>
+=======
+                    <span class="unit">${t('hourPerDay') || 'ج/يوم'}</span>
+                    <span class="auto-calculation" id="laborCalc_${index}">= 0 ج.م</span>
+>>>>>>> 35cbe6c (feat: Implement a detailed cost calculator with UI for labor, equipment, materials, profit, and tax, integrated into the crew calculator.)
                 </div>
             </div>
         `;
@@ -112,7 +120,10 @@ function generateEquipmentCostInputs() {
     }
     
     equipment.forEach((equip, index) => {
+<<<<<<< HEAD
         const currencyUnit = getCurrencyUnit('hour');
+=======
+>>>>>>> 35cbe6c (feat: Implement a detailed cost calculator with UI for labor, equipment, materials, profit, and tax, integrated into the crew calculator.)
         const itemHtml = `
             <div class="cost-input-item" data-type="equipment" data-index="${index}">
                 <label>
@@ -129,8 +140,13 @@ function generateEquipmentCostInputs() {
                            placeholder="0" 
                            min="0" 
                            oninput="calculateTotalCost()">
+<<<<<<< HEAD
                     <span class="unit equipment-unit">${currencyUnit}</span>
                     <span class="auto-calculation" id="equipCalc_${index}">= 0 ${getCurrencySymbol()}</span>
+=======
+                    <span class="unit">${t('perUnit') || 'ج/ساعة'}</span>
+                    <span class="auto-calculation" id="equipCalc_${index}">= 0 ج.م</span>
+>>>>>>> 35cbe6c (feat: Implement a detailed cost calculator with UI for labor, equipment, materials, profit, and tax, integrated into the crew calculator.)
                 </div>
             </div>
         `;
@@ -280,6 +296,7 @@ function formatCurrency(value) {
     }).format(value) + ' ' + symbol;
 }
 
+<<<<<<< HEAD
 // Get currency symbol based on current selection
 function getCurrencySymbol() {
     const lang = window.currentLang || 'ar';
@@ -315,6 +332,8 @@ function updateCurrencyUnits() {
     });
 }
 
+=======
+>>>>>>> 35cbe6c (feat: Implement a detailed cost calculator with UI for labor, equipment, materials, profit, and tax, integrated into the crew calculator.)
 // Initialize currency selector
 function initCurrencySelector() {
     const currencySelect = document.getElementById('currencySelect');
@@ -332,7 +351,10 @@ function initCurrencySelector() {
                 customCurrencySymbol = '';
             }
             
+<<<<<<< HEAD
             updateCurrencyUnits();
+=======
+>>>>>>> 35cbe6c (feat: Implement a detailed cost calculator with UI for labor, equipment, materials, profit, and tax, integrated into the crew calculator.)
             calculateTotalCost();
         });
     }
@@ -340,7 +362,10 @@ function initCurrencySelector() {
     if (customInput) {
         customInput.addEventListener('input', function() {
             customCurrencySymbol = this.value.trim();
+<<<<<<< HEAD
             updateCurrencyUnits();
+=======
+>>>>>>> 35cbe6c (feat: Implement a detailed cost calculator with UI for labor, equipment, materials, profit, and tax, integrated into the crew calculator.)
             calculateTotalCost();
         });
     }
@@ -478,6 +503,7 @@ function loadImage(url) {
 async function generateCostPDFContent() {
     const costSection = document.getElementById('costSection');
     const resultsSection = document.getElementById('resultsSection');
+<<<<<<< HEAD
     // Add PDF exporting class for high contrast styles
     document.body.classList.add('pdf-exporting');
     
@@ -487,6 +513,12 @@ async function generateCostPDFContent() {
         el.setAttribute('data-original-display', el.style.display || '');
         el.style.display = 'none';
     });
+=======
+    const actions = document.querySelector('.cost-actions');
+    
+    // Hide actions button
+    if (actions) actions.style.display = 'none';
+>>>>>>> 35cbe6c (feat: Implement a detailed cost calculator with UI for labor, equipment, materials, profit, and tax, integrated into the crew calculator.)
     
     try {
         const { jsPDF } = window.jspdf;
@@ -497,7 +529,11 @@ async function generateCostPDFContent() {
         const headerHeight = 30;
         
         // Load Header Image
+<<<<<<< HEAD
         const headerImg = await loadImage('assets/csi_header.png');
+=======
+        const headerImg = await loadImage('img/csi_header.png');
+>>>>>>> 35cbe6c (feat: Implement a detailed cost calculator with UI for labor, equipment, materials, profit, and tax, integrated into the crew calculator.)
         
         // Define Header Drawing Function
         const drawHeader = (doc) => {
@@ -599,6 +635,7 @@ async function generateCostPDFContent() {
         console.error('PDF Generation Error:', err);
         showError('فشل في إنشاء ملف PDF');
     } finally {
+<<<<<<< HEAD
         // Remove PDF exporting class
         document.body.classList.remove('pdf-exporting');
 
@@ -606,5 +643,8 @@ async function generateCostPDFContent() {
         elementsToHide.forEach(el => {
             el.style.display = el.getAttribute('data-original-display');
         });
+=======
+        if (actions) actions.style.display = 'flex';
+>>>>>>> 35cbe6c (feat: Implement a detailed cost calculator with UI for labor, equipment, materials, profit, and tax, integrated into the crew calculator.)
     }
 }
