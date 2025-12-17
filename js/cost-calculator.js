@@ -2,7 +2,7 @@
 // Cost Calculator Module
 // ========================================
 
-// Note: window.window.currentCrewResults is defined in crew-calculator.html
+// Note: window.currentCrewResults is defined in crew-calculator.html
 
 // Currency symbol mapping
 const currencySymbols = {
@@ -71,10 +71,7 @@ function generateLaborCostInputs() {
     }
     
     labor.forEach((member, index) => {
-<<<<<<< HEAD
         const currencyUnit = getCurrencyUnit('day');
-=======
->>>>>>> 35cbe6c (feat: Implement a detailed cost calculator with UI for labor, equipment, materials, profit, and tax, integrated into the crew calculator.)
         const itemHtml = `
             <div class="cost-input-item" data-type="labor" data-index="${index}">
                 <label>
@@ -91,13 +88,8 @@ function generateLaborCostInputs() {
                            placeholder="0" 
                            min="0" 
                            oninput="calculateTotalCost()">
-<<<<<<< HEAD
                     <span class="unit labor-unit">${currencyUnit}</span>
                     <span class="auto-calculation" id="laborCalc_${index}">= 0 ${getCurrencySymbol()}</span>
-=======
-                    <span class="unit">${t('hourPerDay') || 'ج/يوم'}</span>
-                    <span class="auto-calculation" id="laborCalc_${index}">= 0 ج.م</span>
->>>>>>> 35cbe6c (feat: Implement a detailed cost calculator with UI for labor, equipment, materials, profit, and tax, integrated into the crew calculator.)
                 </div>
             </div>
         `;
@@ -120,10 +112,7 @@ function generateEquipmentCostInputs() {
     }
     
     equipment.forEach((equip, index) => {
-<<<<<<< HEAD
         const currencyUnit = getCurrencyUnit('hour');
-=======
->>>>>>> 35cbe6c (feat: Implement a detailed cost calculator with UI for labor, equipment, materials, profit, and tax, integrated into the crew calculator.)
         const itemHtml = `
             <div class="cost-input-item" data-type="equipment" data-index="${index}">
                 <label>
@@ -140,13 +129,8 @@ function generateEquipmentCostInputs() {
                            placeholder="0" 
                            min="0" 
                            oninput="calculateTotalCost()">
-<<<<<<< HEAD
                     <span class="unit equipment-unit">${currencyUnit}</span>
                     <span class="auto-calculation" id="equipCalc_${index}">= 0 ${getCurrencySymbol()}</span>
-=======
-                    <span class="unit">${t('perUnit') || 'ج/ساعة'}</span>
-                    <span class="auto-calculation" id="equipCalc_${index}">= 0 ج.م</span>
->>>>>>> 35cbe6c (feat: Implement a detailed cost calculator with UI for labor, equipment, materials, profit, and tax, integrated into the crew calculator.)
                 </div>
             </div>
         `;
@@ -296,7 +280,6 @@ function formatCurrency(value) {
     }).format(value) + ' ' + symbol;
 }
 
-<<<<<<< HEAD
 // Get currency symbol based on current selection
 function getCurrencySymbol() {
     const lang = window.currentLang || 'ar';
@@ -332,8 +315,6 @@ function updateCurrencyUnits() {
     });
 }
 
-=======
->>>>>>> 35cbe6c (feat: Implement a detailed cost calculator with UI for labor, equipment, materials, profit, and tax, integrated into the crew calculator.)
 // Initialize currency selector
 function initCurrencySelector() {
     const currencySelect = document.getElementById('currencySelect');
@@ -351,10 +332,7 @@ function initCurrencySelector() {
                 customCurrencySymbol = '';
             }
             
-<<<<<<< HEAD
             updateCurrencyUnits();
-=======
->>>>>>> 35cbe6c (feat: Implement a detailed cost calculator with UI for labor, equipment, materials, profit, and tax, integrated into the crew calculator.)
             calculateTotalCost();
         });
     }
@@ -362,10 +340,7 @@ function initCurrencySelector() {
     if (customInput) {
         customInput.addEventListener('input', function() {
             customCurrencySymbol = this.value.trim();
-<<<<<<< HEAD
             updateCurrencyUnits();
-=======
->>>>>>> 35cbe6c (feat: Implement a detailed cost calculator with UI for labor, equipment, materials, profit, and tax, integrated into the crew calculator.)
             calculateTotalCost();
         });
     }
@@ -503,7 +478,7 @@ function loadImage(url) {
 async function generateCostPDFContent() {
     const costSection = document.getElementById('costSection');
     const resultsSection = document.getElementById('resultsSection');
-<<<<<<< HEAD
+    
     // Add PDF exporting class for high contrast styles
     document.body.classList.add('pdf-exporting');
     
@@ -513,12 +488,6 @@ async function generateCostPDFContent() {
         el.setAttribute('data-original-display', el.style.display || '');
         el.style.display = 'none';
     });
-=======
-    const actions = document.querySelector('.cost-actions');
-    
-    // Hide actions button
-    if (actions) actions.style.display = 'none';
->>>>>>> 35cbe6c (feat: Implement a detailed cost calculator with UI for labor, equipment, materials, profit, and tax, integrated into the crew calculator.)
     
     try {
         const { jsPDF } = window.jspdf;
@@ -529,16 +498,12 @@ async function generateCostPDFContent() {
         const headerHeight = 30;
         
         // Load Header Image
-<<<<<<< HEAD
         const headerImg = await loadImage('assets/csi_header.png');
-=======
-        const headerImg = await loadImage('img/csi_header.png');
->>>>>>> 35cbe6c (feat: Implement a detailed cost calculator with UI for labor, equipment, materials, profit, and tax, integrated into the crew calculator.)
         
         // Define Header Drawing Function
         const drawHeader = (doc) => {
             const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
-            const headerBgColor = isDarkMode ? [20, 20, 20] : [255, 255, 255]; // Use white for light mode header (cleaner)
+            const headerBgColor = isDarkMode ? [20, 20, 20] : [255, 255, 255];
             const textColor = isDarkMode ? [255, 255, 255] : [0, 0, 0];
             
             // Header Background
@@ -548,7 +513,7 @@ async function generateCostPDFContent() {
             // Header Image (Left)
             if (headerImg) {
                 const imgRatio = headerImg.width / headerImg.height;
-                const imgH = 20; // 20mm height
+                const imgH = 20;
                 const imgW = imgH * imgRatio;
                 doc.addImage(headerImg, 'PNG', margin, 5, imgW, imgH);
             } else {
@@ -566,7 +531,7 @@ async function generateCostPDFContent() {
             doc.text('CSI-Calculator', pdfWidth - margin, 18, { align: 'right' });
             
             // Separator Line
-            doc.setDrawColor(102, 126, 234); // Primary color
+            doc.setDrawColor(102, 126, 234);
             doc.setLineWidth(0.5);
             doc.line(margin, 28, pdfWidth - margin, 28);
         };
@@ -576,7 +541,6 @@ async function generateCostPDFContent() {
         
         // 1. Results Section (if visible context)
         if (resultsSection && resultsSection.style.display !== 'none') {
-             // Capture the whole results block as it's usually compact
              sectionsToCapture.push(resultsSection);
         }
         
@@ -584,27 +548,24 @@ async function generateCostPDFContent() {
         if (costSection && costSection.style.display !== 'none') {
             const costChildren = Array.from(costSection.children);
             costChildren.forEach(child => {
-                // Skip actions and hidden elements
                 if (child.classList.contains('cost-actions') || child.style.display === 'none') return;
                 sectionsToCapture.push(child);
             });
         }
         
         // Initialize PDF
-        let cursorY = headerHeight + 5; // Start below header
+        let cursorY = headerHeight + 5;
         drawHeader(pdf);
         
         // Process each section
         for (const section of sectionsToCapture) {
-            // Skip empty/hidden sections
             if (section.offsetHeight === 0) continue;
             
             const canvas = await html2canvas(section, {
                 scale: 2,
                 useCORS: true,
                 logging: false,
-                backgroundColor: '#ffffff' // Force white background for clarity in PDF
-                // Note: If you want dark mode PDF, change this to null or detect theme
+                backgroundColor: '#ffffff'
             });
             
             const imgWidth = pdfWidth - (margin * 2);
@@ -620,7 +581,7 @@ async function generateCostPDFContent() {
             const imgData = canvas.toDataURL('image/png');
             pdf.addImage(imgData, 'PNG', margin, cursorY, imgWidth, imgHeight);
             
-            cursorY += imgHeight + 2; // Add spacing between sections
+            cursorY += imgHeight + 2;
         }
         
         // Save
@@ -635,7 +596,6 @@ async function generateCostPDFContent() {
         console.error('PDF Generation Error:', err);
         showError('فشل في إنشاء ملف PDF');
     } finally {
-<<<<<<< HEAD
         // Remove PDF exporting class
         document.body.classList.remove('pdf-exporting');
 
@@ -643,8 +603,5 @@ async function generateCostPDFContent() {
         elementsToHide.forEach(el => {
             el.style.display = el.getAttribute('data-original-display');
         });
-=======
-        if (actions) actions.style.display = 'flex';
->>>>>>> 35cbe6c (feat: Implement a detailed cost calculator with UI for labor, equipment, materials, profit, and tax, integrated into the crew calculator.)
     }
 }
