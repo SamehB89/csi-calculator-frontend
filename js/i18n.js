@@ -142,6 +142,13 @@ const translations = {
         currencyOther: 'عملة',
         pdfGenerated: 'تم إنشاء التقرير بنجاح (PDF)!',
         
+        // Subtotals
+        laborSubtotal: 'إجمالي تكلفة العمالة:',
+        equipmentSubtotal: 'إجمالي تكلفة المعدات:',
+        materialsSubtotal: 'إجمالي تكلفة المواد:',
+        clearPrices: 'مسح الأسعار',
+        pricesCleared: 'تم مسح الأسعار بنجاح!',
+        
         // AI Planner
         experimentalWarning: 'تحت الإنشاء - تجريبي',
         
@@ -320,6 +327,8 @@ const translations = {
         laborSubtotal: 'Labor Total Cost:',
         equipmentSubtotal: 'Equipment Total Cost:',
         materialsSubtotal: 'Materials Total Cost:',
+        clearPrices: 'Clear Prices',
+        pricesCleared: 'Prices cleared successfully!',
 
         // AI Planner
         experimentalWarning: 'Under Construction - Experimental',

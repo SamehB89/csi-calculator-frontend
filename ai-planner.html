@@ -29,21 +29,18 @@
         }
         
         .planner-container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 2rem auto;
             padding: 0 2rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
         }
         
-        @media (max-width: 1024px) {
+        @media (max-width: 768px) {
             .planner-container {
-                grid-template-columns: 1fr;
+                padding: 0 1rem;
             }
         }
         
-        .chat-section, .gantt-section {
+        .chat-section {
             background: var(--glass-bg);
             backdrop-filter: var(--glass-blur);
             border: 1px solid var(--glass-border);
@@ -51,7 +48,8 @@
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            height: 75vh;
+            height: 80vh;
+            width: 100%;
         }
         
         .section-header {
@@ -329,6 +327,99 @@
             color: white;
             border-color: var(--primary-color);
         }
+        
+        /* Items Selection List */
+        .items-select-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .items-prompt {
+            margin: 0 0 0.5rem 0;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .item-option {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            padding: 0.75rem 1rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+        
+        .item-option:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+        
+        .item-option:hover small {
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .item-option strong {
+            font-size: 0.85rem;
+            color: var(--primary-color);
+        }
+        
+        .item-option:hover strong {
+            color: white;
+        }
+        
+        .item-option span {
+            font-size: 0.9rem;
+        }
+        
+        .item-option small {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+        
+        /* Result Card */
+        .result-card-ai {
+            background: var(--bg-secondary);
+            border: 2px solid var(--success-color);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+        }
+        
+        .result-card-ai .result-header {
+            background: var(--success-color);
+            color: white;
+            padding: 0.75rem 1rem;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        
+        .result-card-ai .result-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .result-card-ai .result-row:last-child {
+            border-bottom: none;
+        }
+        
+        .result-card-ai .result-row.highlight {
+            background: rgba(16, 185, 129, 0.1);
+            font-size: 1.1rem;
+        }
+        
+        .result-card-ai .result-row span {
+            color: var(--text-secondary);
+        }
+        
+        .result-card-ai .result-row strong {
+            color: var(--text-primary);
+        }
     </style>
 </head>
 <body>
@@ -402,22 +493,6 @@
             <div class="input-area">
                 <input type="text" id="userInput" placeholder="اكتب رسالتك..." data-i18n-placeholder="searchPlaceholder">
                 <button id="sendBtn" class="send-btn">➤</button>
-            </div>
-        </div>
-
-        <!-- Gantt Chart Section -->
-        <div class="gantt-section">
-            <div class="section-header">
-                <span class="section-header-icon">📊</span>
-                <h2>Activity Timeline</h2>
-            </div>
-
-            <div id="ganttContent" class="gantt-content">
-                <div class="gantt-placeholder">
-                    <div class="gantt-placeholder-icon">📅</div>
-                    <h3>Gantt Chart</h3>
-                    <p>سيظهر الجدول الزمني هنا بعد إنشاء الخطة</p>
-                </div>
             </div>
         </div>
     </div>

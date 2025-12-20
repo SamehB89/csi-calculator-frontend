@@ -60,6 +60,15 @@ function addLoading() {
   return m;
 }
 
+// Store conversation state
+let conversationState = {
+  status: null,
+  selected_item: null,
+  matched_type: null,
+  unit: null,
+  history: []  // Add conversation history for context
+};
+
 async function sendMessage() {
   const input = document.getElementById("userInput");
   if (!input) return;
@@ -70,29 +79,57 @@ async function sendMessage() {
   addMessage(query, "user");
   input.value = "";
   const loadingMsg = addLoading();
+  
+  // Add to conversation history
+  conversationState.history.push({role: "user", content: query});
 
   try {
-    const res = await fetch("/api/ai", {
+    // Build request based on conversation state
+    const requestData = {
+      query,
+      lang: document.documentElement.lang,
+      history: conversationState.history.slice(-10)  // Send last 10 messages for context
+    };
+    
+    // If we're waiting for quantity and user entered a number
+    if (conversationState.status === 'need_quantity' || conversationState.status === 'select_item') {
+      const qtyMatch = query.match(/[\d.]+/);
+      if (qtyMatch) {
+        requestData.quantity = parseFloat(qtyMatch[0]);
+        if (conversationState.selected_item) {
+          requestData.item_code = conversationState.selected_item;
+        }
+      }
+    }
+    
+    // Use intelligent-ai endpoint for real AI thinking
+    const res = await fetch("/api/intelligent-ai", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        query,
-        lang: document.documentElement.lang
-      })
+      body: JSON.stringify(requestData)
     });
     const data = await res.json();
     loadingMsg.remove();
 
+    // Update conversation state
+    conversationState.status = data.status;
+    
     // Render assistant text
     if (data.text) addMessage(data.text, "assistant");
 
-    // Render table if provided
-    if (data.table && Array.isArray(data.table.rows)) {
-      const tableHtml = buildResultTable(data.table);
-      addMessage(tableHtml, "assistant", true);
+    // If items are returned, show them as clickable options
+    if (data.items && Array.isArray(data.items)) {
+      const itemsHtml = buildItemsList(data.items, data.prompt);
+      addMessage(itemsHtml, "assistant", true);
+    }
+    
+    // If calculation result, show in table and Gantt
+    if (data.status === 'calculated' && data.result) {
+      const resultHtml = buildResultCard(data.result);
+      addMessage(resultHtml, "assistant", true);
       
-      // Build Gantt Chart
-      buildGanttChart(data.table.rows);
+      // Build simple Gantt
+      buildSimpleGantt(data.result);
     }
 
     // Render notes
@@ -102,6 +139,70 @@ async function sendMessage() {
     addMessage("حدث خطأ أثناء المعالجة. حاول مرة أخرى.", "assistant");
     console.error(err);
   }
+}
+
+function buildItemsList(items, prompt) {
+  let html = `<div class="items-select-list">`;
+  if (prompt) html += `<p class="items-prompt">${prompt}</p>`;
+  
+  items.forEach(item => {
+    // Escape description for onclick (remove single quotes that might break JS)
+    const safeDesc = (item.description || '').replace(/'/g, "\\'");
+    html += `
+      <div class="item-option" onclick="selectItem('${item.code}', '${safeDesc}', '${item.unit}')">
+        <strong>${item.code}</strong>
+        <span>${item.description}</span>
+        <small>الوحدة: <strong>${item.unit}</strong> | الإنتاجية: ${item.daily_output || 'N/A'} ${item.unit}/يوم</small>
+      </div>
+    `;
+  });
+  
+  html += `</div>`;
+  return html;
+}
+
+function selectItem(code, description, unit) {
+  conversationState.selected_item = code;
+  conversationState.selected_unit = unit;
+  addMessage(`✅ تم اختيار: ${description}`, "user");
+  addMessage(`الرجاء إدخال الكمية بوحدة (${unit}):`, "assistant");
+  document.getElementById("userInput").focus();
+}
+
+function buildResultCard(result) {
+  return `
+    <div class="result-card-ai">
+      <div class="result-header">📊 نتيجة الحساب</div>
+      <div class="result-row"><span>البند:</span> <strong>${result.description}</strong></div>
+      <div class="result-row"><span>الكمية:</span> ${result.quantity} ${result.unit}</div>
+      <div class="result-row"><span>الإنتاجية اليومية:</span> ${result.daily_output} ${result.unit}/يوم</div>
+      <div class="result-row highlight"><span>⏱️ المدة:</span> <strong>${result.duration_days} يوم</strong></div>
+      <div class="result-row"><span>👷 ساعات العمل:</span> ${result.total_man_hours} ساعة</div>
+      <div class="result-row"><span>🔧 فريق العمل:</span> ${result.crew_structure || 'فريق قياسي'}</div>
+    </div>
+  `;
+}
+
+function buildSimpleGantt(result) {
+  const ganttContent = document.getElementById('ganttContent');
+  if (!ganttContent) return;
+  
+  const days = result.duration_days;
+  
+  ganttContent.innerHTML = `
+    <div class="gantt-chart">
+      <div class="gantt-bar">
+        <div class="gantt-bar-label">${result.description.substring(0, 30)}...</div>
+        <div class="gantt-bar-track">
+          <div class="gantt-bar-fill" style="width: 100%">${days} يوم</div>
+        </div>
+      </div>
+      <div class="gantt-bar" style="margin-top: 1rem; background: var(--primary-gradient); color: white;">
+        <div class="gantt-bar-label">📅 إجمالي المدة</div>
+        <div style="font-weight: 700; font-size: 1.25rem;">${days} يوم</div>
+      </div>
+    </div>
+  `;
 }
 
 function buildResultTable(tbl) {

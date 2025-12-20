@@ -423,6 +423,37 @@ function loadSavedPrices() {
     }
 }
 
+// Clear all prices and reset to defaults
+function clearAllPrices() {
+    // Clear all labor price inputs
+    document.querySelectorAll('.labor-price').forEach(input => {
+        input.value = '';
+    });
+    
+    // Clear all equipment price inputs
+    document.querySelectorAll('.equipment-price').forEach(input => {
+        input.value = '';
+    });
+    
+    // Clear materials cost
+    const materialsCost = document.getElementById('materialsCost');
+    if (materialsCost) materialsCost.value = '';
+    
+    // Reset modifiers to defaults
+    const profitMargin = document.getElementById('profitMargin');
+    const vatRate = document.getElementById('vatRate');
+    if (profitMargin) profitMargin.value = '15';
+    if (vatRate) vatRate.value = '14';
+    
+    // Clear saved prices from localStorage
+    localStorage.removeItem('csi_saved_prices');
+    
+    // Recalculate
+    calculateTotalCost();
+    
+    showSuccessMessage(t('pricesCleared'));
+}
+
 // Show success message
 function showSuccessMessage(message) {
     // Remove existing messages
@@ -479,11 +510,8 @@ async function generateCostPDFContent() {
     const costSection = document.getElementById('costSection');
     const resultsSection = document.getElementById('resultsSection');
     
-    // Add PDF exporting class for high contrast styles
-    document.body.classList.add('pdf-exporting');
-    
-    // Hide visibility of specified elements
-    const elementsToHide = document.querySelectorAll('.cost-actions, .calculate-btn');
+    // Hide visibility of specified elements (buttons)
+    const elementsToHide = document.querySelectorAll('.cost-actions, .calculate-btn, #showCostBtn');
     elementsToHide.forEach(el => {
         el.setAttribute('data-original-display', el.style.display || '');
         el.style.display = 'none';
@@ -502,12 +530,8 @@ async function generateCostPDFContent() {
         
         // Define Header Drawing Function
         const drawHeader = (doc) => {
-            const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
-            const headerBgColor = isDarkMode ? [20, 20, 20] : [255, 255, 255];
-            const textColor = isDarkMode ? [255, 255, 255] : [0, 0, 0];
-            
-            // Header Background
-            doc.setFillColor(headerBgColor[0], headerBgColor[1], headerBgColor[2]);
+            // Header Background (white)
+            doc.setFillColor(255, 255, 255);
             doc.rect(0, 0, pdfWidth, headerHeight, 'F');
             
             // Header Image (Left)
@@ -520,68 +544,81 @@ async function generateCostPDFContent() {
                 // Fallback text
                 doc.setFont('times', 'bold');
                 doc.setFontSize(14);
-                doc.setTextColor(textColor[0], textColor[1], textColor[2]);
+                doc.setTextColor(0, 0, 0);
                 doc.text('CSI+Sameh', margin, 18);
             }
             
             // Text "CSI-Calculator" (Right)
             doc.setFont('times', 'bold');
             doc.setFontSize(16);
-            doc.setTextColor(textColor[0], textColor[1], textColor[2]);
+            doc.setTextColor(0, 0, 0);
             doc.text('CSI-Calculator', pdfWidth - margin, 18, { align: 'right' });
             
-            // Separator Line
+            // Separator Line (Purple)
             doc.setDrawColor(102, 126, 234);
             doc.setLineWidth(0.5);
             doc.line(margin, 28, pdfWidth - margin, 28);
         };
         
-        // Collect Sections to Capture
-        const sectionsToCapture = [];
-        
-        // 1. Results Section (if visible context)
-        if (resultsSection && resultsSection.style.display !== 'none') {
-             sectionsToCapture.push(resultsSection);
-        }
-        
-        // 2. Cost Section Breakdown
-        if (costSection && costSection.style.display !== 'none') {
-            const costChildren = Array.from(costSection.children);
-            costChildren.forEach(child => {
-                if (child.classList.contains('cost-actions') || child.style.display === 'none') return;
-                sectionsToCapture.push(child);
-            });
-        }
-        
         // Initialize PDF
         let cursorY = headerHeight + 5;
         drawHeader(pdf);
         
-        // Process each section
-        for (const section of sectionsToCapture) {
-            if (section.offsetHeight === 0) continue;
-            
-            const canvas = await html2canvas(section, {
+        // ========== PAGE 1: Results Section ==========
+        if (resultsSection && resultsSection.style.display !== 'none') {
+            const canvas = await html2canvas(resultsSection, {
                 scale: 2,
                 useCORS: true,
                 logging: false,
-                backgroundColor: '#ffffff'
+                backgroundColor: null // Preserve original colors!
             });
             
             const imgWidth = pdfWidth - (margin * 2);
             const imgHeight = (canvas.height * imgWidth) / canvas.width;
             
-            // Check page overflow
-            if (cursorY + imgHeight > pdfHeight - margin) {
-                pdf.addPage();
-                drawHeader(pdf);
-                cursorY = headerHeight + 5;
-            }
-            
             const imgData = canvas.toDataURL('image/png');
             pdf.addImage(imgData, 'PNG', margin, cursorY, imgWidth, imgHeight);
             
-            cursorY += imgHeight + 2;
+            cursorY += imgHeight + 5;
+        }
+        
+        // ========== PAGE 2+: Cost Calculator Section (NEW PAGE) ==========
+        if (costSection && costSection.style.display !== 'none') {
+            // Start Cost Calculator on a NEW PAGE
+            pdf.addPage();
+            drawHeader(pdf);
+            cursorY = headerHeight + 5;
+            
+            // Capture each child of cost section
+            const costChildren = Array.from(costSection.children);
+            for (const child of costChildren) {
+                if (child.classList.contains('cost-actions') || 
+                    child.classList.contains('section-header') === false && 
+                    child.style.display === 'none') continue;
+                if (child.offsetHeight === 0) continue;
+                
+                const canvas = await html2canvas(child, {
+                    scale: 2,
+                    useCORS: true,
+                    logging: false,
+                    backgroundColor: null // Preserve original colors!
+                });
+                
+                const imgWidth = pdfWidth - (margin * 2);
+                const imgHeight = (canvas.height * imgWidth) / canvas.width;
+                
+                // Check page overflow
+                if (cursorY + imgHeight > pdfHeight - margin) {
+                    pdf.addPage();
+                    drawHeader(pdf);
+                    cursorY = headerHeight + 5;
+                }
+                
+                const imgData = canvas.toDataURL('image/png');
+                pdf.addImage(imgData, 'PNG', margin, cursorY, imgWidth, imgHeight);
+                
+                cursorY += imgHeight + 2;
+            }
         }
         
         // Save
@@ -596,9 +633,6 @@ async function generateCostPDFContent() {
         console.error('PDF Generation Error:', err);
         showError('فشل في إنشاء ملف PDF');
     } finally {
-        // Remove PDF exporting class
-        document.body.classList.remove('pdf-exporting');
-
         // Restore elements
         elementsToHide.forEach(el => {
             el.style.display = el.getAttribute('data-original-display');
