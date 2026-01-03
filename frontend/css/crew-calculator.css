@@ -1,0 +1,476 @@
+/* ========================================
+   CSI Crew Calculator - Premium Styling
+   ======================================== */
+
+/* Container */
+.calculator-container {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 30px;
+}
+
+.page-title {
+    text-align: center;
+    color: #1a202c;
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 40px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Section Cards */
+.section-card {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.section-card:hover {
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+.section-header {
+    margin-bottom: 25px;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 15px;
+}
+
+.section-header h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2d3748;
+    margin: 0 0 8px 0;
+}
+
+.section-subtitle {
+    margin: 0;
+    color: #718096;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Form Grid */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #4a5568;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.label-icon {
+    font-size: 18px;
+}
+
+.form-group select,
+.form-group input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #2d3748;
+    background: white;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.form-group select:focus,
+.form-group input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+.form-group select:disabled {
+    background: #f7fafc;
+    color: #a0aec0;
+    cursor: not-allowed;
+}
+
+.form-group select option {
+    padding: 10px;
+}
+
+/* Item Info Grid */
+.item-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.info-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+.info-card.full-width {
+    grid-column: 1 / -1;
+}
+
+.info-icon {
+    font-size: 36px;
+    opacity: 0.9;
+}
+
+.info-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.info-label {
+    font-size: 13px;
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+.info-value {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.info-unit {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+/* Crew Structure Card Styling */
+.crew-structure-title {
+    font-weight: 700 !important;
+    text-decoration: underline;
+    font-size: 16px !important;
+}
+
+.crew-structure-inline {
+    margin-top: 10px;
+    line-height: 1.8;
+}
+
+.crew-line {
+    padding: 4px 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+}
+
+.crew-separator {
+    border: none;
+    border-top: 2px solid rgba(255, 255, 255, 0.3);
+    margin: 10px 0;
+}
+
+
+/* Crew Details Section */
+.crew-details-section {
+    margin-top: 30px;
+}
+
+.crew-details-section h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 15px;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.crew-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.crew-table thead {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #1a202c;
+}
+
+.crew-table th {
+    padding: 16px;
+    text-align: right;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.crew-table td {
+    padding: 14px 16px;
+    text-align: right;
+    border-bottom: 1px solid #e2e8f0;
+    color: #4a5568;
+}
+
+.crew-table tbody tr:hover {
+    background: #f7fafc;
+}
+
+.crew-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.crew-number {
+    font-weight: 600;
+    color: #667eea;
+}
+
+.crew-qty {
+    font-weight: 700;
+    color: #2d3748;
+}
+
+.crew-desc {
+    color: #718096;
+}
+
+.no-data {
+    text-align: center !important;
+    color: #a0aec0;
+    font-style: italic;
+    padding: 30px !important;
+}
+
+/* Quantity Input Grid */
+.quantity-input-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.input-unit {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #a0aec0;
+    font-size: 14px;
+    font-weight: 600;
+    pointer-events: none;
+    margin-top: 18px;
+}
+
+/* Calculate Button */
+.calculate-btn {
+    width: 100%;
+    padding: 18px 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.calculate-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(102, 126, 234, 0.4);
+}
+
+.calculate-btn:active {
+    transform: translateY(-1px);
+}
+
+.btn-icon {
+    font-size: 22px;
+}
+
+/* Results Grid */
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.result-card {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+}
+
+.result-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.result-icon {
+    font-size: 40px;
+}
+
+.result-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.result-label {
+    font-size: 13px;
+    color: #718096;
+    font-weight: 600;
+}
+
+.result-value {
+    font-size: 28px;
+    font-weight: 800;
+    color: #2d3748;
+}
+
+.result-unit {
+    font-size: 12px;
+    color: #a0aec0;
+    font-weight: 600;
+}
+
+/* Crew Breakdown */
+.crew-breakdown {
+    margin-top: 30px;
+}
+
+.crew-breakdown h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 15px;
+}
+
+/* Error Message */
+.error-message {
+    background: linear-gradient(135deg, #fed7d7 0%, #feb2b2 100%);
+    color: #c53030;
+    padding: 18px 24px;
+    border-radius: 12px;
+    margin-top: 20px;
+    font-weight: 600;
+    border-left: 5px solid #c53030;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .calculator-container {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .page-title {
+        font-size: 24px;
+    }
+
+    .section-card {
+        padding: 20px;
+    }
+
+    .form-grid,
+    .item-info-grid,
+    .quantity-input-grid,
+    .results-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-card.full-width {
+        grid-column: 1;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-card {
+    animation: fadeIn 0.5s ease;
+}
+
+/* Loading State */
+.loading {
+    pointer-events: none;
+    opacity: 0.6;
+    position: relative;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border: 4px solid #e2e8f0;
+    border-top-color: #667eea;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}

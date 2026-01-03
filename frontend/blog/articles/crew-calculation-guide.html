@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كيفية حساب فريق العمل للمشاريع الإنشائية - CSI Calculator</title>
+    <meta name="description" content="دليل شامل لحساب عدد العمال والمعدات المطلوبة لأي مشروع بناء باستخدام معايير CSI وأفضل الممارسات العالمية">
+    <meta name="keywords" content="حساب فريق العمل, تقدير العمالة, CSI, معايير البناء, إنتاجية العمال, تكلفة العمالة">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="كيفية حساب فريق العمل للمشاريع الإنشائية">
+    <meta property="og:description" content="دليل شامل لحساب عدد العمال والمعدات المطلوبة لأي مشروع بناء">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://csi-calc.vercel.app/blog/articles/crew-calculation-guide.html">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="كيفية حساب فريق العمل للمشاريع الإنشائية">
+    <meta name="twitter:description" content="دليل شامل لحساب عدد العمال والمعدات المطلوبة">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "كيفية حساب فريق العمل للمشاريع الإنشائية",
+      "author": {
+        "@type": "Person",
+        "name": "Sameh Badawy Sayed"
+      },
+      "datePublished": "2026-01-02",
+      "dateModified": "2026-01-02",
+      "description": "دليل شامل لحساب عدد العمال والمعدات المطلوبة لأي مشروع بناء باستخدام معايير CSI",
+      "articleSection": "تقدير التكلفة",
+      "keywords": "حساب فريق العمل, تقدير العمالة, CSI"
+    }
+    </script>
+    
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5429423113977975" crossorigin="anonymous"></script>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/lang-toggle.css">
+    <link rel="stylesheet" href="../../css/blog.css">
+    <link rel="stylesheet" href="../../css/ads.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Scripts -->
+    <script src="../../js/i18n.js"></script>
+    <script src="../../js/ads.js"></script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../js/blog-i18n.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../../index.html" class="logo-container">
+                <img src="../../assets/logo.png" alt="SAMEH Logo" class="logo-image">
+                <span class="logo-text">CSI Calculator</span>
+            </a>
+            <div class="nav-links">
+                <a href="../../index.html" data-i18n="home" data-icon="🏠">
+                    <span>تصفح</span>
+                </a>
+                <a href="../../crew-calculator.html" data-i18n="crewCalculator" data-icon="🧮">
+                    <span>الحاسبة</span>
+                </a>
+                <a href="../../ai-planner.html" data-i18n="aiPlanner" data-icon="🤖">
+                    <span>المخطط الذكي</span>
+                </a>
+                <a href="../index.html" class="active" data-i18n="blog" data-icon="📚">
+                    <span>دليل التشغيل+مقالات فنية</span>
+                </a>
+                <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">
+                    🌙
+                </button>
+                <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()">
+                    <span id="langIcon">EN</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Header -->
+    <div class="article-header">
+        <span class="article-category">تقدير التكلفة</span>
+        <h1>كيفية حساب فريق العمل للمشاريع الإنشائية</h1>
+        <div class="article-meta">
+            <span class="article-date">2 يناير 2026</span>
+            <span class="article-read-time">10 دقائق قراءة</span>
+        </div>
+    </div>
+
+    <!-- Article Body -->
+    <div class="article-body">
+        <h2>📋 مقدمة</h2>
+        <p>
+            يعتبر حساب فريق العمل المطلوب لأي مشروع إنشائي من أهم العوامل التي تحدد نجاح المشروع من حيث الوقت والتكلفة. التقدير الصحيح لعدد العمال والمعدات يساعد على:
+        </p>
+        <ul>
+            <li><strong>إنجاز المشروع في الوقت المحدد</strong> دون تأخيرات</li>
+            <li><strong>التحكم في التكاليف</strong> وتجنب الهدر في العمالة</li>
+            <li><strong>تحسين الإنتاجية</strong> وجودة العمل</li>
+            <li><strong>تجنب الاكتظاظ</strong> الذي يقلل من كفاءة العمل</li>
+        </ul>
+
+        <h2>🎯 ما هي معايير CSI؟</h2>
+        <p>
+            معايير <strong>Construction Specifications Institute (CSI)</strong> هي نظام عالمي لتصنيف وتنظيم معلومات البناء. توفر هذه المعايير بيانات دقيقة عن:
+        </p>
+        <ul>
+            <li>تصنيف موحد لأعمال البناء (16 قسم رئيسي)</li>
+            <li>هيكلة المواصفات والرسومات الفنية</li>
+            <li>معدلات الإنتاجية المعيارية للأنشطة المختلفة</li>
+            <li>الناتج اليومي المتوقع (Daily Output)</li>
+        </ul>
+
+        <blockquote>
+            <strong>💡 نصيحة:</strong> استخدام معايير CSI يضمن لك تقديرات موثوقة ومجربة عالمياً،  مما يقلل من المخاطر المرتبطة بالتقدير.
+        </blockquote>
+
+        <h2>🧮 كيفية حساب فريق العمل خطوة بخطوة</h2>
+        
+        <h3>الخطوة 1: تحديد نوع العمل والكمية</h3>
+        <p>
+            أول خطوة هي تحديد نوع العمل المطلوب بدقة والكمية المراد إنجازها. على سبيل المثال:
+        </p>
+        <ul>
+            <li>صب خرسانة عادية: 100 متر مكعب</li>
+            <li>أعمال بناء طوب: 500 متر مربع</li>
+            <li>أعمال حديد تسليح: 10 طن</li>
+        </ul>
+
+        <h3>الخطوة 2: استخدام حاسبة CSI</h3>
+        <p>
+            استخدم <a href="../../crew-calculator.html" style="color: var(--primary-color); font-weight: 600;">حاسبة فريق العمل</a> في موقعنا:
+        </p>
+        <ol>
+            <li>اختر نوع النشاط من القائمة (مثلاً: "صب خرسانة عادية")</li>
+            <li>أدخل الكمية المطلوبة</li>
+            <li>سيظهر لك تلقائياً:
+                <ul>
+                    <li>عدد العمال المطلوب</li>
+                    <li>الناتج اليومي</li>
+                    <li>المدة المتوقعة للإنجاز</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h3>الخطوة 3: فهم النتائج</h3>
+        <p>
+            عند استخدام الحاسبة، ستحصل على معلومات مثل:
+        </p>
+        <ul>
+            <li><strong>Daily Output:</strong> الناتج اليومي المتوقع (بالوحدة المحددة/يوم)</li>
+            <li><strong>Labor-Hours:</strong> ساعات العمل الإجمالية المطلوبة</li>
+            <li><strong>Crew Composition:</strong> تركيبة الفريق (عمال، نجارين، حدادين، معدات)</li>
+        </ul>
+
+        <h2>📊 مثال عملي: مشروع فيلا سكنية</h2>
+        <p>
+            لنفترض أن لديك مشروع فيلا سكنية بالمواصفات التالية:
+        </p>
+        <ul>
+            <li>خرسانة عادية للأساسات: 50 م³</li>
+            <li>خرسانة مسلحة للأعمدة والأسقف: 80 م³</li>
+            <li>أعمال بناء طوب: 300 م²</li>
+        </ul>
+
+        <h3>الحسابات المطلوبة:</h3>
+        
+        <p><strong>1. الأساسات (خرسانة عادية):</strong></p>
+        <ul>
+            <li>الفريق النموذجي: 1 فريق من (1 مشرف صب + 4 عمال صب)</li>
+            <li>الناتج اليومي: 15-20 م³/يوم (حسب الظروف)</li>
+            <li>المدة: 50 ÷ 17.5 = 2.9 يوم ≈ 3 أيام</li>
+        </ul>
+
+        <p><strong>2. الأعمدة والأسقف (خرسانة مسلحة):</strong></p>
+        <ul>
+            <li>الفريق النموذجي: شغالة نجارة (1 نجار + 2 مساعد) + شغالة حدادة (1 حداد + 2 مساعد) + شغالة صب (1 مشرف + 3 عمال)</li>
+            <li>الناتج اليومي: 10-12 م³/يوم</li>
+            <li>المدة: 80 ÷ 11 = 7.3 يوم ≈ 8 أيام</li>
+        </ul>
+
+        <p><strong>3. أعمال البناء:</strong></p>
+        <ul>
+            <li>الفريق النموذجي: 1 بنّاء + 1 مساعد</li>
+            <li>الناتج اليومي: 35-45 م²/يوم (حسب نوع الطوب)</li>
+            <li>المدة: 300 ÷ 40 = 7.5 يوم ≈ 8 أيام</li>
+        </ul>
+
+        <h2>⚠️ أخطاء شائعة يجب تجنبها</h2>
+        
+        <h3>1. عدم مراعاة الظروف المحلية</h3>
+        <p>
+            معدلات الإنتاجية تختلف حسب:
+        </p>
+        <ul>
+            <li>مهارة العمال المحليين ومستوى التدريب</li>
+            <li>ظروف الطقس (الحرارة، الأمطار، الرطوبة)</li>
+            <li>توفر المواد والمعدات في الموقع</li>
+            <li>صعوبة الوصول للموقع</li>
+        </ul>
+
+        <h3>2. إهمال أوقات التوقف والتجهيز</h3>
+        <p>
+            احسب 10-15% وقت إضافي لـ:
+        </p>
+        <ul>
+            <li>تجهيز الموقع ونقل المواد</li>
+            <li>الاستراحات وأوقات الصلاة</li>
+            <li>الصيانة الدورية للمعدات</li>
+            <li>معالجة المشاكل الطارئة</li>
+        </ul>
+
+        <h3>3. عدم التخطيط للتداخل بين الأنشطة</h3>
+        <p>
+            بعض الأنشطة يمكن تنفيذها بالتوازي، مما يوفر الوقت والتكلفة. استخدم مخططات CPM أو PERT لتحسين الجدولة.
+        </p>
+
+        <h2>💡 نصائح لتحسين الإنتاجية</h2>
+        <ul>
+            <li><strong>استخدم العمالة الماهرة:</strong> العامل الماهر ينجز ضعف العامل العادي بجودة أفضل</li>
+            <li><strong>وفر المعدات المناسبة:</strong> الأدوات الجيدة تزيد الإنتاجية بنسبة 30-40%</li>
+            <li><strong>خطط الجدول الزمني:</strong> تجنب توقف العمال بسبب نقص المواد</li>
+            <li><strong>راقب الأداء يومياً:</strong> قارن الإنجاز الفعلي بالمخطط واتخذ إجراءات تصحيحية فورية</li>
+            <li><strong>احفظ السلامة:</strong> بيئة العمل الآمنة تزيد من إنتاجية العمال</li>
+        </ul>
+
+        <h2>🚀 استخدم أدواتنا المجانية</h2>
+        <p>
+            موقع CSI Calculator يوفر لك أدوات مجانية لتسهيل عملك:
+        </p>
+        <ul>
+            <li><a href="../../crew-calculator.html" style="color: var(--primary-color); font-weight: 600;">🧮 حاسبة فريق العمل</a>: احسب عدد العمال والمدة لأي نشاط</li>
+            <li><a href="../../ai-planner.html" style="color: var(--primary-color); font-weight: 600;">🤖 المخطط الذكي</a>: خطط مشروعك إلكترونياً بالذكاء الاصطناعي</li>
+            <li><a href="../../crew-calculator.html" style="color: var(--primary-color); font-weight: 600;">📚 قاعدة بيانات CSI</a>: تصفح آلاف الأنشطة والمعدلات</li>
+        </ul>
+
+        <h2>📝 الخلاصة</h2>
+        <p>
+            حساب فريق العمل بدقة هو أساس نجاح أي مشروع إنشائي. باستخدام معايير CSI وأدواتنا المجانية، يمكنك:
+        </p>
+        <ul>
+            <li>تقدير التكاليف بدقة عالية</li>
+            <li>إنجاز المشروع في الوقت المحدد</li>
+            <li>تجنب الهدر في العمالة والمواد</li>
+            <li>تحسين الإنتاجية والجودة</li>
+        </ul>
+
+        <p style="margin-top: 2rem; padding: 1.5rem; background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%); border-radius: var(--radius-md); border-right: 4px solid var(--primary-color);">
+            <strong>👨‍💼 ابدأ التقدير الصحيح الآن!</strong><br>
+            جرب <a href="../../crew-calculator.html" style="color: var(--primary-color); font-weight: 600;">حاسبة فريق العمل</a> الآن واحصل على نتائج فورية لمشروعك!
+            <br><br>
+            <strong>🙋‍♂️ هل لديك أسئلة؟</strong> تواصل معي على صفحتي على الفيسبوك: <a href="https://www.facebook.com/Sameh.Badawy.Sayed" target="_blank" style="color: var(--primary-color); text-decoration: underline;">Sameh Badawy Sayed</a>
+        </p>
+    </div>
+
+    <!-- Share Section -->
+    <div class="share-section">
+        <h3>شارك هذا المقال</h3>
+        <div class="share-buttons">
+            <button class="share-btn twitter" onclick="shareOnTwitter()">
+                🐦 Twitter
+            </button>
+            <button class="share-btn facebook" onclick="shareOnFacebook()">
+                📘 Facebook
+            </button>
+            <button class="share-btn linkedin" onclick="shareOnLinkedIn()">
+                💼 LinkedIn
+            </button>
+            <button class="share-btn email" onclick="shareViaEmail()">
+                📧 Email
+            </button>
+        </div>
+    </div>
+
+    <!-- Related Articles -->
+    <div class="related-articles">
+        <h2>مقالات ذات صلة</h2>
+        <div class="articles-grid">
+            <a href="csi-standards-guide.html" class="article-card">
+                <div class="article-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                <div class="article-content">
+                    <span class="article-category">معايير CSI</span>
+                    <h2 class="article-title">دليل شامل لمعايير معهد مواصفات البناء</h2>
+                    <p class="article-excerpt">تعرف على تاريخ ومكونات معايير CSI وكيفية تطبيقها</p>
+                </div>
+            </a>
+            <a href="cost-estimation-mistakes.html" class="article-card">
+                <div class="article-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+                <div class="article-content">
+                    <span class="article-category">تقدير التكلفة</span>
+                    <h2 class="article-title">أخطاء شائعة في تقدير التكلفة</h2>
+                    <p class="article-excerpt">تعلم كيفية تجنب الأخطاء التي تؤدي لزيادة التكاليف</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p class="footer-text">
+                CSI Crew Calculator • Built with <span class="footer-heart">❤️</span> by <span class="footer-author">Sameh Badawy Sayed</span>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const pageTitle = encodeURIComponent(document.title);
+        const pageUrl = encodeURIComponent(window.location.href);
+
+        function shareOnTwitter() {
+            window.open(`https://twitter.com/intent/tweet?text=${pageTitle}&url=${pageUrl}`, '_blank');
+        }
+
+        function shareOnFacebook() {
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`, '_blank');
+        }
+
+        function shareOnLinkedIn() {
+            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${pageUrl}`, '_blank');
+        }
+
+        function shareViaEmail() {
+            window.location.href = `mailto:?subject=${pageTitle}&body=${pageUrl}`;
+        }
+    </script>
+</body>
+</html>

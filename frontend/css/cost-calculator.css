@@ -1,0 +1,540 @@
+/* ========================================
+   Cost Calculator Styles
+   ======================================== */
+
+/* Cost Category Sections */
+.cost-category {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--border-color);
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.cost-category h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+}
+
+.category-note {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+/* Cost Inputs Grid */
+.cost-inputs-grid {
+    display: grid;
+    gap: 1rem;
+    max-width: 100%;
+}
+
+.cost-input-item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+    background: var(--bg-primary);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-color);
+    max-width: 100%;
+}
+
+.cost-input-item label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    min-width: 0;
+    word-wrap: break-word;
+}
+
+.input-label {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.input-details {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.input-hint {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.input-with-unit {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+}
+
+.cost-input {
+    width: 120px;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: left;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    transition: all var(--transition-fast);
+}
+
+.cost-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+.cost-input::placeholder {
+    color: var(--text-muted);
+}
+
+.input-with-unit .unit {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    min-width: 40px;
+}
+
+.auto-calculation {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    min-width: 100px;
+    text-align: left;
+}
+
+/* Subtotal Row */
+.subtotal-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 1rem;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    border-radius: var(--radius-sm);
+    color: white;
+    font-weight: 600;
+    max-width: 100%;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.subtotal-value {
+    font-size: 1.2rem;
+}
+
+/* Materials Section */
+.materials-section .checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 0.5rem 0;
+}
+
+.materials-section input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+#materialsCostSection {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--border-color);
+}
+
+.material-input {
+    background: var(--bg-tertiary);
+}
+
+/* Modifiers Section */
+.modifiers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.modifier-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.modifier-item label {
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.modifier-item .cost-input {
+    width: 100%;
+}
+
+/* Cost Summary */
+.cost-summary {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    border: 2px solid var(--primary-color);
+    max-width: 100%;
+}
+
+.cost-summary h4 {
+    margin: 0 0 1rem 0;
+    color: var(--primary-color);
+}
+
+.summary-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border-color);
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    max-width: 100%;
+}
+
+.summary-line:last-child {
+    border-bottom: none;
+}
+
+.summary-line span:first-child {
+    color: var(--text-secondary);
+    flex: 1;
+    min-width: 0;
+}
+
+.summary-line span:last-child {
+    font-weight: 600;
+    color: var(--text-primary);
+    flex-shrink: 0;
+}
+
+.summary-subtotal {
+    background: var(--bg-tertiary);
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-sm);
+    margin: 0.5rem 0;
+}
+
+.summary-total {
+    background: linear-gradient(135deg, var(--success-color) 0%, #059669 100%);
+    color: white !important;
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.summary-total span {
+    color: white !important;
+}
+
+.unit-price {
+    background: var(--bg-tertiary);
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-sm);
+}
+
+.unit-price span:last-child {
+    color: var(--primary-color);
+}
+
+/* Cost Actions */
+.cost-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.btn-success {
+    background: linear-gradient(135deg, var(--success-color) 0%, #059669 100%);
+    color: white;
+    border: none;
+}
+
+.btn-success:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+.btn-outline:hover {
+    background: var(--bg-secondary);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+/* Danger Button */
+.btn-danger {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: white !important;
+    border: none;
+}
+
+.btn-danger:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+}
+
+.btn-danger span {
+    color: white !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cost-input-item {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+    
+    .input-with-unit {
+        justify-content: flex-start;
+        width: 100%;
+    }
+    
+    .cost-input {
+        width: 100%;
+        max-width: 200px;
+    }
+    
+    .modifiers-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cost-actions {
+        flex-direction: column;
+    }
+    
+    .cost-actions .btn {
+        width: 100%;
+    }
+    
+    .summary-total {
+        font-size: 1rem;
+    }
+    
+    .subtotal-row {
+        font-size: 0.9rem;
+    }
+    
+    .summary-line {
+        font-size: 0.9rem;
+    }
+}
+
+/* Animation for cost section */
+#costSection {
+    animation: fadeInUp 0.5s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Success message */
+.success-message {
+    background: var(--success-color);
+    color: white;
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    text-align: center;
+    margin-top: 1rem;
+    animation: fadeInUp 0.3s ease;
+}
+
+/* ========================================
+   Button Contrast Fixes
+   ======================================== */
+
+/* Ensure button text is always visible */
+.btn-success,
+.btn-success span {
+    color: #ffffff !important;
+}
+
+/* Light mode - ensure button text contrast */
+:root .btn-success,
+:root .btn-success span,
+[data-theme="light"] .btn-success,
+[data-theme="light"] .btn-success span {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark mode button contrast */
+[data-theme="dark"] .btn-success,
+[data-theme="dark"] .btn-success span {
+    color: #ffffff !important;
+}
+
+/* Currency Selector Styles */
+#currencySection {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+#currencySection .input-label {
+    font-weight: 600;
+    min-width: 60px;
+}
+
+#currencySelect {
+    min-width: 200px;
+    max-width: 300px;
+}
+
+#customCurrency {
+    min-width: 120px;
+    max-width: 150px;
+}
+
+#customCurrency.hidden {
+    display: none;
+}
+
+/* Subtotal Row Text Contrast */
+.subtotal-row,
+.subtotal-row span {
+    color: #ffffff !important;
+}
+
+/* Summary Line Contrast Fix */
+.summary-total,
+.summary-total span {
+    color: #ffffff !important;
+}
+
+
+/* ========================================
+   Dark Mode Background Fixes
+   ======================================== */
+[data-theme="dark"] .section-card,
+[data-theme="dark"] .crew-table,
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group select,
+[data-theme="dark"] .cost-input,
+[data-theme="dark"] .result-card,
+[data-theme="dark"] .info-card {
+    background-color: #1f2937 !important;
+    color: #e2e8f0 !important;
+    border-color: #374151 !important;
+}
+
+[data-theme="dark"] .crew-table th {
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%) !important;
+    color: #f8fafc !important; 
+}
+
+[data-theme="dark"] .crew-table td {
+    color: #e2e8f0 !important;
+    border-bottom-color: #374151 !important;
+}
+
+[data-theme="dark"] .crew-table tbody tr:hover {
+    background-color: #374151 !important;
+}
+
+[data-theme="dark"] .cost-input-item {
+    background-color: #111827 !important;
+    border-color: #374151 !important;
+}
+
+[data-theme="dark"] .unit-price,
+[data-theme="dark"] .summary-subtotal {
+    background-color: #111827 !important;
+}
+
+/* Ensure white text on specific colored buttons is maintained */
+[data-theme="dark"] .btn-primary, 
+[data-theme="dark"] .btn-success,
+[data-theme="dark"] .btn-danger {
+    color: white !important;
+}
+
+[data-theme="dark"] .cost-summary {
+    background-color: #1f2937 !important;
+}
+
+/* ========================================
+   PDF Export High Contrast Styles
+   ======================================== */
+.pdf-exporting .glass-card,
+.pdf-exporting .section-card,
+.pdf-exporting .result-card,
+.pdf-exporting .info-card {
+    background: #ffffff !important;
+    backdrop-filter: none !important;
+    box-shadow: none !important;
+    border: 1px solid #000000 !important;
+    color: #000000 !important;
+}
+
+.pdf-exporting h1, 
+.pdf-exporting h2, 
+.pdf-exporting h3, 
+.pdf-exporting h4, 
+.pdf-exporting h5, 
+.pdf-exporting h6,
+.pdf-exporting p, 
+.pdf-exporting span, 
+.pdf-exporting div, 
+.pdf-exporting label, 
+.pdf-exporting th, 
+.pdf-exporting td {
+    color: #000000 !important;
+    text-shadow: none !important;
+}
+
+.pdf-exporting .subtotal-row,
+.pdf-exporting .summary-total {
+    background: #f0f0f0 !important;
+    color: #000000 !important;
+    border: 1px solid #000000 !important;
+}
+
+.pdf-exporting .subtotal-row span,
+.pdf-exporting .summary-total span {
+    color: #000000 !important;
+}
+
+/* Force table borders to be visible in PDF */
+.pdf-exporting table, 
+.pdf-exporting th, 
+.pdf-exporting td {
+    border-color: #000000 !important;
+}

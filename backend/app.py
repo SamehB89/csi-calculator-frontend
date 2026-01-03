@@ -1397,7 +1397,7 @@ def intelligent_ai():
 {csi_context}
 
 ## المحادثة السابقة:
-{json.dumps(conversation_history[-10:], ensure_ascii=False) if conversation_history else "لا توجد محادثة سابقة"}
+{json.dumps(conversation_history[-30:], ensure_ascii=False) if conversation_history else "لا توجد محادثة سابقة"}
 
 ## استفسار المستخدم الحالي:
 {query}
