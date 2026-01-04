@@ -1,0 +1,1916 @@
+{
+  "version": "2.0",
+  "last_updated": "2026-01-04",
+  "categories": [
+    {
+      "category_id": "CONC",
+      "category_name_ar": "أعمال الخرسانة",
+      "category_name_en": "Concrete Works",
+      "csi_division": "Division 03",
+      "items": [
+        {
+          "item_key": "CONC_FOOT_ISO_PLAIN",
+          "item_name_ar": "قواعد منفصلة - عادية",
+          "item_name_en": "Plain isolated footings",
+          "synonyms_ar": [
+            "قاعدة منفصلة",
+            "قواعد منفصلة عادية",
+            "isolated foundation",
+            "أساسات منفصلة"
+          ],
+          "synonyms_en": [
+            "isolated footing",
+            "plain footing",
+            "pad foundation",
+            "isolated foundation"
+          ],
+          "csi_section": "03 30 00",
+          "typical_activities": [
+            "Formwork: simple pad forms",
+            "Reinforcing: usually none",
+            "Casting: pour, compact, cure, waterproof if needed"
+          ],
+          "default_unit": "CUM",
+          "default_depth_mm": "400-600",
+          "notes": "Simple excavation + concrete pour. Typically no reinforcement."
+        },
+        {
+          "item_key": "CONC_FOOT_ISO_RFD",
+          "item_name_ar": "قواعد منفصلة - مسلحة",
+          "item_name_en": "Reinforced isolated footings",
+          "synonyms_ar": [
+            "قاعدة منفصلة مسلحة",
+            "قواعد معزولة",
+            "isolated footing reinforced"
+          ],
+          "synonyms_en": [
+            "reinforced footing",
+            "reinforced pad",
+            "RF footing"
+          ],
+          "csi_section": "03 20 00 / 03 30 00",
+          "typical_activities": [
+            "Formwork: pad forms",
+            "Reinforcing: mats, stirrups, dowels",
+            "Casting: vibrate, cure"
+          ],
+          "default_unit": "CUM",
+          "default_depth_mm": "500-800",
+          "notes": "Requires rebar design, lapping, chairs. Ask about rebar diameter/type."
+        },
+        {
+          "item_key": "CONC_FOOT_STRIP_PLAIN",
+          "item_name_ar": "قواعد شريطية - عادية",
+          "item_name_en": "Plain strip footings",
+          "synonyms_ar": [
+            "قاعدة شريطية",
+            "strip footing",
+            "قواعد مستمرة"
+          ],
+          "synonyms_en": [
+            "strip foundation",
+            "continuous footing",
+            "wall footing"
+          ],
+          "csi_section": "03 30 00",
+          "typical_activities": [
+            "Formwork: continuous strip",
+            "Reinforcing: only if required",
+            "Casting: continuous pour"
+          ],
+          "default_unit": "CUM",
+          "default_depth_mm": "400-600",
+          "notes": "Linear foundation. Calculate: length × cross-section area."
+        },
+        {
+          "item_key": "CONC_FOOT_STRIP_RFD",
+          "item_name_ar": "قواعد شريطية - مسلحة",
+          "item_name_en": "Reinforced strip footings",
+          "synonyms_ar": [
+            "قاعدة شريطية مسلحة",
+            "strip foundation reinforced"
+          ],
+          "synonyms_en": [
+            "reinforced strip",
+            "continuous RF footing"
+          ],
+          "csi_section": "03 20 00 / 03 30 00",
+          "typical_activities": [
+            "Formwork",
+            "reinforcement cages",
+            "splice",
+            "cast"
+          ],
+          "default_unit": "CUM",
+          "default_depth_mm": "500-700",
+          "notes": "Continuous reinforcement required."
+        },
+        {
+          "item_key": "CONC_RAFT_PLAIN",
+          "item_name_ar": "لبشة - عادية",
+          "item_name_en": "Plain raft foundation",
+          "synonyms_ar": [
+            "لبشة عادية",
+            "raft",
+            "قاعدة لبشة",
+            "mat foundation"
+          ],
+          "synonyms_en": [
+            "raft slab",
+            "mat foundation",
+            "raft foundation"
+          ],
+          "csi_section": "03 30 00",
+          "typical_activities": [
+            "Edge formwork",
+            "leveling",
+            "casting large pour",
+            "joints",
+            "curing"
+          ],
+          "default_unit": "SQM / CUM",
+          "default_depth_mm": "300-600",
+          "notes": "Large area foundation. Consider pour sequence and joints."
+        },
+        {
+          "item_key": "CONC_RAFT_RFD",
+          "item_name_ar": "لبشة - مسلحة",
+          "item_name_en": "Reinforced raft foundation",
+          "synonyms_ar": [
+            "لبشة مسلحة",
+            "raft reinforced",
+            "لبشة خرسانية"
+          ],
+          "synonyms_en": [
+            "reinforced raft",
+            "RF mat",
+            "reinforced mat foundation"
+          ],
+          "csi_section": "03 20 00 / 03 30 00",
+          "typical_activities": [
+            "Mesh reinforcement",
+            "top/bottom mats",
+            "shear studs",
+            "cast in lifts if needed"
+          ],
+          "default_unit": "SQM / CUM",
+          "default_depth_mm": "400-800",
+          "notes": "Heavy reinforcement. Control shrinkage and concrete feed."
+        },
+        {
+          "item_key": "CONC_TIE_BEAM",
+          "item_name_ar": "سملات / كمرات أرضية",
+          "item_name_en": "Tie beams / Ground beams",
+          "synonyms_ar": [
+            "سمل",
+            "كمرة أرضية",
+            "ground beam",
+            "tie beam"
+          ],
+          "synonyms_en": [
+            "tie beam",
+            "plinth beam",
+            "ground beam",
+            "grade beam"
+          ],
+          "csi_section": "03 20 00 / 03 30 00",
+          "typical_activities": [
+            "Beam formwork",
+            "reinforcement (stirrups, main bars)",
+            "cast continuous"
+          ],
+          "default_unit": "RM",
+          "default_depth_mm": "300-500",
+          "notes": "Running meter. Typical cross-section noted."
+        },
+        {
+          "item_key": "CONC_BEAM_FLOOR",
+          "item_name_ar": "كمرات أدوار",
+          "item_name_en": "Floor beams",
+          "synonyms_ar": [
+            "كمرة دور",
+            "beam",
+            "كمرات السقف"
+          ],
+          "synonyms_en": [
+            "floor beam",
+            "suspended beam",
+            "structural beam"
+          ],
+          "csi_section": "03 20 00 / 03 30 00",
+          "typical_activities": [
+            "Beam formwork",
+            "shoring (falsework)",
+            "reinforcement",
+            "cast on centerline"
+          ],
+          "default_unit": "RM",
+          "default_depth_mm": "400-800",
+          "notes": "Ask about depth/width. Requires temporary support."
+        },
+        {
+          "item_key": "CONC_COLUMN",
+          "item_name_ar": "أعمدة خرسانية",
+          "item_name_en": "Concrete columns",
+          "synonyms_ar": [
+            "عمود خرساني",
+            "column",
+            "أعمدة"
+          ],
+          "synonyms_en": [
+            "concrete column",
+            "RC column",
+            "structural column"
+          ],
+          "csi_section": "03 20 00 / 03 30 00",
+          "typical_activities": [
+            "Column form (box/metal/plastic)",
+            "vertical bars",
+            "ties",
+            "cast (staged or monolithic)"
+          ],
+          "default_unit": "Each",
+          "default_depth_mm": "N/A",
+          "notes": "Common sections: 300x300, 400x400 mm. Count or volume basis."
+        },
+        {
+          "item_key": "CONC_SLAB_GRADE",
+          "item_name_ar": "بلاطات أرضية - على تربة",
+          "item_name_en": "Slab on grade",
+          "synonyms_ar": [
+            "بلاطة أرضية",
+            "slab on grade",
+            "أرضية خرسانية"
+          ],
+          "synonyms_en": [
+            "ground slab",
+            "slab on ground",
+            "ground floor slab"
+          ],
+          "csi_section": "03 30 00",
+          "typical_activities": [
+            "Edge forms",
+            "mesh/mesh chairs",
+            "vapor barrier (if needed)",
+            "pour",
+            "screed",
+            "jointing"
+          ],
+          "default_unit": "SQM",
+          "default_depth_mm": "120-200",
+          "notes": "Typically 150mm thick. Mesh reinforcement common."
+        },
+        {
+          "item_key": "CONC_SLAB_SUSP",
+          "item_name_ar": "بلاطات أدوار",
+          "item_name_en": "Suspended slabs",
+          "synonyms_ar": [
+            "بلاطة معلقة",
+            "suspended slab",
+            "بلاطة سقف"
+          ],
+          "synonyms_en": [
+            "floor slab",
+            "suspended slab",
+            "deck slab"
+          ],
+          "csi_section": "03 20 00 / 03 30 00",
+          "typical_activities": [
+            "Formwork+props",
+            "reinforcement mesh/bars",
+            "curing",
+            "cutting joints"
+          ],
+          "default_unit": "SQM",
+          "default_depth_mm": "150-250",
+          "notes": "Requires formwork and temporary support. Account for props/shores."
+        }
+      ]
+    },
+    {
+      "category_id": "EARTH",
+      "category_name_ar": "الأعمال الترابية",
+      "category_name_en": "Earthworks",
+      "csi_division": "Division 02",
+      "items": [
+        {
+          "item_key": "EARTH_TOPSOIL",
+          "item_name_ar": "تجريف / إزالة طبقة سطحية",
+          "item_name_en": "Topsoil stripping",
+          "synonyms_ar": [
+            "تجريف",
+            "إزالة طبقة",
+            "topsoil removal"
+          ],
+          "synonyms_en": [
+            "topsoil removal",
+            "stripping",
+            "clearing"
+          ],
+          "csi_section": "02 41 00",
+          "typical_activities": [
+            "Remove organic layer",
+            "stockpile",
+            "protect trees"
+          ],
+          "default_unit": "CUM / SQM",
+          "default_depth_mm": "150-300",
+          "notes": "First operation before excavation."
+        },
+        {
+          "item_key": "EARTH_EXCAV_FOUND",
+          "item_name_ar": "حفر قواعد",
+          "item_name_en": "Excavation for foundations",
+          "synonyms_ar": [
+            "حفر",
+            "excavation",
+            "حفريات",
+            "حفر أساسات"
+          ],
+          "synonyms_en": [
+            "foundation excavation",
+            "digging",
+            "trenching"
+          ],
+          "csi_section": "02 41 00",
+          "typical_activities": [
+            "Bulk excavation",
+            "trenches",
+            "benching",
+            "slope stabilization"
+          ],
+          "default_unit": "CUM",
+          "default_depth_mm": "Variable",
+          "notes": "Excavate to bottom of footing level."
+        },
+        {
+          "item_key": "EARTH_SHORING",
+          "item_name_ar": "سند جوانب الحفر",
+          "item_name_en": "Shoring / Sheeting",
+          "synonyms_ar": [
+            "سند",
+            "شيتنج",
+            "shoring",
+            "دعم جوانب"
+          ],
+          "synonyms_en": [
+            "shoring",
+            "sheet piling",
+            "soldier piles",
+            "timber shoring"
+          ],
+          "csi_section": "02 40 00",
+          "typical_activities": [
+            "Install sheet piles",
+            "soldier piles",
+            "timber shoring",
+            "bracing"
+          ],
+          "default_unit": "RM / Assembly count",
+          "default_depth_mm": "N/A",
+          "notes": "Temporary works for deep excavation."
+        },
+        {
+          "item_key": "EARTH_BACKFILL",
+          "item_name_ar": "ردميات",
+          "item_name_en": "Backfill & compaction",
+          "synonyms_ar": [
+            "ردم",
+            "backfill",
+            "ردميات",
+            "دك"
+          ],
+          "synonyms_en": [
+            "backfill",
+            "compaction",
+            "fill"
+          ],
+          "csi_section": "02 80 00",
+          "typical_activities": [
+            "Layered backfill",
+            "compaction tests (Proctor/CBR)"
+          ],
+          "default_unit": "CUM",
+          "default_depth_mm": "Variable",
+          "notes": "Specify compaction percentage (usually 95%)."
+        },
+        {
+          "item_key": "EARTH_GRADING",
+          "item_name_ar": "تسوية",
+          "item_name_en": "Grading / Subgrade preparation",
+          "synonyms_ar": [
+            "تسوية",
+            "grading",
+            "تسطيح"
+          ],
+          "synonyms_en": [
+            "grading",
+            "leveling",
+            "subgrade prep"
+          ],
+          "csi_section": "02 22 00",
+          "typical_activities": [
+            "Cut & fill balance",
+            "fine grading",
+            "proof roll"
+          ],
+          "default_unit": "SQM / CUM",
+          "default_depth_mm": "N/A",
+          "notes": "Final level before construction."
+        },
+        {
+          "item_key": "EARTH_REPLACEMENT",
+          "item_name_ar": "إبدال تربة",
+          "item_name_en": "Subbase replacement / stabilization",
+          "synonyms_ar": [
+            "إبدال",
+            "replacement",
+            "تحسين تربة"
+          ],
+          "synonyms_en": [
+            "soil replacement",
+            "stabilization",
+            "subbase"
+          ],
+          "csi_section": "02 50 00",
+          "typical_activities": [
+            "Remove unsuitable soils",
+            "replace with compacted fill",
+            "geotextile"
+          ],
+          "default_unit": "CUM",
+          "default_depth_mm": "Variable",
+          "notes": "Testing required. May need engineer approval."
+        }
+      ]
+    },
+    {
+      "category_id": "DEWATER",
+      "category_name_ar": "أعمال النزح",
+      "category_name_en": "Dewatering & Drainage",
+      "csi_division": "Division 02 / 33",
+      "items": [
+        {
+          "item_key": "DEWATER_SURFACE",
+          "item_name_ar": "نزح سطحي",
+          "item_name_en": "Surface drainage / runoff",
+          "synonyms_ar": [
+            "نزح سطحي",
+            "surface drainage",
+            "تصريف سطحي"
+          ],
+          "synonyms_en": [
+            "surface drainage",
+            "runoff control",
+            "temporary drainage"
+          ],
+          "csi_section": "02 40 00 / 33 00 00",
+          "typical_activities": [
+            "Temporary surface channels",
+            "diversion",
+            "berms",
+            "settling pits"
+          ],
+          "default_unit": "LM / SQM",
+          "default_depth_mm": "N/A",
+          "notes": "Controls surface water during construction."
+        },
+        {
+          "item_key": "DEWATER_GROUND",
+          "item_name_ar": "نزح جوفي",
+          "item_name_en": "Dewatering / groundwater control",
+          "synonyms_ar": [
+            "نزح جوفي",
+            "dewatering",
+            "تخفيض منسوب المياه"
+          ],
+          "synonyms_en": [
+            "dewatering",
+            "wellpoint",
+            "groundwater control"
+          ],
+          "csi_section": "02 40 00",
+          "typical_activities": [
+            "Wellpoint systems",
+            "sump pumps",
+            "slurry pumps",
+            "discharge to settling area"
+          ],
+          "default_unit": "System count / days",
+          "default_depth_mm": "N/A",
+          "notes": "Duration-based. Critical for foundation quality."
+        },
+        {
+          "item_key": "DEWATER_STORM",
+          "item_name_ar": "شبكات تصريف أساسية",
+          "item_name_en": "Stormwater drainage",
+          "synonyms_ar": [
+            "تصريف أمطار",
+            "stormwater",
+            "شبكة صرف"
+          ],
+          "synonyms_en": [
+            "storm drainage",
+            "stormwater system",
+            "drainage pipes"
+          ],
+          "csi_section": "33 00 00",
+          "typical_activities": [
+            "Pipes",
+            "manholes",
+            "connections to public system",
+            "outfalls"
+          ],
+          "default_unit": "RM (pipe length)",
+          "default_depth_mm": "N/A",
+          "notes": "Permanent drainage infrastructure."
+        }
+      ]
+    },
+    {
+      "category_id": "WATERPROOF",
+      "category_name_ar": "أعمال العزل",
+      "category_name_en": "Waterproofing & Membranes",
+      "csi_division": "Division 07",
+      "items": [
+        {
+          "item_key": "WP_FOUNDATION",
+          "item_name_ar": "عزل قواعد",
+          "item_name_en": "Foundation waterproofing / DPC",
+          "synonyms_ar": [
+            "عزل قاعدة",
+            "foundation waterproofing",
+            "عزل أساسات"
+          ],
+          "synonyms_en": [
+            "foundation waterproofing",
+            "DPC",
+            "damp proof course"
+          ],
+          "csi_section": "07 10 00 / 07 50 00",
+          "typical_activities": [
+            "Bituminous membrane (torch-on)",
+            "cementitious coatings",
+            "bentonite sheets",
+            "protection board"
+          ],
+          "default_unit": "SQM",
+          "default_depth_mm": "N/A",
+          "notes": "Ensure protection board if backfill required."
+        },
+        {
+          "item_key": "WP_WETAREA",
+          "item_name_ar": "عزل الحمامات",
+          "item_name_en": "Wet area waterproofing",
+          "synonyms_ar": [
+            "عزل حمام",
+            "bathroom waterproofing",
+            "عزل مناطق رطبة"
+          ],
+          "synonyms_en": [
+            "bathroom waterproofing",
+            "wet area",
+            "shower waterproofing"
+          ],
+          "csi_section": "07 10 00 / 09 30 00",
+          "typical_activities": [
+            "Cementitious slurry",
+            "liquid PU membrane",
+            "sheet membrane under tile"
+          ],
+          "default_unit": "SQM",
+          "default_depth_mm": "N/A",
+          "notes": "Pond test 24-72h required."
+        },
+        {
+          "item_key": "WP_ROOF",
+          "item_name_ar": "عزل الأسطح",
+          "item_name_en": "Roof waterproofing / terraces",
+          "synonyms_ar": [
+            "عزل سطح",
+            "عزل أسطح",
+            "roof waterproofing",
+            "waterproofing roof",
+            "عزل تراس",
+            "عزل السطح"
+          ],
+          "synonyms_en": [
+            "roof waterproofing",
+            "waterproofing roof",
+            "terrace waterproofing",
+            "flat roof membrane",
+            "roof membrane",
+            "roofing waterproof"
+          ],
+          "csi_section": "07 50 00 / 07 10 00",
+          "typical_activities": [
+            "Torch-on",
+            "single-ply (EPDM/PVC/TPO)",
+            "liquid membranes"
+          ],
+          "default_unit": "SQM",
+          "default_depth_mm": "N/A",
+          "notes": "Slope & drainage critical."
+        },
+        {
+          "item_key": "WP_TANK",
+          "item_name_ar": "عزل خزانات وأحواض",
+          "item_name_en": "Tanking / pool waterproofing",
+          "synonyms_ar": [
+            "عزل خزان",
+            "tank waterproofing",
+            "عزل حوض"
+          ],
+          "synonyms_en": [
+            "tank waterproofing",
+            "pool lining",
+            "water tank membrane"
+          ],
+          "csi_section": "07 10 00 / 03 30 00",
+          "typical_activities": [
+            "Cementitious + flexible membranes",
+            "PVC liners",
+            "crystalline waterproofers"
+          ],
+          "default_unit": "SQM",
+          "default_depth_mm": "N/A",
+          "notes": "Check chemical resistance."
+        }
+      ]
+    },
+    {
+      "category_id": "FINISH",
+      "category_name_ar": "التشطيبات",
+      "category_name_en": "Finishes",
+      "csi_division": "Division 09",
+      "items": [
+        {
+          "item_key": "FINISH_PLASTER",
+          "item_name_ar": "محارة داخلية/خارجية",
+          "item_name_en": "Plaster / Render",
+          "synonyms_ar": [
+            "محارة",
+            "plaster",
+            "طرطشة"
+          ],
+          "synonyms_en": [
+            "plaster",
+            "render",
+            "stucco"
+          ],
+          "csi_section": "09 24 00 / 09 29 00",
+          "typical_activities": [
+            "Rough coat",
+            "finish coat",
+            "curing",
+            "floating"
+          ],
+          "default_unit": "SQM",
+          "default_depth_mm": "10-20",
+          "notes": "Typical thickness 10-20mm finish."
+        },
+        {
+          "item_key": "FINISH_PAINT",
+          "item_name_ar": "دهانات داخلية",
+          "item_name_en": "Emulsion / Acrylic paint",
+          "synonyms_ar": [
+            "دهان",
+            "paint",
+            "بوية"
+          ],
+          "synonyms_en": [
+            "paint",
+            "emulsion",
+            "acrylic"
+          ],
+          "csi_section": "09 90 00",
+          "typical_activities": [
+            "Primer",
+            "putty (filler)",
+            "2 coats finish"
+          ],
+          "default_unit": "SQM",
+          "default_depth_mm": "N/A",
+          "notes": "Check VOC and drying time."
+        },
+        {
+          "item_key": "FINISH_TILE",
+          "item_name_ar": "بلاط سيراميك/بورسلان",
+          "item_name_en": "Ceramic / Porcelain tiles",
+          "synonyms_ar": [
+            "بلاط",
+            "بلاط سيراميك",
+            "tile",
+            "ceramic tiles",
+            "سيراميك",
+            "بورسلان"
+          ],
+          "synonyms_en": [
+            "tile",
+            "tiles",
+            "ceramic",
+            "ceramic tiles",
+            "porcelain",
+            "porcelain tiles"
+          ],
+          "csi_section": "09 30 00",
+          "typical_activities": [
+            "Tile adhesive",
+            "leveling",
+            "grout",
+            "waterproofing under slabs (if wet area)"
+          ],
+          "default_unit": "SQM",
+          "default_depth_mm": "N/A",
+          "notes": "Joint width, grout type important."
+        },
+        {
+          "item_key": "FINISH_STONE",
+          "item_name_ar": "رخام/جرانيت",
+          "item_name_en": "Marble / Granite",
+          "synonyms_ar": [
+            "رخام",
+            "marble",
+            "جرانيت",
+            "granite"
+          ],
+          "synonyms_en": [
+            "marble",
+            "granite",
+            "natural stone"
+          ],
+          "csi_section": "09 60 00",
+          "typical_activities": [
+            "Cutting",
+            "adhesive/chem fixed",
+            "jointing",
+            "polishing"
+          ],
+          "default_unit": "SQM",
+          "default_depth_mm": "N/A",
+          "notes": "Heavy handling required."
+        },
+        {
+          "item_key": "FINISH_WOOD",
+          "item_name_ar": "أرضيات خشبية / باركيه / لمينيت",
+          "item_name_en": "Wood / Parquet / Laminate flooring",
+          "synonyms_ar": [
+            "باركيه",
+            "parquet",
+            "خشب",
+            "لمينيت"
+          ],
+          "synonyms_en": [
+            "parquet",
+            "wood flooring",
+            "laminate"
+          ],
+          "csi_section": "09 64 00",
+          "typical_activities": [
+            "Subfloor prep",
+            "adhesive or floating installation"
+          ],
+          "default_unit": "SQM",
+          "default_depth_mm": "N/A",
+          "notes": "Expansion gap required."
+        },
+        {
+          "item_key": "FINISH_DOORSWIN",
+          "item_name_ar": "أبواب ونوافذ",
+          "item_name_en": "Doors & Windows",
+          "synonyms_ar": [
+            "باب",
+            "door",
+            "شباك",
+            "window"
+          ],
+          "synonyms_en": [
+            "door",
+            "window",
+            "fenestration"
+          ],
+          "csi_section": "08 10 00 / 08 40 00",
+          "typical_activities": [
+            "Supply & install",
+            "frames",
+            "glazing",
+            "seals"
+          ],
+          "default_unit": "Each / SQM for glazing",
+          "default_depth_mm": "N/A",
+          "notes": "Count or area basis."
+        }
+      ]
+    },
+    {
+      "category_id": "CEILING",
+      "category_name_ar": "الأعمال التكميلية",
+      "category_name_en": "Suspended ceilings & others",
+      "csi_division": "Division 09",
+      "items": [
+        {
+          "item_key": "CEILING_GYPSUM",
+          "item_name_ar": "أسقف معلقة جبسون / metal grid",
+          "item_name_en": "Gypsum / Metal grid false ceilings",
+          "synonyms_ar": [
+            "سقف معلق",
+            "false ceiling",
+            "جبسون"
+          ],
+          "synonyms_en": [
+            "false ceiling",
+            "drop ceiling",
+            "suspended ceiling"
+          ],
+          "csi_section": "09 50 00",
+          "typical_activities": [
+            "Framework",
+            "hangers",
+            "gypsum/tiles",
+            "access panels",
+            "finishing"
+          ],
+          "default_unit": "SQM",
+          "default_depth_mm": "N/A",
+          "notes": "Coordinate with MEP before installation."
+        },
+        {
+          "item_key": "CEILING_ACOUSTIC",
+          "item_name_ar": "أنظمة سقف مستعارة",
+          "item_name_en": "Acoustic tiles",
+          "synonyms_ar": [
+            "acoustic tiles",
+            "سقف صوتي"
+          ],
+          "synonyms_en": [
+            "acoustic ceiling",
+            "sound tiles"
+          ],
+          "csi_section": "09 51 00",
+          "typical_activities": [
+            "Grid installation",
+            "tiles",
+            "edge trims"
+          ],
+          "default_unit": "SQM",
+          "default_depth_mm": "N/A",
+          "notes": "Part of ceiling systems."
+        }
+      ]
+    },
+    {
+      "category_id": "PLUMBING",
+      "category_name_ar": "السباكة",
+      "category_name_en": "Plumbing / Water supply & Sanitary",
+      "csi_division": "Division 22",
+      "items": [
+        {
+          "item_key": "PLUMB_SUPPLY",
+          "item_name_ar": "تمديدات مياه باردة / ساخنة",
+          "item_name_en": "Cold/Hot water supply piping",
+          "synonyms_ar": [
+            "تمديدات مياه",
+            "water piping",
+            "مواسير مياه"
+          ],
+          "synonyms_en": [
+            "water piping",
+            "supply lines",
+            "potable water"
+          ],
+          "csi_section": "22 00 00",
+          "typical_activities": [
+            "Lay pipes (PVC/Cu/PEX)",
+            "valves",
+            "fittings",
+            "pressure test"
+          ],
+          "default_unit": "RM / connections",
+          "default_depth_mm": "N/A",
+          "notes": "Length or connection count."
+        },
+        {
+          "item_key": "PLUMB_SANITARY",
+          "item_name_ar": "صرف صحي داخلي",
+          "item_name_en": "Sanitary waste & vent",
+          "synonyms_ar": [
+            "صرف صحي",
+            "sanitary",
+            "مجاري"
+          ],
+          "synonyms_en": [
+            "sanitary piping",
+            "waste lines",
+            "soil stack"
+          ],
+          "csi_section": "22 00 00",
+          "typical_activities": [
+            "Stack layout",
+            "traps",
+            "vents",
+            "connection to external sewer"
+          ],
+          "default_unit": "RM / fixture count",
+          "default_depth_mm": "N/A",
+          "notes": "Internal waste system."
+        },
+        {
+          "item_key": "PLUMB_STORM",
+          "item_name_ar": "شبكات الصرف الخارجي",
+          "item_name_en": "Storm / external drains",
+          "synonyms_ar": [
+            "صرف خارجي",
+            "storm drainage",
+            "مجاري خارجية"
+          ],
+          "synonyms_en": [
+            "storm drains",
+            "external drainage",
+            "sewer lines"
+          ],
+          "csi_section": "33 00 00 / 22 00 00",
+          "typical_activities": [
+            "Manholes",
+            "gullies",
+            "gravity pipes",
+            "connections"
+          ],
+          "default_unit": "RM / manhole count",
+          "default_depth_mm": "N/A",
+          "notes": "External infrastructure."
+        },
+        {
+          "item_key": "PLUMB_FIXTURES",
+          "item_name_ar": "تجهيزات صحية",
+          "item_name_en": "Plumbing fixtures (WC, basin, shower)",
+          "synonyms_ar": [
+            "تجهيزات",
+            "fixtures",
+            "أدوات صحية"
+          ],
+          "synonyms_en": [
+            "fixtures",
+            "sanitary ware",
+            "fittings"
+          ],
+          "csi_section": "22 00 00",
+          "typical_activities": [
+            "Install fixtures",
+            "connectors",
+            "sealing",
+            "testing"
+          ],
+          "default_unit": "Each / item",
+          "default_depth_mm": "N/A",
+          "notes": "Count basis."
+        },
+        {
+          "item_key": "PLUMB_GAS",
+          "item_name_ar": "شبكات الغاز",
+          "item_name_en": "Fuel gas piping",
+          "synonyms_ar": [
+            "غاز",
+            "gas piping",
+            "أنابيب غاز"
+          ],
+          "synonyms_en": [
+            "gas piping",
+            "fuel gas",
+            "natural gas"
+          ],
+          "csi_section": "22 00 00",
+          "typical_activities": [
+            "Piping",
+            "regulators",
+            "leak test"
+          ],
+          "default_unit": "RM",
+          "default_depth_mm": "N/A",
+          "notes": "Specialized safety requirements."
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "item_key": "CONC_FOOT_ISO",
+      "item_name_ar": "قواعد منفصلة — عادية",
+      "item_name_en": "Plain isolated footings",
+      "category_id": "concrete",
+      "csi_section": "Division 03 → 03 30 (Cast-in-Place Concrete)",
+      "typical_activities": [
+        "Formwork: قالب بسيط",
+        "Pad",
+        "Reinforcing: غالبًا لا؛ Casting: صب",
+        "compact",
+        "curing"
+      ],
+      "default_unit": "CUM",
+      "implementation_notes": "() - عمق افتراضي: 400 - 600mm",
+      "synonyms_ar": [
+        "قواعد منفصلة — عادية",
+        "فوتينج",
+        "أساسات"
+      ],
+      "synonyms_en": [
+        "foundation",
+        "base",
+        "plain isolated footings"
+      ]
+    },
+    {
+      "item_key": "CONC_FOOT_ISO",
+      "item_name_ar": "قواعد منفصلة — مسلحة",
+      "item_name_en": "Reinforced isolated footings",
+      "category_id": "concrete",
+      "csi_section": "03 10 / 03 20 / 03 30",
+      "typical_activities": [
+        "Formwork: pad forms",
+        "Reinforcing: mats",
+        "stirrups",
+        "dowels",
+        "Casting: vibrate"
+      ],
+      "default_unit": "CUM",
+      "implementation_notes": "- اسأل عن قطر/نوع حديد",
+      "synonyms_ar": [
+        "قواعد منفصلة — مسلحة",
+        "فوتينج",
+        "أساسات"
+      ],
+      "synonyms_en": [
+        "reinforced isolated footings",
+        "foundation",
+        "base"
+      ]
+    },
+    {
+      "item_key": "CONC_FOOT_STRIP",
+      "item_name_ar": "قواعد شريطية — عادية",
+      "item_name_en": "Plain strip footings",
+      "category_id": "concrete",
+      "csi_section": "03 10 / 03 30",
+      "typical_activities": [
+        "Formwork: continuous strip",
+        "Reinforcing: only if required",
+        "Casting: continuous pour",
+        "joints"
+      ],
+      "default_unit": "CUM",
+      "implementation_notes": "للطول × مساحة مقطع",
+      "synonyms_ar": [
+        "قواعد شريطية — عادية",
+        "فوتينج",
+        "أساسات"
+      ],
+      "synonyms_en": [
+        "plain strip footings",
+        "foundation",
+        "base"
+      ]
+    },
+    {
+      "item_key": "CONC_FOOT_STRIP",
+      "item_name_ar": "قواعد شريطية — مسلحة",
+      "item_name_en": "Reinforced strip footings",
+      "category_id": "concrete",
+      "csi_section": "03 10 / 03 20 / 03 30",
+      "typical_activities": [
+        "Formwork",
+        "reinforcement cages",
+        "splice",
+        "cast"
+      ],
+      "default_unit": "CUM",
+      "implementation_notes": "- طول × مقطع",
+      "synonyms_ar": [
+        "قواعد شريطية — مسلحة",
+        "فوتينج",
+        "أساسات"
+      ],
+      "synonyms_en": [
+        "foundation",
+        "base",
+        "reinforced strip footings"
+      ]
+    },
+    {
+      "item_key": "CONC_RAFT",
+      "item_name_ar": "لبشة — عادية",
+      "item_name_en": "Raft",
+      "category_id": "concrete",
+      "csi_section": "03 10 / 03 30",
+      "typical_activities": [
+        "Edge formwork",
+        "leveling",
+        "casting large pour",
+        "joints",
+        "curing"
+      ],
+      "default_unit": "CUM",
+      "implementation_notes": "و - سماكة افتراضية 300 - 600mm",
+      "synonyms_ar": [
+        "حصيرة",
+        "mat foundation",
+        "رافت",
+        "لبشة — عادية"
+      ],
+      "synonyms_en": [
+        "slab foundation",
+        "mat foundation",
+        "raft"
+      ]
+    },
+    {
+      "item_key": "CONC_RAFT",
+      "item_name_ar": "لبشة — مسلحة",
+      "item_name_en": "Raft",
+      "category_id": "concrete",
+      "csi_section": "03 10 / 03 20 / 03 30",
+      "typical_activities": [
+        "Mesh reinforcement",
+        "top/bottom mats",
+        "shear studs",
+        "cast in lifts if needed"
+      ],
+      "default_unit": "CUM",
+      "implementation_notes": "، - تحكم انكماش وتغذية الخرسانة",
+      "synonyms_ar": [
+        "حصيرة",
+        "mat foundation",
+        "رافت",
+        "لبشة — مسلحة"
+      ],
+      "synonyms_en": [
+        "slab foundation",
+        "mat foundation",
+        "raft"
+      ]
+    },
+    {
+      "item_key": "CONC_TIE_BEAM",
+      "item_name_ar": "سملات / كمرات أرضية",
+      "item_name_en": "Tie beams / Ground beams",
+      "category_id": "concrete",
+      "csi_section": "03 10 / 03 20 / 03 30",
+      "typical_activities": [
+        "Formwork for beam",
+        "reinforcement (stirrups",
+        "main bars)",
+        "cast continuous"
+      ],
+      "default_unit": "RM",
+      "implementation_notes": "(متر طولي) - مقطع افتراضي",
+      "synonyms_ar": [
+        "سملات / كمرات أرضية"
+      ],
+      "synonyms_en": [
+        "tie beams / ground beams"
+      ]
+    },
+    {
+      "item_key": "CONC_كمرات أدوا",
+      "item_name_ar": "كمرات أدوار",
+      "item_name_en": "Floor beams",
+      "category_id": "concrete",
+      "csi_section": "03 10 / 03 20 / 03 30",
+      "typical_activities": [
+        "Beam formwork",
+        "shoring (falsework)",
+        "reinforcement",
+        "cast on centerline"
+      ],
+      "default_unit": "RM",
+      "implementation_notes": "- اسأل عن عمق/عرض",
+      "synonyms_ar": [
+        "كمرات أدوار"
+      ],
+      "synonyms_en": [
+        "floor beams"
+      ]
+    },
+    {
+      "item_key": "CONC_COLUMN",
+      "item_name_ar": "أعمدة خرسانية",
+      "item_name_en": "Columns",
+      "category_id": "concrete",
+      "csi_section": "03 10 / 03 20 / 03 30",
+      "typical_activities": [
+        "Column form (box/metal/plastic)",
+        "vertical bars",
+        "ties",
+        "cast (staged or monolithic)"
+      ],
+      "default_unit": "EACH",
+      "implementation_notes": "Each (عدد) - قِطع/مقاطع شائعة: 300x300, 400x400 mm",
+      "synonyms_ar": [
+        "أعمدة خرسانية"
+      ],
+      "synonyms_en": [
+        "columns"
+      ]
+    },
+    {
+      "item_key": "CONC_SLAB",
+      "item_name_ar": "بلاطات أرضية — على تربة",
+      "item_name_en": "Slab on grade",
+      "category_id": "concrete",
+      "csi_section": "03 10 / 03 20 / 03 30",
+      "typical_activities": [
+        "Edge forms",
+        "mesh/mesh chairs",
+        "vapor barrier (if needed)",
+        "pour",
+        "screed"
+      ],
+      "default_unit": "SQM",
+      "implementation_notes": ", thickness 120 - 200mm",
+      "synonyms_ar": [
+        "بلاطات أرضية — على تربة"
+      ],
+      "synonyms_en": [
+        "slab on grade"
+      ]
+    },
+    {
+      "item_key": "CONC_SLAB",
+      "item_name_ar": "بلاطات أدوار",
+      "item_name_en": "Suspended slabs",
+      "category_id": "concrete",
+      "csi_section": "03 10 / 03 20 / 03 30",
+      "typical_activities": [
+        "Formwork+props",
+        "reinforcement mesh/bars",
+        "curing",
+        "cutting joints"
+      ],
+      "default_unit": "SQM",
+      "implementation_notes": "- تؤخذ بعين الاعتبار شدة/دعم مؤقت",
+      "synonyms_ar": [
+        "بلاطات أدوار"
+      ],
+      "synonyms_en": [
+        "suspended slabs"
+      ]
+    },
+    {
+      "item_key": "CONC_FORMWORK",
+      "item_name_ar": "شدة — عمومي",
+      "item_name_en": "Formwork",
+      "category_id": "concrete",
+      "csi_section": "03 10 00",
+      "typical_activities": [
+        "Provision of plywood/steel forms",
+        "bracing",
+        "shores",
+        "stripping sequence"
+      ],
+      "default_unit": "SQM",
+      "implementation_notes": "/forms count",
+      "synonyms_ar": [
+        "شدة — عمومي"
+      ],
+      "synonyms_en": [
+        "formwork"
+      ]
+    },
+    {
+      "item_key": "CONC_REINF",
+      "item_name_ar": "تسليح — عمومي",
+      "item_name_en": "Reinforcing",
+      "category_id": "concrete",
+      "csi_section": "03 20 00",
+      "typical_activities": [
+        "Supply & fixing rebars",
+        "cutting/bending",
+        "chairs",
+        "lap splices",
+        "dowels"
+      ],
+      "default_unit": "TON",
+      "implementation_notes": "TON أو KG حسب المشروع",
+      "synonyms_ar": [
+        "تسليح — عمومي"
+      ],
+      "synonyms_en": [
+        "reinforcing"
+      ]
+    },
+    {
+      "item_key": "CONC_CAST",
+      "item_name_ar": "صب وخرسانة — عمومي",
+      "item_name_en": "Casting & Curing",
+      "category_id": "concrete",
+      "csi_section": "03 30 00",
+      "typical_activities": [
+        "Supply concrete",
+        "pump/transport",
+        "vibration",
+        "finishing",
+        "curing"
+      ],
+      "default_unit": "CUM",
+      "implementation_notes": "- تضمن admixtures, slump",
+      "synonyms_ar": [
+        "صب وخرسانة — عمومي"
+      ],
+      "synonyms_en": [
+        "casting & curing"
+      ]
+    },
+    {
+      "item_key": "EART_TOPSOIL",
+      "item_name_ar": "تجريف / إزالة طبقة سطحية",
+      "item_name_en": "Topsoil stripping",
+      "category_id": "earthworks",
+      "csi_section": "Division 02 — Site Work",
+      "typical_activities": [
+        "إزالة طبقة عضوية",
+        "stockpile",
+        "protect trees"
+      ],
+      "default_unit": "CUM",
+      "implementation_notes": "/",
+      "synonyms_ar": [
+        "تجريف / إزالة طبقة سطحية"
+      ],
+      "synonyms_en": [
+        "topsoil stripping"
+      ]
+    },
+    {
+      "item_key": "EART_EXCAV",
+      "item_name_ar": "حفر قواعد",
+      "item_name_en": "Excavation for foundations",
+      "category_id": "earthworks",
+      "csi_section": "02 41 / 02 40",
+      "typical_activities": [
+        "Bulk excavation",
+        "trenches",
+        "benching",
+        "slope stabilization"
+      ],
+      "default_unit": "CUM",
+      "implementation_notes": "- حفر إلى مستوى الـ bottom footing",
+      "synonyms_ar": [
+        "حفر قواعد",
+        "فوتينج",
+        "أساسات"
+      ],
+      "synonyms_en": [
+        "excavation for foundations"
+      ]
+    },
+    {
+      "item_key": "EART_EXCAV",
+      "item_name_ar": "سند جوانب الحفر",
+      "item_name_en": "Shoring / sheeting",
+      "category_id": "earthworks",
+      "csi_section": "02 40 temporary works",
+      "typical_activities": [
+        "Install sheet piles",
+        "soldier piles",
+        "timber shoring",
+        "bracing"
+      ],
+      "default_unit": "RM",
+      "implementation_notes": "أو assembly count",
+      "synonyms_ar": [
+        "سند جوانب الحفر"
+      ],
+      "synonyms_en": [
+        "shoring / sheeting"
+      ]
+    },
+    {
+      "item_key": "EART_BACKFILL",
+      "item_name_ar": "ردميات",
+      "item_name_en": "Backfill & compaction",
+      "category_id": "earthworks",
+      "csi_section": "02 80",
+      "typical_activities": [
+        "Layered backfill",
+        "compaction tests (Proctor/CBR)"
+      ],
+      "default_unit": "CUM",
+      "implementation_notes": "- compaction %",
+      "synonyms_ar": [
+        "ردميات"
+      ],
+      "synonyms_en": [
+        "backfill & compaction"
+      ]
+    },
+    {
+      "item_key": "EART_GRADING",
+      "item_name_ar": "تسوية",
+      "item_name_en": "Grading / subgrade preparation",
+      "category_id": "earthworks",
+      "csi_section": "02 22",
+      "typical_activities": [
+        "Cut & fill balance",
+        "fine grading",
+        "proof roll"
+      ],
+      "default_unit": "CUM",
+      "implementation_notes": "/",
+      "synonyms_ar": [
+        "تسوية"
+      ],
+      "synonyms_en": [
+        "grading / subgrade preparation"
+      ]
+    },
+    {
+      "item_key": "EART_إبدال تربة",
+      "item_name_ar": "إبدال تربة",
+      "item_name_en": "Subbase replacement / stabilization",
+      "category_id": "earthworks",
+      "csi_section": "02 50",
+      "typical_activities": [
+        "Remove unsuitable soils",
+        "replace with compacted fill",
+        "geotextile"
+      ],
+      "default_unit": "CUM",
+      "implementation_notes": "- note: testing required",
+      "synonyms_ar": [
+        "إبدال تربة"
+      ],
+      "synonyms_en": [
+        "subbase replacement / stabilization"
+      ]
+    },
+    {
+      "item_key": "DEWA_SURF_DRAIN",
+      "item_name_ar": "نزح سطحي",
+      "item_name_en": "Surface drainage / runoff",
+      "category_id": "dewatering",
+      "csi_section": "Division 02 / 33 (Site utilities)",
+      "typical_activities": [
+        "Temporary surface channels",
+        "diversion",
+        "berms",
+        "settling pits"
+      ],
+      "default_unit": "SQM",
+      "implementation_notes": "/",
+      "synonyms_ar": [
+        "نزح سطحي"
+      ],
+      "synonyms_en": [
+        "surface drainage / runoff"
+      ]
+    },
+    {
+      "item_key": "DEWA_DEWATER",
+      "item_name_ar": "نزح جوفي",
+      "item_name_en": "Dewatering / groundwater control",
+      "category_id": "dewatering",
+      "csi_section": "Division 02 (temporary works) / 33",
+      "typical_activities": [
+        "Wellpoint systems",
+        "sump pumps",
+        "slurry pumps",
+        "discharge to settling area"
+      ],
+      "default_unit": "EACH",
+      "implementation_notes": "system count - duration (days)",
+      "synonyms_ar": [
+        "نزح جوفي"
+      ],
+      "synonyms_en": [
+        "dewatering / groundwater control"
+      ]
+    },
+    {
+      "item_key": "DEWA_STORM",
+      "item_name_ar": "شبكات تصريف أساسية",
+      "item_name_en": "Stormwater drainage",
+      "category_id": "dewatering",
+      "csi_section": "Division 33",
+      "typical_activities": [
+        "Pipes",
+        "manholes",
+        "connections to public system",
+        "outfalls"
+      ],
+      "default_unit": "RM",
+      "implementation_notes": "/ m (pipe)",
+      "synonyms_ar": [
+        "شبكات تصريف أساسية"
+      ],
+      "synonyms_en": [
+        "stormwater drainage"
+      ]
+    },
+    {
+      "item_key": "WATE_WP_FOUND",
+      "item_name_ar": "عزل قواعد",
+      "item_name_en": "Foundation waterproofing / DPC",
+      "category_id": "waterproofing",
+      "csi_section": "07 10 / 07 50",
+      "typical_activities": [
+        "Bituminous membrane (torch-on)",
+        "cementitious coatings",
+        "bentonite sheets",
+        "protection board"
+      ],
+      "default_unit": "SQM",
+      "implementation_notes": "- ensure protection board if backfill",
+      "synonyms_ar": [
+        "insulation",
+        "أساسات",
+        "فوتينج",
+        "عزل قواعد"
+      ],
+      "synonyms_en": [
+        "damp proofing",
+        "membrane",
+        "foundation waterproofing / dpc"
+      ]
+    },
+    {
+      "item_key": "WATE_WP_WET",
+      "item_name_ar": "عزل الحمامات",
+      "item_name_en": "Wet area waterproofing",
+      "category_id": "waterproofing",
+      "csi_section": "07 10 / 09 30 (tiling)",
+      "typical_activities": [
+        "Cementitious slurry",
+        "liquid PU membrane",
+        "sheet membrane under tile"
+      ],
+      "default_unit": "SQM",
+      "implementation_notes": "- pond test 24 - 72h",
+      "synonyms_ar": [
+        "عزل الحمامات",
+        "insulation"
+      ],
+      "synonyms_en": [
+        "wet area waterproofing",
+        "damp proofing",
+        "membrane"
+      ]
+    },
+    {
+      "item_key": "WATE_WP_ROOF",
+      "item_name_ar": "عزل الأسطح",
+      "item_name_en": "Roof waterproofing / terraces",
+      "category_id": "waterproofing",
+      "csi_section": "07 50 / 07 10",
+      "typical_activities": [
+        "Torch-on",
+        "single-ply (EPDM/PVC/TPO)",
+        "liquid membranes"
+      ],
+      "default_unit": "SQM",
+      "implementation_notes": "- slope & drainage critical",
+      "synonyms_ar": [
+        "عزل الأسطح",
+        "insulation"
+      ],
+      "synonyms_en": [
+        "damp proofing",
+        "membrane",
+        "roof waterproofing / terraces"
+      ]
+    },
+    {
+      "item_key": "WATE_WP_TANK",
+      "item_name_ar": "عزل خزانات وأحواض",
+      "item_name_en": "Tanking / pool",
+      "category_id": "waterproofing",
+      "csi_section": "07 10 / 03 30",
+      "typical_activities": [
+        "Cementitious + flexible membranes",
+        "PVC liners",
+        "crystalline waterproofers"
+      ],
+      "default_unit": "SQM",
+      "implementation_notes": "- check chemical resistance",
+      "synonyms_ar": [
+        "عزل خزانات وأحواض",
+        "insulation"
+      ],
+      "synonyms_en": [
+        "tanking / pool"
+      ]
+    },
+    {
+      "item_key": "WATE_حماية غشاء",
+      "item_name_ar": "حماية غشاء العزل",
+      "item_name_en": "protection boards",
+      "category_id": "waterproofing",
+      "csi_section": "07 10",
+      "typical_activities": [
+        "Board over membrane before backfill or screed"
+      ],
+      "default_unit": "SQM",
+      "implementation_notes": "",
+      "synonyms_ar": [
+        "حماية غشاء العزل",
+        "insulation"
+      ],
+      "synonyms_en": [
+        "protection boards"
+      ]
+    },
+    {
+      "item_key": "FINI_PLASTER",
+      "item_name_ar": "محارة داخلية/خارجية",
+      "item_name_en": "Plaster / Render",
+      "category_id": "finishes",
+      "csi_section": "09 24 / 09 29",
+      "typical_activities": [
+        "Rough coat",
+        "finish coat",
+        "curing",
+        "floating"
+      ],
+      "default_unit": "SQM",
+      "implementation_notes": "- thickness typical 10 - 20mm finish",
+      "synonyms_ar": [
+        "لياسة",
+        "plaster",
+        "محارة داخلية/خارجية",
+        "بياض"
+      ],
+      "synonyms_en": [
+        "rendering",
+        "render",
+        "plaster / render"
+      ]
+    },
+    {
+      "item_key": "FINI_PAINT",
+      "item_name_ar": "دهانات داخلية",
+      "item_name_en": "Emulsion / Acrylic",
+      "category_id": "finishes",
+      "csi_section": "09 90",
+      "typical_activities": [
+        "Primer",
+        "putty (filler)",
+        "2 coats finish"
+      ],
+      "default_unit": "SQM",
+      "implementation_notes": "- check VOC and drying time",
+      "synonyms_ar": [
+        "طلاء",
+        "بوية",
+        "paint",
+        "دهانات داخلية"
+      ],
+      "synonyms_en": [
+        "emulsion / acrylic"
+      ]
+    },
+    {
+      "item_key": "FINI_TILE",
+      "item_name_ar": "بلاط سيراميك/بورسلان",
+      "item_name_en": "Tiles",
+      "category_id": "finishes",
+      "csi_section": "09 30",
+      "typical_activities": [
+        "Tile adhesive",
+        "leveling",
+        "grout",
+        "waterproofing under slabs (if wet area)"
+      ],
+      "default_unit": "SQM",
+      "implementation_notes": "- joint width, grout type",
+      "synonyms_ar": [
+        "بلاط سيراميك/بورسلان"
+      ],
+      "synonyms_en": [
+        "tiles"
+      ]
+    },
+    {
+      "item_key": "FINI_STONE",
+      "item_name_ar": "رخام/جرانيت",
+      "item_name_en": "Stone finishes",
+      "category_id": "finishes",
+      "csi_section": "09 60",
+      "typical_activities": [
+        "Cutting",
+        "adhesive/chem fixed",
+        "jointing",
+        "polishing"
+      ],
+      "default_unit": "SQM",
+      "implementation_notes": "- heavy handling",
+      "synonyms_ar": [
+        "رخام/جرانيت"
+      ],
+      "synonyms_en": [
+        "stone finishes"
+      ]
+    },
+    {
+      "item_key": "FINI_WOOD_FLOOR",
+      "item_name_ar": "أرضيات خشبية / باركيه / لمينيت",
+      "item_name_en": "Wood Flooring",
+      "category_id": "finishes",
+      "csi_section": "09 64",
+      "typical_activities": [
+        "subfloor prep",
+        "adhesive or floating installation"
+      ],
+      "default_unit": "SQM",
+      "implementation_notes": "- expansion gap",
+      "synonyms_ar": [
+        "أرضيات خشبية / باركيه / لمينيت"
+      ],
+      "synonyms_en": []
+    },
+    {
+      "item_key": "FINI_أبواب ونوا",
+      "item_name_ar": "أبواب ونوافذ",
+      "item_name_en": "Doors & Windows",
+      "category_id": "finishes",
+      "csi_section": "08 10 / 08 40",
+      "typical_activities": [
+        "Supply & install",
+        "frames",
+        "glazing",
+        "seals"
+      ],
+      "default_unit": "SQM",
+      "implementation_notes": "each /  for glazing",
+      "synonyms_ar": [
+        "أبواب ونوافذ"
+      ],
+      "synonyms_en": [
+        "doors & windows"
+      ]
+    },
+    {
+      "item_key": "FINI_CEIL_SUSP",
+      "item_name_ar": "أسقف معلقة جبسون / metal grid",
+      "item_name_en": "false ceilings",
+      "category_id": "finishes",
+      "csi_section": "09 50",
+      "typical_activities": [
+        "Framework",
+        "hangers",
+        "gypsum/tiles",
+        "access panels",
+        "finishing"
+      ],
+      "default_unit": "SQM",
+      "implementation_notes": "",
+      "synonyms_ar": [
+        "أسقف معلقة جبسون / metal grid"
+      ],
+      "synonyms_en": [
+        "false ceilings"
+      ]
+    },
+    {
+      "item_key": "FINI_أنظمة سقف ",
+      "item_name_ar": "أنظمة سقف مستعارة",
+      "item_name_en": "acoustic tiles",
+      "category_id": "finishes",
+      "csi_section": "09 51",
+      "typical_activities": [
+        "grid installation",
+        "tiles",
+        "edge trims"
+      ],
+      "default_unit": "SQM",
+      "implementation_notes": "",
+      "synonyms_ar": [
+        "أنظمة سقف مستعارة"
+      ],
+      "synonyms_en": [
+        "acoustic tiles"
+      ]
+    },
+    {
+      "item_key": "FINI_حواملأنظمة",
+      "item_name_ar": "حوامل/أنظمة تعليق",
+      "item_name_en": "suspension systems",
+      "category_id": "finishes",
+      "csi_section": "09 50",
+      "typical_activities": [
+        "rods",
+        "wires",
+        "anchors",
+        "leveling"
+      ],
+      "default_unit": "EACH",
+      "implementation_notes": "item/count",
+      "synonyms_ar": [
+        "حوامل/أنظمة تعليق"
+      ],
+      "synonyms_en": [
+        "suspension systems"
+      ]
+    },
+    {
+      "item_key": "PLUM_WATER_PIPE",
+      "item_name_ar": "تمديدات مياه باردة / ساخنة",
+      "item_name_en": "Supply piping",
+      "category_id": "plumbing",
+      "csi_section": "Division 22 — Water Distribution",
+      "typical_activities": [
+        "Lay pipes (PVC/Cu/PEX)",
+        "valves",
+        "fittings",
+        "pressure test"
+      ],
+      "default_unit": "RM",
+      "implementation_notes": "(length) / connections",
+      "synonyms_ar": [
+        "تمديدات مياه باردة / ساخنة"
+      ],
+      "synonyms_en": [
+        "supply piping"
+      ]
+    },
+    {
+      "item_key": "PLUM_SANITARY",
+      "item_name_ar": "صرف صحي داخلي",
+      "item_name_en": "Sanitary waste & vent",
+      "category_id": "plumbing",
+      "csi_section": "Division 22 — Sanitary Piping",
+      "typical_activities": [
+        "Stack layout",
+        "traps",
+        "vents",
+        "connection to external sewer"
+      ],
+      "default_unit": "RM",
+      "implementation_notes": "/ fixture count",
+      "synonyms_ar": [
+        "صرف صحي داخلي"
+      ],
+      "synonyms_en": [
+        "sanitary waste & vent"
+      ]
+    },
+    {
+      "item_key": "PLUM_شبكات الصر",
+      "item_name_ar": "شبكات الصرف الخارجي",
+      "item_name_en": "Storm / external drains",
+      "category_id": "plumbing",
+      "csi_section": "Division 33 / 22",
+      "typical_activities": [
+        "Manholes",
+        "gullies",
+        "gravity pipes",
+        "connections"
+      ],
+      "default_unit": "RM",
+      "implementation_notes": "/ manhole count",
+      "synonyms_ar": [
+        "شبكات الصرف الخارجي"
+      ],
+      "synonyms_en": [
+        "storm / external drains"
+      ]
+    },
+    {
+      "item_key": "PLUM_FIXTURES",
+      "item_name_ar": "تجهيزات صحية",
+      "item_name_en": "Fixtures: WC, basin, shower",
+      "category_id": "plumbing",
+      "csi_section": "Division 22 — Plumbing Fixtures",
+      "typical_activities": [
+        "Install fixtures",
+        "connectors",
+        "sealing",
+        "testing"
+      ],
+      "default_unit": "EACH",
+      "implementation_notes": "each / item",
+      "synonyms_ar": [
+        "تجهيزات صحية"
+      ],
+      "synonyms_en": [
+        "fixtures: wc, basin, shower"
+      ]
+    },
+    {
+      "item_key": "PLUM_شبكات الغا",
+      "item_name_ar": "شبكات الغاز",
+      "item_name_en": "إذا موجودة",
+      "category_id": "plumbing",
+      "csi_section": "Division 22 — Fuel Gas Piping",
+      "typical_activities": [
+        "Piping",
+        "regulators",
+        "leak test"
+      ],
+      "default_unit": "RM",
+      "implementation_notes": "- specialized safety",
+      "synonyms_ar": [
+        "شبكات الغاز"
+      ],
+      "synonyms_en": [
+        "إذا موجودة"
+      ]
+    }
+  ]
+}
