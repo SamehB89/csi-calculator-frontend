@@ -17,7 +17,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://web-production-90db2.up.railway.app/api/:path*"
+      "destination": "https://csicalcbackendv3.pythonanywhere.com/api/:path*"
     }
   ],
   "headers": [
