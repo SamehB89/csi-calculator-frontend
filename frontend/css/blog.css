@@ -90,15 +90,31 @@
 /* Horizontal Ad Row (between article rows) */
 .ad-row-horizontal {
     grid-column: 1 / -1; /* Span full width */
-    background: var(--bg-tertiary);
-    border: 1px dashed var(--border-color);
-    border-radius: var(--radius-md);
-    padding: 1rem;
+    background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
+    border: 2px dashed var(--primary-color);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 90px;
-    margin: 1rem 0;
+    min-height: 100px;
+    margin: 1.5rem 0;
+    position: relative;
+}
+
+/* Placeholder text when ad is not loaded */
+.ad-row-horizontal::before {
+    content: "📢 مساحة إعلانية";
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    opacity: 0.6;
+    position: absolute;
+}
+
+/* Hide placeholder when ad loads */
+.ad-row-horizontal:has(ins[data-ad-status="filled"])::before,
+.ad-row-horizontal:has(ins.adsbygoogle-noablate)::before {
+    display: none;
 }
 
 .ad-row-horizontal ins {
