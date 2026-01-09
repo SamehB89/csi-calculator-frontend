@@ -248,57 +248,107 @@ class QuickSearchManager {
         const subDiv2 = document.getElementById('subDivision2');
         const itemDesc = document.getElementById('itemDescription');
         
-        // Set main division
-        if (item.division && mainDiv) {
-            // Find matching option by text content
-            const option = Array.from(mainDiv.options).find(opt => 
-                opt.textContent.includes(item.division)
-            );
-            if (option) {
-                mainDiv.value = option.value;
+        // Extract division code from item.code (format: "XXX YYY-ZZZZ")
+        // The first 2-3 digits are the main division code
+        const codeMatch = item.code.match(/^(\d{2,3})/);
+        const mainDivCode = codeMatch ? codeMatch[1] : null;
+        
+        console.log('🔍 Populating dropdowns for item:', item.code);
+        console.log('🔍 Extracted main div code:', mainDivCode);
+        console.log('🔍 Item division name:', item.division);
+        
+        // Set main division by code first, then by name
+        if (mainDiv) {
+            let foundOption = null;
+            
+            // First try to match by code (more reliable)
+            if (mainDivCode) {
+                foundOption = Array.from(mainDiv.options).find(opt => 
+                    opt.value === mainDivCode
+                );
+            }
+            
+            // Fallback: match by division name
+            if (!foundOption && item.division) {
+                foundOption = Array.from(mainDiv.options).find(opt => 
+                    opt.textContent.toLowerCase().includes(item.division.toLowerCase())
+                );
+            }
+            
+            if (foundOption) {
+                console.log('✅ Found main division:', foundOption.value, foundOption.textContent);
+                mainDiv.value = foundOption.value;
                 mainDiv.dispatchEvent(new Event('change'));
                 
-                // Wait for sub1 to load
-                await this.waitFor(200);
+                // Wait for sub1 to load from API
+                await this.waitForDropdownToLoad(subDiv1, 500, 5);
+            } else {
+                console.warn('⚠️ Main division not found for:', item.division);
             }
         }
         
         // Set subdivision 1
-        if (item.subdivision1 && subDiv1) {
-            await this.waitFor(100);
-            const option = Array.from(subDiv1.options).find(opt => 
-                opt.textContent.includes(item.subdivision1)
+        if (item.subdivision1 && subDiv1 && subDiv1.options.length > 1) {
+            const foundOption = Array.from(subDiv1.options).find(opt => 
+                opt.textContent.toLowerCase().includes(item.subdivision1.toLowerCase())
             );
-            if (option) {
-                subDiv1.value = option.value;
+            
+            if (foundOption) {
+                console.log('✅ Found subdivision1:', foundOption.value);
+                subDiv1.value = foundOption.value;
                 subDiv1.dispatchEvent(new Event('change'));
                 
                 // Wait for sub2 to load
-                await this.waitFor(200);
+                await this.waitForDropdownToLoad(subDiv2, 500, 5);
+            } else {
+                console.warn('⚠️ Subdivision1 not found for:', item.subdivision1);
             }
         }
         
         // Set subdivision 2
-        if (item.subdivision2 && subDiv2) {
-            await this.waitFor(100);
-            const option = Array.from(subDiv2.options).find(opt => 
-                opt.textContent.includes(item.subdivision2)
+        if (item.subdivision2 && subDiv2 && subDiv2.options.length > 1) {
+            const foundOption = Array.from(subDiv2.options).find(opt => 
+                opt.textContent.toLowerCase().includes(item.subdivision2.toLowerCase())
             );
-            if (option) {
-                subDiv2.value = option.value;
+            
+            if (foundOption) {
+                console.log('✅ Found subdivision2:', foundOption.value);
+                subDiv2.value = foundOption.value;
                 subDiv2.dispatchEvent(new Event('change'));
                 
                 // Wait for items to load
-                await this.waitFor(200);
+                await this.waitForDropdownToLoad(itemDesc, 500, 5);
+            } else {
+                console.warn('⚠️ Subdivision2 not found for:', item.subdivision2);
             }
         }
         
-        // Set final item
-        if (item.code && itemDesc) {
-            await this.waitFor(100);
-            itemDesc.value = item.code;
-            itemDesc.dispatchEvent(new Event('change'));
+        // Set final item by code
+        if (item.code && itemDesc && itemDesc.options.length > 1) {
+            // Try direct code match first
+            let foundOption = Array.from(itemDesc.options).find(opt => 
+                opt.value === item.code
+            );
+            
+            if (foundOption) {
+                console.log('✅ Found item:', foundOption.value);
+                itemDesc.value = item.code;
+                itemDesc.dispatchEvent(new Event('change'));
+            } else {
+                console.warn('⚠️ Item not found for code:', item.code);
+            }
         }
+    }
+    
+    // Helper: Wait for dropdown to be populated
+    async waitForDropdownToLoad(dropdown, intervalMs = 100, maxAttempts = 10) {
+        for (let i = 0; i < maxAttempts; i++) {
+            await this.waitFor(intervalMs);
+            if (dropdown && dropdown.options.length > 1 && !dropdown.disabled) {
+                return true;
+            }
+        }
+        return false;
     }
     
     waitFor(ms) {

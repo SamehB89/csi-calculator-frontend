@@ -74,10 +74,15 @@
         <!-- Search and Filter -->
         <div class="blog-controls">
             <input type="text" class="blog-search" id="searchInput" placeholder="🔍 ابحث عن مقال...">
-            <div class="blog-filter">
+        <div class="blog-filter">
                 <button class="filter-btn active" data-category="all">الكل</button>
+                <button class="filter-btn" data-category="bim">BIM</button>
+                <button class="filter-btn" data-category="bim-standards">معايير BIM</button>
+                <button class="filter-btn" data-category="bim-dimensions">أبعاد BIM</button>
                 <button class="filter-btn" data-category="cost">تقدير التكلفة</button>
                 <button class="filter-btn" data-category="management">إدارة المشاريع</button>
+                <button class="filter-btn" data-category="planning">التخطيط والجدولة</button>
+                <button class="filter-btn" data-category="contracts">العقود</button>
                 <button class="filter-btn" data-category="csi">معايير CSI</button>
                 <button class="filter-btn" data-category="tutorial">دروس تطبيقية</button>
             </div>
@@ -165,8 +170,17 @@
                 </div>
             </a>
 
+            <!-- Ad Row 1: After 6 articles -->
+            <div class="ad-row-horizontal" data-ad-exclude="true">
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-5429423113977975"
+                    data-ad-slot="1234567890"
+                    data-ad-format="horizontal"></ins>
+            </div>
+
             <!-- Article 26: EIR Guide -->
-            <a href="articles/eir-guide.html" class="article-card" data-category="bim">
+            <a href="articles/eir-guide.html" class="article-card" data-category="bim-standards">
                 <div class="article-image" style="background-image: url('assets/eir-guide.jpg'); background-size: cover; background-position: center;"></div>
                 <div class="article-content">
                     <span class="article-category">معايير BIM</span>
@@ -182,7 +196,7 @@
             </a>
 
             <!-- Article 27: BEP Guide -->
-            <a href="articles/bep-guide.html" class="article-card" data-category="bim">
+            <a href="articles/bep-guide.html" class="article-card" data-category="bim-standards">
                 <div class="article-image" style="background-image: url('assets/bep-guide.jpg'); background-size: cover; background-position: center;"></div>
                 <div class="article-content">
                     <span class="article-category">معايير BIM</span>
@@ -198,7 +212,7 @@
             </a>
 
             <!-- Article 28: CDE Guide -->
-            <a href="articles/cde-guide.html" class="article-card" data-category="bim">
+            <a href="articles/cde-guide.html" class="article-card" data-category="bim-standards">
                 <div class="article-image" style="background-image: url('assets/cde-guide.jpg'); background-size: cover; background-position: center;"></div>
                 <div class="article-content">
                     <span class="article-category">معايير BIM</span>
@@ -214,7 +228,7 @@
             </a>
 
             <!-- Article 29: LOD Guide -->
-            <a href="articles/lod-guide.html" class="article-card" data-category="bim">
+            <a href="articles/lod-guide.html" class="article-card" data-category="bim-standards">
                 <div class="article-image" style="background-image: url('assets/lod-guide.jpg'); background-size: cover; background-position: center;"></div>
                 <div class="article-content">
                     <span class="article-category">معايير BIM</span>
@@ -229,8 +243,17 @@
                 </div>
             </a>
 
+            <!-- Ad Row 2: After 12 articles -->
+            <div class="ad-row-horizontal" data-ad-exclude="true">
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-5429423113977975"
+                    data-ad-slot="1234567891"
+                    data-ad-format="horizontal"></ins>
+            </div>
+
             <!-- Article 30: IFC Guide -->
-            <a href="articles/ifc-guide.html" class="article-card" data-category="bim">
+            <a href="articles/ifc-guide.html" class="article-card" data-category="bim-standards">
                 <div class="article-image" style="background-image: url('assets/ifc-guide.jpg'); background-size: cover; background-position: center;"></div>
                 <div class="article-content">
                     <span class="article-category">معايير BIM</span>
@@ -246,7 +269,7 @@
             </a>
 
             <!-- Article 31: COBie Guide -->
-            <a href="articles/cobie-guide.html" class="article-card" data-category="bim">
+            <a href="articles/cobie-guide.html" class="article-card" data-category="bim-standards">
                 <div class="article-image" style="background-image: url('assets/cobie-guide.jpg'); background-size: cover; background-position: center;"></div>
                 <div class="article-content">
                     <span class="article-category">معايير BIM</span>
@@ -262,7 +285,7 @@
             </a>
 
             <!-- Article 32: 4D BIM -->
-            <a href="articles/4d-bim.html" class="article-card" data-category="bim">
+            <a href="articles/4d-bim.html" class="article-card" data-category="bim-dimensions">
                 <div class="article-image" style="background-image: url('assets/4d-bim.jpg'); background-size: cover; background-position: center;"></div>
                 <div class="article-content">
                     <span class="article-category">أبعاد BIM</span>
@@ -278,7 +301,7 @@
             </a>
 
             <!-- Article 33: 5D BIM -->
-            <a href="articles/5d-bim.html" class="article-card" data-category="bim">
+            <a href="articles/5d-bim.html" class="article-card" data-category="bim-dimensions">
                 <div class="article-image" style="background-image: url('assets/5d-bim.jpg'); background-size: cover; background-position: center;"></div>
                 <div class="article-content">
                     <span class="article-category">أبعاد BIM</span>
@@ -294,7 +317,7 @@
             </a>
 
             <!-- Article 34: 6D BIM -->
-            <a href="articles/6d-bim.html" class="article-card" data-category="bim">
+            <a href="articles/6d-bim.html" class="article-card" data-category="bim-dimensions">
                 <div class="article-image" style="background-image: url('assets/6d-bim.jpg'); background-size: cover; background-position: center;"></div>
                 <div class="article-content">
                     <span class="article-category">أبعاد BIM</span>
@@ -310,7 +333,7 @@
             </a>
 
             <!-- Article 35: 7D BIM -->
-            <a href="articles/7d-bim.html" class="article-card" data-category="bim">
+            <a href="articles/7d-bim.html" class="article-card" data-category="bim-dimensions">
                 <div class="article-image" style="background-image: url('assets/7d-bim.jpg'); background-size: cover; background-position: center;"></div>
                 <div class="article-content">
                     <span class="article-category">أبعاد BIM</span>
@@ -324,6 +347,15 @@
                     </div>
                 </div>
             </a>
+
+            <!-- Ad Row 3: After 18 articles -->
+            <div class="ad-row-horizontal" data-ad-exclude="true">
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-5429423113977975"
+                    data-ad-slot="1234567892"
+                    data-ad-format="horizontal"></ins>
+            </div>
 
             <!-- Article 1: EVM Introduction -->
             <a href="articles/evm-introduction.html" class="article-card" data-category="management">
@@ -469,6 +501,15 @@
                 </div>
             </a>
 
+            <!-- Ad Row 4: After 24 articles -->
+            <div class="ad-row-horizontal" data-ad-exclude="true">
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-5429423113977975"
+                    data-ad-slot="1234567893"
+                    data-ad-format="horizontal"></ins>
+            </div>
+
             <!-- Article 10: Contract Types -->
             <a href="articles/contract-types.html" class="article-card" data-category="contracts">
                 <div class="article-image" style="background-image: url('assets/contract-types.jpg'); background-size: cover; background-position: center;"></div>
@@ -564,6 +605,15 @@
                     </div>
                 </div>
             </a>
+
+            <!-- Ad Row 5: After 30 articles -->
+            <div class="ad-row-horizontal" data-ad-exclude="true">
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-5429423113977975"
+                    data-ad-slot="1234567894"
+                    data-ad-format="horizontal"></ins>
+            </div>
 
             <!-- Article 16: Scheduling Fundamentals -->
             <a href="articles/scheduling-fundamentals.html" class="article-card" data-category="planning">

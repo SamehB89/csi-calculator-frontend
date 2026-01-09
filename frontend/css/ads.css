@@ -13,8 +13,7 @@
 .nav-links *,
 header,
 header * {
-    /* Mark as non-ad zones */
-    data-ad-exclude: "true";
+    /* Navigation zone - excluded from auto ads via HTML data attributes */
 }
 
 /* Ensure minimum spacing from navigation */
