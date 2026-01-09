@@ -12,6 +12,32 @@ function initAdsense() {
     // Auto ads script is already loaded in HTML <head>
     // Configure exclusion zones to prevent ads near navigation
     configureAdExclusions();
+    
+    // Initialize all manual ad units on the page
+    initializeManualAdUnits();
+}
+
+// Initialize all adsbygoogle elements on the page
+function initializeManualAdUnits() {
+    // Find all uninitialized ad units
+    const adUnits = document.querySelectorAll('.adsbygoogle:not([data-adsbygoogle-status])');
+    
+    if (adUnits.length === 0) {
+        console.log('📢 No manual ad units to initialize');
+        return;
+    }
+    
+    console.log(`📢 Initializing ${adUnits.length} manual ad unit(s)...`);
+    
+    // Push each ad unit to AdSense
+    adUnits.forEach((adUnit, index) => {
+        try {
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            console.log(`✅ Ad unit ${index + 1} pushed to AdSense queue`);
+        } catch (error) {
+            console.warn(`⚠️ Error initializing ad unit ${index + 1}:`, error);
+        }
+    });
 }
 
 // Configure ad exclusion zones to comply with navigation policy
@@ -40,9 +66,8 @@ function configureAdExclusions() {
     console.log('🚫 Ad exclusion zones configured for navigation elements');
 }
 
-// Optional: Manual ad insertion for specific placements
-// Only use when explicitly placing ads with proper labeling
-function insertManualAd(containerId, slotId) {
+// Insert a responsive ad unit into a container
+function insertResponsiveAd(containerId, slotId, format = 'auto') {
     const container = document.getElementById(containerId);
     if (!container) {
         console.warn(`Ad container "${containerId}" not found`);
@@ -52,19 +77,48 @@ function insertManualAd(containerId, slotId) {
     // Ensure container has proper styling
     container.classList.add('ad-container');
     
-    // For future manual ad units, uncomment and add slot ID:
-    /*
+    // Create the ad unit with responsive settings
     container.innerHTML = `
         <ins class="adsbygoogle"
              style="display:block"
              data-ad-client="ca-pub-5429423113977975"
              data-ad-slot="${slotId}"
-             data-ad-format="auto"
+             data-ad-format="${format}"
              data-full-width-responsive="true"></ins>
     `;
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    console.log(`✅ Manual ad inserted in container: ${containerId}`);
-    */
+    
+    // Push to AdSense queue
+    try {
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        console.log(`✅ Responsive ad inserted in container: ${containerId}`);
+    } catch (error) {
+        console.warn(`⚠️ Error inserting ad in ${containerId}:`, error);
+    }
+}
+
+// Insert a vertical sidebar ad
+function insertSidebarAd(containerId, slotId) {
+    const container = document.getElementById(containerId);
+    if (!container) {
+        console.warn(`Sidebar ad container "${containerId}" not found`);
+        return;
+    }
+    
+    container.innerHTML = `
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5429423113977975"
+             data-ad-slot="${slotId}"
+             data-ad-format="vertical"
+             data-full-width-responsive="false"></ins>
+    `;
+    
+    try {
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        console.log(`✅ Sidebar ad inserted in container: ${containerId}`);
+    } catch (error) {
+        console.warn(`⚠️ Error inserting sidebar ad in ${containerId}:`, error);
+    }
 }
 
 // Monitor Auto Ads placement and ensure compliance
@@ -119,7 +173,9 @@ document.addEventListener('DOMContentLoaded', () => {
 // Export for external use
 window.CSI_Ads = {
     init: initAdsense,
-    insertManualAd: insertManualAd,
+    initializeAdUnits: initializeManualAdUnits,
+    insertResponsiveAd: insertResponsiveAd,
+    insertSidebarAd: insertSidebarAd,
     configureExclusions: configureAdExclusions
 };
 
