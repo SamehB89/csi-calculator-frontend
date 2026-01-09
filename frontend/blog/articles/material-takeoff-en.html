@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Take-off and Cost Calculation - CSI Calculator</title>
+    <meta name="description" content="Practical guide to quantity take-off from engineering drawings and accurate cost calculation, including methods, precautions, and wastage rates.">
+    <meta name="keywords" content="Quantity Take-off, Material Estimation, BOQ, Construction Quantities">
+    
+    <meta property="og:title" content="Material Take-off and Cost Calculation">
+    <meta property="og:description" content="How to accurately take off quantities from drawings?">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="../assets/material-takeoff.jpg">
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5429423113977975" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/lang-toggle.css">
+    <link rel="stylesheet" href="../../css/blog.css">
+    <link rel="stylesheet" href="../../css/ads.css">
+    <link rel="stylesheet" href="../../css/share-buttons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="../../js/ads.js"></script>
+    <script src="../../js/i18n.js"></script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../js/blog-i18n.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../../index.html" class="logo-container">
+                <img src="../../assets/logo.png" alt="SAMEH Logo" class="logo-image">
+                <span class="logo-text">CSI Calculator</span>
+            </a>
+            <div class="nav-links">
+                <a href="../../index.html" data-i18n="home" data-icon="🏠"><span>Home</span></a>
+                <a href="../../crew-calculator.html" data-i18n="crewCalculator" data-icon="🧮"><span>Calculator</span></a>
+                <a href="../../ai-planner.html" data-i18n="aiPlanner" data-icon="🤖"><span>AI Planner</span></a>
+                <a href="../index-en.html" class="active" data-i18n="blog" data-icon="📚"><span>Manual & Tips</span></a>
+                <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">🌙</button>
+                <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()"><span id="langIcon">AR</span></button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="article-header">
+        <span class="article-category">Quantity Surveying</span>
+        <h1>Material Take-off and Cost Calculation</h1>
+        <div class="article-meta">
+            <span class="article-date">January 7, 2026</span>
+            <span class="article-read-time">12 min read</span>
+        </div>
+    </div>
+
+    <div class="article-body">
+        <div class="article-image-container">
+            <img src="../assets/material-takeoff.jpg" alt="Quantity Take-off" class="img-fluid rounded shadow mb-4">
+        </div>
+
+        <h2>📐 What is Quantity Take-off?</h2>
+        <p>
+            Quantity Take-off (or Material Take-off) is the process of extracting material quantities and work items from engineering drawings and specifications. This process is fundamental for preparing the Bill of Quantities (BOQ) and accurately pricing the project.
+        </p>
+
+        <h2>📊 Types of Take-off</h2>
+        <h3>1. Approximate Take-off</h3>
+        <p>Used in early project stages to estimate total cost:</p>
+        <ul>
+            <li>Based on gross areas and estimation factors.</li>
+            <li>Low accuracy (±25-30%).</li>
+            <li>Fast and doesn't require detailed drawings.</li>
+        </ul>
+
+        <h3>2. Detailed Take-off</h3>
+        <p>Used when submitting bids and executing projects:</p>
+        <ul>
+            <li>Based on careful reading of every drawing.</li>
+            <li>High accuracy (±5-10%).</li>
+            <li>Takes considerable time and requires expertise.</li>
+        </ul>
+
+        <h2>🔧 Detailed Take-off Steps</h2>
+        <ol>
+            <li><strong>Study Drawings:</strong> Understand the entire project before starting.</li>
+            <li><strong>Identify Items:</strong> Divide work according to BOQ or WBS.</li>
+            <li><strong>Measure:</strong> Use scale rulers or software (AutoCAD, Bluebeam).</li>
+            <li><strong>Calculate:</strong> Apply correct engineering formulas.</li>
+            <li><strong>Review:</strong> Check calculations at least twice.</li>
+        </ol>
+
+        <h2>📏 Basic Take-off Formulas</h2>
+        <h3>Concrete:</h3>
+        <div class="formula-box">
+            Volume (m³) = Length × Width × Height
+        </div>
+
+        <h3>Reinforcement:</h3>
+        <div class="formula-box">
+            Weight (kg) = Volume × Density (7850 kg/m³)<br>
+            Or: Weight = Bar Length × Unit Weight per Meter
+        </div>
+
+        <h3>Formwork:</h3>
+        <div class="formula-box">
+            Area (m²) = Element Perimeter × Height + Bottom Area
+        </div>
+
+        <h2>⚠️ Wastage Rates</h2>
+        <p>Add wastage percentage for each material:</p>
+        <table class="pricing-table">
+            <tr><th>Material</th><th>Wastage Rate</th></tr>
+            <tr><td>Concrete</td><td>3-5%</td></tr>
+            <tr><td>Reinforcement</td><td>3-5%</td></tr>
+            <tr><td>Bricks</td><td>5-7%</td></tr>
+            <tr><td>Tiles</td><td>8-12%</td></tr>
+            <tr><td>Paint</td><td>10-15%</td></tr>
+            <tr><td>Timber</td><td>10-15%</td></tr>
+        </table>
+
+        <h2>💻 Modern Take-off Tools</h2>
+        <ul>
+            <li><strong>Bluebeam Revu:</strong> For measuring from PDF files.</li>
+            <li><strong>PlanSwift:</strong> Specialized take-off software.</li>
+            <li><strong>CostX:</strong> 2D and 3D take-off.</li>
+            <li><strong>Revit:</strong> Automatic take-off from BIM models.</li>
+        </ul>
+
+        <h2>💡 Tips for Accurate Take-off</h2>
+        <ul>
+            <li>Use the same units throughout all calculations.</li>
+            <li>Document the source of every number (sheet number, detail).</li>
+            <li>Check take-off using different method (e.g., calculate from two directions).</li>
+            <li>Don't forget hidden elements (foundations, installations).</li>
+        </ul>        <!-- Share Buttons -->
+        <div class="share-buttons">
+            <span class="share-buttons-label">Share this article:</span>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-btn facebook" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">Facebook</a>
+            <a href="https://twitter.com/intent/tweet?url=" class="share-btn twitter" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">Twitter</a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=" class="share-btn linkedin" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">LinkedIn</a>
+            <a href="https://wa.me/?text=" class="share-btn whatsapp" target="_blank" onclick="this.href+=encodeURIComponent(document.title + ' ' + window.location.href)">WhatsApp</a>
+            <button class="share-btn copy" onclick="navigator.clipboard.writeText(window.location.href);alert('Link copied!')">Copy Link</button>
+        </div>
+        
+        
+        <hr>
+        <p><strong>Next Article:</strong> <a href="overhead-profit-en.html">Overhead and Profit in Construction Pricing</a></p>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p class="footer-text">CSI Crew Calculator • Built with <span class="footer-heart">❤️</span> by <span class="footer-author">Sameh Badawy Sayed</span></p>
+        </div>
+    </footer>
+</body>
+</html>

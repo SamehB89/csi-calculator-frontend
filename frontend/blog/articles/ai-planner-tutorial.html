@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كيفية استخدام AI Planner لتخطيط مشروعك - CSI Calculator</title>
+    <meta name="description" content="دليل خطوة بخطوة لاستخدام المخطط الذكي (AI Planner) لتخطيط مشروعك الإنشائي، حساب الفرق المطلوبة، وتقدير المدة الزمنية في ثوانٍ.">
+    <meta name="keywords" content="AI Construction, الذكاء الاصطناعي في البناء, تخطيط المشاريع, المخطط الذكي, CSI Calculator">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="كيفية استخدام AI Planner لتخطيط مشروعك">
+    <meta property="og:description" content="خطط مشروعك بالذكاء الاصطناعي في ثوانٍ">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://csi-calc.vercel.app/blog/articles/ai-planner-tutorial.html">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "كيفية استخدام AI Planner لتخطيط مشروعك",
+      "author": {
+        "@type": "Person",
+        "name": "Sameh Badawy Sayed"
+      },
+      "datePublished": "2026-01-02",
+      "description": "دليل خطوة بخطوة لاستخدام المخطط الذكي",
+      "articleSection": "الذكاء الاصطناعي"
+    }
+    </script>
+    
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5429423113977975" crossorigin="anonymous"></script>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/lang-toggle.css">
+    <link rel="stylesheet" href="../../css/blog.css">
+    <link rel="stylesheet" href="../../css/ads.css">
+    <link rel="stylesheet" href="../../css/share-buttons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Scripts -->
+    <script src="../../js/ads.js"></script>
+    <script src="../../js/i18n.js"></script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../js/blog-i18n.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../../index.html" class="logo-container">
+                <img src="../../assets/logo.png" alt="SAMEH Logo" class="logo-image">
+                <span class="logo-text">CSI Calculator</span>
+            </a>
+            <div class="nav-links">
+                <a href="../../index.html" data-i18n="home" data-icon="🏠">
+                    <span>تصفح</span>
+                </a>
+                <a href="../../crew-calculator.html" data-i18n="crewCalculator" data-icon="🧮">
+                    <span>الحاسبة</span>
+                </a>
+                <a href="../../ai-planner.html" data-i18n="aiPlanner" data-icon="🤖">
+                    <span>المخطط الذكي</span>
+                </a>
+                <a href="../index.html" class="active" data-i18n="blog" data-icon="📚">
+                    <span>دليل التشغيل+مقالات فنية</span>
+                </a>
+                <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">
+                    🌙
+                </button>
+                <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()">
+                    <span id="langIcon">EN</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Header -->
+    <div class="article-header">
+        <span class="article-category">الذكاء الاصطناعي في البناء</span>
+        <h1>كيف تستخدم المخطط الذكي AI Planner لإدارة مشروعك؟</h1>
+        <div class="article-meta">
+            <span class="article-date">2 يناير 2026</span>
+            <span class="article-read-time">5 دقائق قراءة</span>
+        </div>
+    </div>
+
+    <!-- Article Body -->
+    <div class="article-body">
+        <h2>🤖 مقدمة</h2>
+        <p>
+            تخيل أن لديك مساعداً هندسياً خبيراً متاحاً 24 ساعة، يفهم طلباتك بلغتك الطبيعية، ويقترح عليك فرق العمل، المعدات، والمدة الزمنية فوراً. هذا هو بالضبط ما يفعله <strong>AI Planner</strong> المتوفر مجاناً على موقعنا.
+        </p>
+
+        <h2>خطوة 1: الوصول للأداة</h2>
+        <p>
+            اضغط على أيقونة "المخطط الذكي" في القائمة العلوية أو <a href="../../ai-planner.html" style="color: var(--primary-color); font-weight: 600;">اضغط هنا</a>. ستظهر لك واجهة دردشة بسيطة وسهلة الاستخدام.
+        </p>
+
+        <h2>خطوة 2: اكتب طلبك (Prompt)</h2>
+        <p>
+            لا تحتاج لكتابة أكواد أو ملء جداول معقدة. فقط صف ما تريد فعله.
+        </p>
+        
+        <h3>أمثلة لما يمكنك كتابته:</h3>
+        <ul>
+            <li>"عندي صب قواعد منفصلة 50 متر مكعب خرسانة عادية"</li>
+            <li>"بناء حائط طوب أحمر مساحة 200 متر مربع"</li>
+            <li>"تركيب سيراميك أرضيات 100 متر"</li>
+        </ul>
+
+        <blockquote>
+            <strong>💡 نصيحة ذهبية:</strong> كلما كنت محدداً في الكمية ونوع العمل، كانت النتائج أدق.
+        </blockquote>
+
+        <h2>خطوة 3: احصل على الخطة الفورية</h2>
+        <p>
+            بمجرد إرسال الرسالة، سيقوم الذكاء الاصطناعي بتحليل طلبك ومطابقته مع قاعدة بيانات CSI، وسيرد عليك بمعلومات تفصيلية تشمل:
+        </p>
+        <ul>
+            <li><strong>الأنشطة المطلوبة:</strong> (نجارة، حدادة، صب، إلخ)</li>
+            <li><strong>فريق العمل المقترح:</strong> عدد العمال والمشرفين لكل نشاط.</li>
+            <li><strong>المعدات اللازمة:</strong> هل تحتاج خلاطة؟ هزاز؟ رافعة؟</li>
+            <li><strong>المدة الزمنية:</strong> كم يوماً سيستغرق هذا العمل؟</li>
+        </ul>
+
+        <h2>خطوة 4: التعديل والتخصيص</h2>
+        <p>
+            النتائج هي مقترح أولي (Starting Point). يمكنك دائماً أن تطلب منه تعديلات، مثلاً:
+        </p>
+        <ul>
+            <li>"هل يمكن إنجاز العمل في يومين بدلاً من 4؟"</li>
+            <li>"احسب التكلفة إذا كانت يومية العامل 150 جنيه"</li>
+        </ul>
+
+        <h2>لماذا تستخدم AI Planner؟</h2>
+        <ul>
+            <li><strong>السرعة:</strong> خطة كاملة في ثوانٍ.</li>
+            <li><strong>الدقة:</strong> مبني على معايير عالمية.</li>
+            <li><strong>السهولة:</strong> واجهة دردشة مألوفة للجميع.</li>
+        </ul>
+
+        <h2>📝 الخلاصة</h2>
+        <p>
+            المخطط الذكي هو خطوتك الأولى نحو رقمنة أعمالك الهندسية. جربه الآن ووفر ساعات من التخطيط اليدوي.
+        </p>
+
+        <p style="margin-top: 2rem; padding: 1.5rem; background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%); border-radius: var(--radius-md); border-right: 4px solid var(--primary-color);">
+            <strong>🤖 هل أنت مستعد للتجربة؟</strong><br>
+            انتقل إلى <a href="../../ai-planner.html" style="color: var(--primary-color); font-weight: 600;">المخطط الذكي</a> واكتب مشروعك الأول الآن!
+            <br><br>
+            <strong>🙋‍♂️ هل لديك أسئلة؟</strong> تواصل معي على صفحتي على الفيسبوك: <a href="https://www.facebook.com/Sameh.Badawy.Sayed" target="_blank" style="color: var(--primary-color); text-decoration: underline;">Sameh Badawy Sayed</a>
+        </p>
+    </div>
+
+    <!-- Share Section -->
+    <div class="share-section">
+        <h3>شارك هذا المقال</h3>
+        <div class="share-buttons">
+            <button class="share-btn twitter" onclick="shareOnTwitter()">
+                🐦 Twitter
+            </button>
+            <button class="share-btn facebook" onclick="shareOnFacebook()">
+                📘 Facebook
+            </button>
+            <button class="share-btn linkedin" onclick="shareOnLinkedIn()">
+                💼 LinkedIn
+            </button>
+            <button class="share-btn email" onclick="shareViaEmail()">
+                📧 Email
+            </button>
+        </div>
+    </div>
+
+    <!-- Related Articles -->
+    <div class="related-articles">
+        <h2>مقالات ذات صلة</h2>
+        <div class="articles-grid">
+            <a href="crew-calculation-guide.html" class="article-card">
+                <div class="article-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                <div class="article-content">
+                    <span class="article-category">تقدير التكلفة</span>
+                    <h2 class="article-title">حساب فريق العمل</h2>
+                    <p class="article-excerpt">دليل شامل لحساب العمالة</p>
+                </div>
+            </a>
+            <a href="construction-team-management.html" class="article-card">
+                <div class="article-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+                <div class="article-content">
+                    <span class="article-category">إدارة المشاريع</span>
+                    <h2 class="article-title">إدارة فرق البناء</h2>
+                    <p class="article-excerpt">أفضل ممارسات الإدارة الناجحة</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p class="footer-text">
+                CSI Crew Calculator • Built with <span class="footer-heart">❤️</span> by <span class="footer-author">Sameh Badawy Sayed</span>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const pageTitle = encodeURIComponent(document.title);
+        const pageUrl = encodeURIComponent(window.location.href);
+
+        function shareOnTwitter() {
+            window.open(`https://twitter.com/intent/tweet?text=${pageTitle}&url=${pageUrl}`, '_blank');
+        }
+
+        function shareOnFacebook() {
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`, '_blank');
+        }
+
+        function shareOnLinkedIn() {
+            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${pageUrl}`, '_blank');
+        }
+
+        function shareViaEmail() {
+            window.location.href = `mailto:?subject=${pageTitle}&body=${pageUrl}`;
+        }
+    </script>
+</body>
+</html>

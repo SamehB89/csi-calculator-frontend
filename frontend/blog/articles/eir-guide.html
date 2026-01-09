@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EIR: متطلبات معلومات المالك - الدليل الشامل - CSI Calculator</title>
+    <meta name="description" content="دليل تفصيلي شامل لـ EIR (Employer's Information Requirements): ما هو، محتوياته، كيف تكتبه، والعلاقة مع BEP. كورس مكثف مع أمثلة عملية.">
+    <meta name="keywords" content="EIR, Employer's Information Requirements, متطلبات المعلومات, BIM, ISO 19650">
+    
+    <meta property="og:title" content="EIR: متطلبات معلومات المالك - الدليل الشامل">
+    <meta property="og:description" content="كورس مكثف في إعداد وثيقة EIR بمعايير ISO 19650">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="../assets/eir-guide.jpg">
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5429423113977975" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/lang-toggle.css">
+    <link rel="stylesheet" href="../../css/blog.css">
+    <link rel="stylesheet" href="../../css/ads.css">
+    <link rel="stylesheet" href="../../css/share-buttons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="../../js/ads.js"></script>
+    <script src="../../js/i18n.js"></script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../js/blog-i18n.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../../index.html" class="logo-container">
+                <img src="../../assets/logo.png" alt="SAMEH Logo" class="logo-image">
+                <span class="logo-text">CSI Calculator</span>
+            </a>
+            <div class="nav-links">
+                <a href="../../index.html" data-i18n="home" data-icon="🏠"><span>تصفح</span></a>
+                <a href="../../crew-calculator.html" data-i18n="crewCalculator" data-icon="🧮"><span>الحاسبة</span></a>
+                <a href="../../ai-planner.html" data-i18n="aiPlanner" data-icon="🤖"><span>المخطط الذكي</span></a>
+                <a href="../index.html" class="active" data-i18n="blog" data-icon="📚"><span>دليل التشغيل+مقالات فنية</span></a>
+                <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">🌙</button>
+                <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()"><span id="langIcon">EN</span></button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="article-header">
+        <span class="article-category">معايير BIM</span>
+        <h1>EIR: متطلبات معلومات المالك - الدليل الشامل</h1>
+        <div class="article-meta">
+            <span class="article-date">8 يناير 2026</span>
+            <span class="article-read-time">25 دقيقة قراءة</span>
+        </div>
+    </div>
+
+    <div class="article-body">
+        <div class="article-image-container">
+            <img src="../assets/eir-guide.jpg" alt="EIR Guide" class="img-fluid rounded shadow mb-4">
+        </div>
+
+        <div class="alert alert-info">
+            <strong>📚 هذا المقال جزء من سلسلة معايير BIM:</strong> EIR → BEP → CDE → LOD → IFC → COBie
+        </div>
+
+        <h2>📋 الفهرس</h2>
+        <ol>
+            <li><a href="#what-is-eir">ما هو EIR؟</a></li>
+            <li><a href="#importance">أهمية EIR في المشاريع</a></li>
+            <li><a href="#iso-context">EIR في سياق ISO 19650</a></li>
+            <li><a href="#contents">محتويات وثيقة EIR</a></li>
+            <li><a href="#writing">كيف تكتب EIR؟</a></li>
+            <li><a href="#examples">أمثلة عملية</a></li>
+            <li><a href="#relationship">العلاقة مع BEP</a></li>
+            <li><a href="#templates">نماذج جاهزة</a></li>
+        </ol>
+
+        <hr>
+
+        <h2 id="what-is-eir">📄 1. ما هو EIR؟</h2>
+        <p>
+            <strong>EIR (Employer's Information Requirements)</strong> هي وثيقة رسمية تُصدرها الجهة المالكة للمشروع (Employer/Client) تحدد فيها جميع متطلباتها من المعلومات التي تحتاجها من فريق التصميم والتنفيذ عبر استخدام BIM.
+        </p>
+
+        <div class="alert alert-warning">
+            <strong>⚠️ تغيير المسمى في ISO 19650:</strong><br>
+            في النسخة الجديدة من ISO 19650، تم استبدال مسمى EIR بـ:<br>
+            <strong>OIR</strong> (Organizational Information Requirements) - متطلبات المنظمة<br>
+            <strong>AIR</strong> (Asset Information Requirements) - متطلبات معلومات الأصل<br>
+            <strong>PIR</strong> (Project Information Requirements) - متطلبات معلومات المشروع<br>
+            لكن EIR لا يزال الأكثر استخداماً في الممارسة العملية.
+        </div>
+
+        <h3>1.1 التعريف البسيط:</h3>
+        <p>EIR = "ماذا يريد المالك من BIM في هذا المشروع؟"</p>
+
+        <h3>1.2 من يُعد EIR؟</h3>
+        <ul>
+            <li>المالك (الجهة المالكة للمشروع)</li>
+            <li>أو مستشار BIM يعمل نيابة عن المالك</li>
+            <li>أو مدير المشروع بالتنسيق مع المالك</li>
+        </ul>
+
+        <h3>1.3 متى يُعد EIR؟</h3>
+        <ul>
+            <li>قبل طرح المناقصة (Tender Stage)</li>
+            <li>يُرفق مع وثائق المناقصة</li>
+            <li>يُستخدم كمعيار لتقييم عروض المقاولين/المصممين</li>
+        </ul>
+
+        <hr>
+
+        <h2 id="importance">🎯 2. أهمية EIR في المشاريع</h2>
+
+        <h3>2.1 لماذا EIR مهم؟</h3>
+        <table class="pricing-table">
+            <tr><th>بدون EIR</th><th>مع EIR</th></tr>
+            <tr><td>لا توجد معايير واضحة</td><td>معايير محددة ومقاسة</td></tr>
+            <tr><td>كل طرف يعمل بطريقته</td><td>توحيد العمل بين الأطراف</td></tr>
+            <tr><td>خلافات حول جودة النموذج</td><td>معايير قبول واضحة</td></tr>
+            <tr><td>ضياع فوائد BIM</td><td>تحقيق ROI من BIM</td></tr>
+            <tr><td>مخرجات غير متوافقة</td><td>مخرجات موحدة ومتسقة</td></tr>
+        </table>
+
+        <h3>2.2 فوائد EIR:</h3>
+        <ul>
+            <li><strong>وضوح التوقعات:</strong> الجميع يعرف ما هو مطلوب</li>
+            <li><strong>أساس للتعاقد:</strong> يُدخل في العقد كملحق تعاقدي</li>
+            <li><strong>معيار للتقييم:</strong> تقييم عروض المناقصات</li>
+            <li><strong>تقليل النزاعات:</strong> معايير واضحة = خلافات أقل</li>
+            <li><strong>ضمان القيمة:</strong> الحصول على ما تريده فعلاً</li>
+        </ul>
+
+        <hr>
+
+        <h2 id="iso-context">🌍 3. EIR في سياق ISO 19650</h2>
+
+        <h3>3.1 هرمية المتطلبات حسب ISO 19650:</h3>
+        <pre style="background: #f5f5f5; padding: 15px; border-radius: 8px; direction: ltr;">
+┌─────────────────────────────────────────┐
+│ OIR - Organizational Info Requirements  │
+│ (ما تحتاجه المنظمة ككل)                 │
+└────────────────┬────────────────────────┘
+                 ↓
+┌─────────────────────────────────────────┐
+│ AIR - Asset Info Requirements           │
+│ (ما تحتاجه لتشغيل الأصل/المبنى)         │
+└────────────────┬────────────────────────┘
+                 ↓
+┌─────────────────────────────────────────┐
+│ PIR - Project Info Requirements         │
+│ (ما تحتاجه خلال مراحل المشروع)          │
+└────────────────┬────────────────────────┘
+                 ↓
+┌─────────────────────────────────────────┐
+│ EIR - Exchange Info Requirements        │
+│ (ما يجب تسليمه في كل مرحلة)             │
+└─────────────────────────────────────────┘
+        </pre>
+
+        <h3>3.2 دورة تبادل المعلومات:</h3>
+        <ol>
+            <li><strong>المالك:</strong> يُعد EIR ويطرحه في المناقصة</li>
+            <li><strong>المتقدمون:</strong> يقدمون Pre-BEP (خطة BIM أولية)</li>
+            <li><strong>الفائز:</strong> يُعد BEP تفصيلي استجابةً لـ EIR</li>
+            <li><strong>التنفيذ:</strong> العمل وفق BEP والتسليم حسب EIR</li>
+        </ol>
+
+        <hr>
+
+        <h2 id="contents">📑 4. محتويات وثيقة EIR</h2>
+
+        <p>تنقسم EIR عادةً إلى ثلاثة أقسام رئيسية:</p>
+
+        <h3>4.1 المتطلبات التقنية (Technical Requirements)</h3>
+        <table class="pricing-table">
+            <tr><th>البند</th><th>الوصف</th><th>مثال</th></tr>
+            <tr><td>البرامج</td><td>البرامج المطلوب استخدامها</td><td>Revit 2024, Navisworks 2024</td></tr>
+            <tr><td>الصيغ</td><td>صيغ الملفات المقبولة</td><td>.rvt, .ifc, .nwc, .pdf</td></tr>
+            <tr><td>LOD</td><td>مستوى التفصيل لكل مرحلة</td><td>LOD 200 للتصميم المبدئي</td></tr>
+            <tr><td>التنسيق</td><td>نظام الإحداثيات والوحدات</td><td>متر، WGS84</td></tr>
+            <tr><td>التسمية</td><td>معايير تسمية الملفات</td><td>PRJ-ZON-DIS-TYP-NUM</td></tr>
+            <tr><td>CDE</td><td>بيئة البيانات المشتركة</td><td>BIM 360, Autodesk Docs</td></tr>
+        </table>
+
+        <h3>4.2 المتطلبات الإدارية (Management Requirements)</h3>
+        <table class="pricing-table">
+            <tr><th>البند</th><th>الوصف</th></tr>
+            <tr><td>الأدوار والمسؤوليات</td><td>من يفعل ماذا في BIM</td></tr>
+            <tr><td>جدول التسليم</td><td>متى يُسلّم كل نموذج/تقرير</td></tr>
+            <tr><td>مراجعة الجودة</td><td>كيف يتم فحص النماذج</td></tr>
+            <tr><td>إدارة التغييرات</td><td>كيف تُوثّق التعديلات</td></tr>
+            <tr><td>الاجتماعات</td><td>تكرار وأجندة اجتماعات BIM</td></tr>
+            <tr><td>التدريب</td><td>متطلبات تدريب الفريق</td></tr>
+        </table>
+
+        <h3>4.3 المتطلبات التجارية/الاستراتيجية (Strategic Requirements)</h3>
+        <table class="pricing-table">
+            <tr><th>البند</th><th>الوصف</th></tr>
+            <tr><td>أهداف BIM</td><td>لماذا نستخدم BIM في هذا المشروع</td></tr>
+            <tr><td>استخدامات BIM</td><td>BIM Uses المطلوبة (Clash Detection, 4D, 5D...)</td></tr>
+            <tr><td>مخرجات FM</td><td>ما يُحتاج لإدارة المرافق</td></tr>
+            <tr><td>COBie</td><td>متطلبات تسليم بيانات التشغيل</td></tr>
+            <tr><td>ملكية البيانات</td><td>من يملك النموذج والبيانات</td></tr>
+        </table>
+
+        <hr>
+
+        <h2 id="writing">✍️ 5. كيف تكتب EIR؟</h2>
+
+        <h3>5.1 الخطوات العملية:</h3>
+        <ol>
+            <li><strong>فهم احتياجات المالك:</strong>
+                <ul>
+                    <li>ما الهدف من BIM؟ (تقليل تكلفة؟ تسريع؟ تسهيل FM؟)</li>
+                    <li>ما المخرجات المطلوبة؟</li>
+                    <li>ما القدرات التقنية للمالك؟</li>
+                </ul>
+            </li>
+            <li><strong>تحديد BIM Uses:</strong>
+                <ul>
+                    <li>Design Authoring</li>
+                    <li>Clash Detection</li>
+                    <li>4D Scheduling</li>
+                    <li>5D Cost Estimation</li>
+                    <li>Facility Management</li>
+                </ul>
+            </li>
+            <li><strong>تحديد LOD لكل مرحلة:</strong>
+                <ul>
+                    <li>مرحلة المفاهيم: LOD 100-200</li>
+                    <li>التصميم الأولي: LOD 200-300</li>
+                    <li>التصميم التفصيلي: LOD 300-350</li>
+                    <li>التنفيذ: LOD 350-400</li>
+                    <li>As-Built: LOD 500</li>
+                </ul>
+            </li>
+            <li><strong>تحديد المتطلبات التقنية</strong></li>
+            <li><strong>تحديد جداول التسليم</strong></li>
+            <li><strong>مراجعة مع أصحاب المصلحة</strong></li>
+        </ol>
+
+        <h3>5.2 نصائح لكتابة EIR فعّال:</h3>
+        <ul>
+            <li>✅ كن محدداً وواضحاً (لا غموض)</li>
+            <li>✅ اربط كل متطلب بهدف محدد</li>
+            <li>✅ تأكد من قابلية التطبيق (واقعية)</li>
+            <li>✅ استخدم جداول ورسومات توضيحية</li>
+            <li>✅ راجع مع خبير BIM</li>
+            <li>❌ لا تنسخ EIR من مشروع آخر بدون تعديل</li>
+            <li>❌ لا تطلب ما لا تحتاجه فعلاً</li>
+        </ul>
+
+        <hr>
+
+        <h2 id="examples">📝 6. أمثلة عملية</h2>
+
+        <h3>6.1 مثال على متطلبات LOD:</h3>
+        <pre style="background: #f5f5f5; padding: 15px; border-radius: 8px;">
+| العنصر          | التصميم المبدئي | التصميم التفصيلي | التنفيذ    | As-Built |
+|-----------------|-----------------|------------------|------------|----------|
+| الأعمدة         | LOD 200         | LOD 300          | LOD 350    | LOD 500  |
+| الكمرات         | LOD 200         | LOD 300          | LOD 350    | LOD 500  |
+| التكييف (HVAC)  | LOD 200         | LOD 300          | LOD 400    | LOD 500  |
+| الكهرباء        | LOD 200         | LOD 300          | LOD 400    | LOD 500  |
+| التشطيبات       | LOD 100         | LOD 200          | LOD 300    | LOD 400  |
+        </pre>
+
+        <h3>6.2 مثال على معيار التسمية:</h3>
+        <pre style="background: #f5f5f5; padding: 15px; border-radius: 8px; direction: ltr;">
+[Project]-[Zone]-[Discipline]-[Type]-[Number].[Extension]
+
+أمثلة:
+- HQ-B1-STR-MOD-001.rvt (نموذج إنشائي للبدروم 1)
+- HQ-GF-ARC-MOD-001.rvt (نموذج معماري للدور الأرضي)
+- HQ-00-MEP-MOD-001.rvt (نموذج MEP موحد)
+        </pre>
+
+        <h3>6.3 مثال على BIM Uses المطلوبة:</h3>
+        <ul>
+            <li>☑️ <strong>Design Authoring:</strong> إنتاج جميع الرسومات من النموذج</li>
+            <li>☑️ <strong>3D Coordination:</strong> تنسيق أسبوعي مع Clash Detection</li>
+            <li>☑️ <strong>Quantity Takeoff:</strong> حصر الكميات من النموذج (LOD 300+)</li>
+            <li>☑️ <strong>4D Scheduling:</strong> ربط مع Primavera P6</li>
+            <li>☐ <strong>5D Cost:</strong> غير مطلوب في هذا المشروع</li>
+            <li>☑️ <strong>FM Handover:</strong> تسليم COBie في نهاية المشروع</li>
+        </ul>
+
+        <hr>
+
+        <h2 id="relationship">🔗 7. العلاقة مع BEP</h2>
+
+        <h3>7.1 EIR vs BEP:</h3>
+        <table class="pricing-table">
+            <tr><th>EIR</th><th>BEP</th></tr>
+            <tr><td>يُعده المالك</td><td>يُعده المقاول/المصمم</td></tr>
+            <tr><td>يُحدد ما هو مطلوب</td><td>يُوضح كيف سيُنفذ</td></tr>
+            <tr><td>قبل المناقصة</td><td>بعد الترسية</td></tr>
+            <tr><td>السؤال: ماذا تريد؟</td><td>الإجابة: هكذا سنفعله</td></tr>
+            <tr><td>معايير القبول</td><td>خطة التنفيذ</td></tr>
+        </table>
+
+        <h3>7.2 التسلسل:</h3>
+        <pre style="background: #f5f5f5; padding: 15px; border-radius: 8px;">
+المالك يُعد EIR
+       ↓
+EIR يُرفق في وثائق المناقصة
+       ↓
+المتقدمون يُعدون Pre-BEP (خطة أولية)
+       ↓
+الفائز يُعد BEP تفصيلي
+       ↓
+المالك يُراجع ويعتمد BEP
+       ↓
+التنفيذ وفق BEP
+        </pre>
+
+        <hr>
+
+        <h2 id="templates">📁 8. نماذج جاهزة</h2>
+
+        <h3>8.1 هيكل EIR المقترح:</h3>
+        <ol>
+            <li><strong>مقدمة:</strong> معلومات المشروع والغرض من EIR</li>
+            <li><strong>أهداف BIM:</strong> لماذا نستخدم BIM</li>
+            <li><strong>BIM Uses:</strong> قائمة الاستخدامات المطلوبة</li>
+            <li><strong>المتطلبات التقنية:</strong> البرامج، الصيغ، المعايير</li>
+            <li><strong>LOD Matrix:</strong> جدول LOD لكل عنصر ومرحلة</li>
+            <li><strong>جدول التسليم:</strong> متى يُسلّم ماذا</li>
+            <li><strong>CDE:</strong> بيئة البيانات المشتركة</li>
+            <li><strong>الأدوار والمسؤوليات:</strong> من يفعل ماذا</li>
+            <li><strong>ضمان الجودة:</strong> كيف نفحص النماذج</li>
+            <li><strong>التسليم النهائي:</strong> COBie و As-Built</li>
+            <li><strong>ملاحق:</strong> نماذج، قوالب، مراجع</li>
+        </ol>
+
+        <div class="alert alert-success">
+            <strong>💡 نصيحة:</strong> ابدأ بقوالب EIR المتاحة من UK BIM Framework أو buildingSMART وعدّلها حسب مشروعك.
+        </div>
+
+        <!-- Share Buttons -->
+        <div class="share-buttons">
+            <span class="share-buttons-label">شارك هذا المقال:</span>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-btn facebook" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">فيسبوك</a>
+            <a href="https://twitter.com/intent/tweet?url=" class="share-btn twitter" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">تويتر</a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=" class="share-btn linkedin" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">لينكدإن</a>
+            <a href="https://wa.me/?text=" class="share-btn whatsapp" target="_blank" onclick="this.href+=encodeURIComponent(document.title + ' ' + window.location.href)">واتساب</a>
+            <button class="share-btn copy" onclick="navigator.clipboard.writeText(window.location.href);alert('تم نسخ الرابط!')">نسخ الرابط</button>
+        </div>
+        
+        <hr>
+        <p><strong>المقال التالي:</strong> <a href="bep-guide.html">BEP: خطة تنفيذ BIM - الدليل الشامل</a></p>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p class="footer-text">CSI Crew Calculator • Built with <span class="footer-heart">❤️</span> by <span class="footer-author">Sameh Badawy Sayed</span></p>
+        </div>
+    </footer>
+</body>
+</html>

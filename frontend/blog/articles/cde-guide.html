@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDE: بيئة البيانات المشتركة - الدليل الشامل - CSI Calculator</title>
+    <meta name="description" content="دليل تفصيلي شامل لـ CDE (Common Data Environment): ما هو، هيكله، Status Codes، Suitability Codes، وكيفية إدارته. كورس مكثف مع أمثلة عملية.">
+    <meta name="keywords" content="CDE, Common Data Environment, بيئة البيانات المشتركة, ISO 19650, BIM 360">
+    
+    <meta property="og:title" content="CDE: بيئة البيانات المشتركة - الدليل الشامل">
+    <meta property="og:description" content="كورس مكثف في إنشاء وإدارة بيئة البيانات المشتركة">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="../assets/cde-guide.jpg">
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5429423113977975" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/lang-toggle.css">
+    <link rel="stylesheet" href="../../css/blog.css">
+    <link rel="stylesheet" href="../../css/ads.css">
+    <link rel="stylesheet" href="../../css/share-buttons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="../../js/ads.js"></script>
+    <script src="../../js/i18n.js"></script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../js/blog-i18n.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../../index.html" class="logo-container">
+                <img src="../../assets/logo.png" alt="SAMEH Logo" class="logo-image">
+                <span class="logo-text">CSI Calculator</span>
+            </a>
+            <div class="nav-links">
+                <a href="../../index.html" data-i18n="home" data-icon="🏠"><span>تصفح</span></a>
+                <a href="../../crew-calculator.html" data-i18n="crewCalculator" data-icon="🧮"><span>الحاسبة</span></a>
+                <a href="../../ai-planner.html" data-i18n="aiPlanner" data-icon="🤖"><span>المخطط الذكي</span></a>
+                <a href="../index.html" class="active" data-i18n="blog" data-icon="📚"><span>دليل التشغيل+مقالات فنية</span></a>
+                <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">🌙</button>
+                <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()"><span id="langIcon">EN</span></button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="article-header">
+        <span class="article-category">معايير BIM</span>
+        <h1>CDE: بيئة البيانات المشتركة - الدليل الشامل</h1>
+        <div class="article-meta">
+            <span class="article-date">8 يناير 2026</span>
+            <span class="article-read-time">25 دقيقة قراءة</span>
+        </div>
+    </div>
+
+    <div class="article-body">
+        <div class="article-image-container">
+            <img src="../assets/cde-guide.jpg" alt="CDE Guide" class="img-fluid rounded shadow mb-4">
+        </div>
+
+        <div class="alert alert-info">
+            <strong>📚 هذا المقال جزء من سلسلة معايير BIM:</strong> EIR → BEP → <strong>CDE</strong> → LOD → IFC → COBie
+        </div>
+
+        <h2>📋 الفهرس</h2>
+        <ol>
+            <li><a href="#what-is-cde">ما هو CDE؟</a></li>
+            <li><a href="#importance">لماذا CDE مهم؟</a></li>
+            <li><a href="#structure">هيكل CDE (المناطق الأربع)</a></li>
+            <li><a href="#workflow">سير العمل (Workflow)</a></li>
+            <li><a href="#codes">أكواد الحالة والملاءمة</a></li>
+            <li><a href="#platforms">منصات CDE الشائعة</a></li>
+            <li><a href="#implementation">التطبيق العملي</a></li>
+            <li><a href="#best-practices">أفضل الممارسات</a></li>
+        </ol>
+
+        <hr>
+
+        <h2 id="what-is-cde">📄 1. ما هو CDE؟</h2>
+        <p>
+            <strong>CDE (Common Data Environment)</strong> هو المصدر الموحد والمركزي لجميع معلومات المشروع. هو المكان الذي يتم فيه تخزين، إدارة، ومشاركة جميع بيانات BIM والوثائق.
+        </p>
+
+        <h3>1.1 التعريف حسب ISO 19650:</h3>
+        <blockquote style="background: #f5f5f5; padding: 15px; border-right: 4px solid #3498db;">
+            "An agreed source of information for any given project or asset, for collecting, managing and disseminating each information container through a managed process."
+        </blockquote>
+
+        <h3>1.2 أهداف CDE:</h3>
+        <ul>
+            <li><strong>مصدر واحد للحقيقة:</strong> Single Source of Truth (SSOT)</li>
+            <li><strong>التحكم في الإصدارات:</strong> Version Control</li>
+            <li><strong>إدارة الوصول:</strong> Access Control</li>
+            <li><strong>التتبع والتدقيق:</strong> Audit Trail</li>
+            <li><strong>التعاون الآمن:</strong> Secure Collaboration</li>
+        </ul>
+
+        <hr>
+
+        <h2 id="importance">🎯 2. لماذا CDE مهم؟</h2>
+
+        <h3>2.1 مشاكل بدون CDE:</h3>
+        <ul>
+            <li>❌ ملفات متناثرة في إيميلات ومجلدات مختلفة</li>
+            <li>❌ "أي نسخة هي الأحدث؟"</li>
+            <li>❌ عمل على ملفات قديمة بدون علم</li>
+            <li>❌ فقدان الملفات أو التعديلات</li>
+            <li>❌ صعوبة التتبع والمساءلة</li>
+        </ul>
+
+        <h3>2.2 فوائد CDE:</h3>
+        <table class="pricing-table">
+            <tr><th>بدون CDE</th><th>مع CDE</th></tr>
+            <tr><td>ملفات متفرقة</td><td>تخزين مركزي</td></tr>
+            <tr><td>إصدارات متضاربة</td><td>تحكم تلقائي بالإصدارات</td></tr>
+            <tr><td>لا يوجد تتبع</td><td>سجل كامل للتغييرات</td></tr>
+            <tr><td>مشاركة بالإيميل</td><td>مشاركة آمنة ومحكومة</td></tr>
+            <tr><td>خلافات حول "أي نسخة"</td><td>مصدر واحد للحقيقة</td></tr>
+        </table>
+
+        <hr>
+
+        <h2 id="structure">🏗️ 3. هيكل CDE (المناطق الأربع)</h2>
+
+        <p>حسب ISO 19650، ينقسم CDE إلى أربع مناطق أساسية:</p>
+
+        <h3>3.1 الهيكل:</h3>
+        <pre style="background: #f5f5f5; padding: 15px; border-radius: 8px;">
+┌─────────────────────────────────────────────────────┐
+│                  CDE Structure                       │
+├─────────────────────────────────────────────────────┤
+│                                                      │
+│  ┌───────────────┐    ┌───────────────┐             │
+│  │   WORK IN     │───▶│    SHARED     │             │
+│  │  PROGRESS     │    │               │             │
+│  │   (WIP)       │    │               │             │
+│  └───────────────┘    └───────┬───────┘             │
+│                               │                      │
+│                               ▼                      │
+│                       ┌───────────────┐             │
+│                       │  PUBLISHED    │             │
+│                       │               │             │
+│                       └───────┬───────┘             │
+│                               │                      │
+│                               ▼                      │
+│                       ┌───────────────┐             │
+│                       │   ARCHIVE     │             │
+│                       │               │             │
+│                       └───────────────┘             │
+│                                                      │
+└─────────────────────────────────────────────────────┘
+        </pre>
+
+        <h3>3.2 شرح المناطق:</h3>
+
+        <h4>1. Work in Progress (WIP) - قيد العمل:</h4>
+        <ul>
+            <li>منطقة العمل الخاصة بكل فريق</li>
+            <li>غير مرئية للفرق الأخرى</li>
+            <li>للتطوير والمراجعة الداخلية</li>
+            <li>لا يُعتمد عليها من الآخرين</li>
+        </ul>
+
+        <h4>2. Shared - مشتركة:</h4>
+        <ul>
+            <li>للتنسيق بين الفرق/التخصصات</li>
+            <li>مرئية للأطراف المعنية</li>
+            <li>مراجعة قبل النشر</li>
+            <li>يُعتمد عليها للتنسيق</li>
+        </ul>
+
+        <h4>3. Published - منشورة:</h4>
+        <ul>
+            <li>المعلومات المعتمدة رسمياً</li>
+            <li>للاستخدام في مرحلة معينة</li>
+            <li>لا تتغير (Frozen)</li>
+            <li>أساس التنفيذ/الترسية</li>
+        </ul>
+
+        <h4>4. Archive - أرشيف:</h4>
+        <ul>
+            <li>النسخ التاريخية</li>
+            <li>سجل كامل للمشروع</li>
+            <li>للمرجعية والتدقيق</li>
+            <li>تسليم نهائي للمالك</li>
+        </ul>
+
+        <hr>
+
+        <h2 id="workflow">🔄 4. سير العمل (Workflow)</h2>
+
+        <h3>4.1 دورة حياة المعلومات:</h3>
+        <pre style="background: #f5f5f5; padding: 15px; border-radius: 8px;">
+     إنشاء النموذج
+           ↓
+    ┌──────────────┐
+    │     WIP      │  ← العمل والتطوير
+    │  Status: S0  │     (داخل الفريق)
+    └──────┬───────┘
+           ↓ فحص داخلي
+    ┌──────────────┐
+    │   SHARED     │  ← التنسيق مع الآخرين
+    │  Status: S1  │     (بين الفرق)
+    └──────┬───────┘
+           ↓ مراجعة واعتماد
+    ┌──────────────┐
+    │  PUBLISHED   │  ← للاستخدام الرسمي
+    │  Status: S3  │     (في المشروع)
+    └──────┬───────┘
+           ↓ انتهاء المرحلة
+    ┌──────────────┐
+    │   ARCHIVE    │  ← حفظ نهائي
+    │              │     (للمرجعية)
+    └──────────────┘
+        </pre>
+
+        <h3>4.2 قواعد الانتقال:</h3>
+        <table class="pricing-table">
+            <tr><th>من</th><th>إلى</th><th>الشرط</th></tr>
+            <tr><td>WIP</td><td>Shared</td><td>اعتماد داخلي + فحص جودة</td></tr>
+            <tr><td>Shared</td><td>Published</td><td>اعتماد Lead Designer/PM</td></tr>
+            <tr><td>Published</td><td>Archive</td><td>انتهاء المرحلة أو التسليم</td></tr>
+        </table>
+
+        <hr>
+
+        <h2 id="codes">🏷️ 5. أكواد الحالة والملاءمة</h2>
+
+        <h3>5.1 Status Codes (أكواد الحالة):</h3>
+        <table class="pricing-table">
+            <tr><th>الكود</th><th>المعنى</th><th>الموقع</th></tr>
+            <tr><td>S0</td><td>Work in Progress</td><td>WIP</td></tr>
+            <tr><td>S1</td><td>Suitable for Coordination</td><td>Shared</td></tr>
+            <tr><td>S2</td><td>Suitable for Information</td><td>Shared</td></tr>
+            <tr><td>S3</td><td>Suitable for Review & Comment</td><td>Shared</td></tr>
+            <tr><td>S4</td><td>Suitable for Stage Approval</td><td>Published</td></tr>
+            <tr><td>S6</td><td>Suitable for PIM Authorization</td><td>Published</td></tr>
+            <tr><td>S7</td><td>Suitable for AIM Authorization</td><td>Archive</td></tr>
+        </table>
+
+        <h3>5.2 Suitability Codes (أكواد الملاءمة):</h3>
+        <table class="pricing-table">
+            <tr><th>الكود</th><th>المعنى</th><th>الاستخدام</th></tr>
+            <tr><td>A1</td><td>Approved</td><td>معتمد للاستخدام</td></tr>
+            <tr><td>A2</td><td>Approved with Comments</td><td>معتمد مع ملاحظات</td></tr>
+            <tr><td>B1</td><td>Rejected</td><td>مرفوض</td></tr>
+            <tr><td>B2</td><td>Rejected - Minor</td><td>مرفوض - تعديلات بسيطة</td></tr>
+            <tr><td>B3</td><td>Rejected - Major</td><td>مرفوض - تعديلات جوهرية</td></tr>
+        </table>
+
+        <hr>
+
+        <h2 id="platforms">💻 6. منصات CDE الشائعة</h2>
+
+        <h3>6.1 المنصات الرئيسية:</h3>
+        <table class="pricing-table">
+            <tr><th>المنصة</th><th>الشركة</th><th>المميزات</th></tr>
+            <tr><td>BIM 360 / Autodesk Docs</td><td>Autodesk</td><td>تكامل مع Revit، Clash Detection</td></tr>
+            <tr><td>Aconex</td><td>Oracle</td><td>إدارة وثائق شاملة</td></tr>
+            <tr><td>Viewpoint</td><td>Trimble</td><td>تكامل مع Tekla</td></tr>
+            <tr><td>Projectwise</td><td>Bentley</td><td>تكامل مع MicroStation</td></tr>
+            <tr><td>SharePoint</td><td>Microsoft</td><td>مرونة عالية، تكلفة أقل</td></tr>
+            <tr><td>BIM Collab</td><td>BIM Collab</td><td>BCF، Issue Tracking</td></tr>
+        </table>
+
+        <h3>6.2 معايير الاختيار:</h3>
+        <ul>
+            <li><strong>التكامل:</strong> مع البرامج المستخدمة (Revit, Navisworks...)</li>
+            <li><strong>السعة:</strong> حجم الملفات والمستخدمين</li>
+            <li><strong>الأمان:</strong> التحكم في الوصول والتشفير</li>
+            <li><strong>التكلفة:</strong> رسوم الاشتراك</li>
+            <li><strong>سهولة الاستخدام:</strong> واجهة المستخدم</li>
+        </ul>
+
+        <hr>
+
+        <h2 id="implementation">🛠️ 7. التطبيق العملي</h2>
+
+        <h3>7.1 خطوات إنشاء CDE:</h3>
+        <ol>
+            <li><strong>اختيار المنصة:</strong> بناءً على الاحتياجات والميزانية</li>
+            <li><strong>تصميم الهيكل:</strong> المجلدات والتصنيفات</li>
+            <li><strong>تحديد الصلاحيات:</strong> من يصل لماذا</li>
+            <li><strong>توثيق الإجراءات:</strong> في BEP</li>
+            <li><strong>تدريب الفريق:</strong> على استخدام المنصة</li>
+            <li><strong>المراقبة والتحسين:</strong> مراجعة دورية</li>
+        </ol>
+
+        <h3>7.2 هيكل المجلدات النموذجي:</h3>
+        <pre style="background: #f5f5f5; padding: 15px; border-radius: 8px;">
+CDE Root
+├── 01_WIP
+│   ├── 01_Architectural
+│   ├── 02_Structural
+│   ├── 03_MEP
+│   └── 04_Coordination
+├── 02_Shared
+│   ├── 01_Models
+│   ├── 02_Drawings
+│   ├── 03_Reports
+│   └── 04_Clash_Reports
+├── 03_Published
+│   ├── 01_Tender_Issue
+│   ├── 02_Construction_Issue
+│   └── 03_As_Built
+└── 04_Archive
+    ├── 01_Superseded
+    └── 02_Final_Handover
+        </pre>
+
+        <hr>
+
+        <h2 id="best-practices">✅ 8. أفضل الممارسات</h2>
+
+        <h3>8.1 نصائح للنجاح:</h3>
+        <ul>
+            <li>✅ التزم بمعايير التسمية بدقة</li>
+            <li>✅ راجع الملفات قبل نقلها بين المناطق</li>
+            <li>✅ استخدم Status Codes بشكل صحيح</li>
+            <li>✅ درّب جميع المستخدمين</li>
+            <li>✅ عيّن Information Manager مسؤول</li>
+            <li>✅ راجع CDE بشكل دوري</li>
+        </ul>
+
+        <h3>8.2 أخطاء شائعة:</h3>
+        <ul>
+            <li>❌ تجاهل الـ WIP والعمل مباشرة في Shared</li>
+            <li>❌ عدم استخدام Status Codes</li>
+            <li>❌ السماح بالوصول غير المحكوم</li>
+            <li>❌ عدم توثيق الإجراءات</li>
+            <li>❌ إهمال التدريب</li>
+        </ul>
+
+        <!-- Share Buttons -->
+        <div class="share-buttons">
+            <span class="share-buttons-label">شارك هذا المقال:</span>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-btn facebook" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">فيسبوك</a>
+            <a href="https://twitter.com/intent/tweet?url=" class="share-btn twitter" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">تويتر</a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=" class="share-btn linkedin" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">لينكدإن</a>
+            <a href="https://wa.me/?text=" class="share-btn whatsapp" target="_blank" onclick="this.href+=encodeURIComponent(document.title + ' ' + window.location.href)">واتساب</a>
+            <button class="share-btn copy" onclick="navigator.clipboard.writeText(window.location.href);alert('تم نسخ الرابط!')">نسخ الرابط</button>
+        </div>
+        
+        <hr>
+        <p><strong>المقال التالي:</strong> <a href="lod-guide.html">LOD: مستوى التطوير - الدليل الشامل</a></p>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p class="footer-text">CSI Crew Calculator • Built with <span class="footer-heart">❤️</span> by <span class="footer-author">Sameh Badawy Sayed</span></p>
+        </div>
+    </footer>
+</body>
+</html>

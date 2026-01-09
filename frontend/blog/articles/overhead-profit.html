@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المصاريف العمومية والأرباح في التسعير الإنشائي - CSI Calculator</title>
+    <meta name="description" content="فهم كامل للمصاريف المباشرة وغير المباشرة (Overhead) وكيفية حساب هامش الربح بطريقة احترافية في مشاريع المقاولات.">
+    <meta name="keywords" content="Overhead, Profit, المصاريف العمومية, هامش الربح, التكاليف غير المباشرة, التسعير">
+    
+    <meta property="og:title" content="المصاريف العمومية والأرباح في التسعير">
+    <meta property="og:description" content="كيف تحسب الـ Overhead والربح بشكل صحيح؟">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="../assets/overhead-profit.jpg">
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5429423113977975" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/lang-toggle.css">
+    <link rel="stylesheet" href="../../css/blog.css">
+    <link rel="stylesheet" href="../../css/ads.css">
+    <link rel="stylesheet" href="../../css/share-buttons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="../../js/ads.js"></script>
+    <script src="../../js/i18n.js"></script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../js/blog-i18n.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../../index.html" class="logo-container">
+                <img src="../../assets/logo.png" alt="SAMEH Logo" class="logo-image">
+                <span class="logo-text">CSI Calculator</span>
+            </a>
+            <div class="nav-links">
+                <a href="../../index.html" data-i18n="home" data-icon="🏠"><span>تصفح</span></a>
+                <a href="../../crew-calculator.html" data-i18n="crewCalculator" data-icon="🧮"><span>الحاسبة</span></a>
+                <a href="../../ai-planner.html" data-i18n="aiPlanner" data-icon="🤖"><span>المخطط الذكي</span></a>
+                <a href="../index.html" class="active" data-i18n="blog" data-icon="📚"><span>دليل التشغيل+مقالات فنية</span></a>
+                <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">🌙</button>
+                <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()"><span id="langIcon">EN</span></button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="article-header">
+        <span class="article-category">التسعير</span>
+        <h1>المصاريف العمومية والأرباح في التسعير الإنشائي</h1>
+        <div class="article-meta">
+            <span class="article-date">7 يناير 2026</span>
+            <span class="article-read-time">10 دقائق قراءة</span>
+        </div>
+    </div>
+
+    <div class="article-body">
+        <div class="article-image-container">
+            <img src="../assets/overhead-profit.jpg" alt="Overhead and Profit" class="img-fluid rounded shadow mb-4">
+        </div>
+
+        <h2>💰 فهم هيكل التكلفة</h2>
+        <p>
+            عند تسعير أي مشروع، لا يكفي أن تحسب تكلفة المواد والعمالة والمعدات فقط. هناك تكاليف "مخفية" يجب تغطيتها، بالإضافة إلى هامش ربح معقول. تجاهل هذه العناصر هو السبب الرئيسي لخسارة المقاولين الصغار.
+        </p>
+
+        <h2>📊 التكاليف المباشرة vs غير المباشرة</h2>
+        <h3>التكاليف المباشرة (Direct Costs)</h3>
+        <p>ترتبط مباشرة ببند معين في BOQ:</p>
+        <ul>
+            <li>المواد الخام (أسمنت، حديد، طوب)</li>
+            <li>عمالة التنفيذ المباشرة</li>
+            <li>إيجار المعدات المستخدمة في البند</li>
+            <li>المقاولين الباطن لأعمال محددة</li>
+        </ul>
+
+        <h3>التكاليف غير المباشرة (Indirect Costs / Overhead)</h3>
+        <p>لا ترتبط ببند محدد ولكنها ضرورية لتشغيل المشروع:</p>
+        <ul>
+            <li>رواتب الإدارة (مدير المشروع، المحاسب)</li>
+            <li>إيجار مكتب الموقع</li>
+            <li>المرافق (كهرباء، ماء، اتصالات)</li>
+            <li>التأمينات والضمانات البنكية</li>
+            <li>معدات الأمان والسلامة</li>
+        </ul>
+
+        <h2>🏢 أنواع Overhead</h2>
+        <h3>1. Site Overhead (مصاريف الموقع)</h3>
+        <p>تكاليف تشغيل موقع العمل:</p>
+        <ul>
+            <li>مكاتب الموقع والمخازن المؤقتة</li>
+            <li>الحراسة والأمن</li>
+            <li>معدات الاختبار والقياس</li>
+            <li>النقل الداخلي في الموقع</li>
+        </ul>
+        <p><strong>النسبة المعتادة:</strong> 5-8% من التكاليف المباشرة</p>
+
+        <h3>2. Home Office Overhead (مصاريف المكتب الرئيسي)</h3>
+        <p>تكاليف تشغيل الشركة الأم:</p>
+        <ul>
+            <li>رواتب الإدارة العليا</li>
+            <li>إيجار المقر الرئيسي</li>
+            <li>التسويق والعلاقات العامة</li>
+            <li>البرامج والتراخيص</li>
+        </ul>
+        <p><strong>النسبة المعتادة:</strong> 3-5% من التكاليف المباشرة</p>
+
+        <h2>📈 حساب هامش الربح</h2>
+        <p>يعتمد هامش الربح على عدة عوامل:</p>
+        <ul>
+            <li><strong>مستوى المنافسة:</strong> سوق تنافسي = ربح أقل</li>
+            <li><strong>المخاطر:</strong> مشروع معقد = ربح أعلى</li>
+            <li><strong>العلاقة مع العميل:</strong> عمل متكرر قد يبرر ربح أقل</li>
+            <li><strong>حجم المشروع:</strong> مشاريع كبيرة تقبل نسب أقل</li>
+        </ul>
+
+        <div class="formula-box">
+            <strong>نسب الربح المعتادة:</strong><br>
+            • مشاريع حكومية: 5-8%<br>
+            • قطاع خاص تنافسي: 8-12%<br>
+            • مشاريع متخصصة: 12-20%<br>
+            • مشاريع عالية المخاطر: 15-25%
+        </div>
+
+        <h2>🧮 مثال عملي</h2>
+        <p>مشروع تكاليفه المباشرة 1,000,000 دولار:</p>
+        <table class="pricing-table">
+            <tr><td>التكاليف المباشرة</td><td>$1,000,000</td></tr>
+            <tr><td>+ Site Overhead (7%)</td><td>$70,000</td></tr>
+            <tr><td>+ Home Office Overhead (4%)</td><td>$40,000</td></tr>
+            <tr><td><strong>إجمالي التكلفة</strong></td><td><strong>$1,110,000</strong></td></tr>
+            <tr><td>+ Profit (10%)</td><td>$111,000</td></tr>
+            <tr><td><strong>سعر العطاء</strong></td><td><strong>$1,221,000</strong></td></tr>
+        </table>
+
+        <h2>⚠️ أخطاء شائعة</h2>
+        <ul>
+            <li>نسيان تكلفة الضمانات البنكية (قد تصل 2-3%).</li>
+            <li>عدم احتساب تكلفة التمويل إذا كان الدفع متأخراً.</li>
+            <li>التقليل من مصاريف الإدارة والإشراف.</li>
+            <li>عدم مراجعة النسب دورياً مع تغير ظروف السوق.</li>
+        </ul>        <!-- Share Buttons -->
+        <div class="share-buttons">
+            <span class="share-buttons-label">���� ��� ������:</span>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-btn facebook" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">������</a>
+            <a href="https://twitter.com/intent/tweet?url=" class="share-btn twitter" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">�����</a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=" class="share-btn linkedin" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">�������</a>
+            <a href="https://wa.me/?text=" class="share-btn whatsapp" target="_blank" onclick="this.href+=encodeURIComponent(document.title + ' ' + window.location.href)">������</a>
+            <button class="share-btn copy" onclick="navigator.clipboard.writeText(window.location.href);alert('�� ��� ������!')">��� ������</button>
+        </div>
+        
+        
+        <hr>
+        <p><strong>المقال التالي:</strong> <a href="contract-types.html">أنواع عقود المقاولات: دليل شامل</a></p>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p class="footer-text">CSI Crew Calculator • Built with <span class="footer-heart">❤️</span> by <span class="footer-author">Sameh Badawy Sayed</span></p>
+        </div>
+    </footer>
+</body>
+</html>

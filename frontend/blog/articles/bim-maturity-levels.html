@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مستويات نضج BIM (Level 0-3) - CSI Calculator</title>
+    <meta name="description" content="شرح تفصيلي لمستويات نضج BIM من المستوى 0 إلى المستوى 3 وما يتطلبه كل مستوى من أدوات وعمليات.">
+    <meta name="keywords" content="BIM Maturity, BIM Level, مستويات BIM, Level 2 BIM, Level 3 BIM">
+    
+    <meta property="og:title" content="مستويات نضج BIM (Level 0-3)">
+    <meta property="og:description" content="أين تقف مؤسستك في سلم نضج BIM؟">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="../assets/bim-maturity-levels.jpg">
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5429423113977975" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/lang-toggle.css">
+    <link rel="stylesheet" href="../../css/blog.css">
+    <link rel="stylesheet" href="../../css/ads.css">
+    <link rel="stylesheet" href="../../css/share-buttons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="../../js/ads.js"></script>
+    <script src="../../js/i18n.js"></script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../js/blog-i18n.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../../index.html" class="logo-container">
+                <img src="../../assets/logo.png" alt="SAMEH Logo" class="logo-image">
+                <span class="logo-text">CSI Calculator</span>
+            </a>
+            <div class="nav-links">
+                <a href="../../index.html" data-i18n="home" data-icon="🏠"><span>تصفح</span></a>
+                <a href="../../crew-calculator.html" data-i18n="crewCalculator" data-icon="🧮"><span>الحاسبة</span></a>
+                <a href="../../ai-planner.html" data-i18n="aiPlanner" data-icon="🤖"><span>المخطط الذكي</span></a>
+                <a href="../index.html" class="active" data-i18n="blog" data-icon="📚"><span>دليل التشغيل+مقالات فنية</span></a>
+                <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">🌙</button>
+                <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()"><span id="langIcon">EN</span></button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="article-header">
+        <span class="article-category">BIM</span>
+        <h1>مستويات نضج BIM (Level 0-3)</h1>
+        <div class="article-meta">
+            <span class="article-date">8 يناير 2026</span>
+            <span class="article-read-time">12 دقيقة قراءة</span>
+        </div>
+    </div>
+
+    <div class="article-body">
+        <div class="article-image-container">
+            <img src="../assets/bim-maturity-levels.jpg" alt="BIM Maturity Levels" class="img-fluid rounded shadow mb-4">
+        </div>
+
+        <h2>📊 ما هي مستويات نضج BIM؟</h2>
+        <p>
+            مستويات نضج BIM (BIM Maturity Levels) هي إطار يُحدد مدى تقدم المؤسسة في تبني واستخدام تقنيات BIM. تم تطوير هذا الإطار في بريطانيا وأصبح معياراً دولياً.
+        </p>
+
+        <h2>🔴 المستوى 0: ما قبل BIM</h2>
+        <h3>الوصف:</h3>
+        <p>لا يوجد تعاون رقمي. كل طرف يعمل بشكل منفصل باستخدام الأساليب التقليدية.</p>
+        
+        <h3>الخصائص:</h3>
+        <ul>
+            <li>رسومات 2D على ورق أو CAD</li>
+            <li>لا يوجد مشاركة رقمية</li>
+            <li>التواصل عبر البريد/الفاكس</li>
+            <li>كل تخصص يعمل منفرداً</li>
+        </ul>
+
+        <div class="alert alert-danger">
+            <strong>الواقع:</strong> لا تزال معظم الشركات الصغيرة في المنطقة العربية تعمل في هذا المستوى.
+        </div>
+
+        <h2>🟡 المستوى 1: 2D/3D مُدار</h2>
+        <h3>الوصف:</h3>
+        <p>استخدام CAD مع بعض النمذجة 3D، لكن دون تبادل نماذج متكاملة.</p>
+        
+        <h3>الخصائص:</h3>
+        <ul>
+            <li>استخدام 2D CAD مع معايير موحدة</li>
+            <li>نماذج 3D للتصور فقط</li>
+            <li>بيئة بيانات مشتركة بسيطة (CDE)</li>
+            <li>تبادل الملفات عبر منصة مركزية</li>
+        </ul>
+
+        <h2>🟢 المستوى 2: BIM التعاوني</h2>
+        <h3>الوصف:</h3>
+        <p>كل تخصص يعمل على نموذج 3D خاص به، مع تبادل النماذج للتنسيق.</p>
+        
+        <h3>الخصائص:</h3>
+        <ul>
+            <li>نماذج 3D منفصلة لكل تخصص</li>
+            <li>تبادل بصيغة IFC أو ملفات أصلية</li>
+            <li>Clash Detection منتظم</li>
+            <li>بيئة بيانات مشتركة (CDE) متقدمة</li>
+            <li>BIM Execution Plan (BEP) محدد</li>
+            <li>مسؤوليات واضحة عبر EIR/BEP</li>
+        </ul>
+
+        <div class="alert alert-success">
+            <strong>بريطانيا:</strong> المستوى 2 إلزامي للمشاريع الحكومية منذ 2016.
+        </div>
+
+        <h3>متطلبات المستوى 2:</h3>
+        <table class="pricing-table">
+            <tr><th>المتطلب</th><th>التفاصيل</th></tr>
+            <tr><td>EIR</td><td>Employer's Information Requirements</td></tr>
+            <tr><td>BEP</td><td>BIM Execution Plan</td></tr>
+            <tr><td>CDE</td><td>Common Data Environment</td></tr>
+            <tr><td>LOD</td><td>Level of Development محدد</td></tr>
+            <tr><td>IFC</td><td>تبادل مفتوح بصيغة IFC</td></tr>
+            <tr><td>COBie</td><td>تسليم بيانات التشغيل</td></tr>
+        </table>
+
+        <h2>🔵 المستوى 3: BIM المتكامل (iBIM)</h2>
+        <h3>الوصف:</h3>
+        <p>نموذج واحد متكامل يعمل عليه الجميع في الوقت الحقيقي عبر السحابة.</p>
+        
+        <h3>الخصائص:</h3>
+        <ul>
+            <li>نموذج مركزي موحد (Single Source of Truth)</li>
+            <li>تعاون في الوقت الحقيقي</li>
+            <li>تكامل كامل لدورة الحياة</li>
+            <li>Digital Twin للمبنى</li>
+            <li>IoT والأتمتة</li>
+        </ul>
+
+        <div class="alert alert-info">
+            <strong>الحالة:</strong> المستوى 3 لا يزال في مرحلة التطوير عالمياً، مع وجود مشاريع تجريبية فقط.
+        </div>
+
+        <h2>📈 مسار التطور</h2>
+        <ol>
+            <li><strong>تقييم الوضع الحالي:</strong> أين نحن الآن؟</li>
+            <li><strong>وضع الأهداف:</strong> أي مستوى نريد الوصول إليه؟</li>
+            <li><strong>سد الفجوات:</strong> ما التدريب والأدوات المطلوبة؟</li>
+            <li><strong>التنفيذ التدريجي:</strong> البدء بمشاريع تجريبية.</li>
+            <li><strong>التحسين المستمر:</strong> مراجعة وتطوير العمليات.</li>
+        </ol>
+
+        <!-- Share Buttons -->
+        <div class="share-buttons">
+            <span class="share-buttons-label">شارك هذا المقال:</span>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-btn facebook" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">فيسبوك</a>
+            <a href="https://twitter.com/intent/tweet?url=" class="share-btn twitter" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">تويتر</a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=" class="share-btn linkedin" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">لينكدإن</a>
+            <a href="https://wa.me/?text=" class="share-btn whatsapp" target="_blank" onclick="this.href+=encodeURIComponent(document.title + ' ' + window.location.href)">واتساب</a>
+            <button class="share-btn copy" onclick="navigator.clipboard.writeText(window.location.href);alert('تم نسخ الرابط!')">نسخ الرابط</button>
+        </div>
+        
+        <hr>
+        <p><strong>المقال التالي:</strong> <a href="bim-vs-cad.html">مقارنة BIM مع CAD التقليدي</a></p>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p class="footer-text">CSI Crew Calculator • Built with <span class="footer-heart">❤️</span> by <span class="footer-author">Sameh Badawy Sayed</span></p>
+        </div>
+    </footer>
+</body>
+</html>

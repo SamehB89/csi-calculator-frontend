@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEP: خطة تنفيذ BIM - الدليل الشامل - CSI Calculator</title>
+    <meta name="description" content="دليل تفصيلي شامل لـ BEP (BIM Execution Plan): ما هو، محتوياته، Pre-BEP vs BEP، وكيف تكتب خطة BIM احترافية. كورس مكثف مع نماذج عملية.">
+    <meta name="keywords" content="BEP, BIM Execution Plan, خطة تنفيذ BIM, ISO 19650, Pre-BEP">
+    
+    <meta property="og:title" content="BEP: خطة تنفيذ BIM - الدليل الشامل">
+    <meta property="og:description" content="كورس مكثف في إعداد خطة تنفيذ BIM الاحترافية">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="../assets/bep-guide.jpg">
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5429423113977975" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/lang-toggle.css">
+    <link rel="stylesheet" href="../../css/blog.css">
+    <link rel="stylesheet" href="../../css/ads.css">
+    <link rel="stylesheet" href="../../css/share-buttons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="../../js/ads.js"></script>
+    <script src="../../js/i18n.js"></script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../js/blog-i18n.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../../index.html" class="logo-container">
+                <img src="../../assets/logo.png" alt="SAMEH Logo" class="logo-image">
+                <span class="logo-text">CSI Calculator</span>
+            </a>
+            <div class="nav-links">
+                <a href="../../index.html" data-i18n="home" data-icon="🏠"><span>تصفح</span></a>
+                <a href="../../crew-calculator.html" data-i18n="crewCalculator" data-icon="🧮"><span>الحاسبة</span></a>
+                <a href="../../ai-planner.html" data-i18n="aiPlanner" data-icon="🤖"><span>المخطط الذكي</span></a>
+                <a href="../index.html" class="active" data-i18n="blog" data-icon="📚"><span>دليل التشغيل+مقالات فنية</span></a>
+                <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">🌙</button>
+                <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()"><span id="langIcon">EN</span></button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="article-header">
+        <span class="article-category">معايير BIM</span>
+        <h1>BEP: خطة تنفيذ BIM - الدليل الشامل</h1>
+        <div class="article-meta">
+            <span class="article-date">8 يناير 2026</span>
+            <span class="article-read-time">30 دقيقة قراءة</span>
+        </div>
+    </div>
+
+    <div class="article-body">
+        <div class="article-image-container">
+            <img src="../assets/bep-guide.jpg" alt="BEP Guide" class="img-fluid rounded shadow mb-4">
+        </div>
+
+        <div class="alert alert-info">
+            <strong>📚 هذا المقال جزء من سلسلة معايير BIM:</strong> EIR → <strong>BEP</strong> → CDE → LOD → IFC → COBie
+        </div>
+
+        <h2>📋 الفهرس</h2>
+        <ol>
+            <li><a href="#what-is-bep">ما هو BEP؟</a></li>
+            <li><a href="#types">أنواع BEP: Pre-BEP vs BEP</a></li>
+            <li><a href="#contents">محتويات BEP التفصيلية</a></li>
+            <li><a href="#bim-uses">BIM Uses وكيفية توثيقها</a></li>
+            <li><a href="#process-maps">خرائط العمليات (Process Maps)</a></li>
+            <li><a href="#model-strategy">استراتيجية النماذج</a></li>
+            <li><a href="#writing">كيف تكتب BEP؟</a></li>
+            <li><a href="#templates">نماذج وقوالب جاهزة</a></li>
+        </ol>
+
+        <hr>
+
+        <h2 id="what-is-bep">📄 1. ما هو BEP؟</h2>
+        <p>
+            <strong>BEP (BIM Execution Plan)</strong> هي وثيقة تخطيطية شاملة تُعدها الجهة المنفذة (المقاول أو المصمم) لتوضيح كيفية تطبيق BIM في المشروع. هو "الإجابة" على "سؤال" EIR.
+        </p>
+
+        <h3>1.1 التعريف البسيط:</h3>
+        <p>BEP = "كيف سنُنفذ متطلبات BIM التي طلبها المالك؟"</p>
+
+        <div class="alert alert-warning">
+            <strong>⚠️ المسمى في ISO 19650:</strong><br>
+            يُسمى BEP رسمياً في ISO 19650 بـ:<br>
+            <strong>BIM Execution Plan (BEP)</strong> - في مرحلة ما قبل التعيين<br>
+            <strong>Task Information Delivery Plan (TIDP)</strong> - جدول تسليم المعلومات على مستوى المهام<br>
+            <strong>Master Information Delivery Plan (MIDP)</strong> - الجدول الرئيسي للتسليم
+        </div>
+
+        <h3>1.2 من يُعد BEP؟</h3>
+        <ul>
+            <li><strong>Lead Appointed Party:</strong> الجهة الرئيسية المعينة (المقاول الرئيسي/الاستشاري الرئيسي)</li>
+            <li><strong>BIM Manager:</strong> مدير BIM للمشروع</li>
+            <li><strong>بالتنسيق مع:</strong> جميع الأطراف المشاركة (تخصصات مختلفة)</li>
+        </ul>
+
+        <h3>1.3 متى يُعد BEP؟</h3>
+        <ul>
+            <li><strong>Pre-BEP:</strong> مع تقديم العرض في المناقصة</li>
+            <li><strong>BEP:</strong> بعد الترسية وقبل بدء العمل</li>
+            <li><strong>التحديث:</strong> يُحدّث خلال المشروع حسب الحاجة</li>
+        </ul>
+
+        <hr>
+
+        <h2 id="types">📊 2. أنواع BEP: Pre-BEP vs BEP</h2>
+
+        <h3>2.1 Pre-BEP (خطة أولية)</h3>
+        <table class="pricing-table">
+            <tr><th>البند</th><th>التفاصيل</th></tr>
+            <tr><td>متى</td><td>مع تقديم العرض في المناقصة</td></tr>
+            <tr><td>من</td><td>المتقدم للمناقصة</td></tr>
+            <tr><td>المحتوى</td><td>خطة أولية توضح القدرات والنهج المقترح</td></tr>
+            <tr><td>الهدف</td><td>إثبات الكفاءة للمالك</td></tr>
+            <tr><td>الحجم</td><td>10-15 صفحة تقريباً</td></tr>
+        </table>
+
+        <h3>2.2 BEP (خطة تفصيلية)</h3>
+        <table class="pricing-table">
+            <tr><th>البند</th><th>التفاصيل</th></tr>
+            <tr><td>متى</td><td>بعد الترسية، قبل بدء العمل</td></tr>
+            <tr><td>من</td><td>الفائز بالتعاقد (Lead Appointed Party)</td></tr>
+            <tr><td>المحتوى</td><td>خطة تفصيلية شاملة بالتنسيق مع جميع الأطراف</td></tr>
+            <tr><td>الهدف</td><td>دليل عمل لجميع الفريق</td></tr>
+            <tr><td>الحجم</td><td>30-100 صفحة حسب حجم المشروع</td></tr>
+        </table>
+
+        <h3>2.3 مقارنة المحتوى:</h3>
+        <table class="pricing-table">
+            <tr><th>العنصر</th><th>Pre-BEP</th><th>BEP</th></tr>
+            <tr><td>معلومات المشروع</td><td>عامة</td><td>تفصيلية</td></tr>
+            <tr><td>BIM Uses</td><td>قائمة أولية</td><td>خرائط عمليات تفصيلية</td></tr>
+            <tr><td>الفريق</td><td>هيكل عام</td><td>أسماء ومسؤوليات محددة</td></tr>
+            <tr><td>البرامج</td><td>قائمة مقترحة</td><td>إصدارات محددة ومعتمدة</td></tr>
+            <tr><td>التسليم</td><td>جدول عام</td><td>MIDP/TIDP تفصيلي</td></tr>
+            <tr><td>الملاحق</td><td>محدودة</td><td>شاملة (قوالب، معايير...)</td></tr>
+        </table>
+
+        <hr>
+
+        <h2 id="contents">📑 3. محتويات BEP التفصيلية</h2>
+
+        <h3>3.1 الهيكل القياسي لـ BEP:</h3>
+
+        <h4>القسم 1: معلومات المشروع</h4>
+        <ul>
+            <li>اسم المشروع ووصفه</li>
+            <li>الموقع والمساحة</li>
+            <li>مراحل المشروع</li>
+            <li>الأطراف المعنية</li>
+            <li>معلومات الاتصال</li>
+        </ul>
+
+        <h4>القسم 2: أهداف BIM وغاياته</h4>
+        <ul>
+            <li>أهداف المشروع من BIM</li>
+            <li>BIM Uses المطلوبة</li>
+            <li>معايير النجاح (KPIs)</li>
+        </ul>
+
+        <h4>القسم 3: الأدوار والمسؤوليات</h4>
+        <table class="pricing-table">
+            <tr><th>الدور</th><th>المسؤوليات</th><th>الشخص</th></tr>
+            <tr><td>BIM Manager</td><td>إدارة عملية BIM الكاملة</td><td>[الاسم]</td></tr>
+            <tr><td>BIM Coordinator</td><td>التنسيق بين النماذج</td><td>[الاسم]</td></tr>
+            <tr><td>Model Author</td><td>إنشاء النماذج</td><td>[الاسم]</td></tr>
+            <tr><td>Information Manager</td><td>إدارة CDE</td><td>[الاسم]</td></tr>
+        </table>
+
+        <h4>القسم 4: المتطلبات التقنية</h4>
+        <ul>
+            <li>البرامج والإصدارات</li>
+            <li>الأجهزة المطلوبة</li>
+            <li>معايير التسمية</li>
+            <li>نظام الإحداثيات</li>
+            <li>الوحدات</li>
+            <li>LOD Matrix</li>
+        </ul>
+
+        <h4>القسم 5: استراتيجية النماذج</h4>
+        <ul>
+            <li>تقسيم النماذج (Federation Strategy)</li>
+            <li>Origin Points</li>
+            <li>Shared Parameters</li>
+            <li>Worksets/Worksharing</li>
+        </ul>
+
+        <h4>القسم 6: تبادل المعلومات</h4>
+        <ul>
+            <li>CDE Structure</li>
+            <li>Status Codes</li>
+            <li>Revision Procedures</li>
+            <li>Approval Workflow</li>
+        </ul>
+
+        <h4>القسم 7: جدول التسليم (MIDP)</h4>
+        <table class="pricing-table">
+            <tr><th>المخرج</th><th>المسؤول</th><th>LOD</th><th>التاريخ</th></tr>
+            <tr><td>نموذج معماري - الأساسات</td><td>ARC Team</td><td>LOD 300</td><td>15 فبراير</td></tr>
+            <tr><td>نموذج إنشائي - الأساسات</td><td>STR Team</td><td>LOD 350</td><td>20 فبراير</td></tr>
+            <tr><td>Federated Model</td><td>BIM Coord</td><td>-</td><td>25 فبراير</td></tr>
+            <tr><td>Clash Report</td><td>BIM Coord</td><td>-</td><td>28 فبراير</td></tr>
+        </table>
+
+        <h4>القسم 8: ضمان الجودة</h4>
+        <ul>
+            <li>Model Check Procedures</li>
+            <li>Clash Detection Protocol</li>
+            <li>Audit Schedule</li>
+        </ul>
+
+        <hr>
+
+        <h2 id="bim-uses">🎯 4. BIM Uses وكيفية توثيقها</h2>
+
+        <h3>4.1 قائمة BIM Uses الشائعة:</h3>
+        <table class="pricing-table">
+            <tr><th>BIM Use</th><th>الوصف</th><th>المرحلة</th></tr>
+            <tr><td>Design Authoring</td><td>إنتاج الرسومات من النموذج</td><td>التصميم</td></tr>
+            <tr><td>Design Reviews</td><td>مراجعة التصميم 3D</td><td>التصميم</td></tr>
+            <tr><td>3D Coordination</td><td>تنسيق واكتشاف التعارضات</td><td>التصميم/التنفيذ</td></tr>
+            <tr><td>Quantity Takeoff</td><td>حصر الكميات</td><td>التصميم/التنفيذ</td></tr>
+            <tr><td>4D Scheduling</td><td>ربط الجدول الزمني</td><td>التخطيط/التنفيذ</td></tr>
+            <tr><td>5D Cost Estimation</td><td>تقدير التكاليف</td><td>التخطيط</td></tr>
+            <tr><td>Construction Simulation</td><td>محاكاة البناء</td><td>التنفيذ</td></tr>
+            <tr><td>FM Handover</td><td>تسليم لإدارة المرافق</td><td>التسليم</td></tr>
+        </table>
+
+        <h3>4.2 توثيق كل BIM Use:</h3>
+        <p>لكل BIM Use، يجب توثيق:</p>
+        <ul>
+            <li><strong>الهدف:</strong> لماذا نستخدمه؟</li>
+            <li><strong>المسؤول:</strong> من يقوم به؟</li>
+            <li><strong>المدخلات:</strong> ما الذي نحتاجه للبدء؟</li>
+            <li><strong>المخرجات:</strong> ما الذي ننتجه؟</li>
+            <li><strong>البرامج:</strong> ما الأدوات المستخدمة؟</li>
+            <li><strong>التكرار:</strong> كم مرة؟</li>
+        </ul>
+
+        <hr>
+
+        <h2 id="process-maps">🗺️ 5. خرائط العمليات (Process Maps)</h2>
+
+        <h3>5.1 ما هي خريطة العملية؟</h3>
+        <p>رسم بياني يوضح تدفق العمل لكل BIM Use، يشمل:</p>
+        <ul>
+            <li>الخطوات المتسلسلة</li>
+            <li>المسؤول عن كل خطوة</li>
+            <li>نقاط القرار</li>
+            <li>المدخلات والمخرجات</li>
+        </ul>
+
+        <h3>5.2 مثال: خريطة 3D Coordination</h3>
+        <pre style="background: #f5f5f5; padding: 15px; border-radius: 8px;">
+┌──────────────────┐
+│ تحميل النماذج    │ ← Model Authors
+│ إلى Navisworks   │
+└────────┬─────────┘
+         ↓
+┌──────────────────┐
+│ تشغيل Clash     │ ← BIM Coordinator
+│ Detection       │
+└────────┬─────────┘
+         ↓
+┌──────────────────┐
+│ مراجعة النتائج   │ ← BIM Coordinator
+│ وتصنيف الـ Clashes│
+└────────┬─────────┘
+         ↓
+    ┌────┴────┐
+    │ هل يوجد │
+    │ Clashes؟│
+    └────┬────┘
+    نعم ↓    ↓ لا
+┌────────────┐  ┌──────────────┐
+│ إصدار     │  │ إصدار تقرير │
+│ BCF Issues│  │ Coordination │
+│ للفرق     │  │ Approved     │
+└────────────┘  └──────────────┘
+        </pre>
+
+        <hr>
+
+        <h2 id="model-strategy">🏗️ 6. استراتيجية النماذج</h2>
+
+        <h3>6.1 Federation Strategy:</h3>
+        <p>كيف نقسم النماذج؟</p>
+        <ul>
+            <li><strong>بالتخصص:</strong> معماري، إنشائي، كهربائي، ميكانيكي</li>
+            <li><strong>بالمنطقة:</strong> المبنى A، المبنى B، الموقع العام</li>
+            <li><strong>بالطابق:</strong> البدروم، الأرضي، الأول...</li>
+            <li><strong>مختلط:</strong> تخصص + منطقة</li>
+        </ul>
+
+        <h3>6.2 مثال على تقسيم النماذج:</h3>
+        <pre style="background: #f5f5f5; padding: 15px; border-radius: 8px;">
+Federated Model
+├── ARC_Building-A_GF.rvt
+├── ARC_Building-A_01.rvt
+├── ARC_Building-A_02.rvt
+├── STR_Building-A.rvt
+├── MEP_Building-A.rvt
+│   ├── HVAC
+│   ├── Plumbing
+│   └── Electrical
+├── ARC_Building-B.rvt
+├── STR_Building-B.rvt
+└── MEP_Building-B.rvt
+        </pre>
+
+        <h3>6.3 Coordination Point (نقطة الأصل):</h3>
+        <ul>
+            <li>تحديد نقطة موحدة (0,0,0) لجميع النماذج</li>
+            <li>استخدام Shared Coordinates في Revit</li>
+            <li>توثيق النقطة في BEP مع إحداثياتها</li>
+        </ul>
+
+        <hr>
+
+        <h2 id="writing">✍️ 7. كيف تكتب BEP؟</h2>
+
+        <h3>7.1 الخطوات:</h3>
+        <ol>
+            <li><strong>مراجعة EIR:</strong> فهم متطلبات المالك</li>
+            <li><strong>تحديد الفريق:</strong> من سيشارك في BIM</li>
+            <li><strong>اجتماع Kickoff:</strong> مع جميع الأطراف</li>
+            <li><strong>تحديد BIM Uses:</strong> وتوزيع المسؤوليات</li>
+            <li><strong>إنشاء Process Maps:</strong> لكل BIM Use</li>
+            <li><strong>تحديد استراتيجية النماذج:</strong> التقسيم والتنسيق</li>
+            <li><strong>إعداد MIDP:</strong> جدول التسليم</li>
+            <li><strong>توثيق المعايير:</strong> التسمية، LOD، إلخ</li>
+            <li><strong>مراجعة واعتماد:</strong> من المالك</li>
+        </ol>
+
+        <h3>7.2 نصائح للنجاح:</h3>
+        <ul>
+            <li>✅ اشرك جميع الأطراف في الإعداد</li>
+            <li>✅ كن واقعياً في التوقعات</li>
+            <li>✅ وثّق كل شيء بوضوح</li>
+            <li>✅ استخدم قوالب موحدة</li>
+            <li>✅ راجع BEP بشكل دوري</li>
+            <li>❌ لا تنسخ BEP من مشروع آخر بدون تعديل</li>
+        </ul>
+
+        <hr>
+
+        <h2 id="templates">📁 8. نماذج وقوالب جاهزة</h2>
+
+        <h3>8.1 مصادر قوالب BEP:</h3>
+        <ul>
+            <li><strong>Penn State CIC:</strong> قوالب BIM Uses وProcess Maps</li>
+            <li><strong>UK BIM Framework:</strong> قوالب ISO 19650</li>
+            <li><strong>buildingSMART:</strong> معايير دولية</li>
+            <li><strong>BIM Forum:</strong> LOD Specification</li>
+        </ul>
+
+        <h3>8.2 Checklist لـ BEP:</h3>
+        <ul>
+            <li>☐ معلومات المشروع كاملة</li>
+            <li>☐ أهداف BIM محددة</li>
+            <li>☐ BIM Uses موثقة</li>
+            <li>☐ الأدوار والمسؤوليات واضحة</li>
+            <li>☐ البرامج والإصدارات محددة</li>
+            <li>☐ معايير التسمية موثقة</li>
+            <li>☐ LOD Matrix مُعد</li>
+            <li>☐ استراتيجية النماذج محددة</li>
+            <li>☐ MIDP جاهز</li>
+            <li>☐ إجراءات الجودة موثقة</li>
+            <li>☐ CDE Structure محدد</li>
+        </ul>
+
+        <!-- Share Buttons -->
+        <div class="share-buttons">
+            <span class="share-buttons-label">شارك هذا المقال:</span>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-btn facebook" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">فيسبوك</a>
+            <a href="https://twitter.com/intent/tweet?url=" class="share-btn twitter" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">تويتر</a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=" class="share-btn linkedin" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">لينكدإن</a>
+            <a href="https://wa.me/?text=" class="share-btn whatsapp" target="_blank" onclick="this.href+=encodeURIComponent(document.title + ' ' + window.location.href)">واتساب</a>
+            <button class="share-btn copy" onclick="navigator.clipboard.writeText(window.location.href);alert('تم نسخ الرابط!')">نسخ الرابط</button>
+        </div>
+        
+        <hr>
+        <p><strong>المقال التالي:</strong> <a href="cde-guide.html">CDE: بيئة البيانات المشتركة - الدليل الشامل</a></p>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p class="footer-text">CSI Crew Calculator • Built with <span class="footer-heart">❤️</span> by <span class="footer-author">Sameh Badawy Sayed</span></p>
+        </div>
+    </footer>
+</body>
+</html>

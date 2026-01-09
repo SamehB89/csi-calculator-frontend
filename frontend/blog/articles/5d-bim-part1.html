@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5D BIM الجزء 1: عندما يتحدث النموذج بالأرقام - CSI Calculator</title>
+    <meta name="description" content="اكتشف كيف يحول 5D BIM النموذج ثلاثي الأبعاد إلى آلة حاسبة تلقائية للكميات والتكلفة. ثورة في تقدير التكاليف!">
+    <meta name="keywords" content="5D BIM, حصر الكميات, التقدير التلقائي, QTO, Cost estimation">
+    
+    <meta property="og:title" content="5D BIM: عندما يتحدث النموذج بالأرقام">
+    <meta property="og:description" content="من النموذج للتكلفة تلقائياً - دقة 95%+">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="../assets/placeholder-article.jpg">
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5429423113977975" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/lang-toggle.css">
+    <link rel="stylesheet" href="../../css/blog.css">
+    <link rel="stylesheet" href="../../css/ads.css">
+    <link rel="stylesheet" href="../../css/share-buttons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="../../js/ads.js"></script>
+    <script src="../../js/i18n.js"></script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../js/blog-i18n.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../../index.html" class="logo-container">
+                <img src="../../assets/logo.png" alt="SAMEH Logo" class="logo-image">
+                <span class="logo-text">CSI Calculator</span>
+            </a>
+            <div class="nav-links">
+                <a href="../../index.html" data-i18n="home" data-icon="🏠"><span>تصفح</span></a>
+                <a href="../../crew-calculator.html" data-i18n="crewCalculator" data-icon="🧮"><span>الحاسبة</span></a>
+                <a href="../../ai-planner.html" data-i18n="aiPlanner" data-icon="🤖"><span>المخطط الذكي</span></a>
+                <a href="../index.html" class="active" data-i18n="blog" data-icon="📚"><span>دليل التشغيل+مقالات فنية</span></a>
+                <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">🌙</button>
+                <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()"><span id="langIcon">EN</span></button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="article-header">
+        <span class="article-category">سلسلة 5D BIM - الجزء 1/4</span>
+        <h1>5D BIM: عندما يتحدث النموذج بالأرقام</h1>
+        <div class="article-meta">
+            <span class="article-date">9 يناير 2026</span>
+            <span class="article-read-time">11 دقيقة قراءة</span>
+        </div>
+    </div>
+
+    <div class="article-body">
+        <div class="article-image-container">
+            <img src="../assets/placeholder-article.jpg" alt="5D BIM Introduction" class="img-fluid rounded shadow mb-4">
+        </div>
+
+        <div class="alert alert-info">
+            <strong>📚 سلسلة 5D BIM:</strong> <strong>الجزء 1</strong> → <a href="5d-bim-part2.html">الجزء 2</a> → <a href="5d-bim-part3.html">الجزء 3</a> → <a href="5d-bim-part4.html">الجزء 4</a><br>
+            <em>قادم من <a href="4d-bim-part4.html">سلسلة 4D BIM</a>؟ مرحباً! الآن ندخل عالم التكلفة.</em>
+        </div>
+
+        <h2>🌟 المقدمة: الحلم القديم</h2>
+        
+        <p style="font-size: 1.1rem; line-height: 1.8;">
+            تخيّل: تصمم مبنى في Revit، تضغط زر واحد، ويخرج لك <strong>حصر كميات كامل + التكلفة بالتفصيل</strong>. 
+            لا Excel، لا حسابات يدوية، لا أخطاء بشرية.
+        </p>
+
+        <p>
+            هذا ليس خيال. هذا <strong>5D BIM</strong> - وهو يحدث الآن في آلاف المشاريع يومياً.
+        </p>
+
+        <div class="alert alert-success">
+            <strong>💡 حقيقة مذهلة:</strong> مكتب استشاري في لندن خفّض وقت حصر الكميات من <strong>2 أسبوع إلى 4 ساعات</strong> باستخدام 5D BIM. الدقة؟ <strong>98%</strong> مقارنة بالطريقة اليدوية!
+        </div>
+
+        <!-- AdSense Display Ad -->
+        <div class="ad-container ad-display" style="margin: 2rem 0; text-align: center; background: #f8f9fa; padding: 1rem; border-radius: 8px;">
+            <p style="font-size: 0.8rem; color: #666; margin-bottom: 0.5rem;">إعلان</p>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-5429423113977975"
+                 data-ad-slot="XXXXXX"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <h2>🎯 ما هو 5D BIM بالضبط؟</h2>
+
+        <h3>التعريف البسيط:</h3>
+        <p>
+            <strong>5D BIM</strong> = 3D Model + Time (<a href="4d-bim-part1.html">4D</a>) + <strong>Cost (التكلفة)</strong>
+        </p>
+
+        <div style="background: #e3f2fd; padding: 1.5rem; border-radius: 8px; border-right: 4px solid #2196f3; margin: 1.5rem 0;">
+            <h3 style="margin-top: 0; color: #1976d2;">المعادلة:</h3>
+            <pre style="background: white; padding: 15px; border-radius: 6px; font-size: 1.05rem;">
+3D Model (الهندسة)
+    +
+Time (الجدول الزمني)
+    +
+Cost Data (بيانات التكلفة)
+    =
+5D BIM (تكلفة ديناميكية مرتبطة بالنموذج)
+            </pre>
+        </div>
+
+        <h3>بالأرقام الواقعية:</h3>
+        <table class="pricing-table" style="margin: 1.5rem 0;">
+            <tr style="background: #f5f5f5;">
+                <th>العنصر</th>
+                <th>ما يحدث في 5D BIM</th>
+            </tr>
+            <tr>
+                <td><strong>جدار خرساني</strong></td>
+                <td>
+                    • الأبعاد: 6m × 3m × 0.2m<br>
+                    • الحجم: 3.6 m³<br>
+                    • التكلفة: 3.6 × $350/m³ = <strong>$1,260</strong>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>بلاطة</strong></td>
+                <td>
+                    • المساحة: 250 m²<br>
+                    • السُمك: 0.25m<br>
+                    • الحجم: 62.5 m³<br>
+                    • التكلفة: 62.5 × $420/m³ = <strong>$26,250</strong>
+                </td>
+            </tr>
+            <tr style="background: #e8f5e9;">
+                <td><strong>المجموع التلقائي</strong></td>
+                <td style="font-weight: bold; color: #2e7d32;">$27,510 (بدون تدخل يدوي!)</td>
+            </tr>
+        </table>
+
+        <p><strong>السحر:</strong> كل هذا يحدث <strong>تلقائياً</strong> عندما ترسم/تعدل العنصر!</p>
+
+        <h2>💰 لماذا يجب أن تهتم؟ (الفوائد الحقيقية)</h2>
+
+        <h3>1. السرعة المذهلة</h3>
+
+        <table class="pricing-table" style="margin: 1.5rem 0;">
+            <tr style="background: #f5f5f5;">
+                <th style="width: 40%;">المهمة</th>
+                <th style="width: 30%;">الطريقة التقليدية</th>
+                <th style="width: 30%;">5D BIM</th>
+            </tr>
+            <tr>
+                <td>حصر كميات مبنى سكني</td>
+                <td>10-15 يوم</td>
+                <td style="background: #e8f5e9; font-weight: bold;">4-6 ساعات</td>
+            </tr>
+            <tr>
+                <td>تعديل التقدير بعد تغيير</td>
+                <td>3-5 أيام</td>
+                <td style="background: #e8f5e9; font-weight: bold;">30 دقيقة</td>
+            </tr>
+            <tr>
+                <td>مقارنة 3 بدائل تصميمية</td>
+                <td>أسبوعين</td>
+                <td style="background: #e8f5e9; font-weight: bold;">يوم واحد</td>
+            </tr>
+        </table>
+
+        <h3>2. الدقة العالية</h3>
+
+        <p><strong>الأخطاء الشائعة في الطريقة اليدوية:</strong></p>
+        <ul>
+            <li>❌ نسيان عناصر (خاصة المخفية)</li>
+            <li>❌ أخطاء حسابية</li>
+            <li>❌ قياسات خاطئة من المخططات</li>
+            <li>❌ عدم تحديث الكميات مع التعديلات</li>
+        </ul>
+
+        <p><strong>مع 5D BIM:</strong></p>
+        <ul style="background: #e8f5e9; padding: 1rem; border-radius: 6px;">
+            <li>✅ كل عنصر محسوب (طالما موجود في النموذج)</li>
+            <li>✅ الحسابات رياضية دقيقة 100%</li>
+            <li>✅ القياسات من النموذج مباشرة</li>
+            <li>✅ التحديث تلقائي فوري</li>
+        </ul>
+
+        <div class="alert alert-info">
+            <strong>📊 دراسة:</strong> مقارنة بين 50 مشروع (Stanford CIFE):
+<br>• الدقة اليدوية: <strong>85-92%</strong>
+            <br>• الدقة مع 5D BIM: <strong>95-99%</strong>
+        </div>
+
+        <h3>3. التحديث الديناميكي</h3>
+
+        <div style="background: #fff3e0; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+            <h4 style="margin-top: 0; color: #f57c00;">🔥 السيناريو الواقعي:</h4>
+            <p><strong>المهندس:</strong> "المالك طلب تغيير سُمك البلاطات من 25cm لـ 30cm"</p>
+            <p style="margin: 0.5rem 0;"><strong>بدون 5D:</strong></p>
+            <ul>
+                <li>تعديل المخططات</li>
+                <li>إعادة حصر الكميات يدوياً</li>
+                <li>إعادة حساب التكلفة</li>
+                <li>تحديث BOQ</li>
+                <li><strong>الوقت: 2-3 أيام</strong></li>
+            </ul>
+            <p style="margin: 0.5rem 0;"><strong>مع 5D:</strong></p>
+            <ul style="margin-bottom: 0;">
+                <li>تعديل parameter واحد في Revit</li>
+                <li>Regenerate model</li>
+                <li>الكميات والتكلفة تتحدث تلقائياً!</li>
+                <li><strong>الوقت: 15 دقيقة</strong></li>
+            </ul>
+        </div>
+
+        <!-- AdSense In-Article Ad -->
+        <div class="ad-container ad-inarticle" style="margin: 2rem 0; background: #f8f9fa; padding: 1rem; border-radius: 8px;">
+            <p style="font-size: 0.8rem; color: #666; margin-bottom: 0.5rem;">إعلان</p>
+            <ins class="adsbygoogle"
+                 style="display:block; text-align:center;"
+                 data-ad-layout="in-article"
+                 data-ad-format="fluid"
+                 data-ad-client="ca-pub-5429423113977975"
+                 data-ad-slot="XXXXXX"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <h2>🔄 كيف يعمل 5D BIM؟ (الآلية)</h2>
+
+        <h3>الخطوات الأساسية:</h3>
+
+        <pre style="background: #f5f5f5; padding: 15px; border-radius: 8px; font-size: 0.95rem;">
+<strong>Step 1:</strong> البناء في 3D
+├─ ترسم جدار في Revit
+└─ الجدار يحمل معلومات: الأبعاد، المادة، إلخ.
+
+<strong>Step 2:</strong> تخصيص Cost Data
+├─ تُعرّف: "الخرسانة M30 = $350/m³"
+└─ تُعرّف: "حديد التسليح = $850/طن"
+
+<strong>Step 3:</strong> الربط التلقائي
+├─ كل عنصر نوع "جدار خرساني" → السعر المحدد
+└─ الحساب يتم تلقائياً
+
+<strong>Step 4:</strong> الاستخراج
+├─ Schedule في Revit → BOQ جاهز
+└─ أو Export لـ Excel/Cost estimation software
+        </pre>
+
+        <h3>الأدوات الرئيسية:</h3>
+
+        <table class="pricing-table" style="margin: 1.5rem 0;">
+            <tr style="background: #f5f5f5;">
+                <th>الأداة</th>
+                <th>الوظيفة</th>
+                <th>الاستخدام</th>
+            </tr>
+            <tr>
+                <td><strong>Revit Schedules</strong></td>
+                <td>استخراج الكميات</td>
+                <td>Built-in، مجاني</td>
+            </tr>
+            <tr>
+                <td><strong>Dynamo</strong></td>
+                <td>Automation متقدم</td>
+                <td>Open source</td>
+            </tr>
+            <tr>
+                <td><strong>Navisworks Quantification</strong></td>
+                <td>QTO من نماذج متعددة</td>
+                <td>Autodesk (مدفوع)</td>
+            </tr>
+            <tr>
+                <td><strong>Vico Office</strong></td>
+                <td>5D كامل + Cost integration</td>
+                <td>Trimble (مدفوع)</td>
+            </tr>
+            <tr>
+                <td><strong>CostX</strong></td>
+                <td>QTO + Cost estimation</td>
+                <td>Exactal (مدفوع)</td>
+            </tr>
+        </table>
+
+        <h2>📊 5D vs الطريقة التقليدية: مقارنة صادقة</h2>
+
+        <table class="pricing-table" style="margin: 1.5rem 0; font-size: 0.9rem;">
+            <tr style="background: #263238; color: white;">
+                <th>المعيار</th>
+                <th>الطريقة التقليدية</th>
+                <th>5D BIM</th>
+            </tr>
+            <tr>
+                <td><strong>الوقت</strong></td>
+                <td style="background: #ffebee;">بطيء (أيام/أسابيع)</td>
+                <td style="background: #e8f5e9;">سريع جداً (ساعات)</td>
+            </tr>
+            <tr>
+                <td><strong>الدقة</strong></td>
+                <td style="background: #fff3e0;">85-92%</td>
+                <td style="background: #e8f5e9;">95-99%</td>
+            </tr>
+            <tr>
+                <td><strong>التحديثات</strong></td>
+                <td style="background: #ffebee;">يدوي، شاق</td>
+                <td style="background: #e8f5e9;">تلقائي، فوري</td>
+            </tr>
+            <tr>
+                <td><strong>التكلفة الأولية</strong></td>
+                <td style="background: #e8f5e9;">منخفضة (ورقة + قلم)</td>
+                <td style="background: #ffebee;">عالية (برامج + تدريب)</td>
+            </tr>
+            <tr>
+                <td><strong>Skill required</strong></td>
+                <td>Quantity surveyor تقليدي</td>
+                <td>QS + BIM skills</td>
+            </tr>
+            <tr>
+                <td><strong>التكامل مع التصميم</strong></td>
+                <td style="background: #ffebee;">منفصل تماماً</td>
+                <td style="background: #e8f5e9;">متكامل 100%</td>
+            </tr>
+            <tr style="background: #f5f5f5; font-weight: bold;">
+                <td>الحكم النهائي</td>
+                <td>مناسب للمشاريع الصغيرة جداً فقط</td>
+                <td>⭐ المستقبل - لا بديل عنه</td>
+            </tr>
+        </table>
+
+        <h2>🌍 من يستخدم 5D BIM؟ (أمثلة واقعية)</h2>
+
+        <h3>1. مقاولون كبار:</h3>
+        <p><strong>Skanska, Turner Construction, Bechtel</strong> - كلهم يطبقون 5D في معظم مشاريعهم.</p>
+
+        <h3>2. مكاتب استشارية:</h3>
+        <p><strong>Arup, WSP, Mace</strong> - يقدمون 5D services كجزء من الاستشارات.</p>
+
+        <h3>3. مالكون:</h3>
+        <p><strong>هيئة الطرق في UK، مشاريع نيوم في السعودية</strong> - يطلبون 5D deliverables إلزامياً.</p>
+
+        <div style="background: #e3f2fd; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+            <h4 style="margin-top: 0; color: #1976d2;">📈 الإحصائية المذهلة:</h4>
+            <p style="margin-bottom: 0; font-size: 1.05rem;">
+                في استبيان NBS 2023 لـ 1000+ مكتب هندسي في UK:
+                <br><strong>72%</strong> يستخدمون 5D BIM بشكل منتظم
+                <br><strong>89%</strong> يخططون لزيادة الاستخدام خلال 3 سنوات
+            </p>
+        </div>
+
+        <!-- AdSense Multiplex Ad -->
+        <div class="ad-container ad-multiplex" style="margin: 2rem 0; background: #f8f9fa; padding: 1rem; border-radius: 8px;">
+            <p style="font-size: 0.8rem; color: #666; margin-bottom: 0.5rem;">إعلان</p>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-format="autorelaxed"
+                 data-ad-client="ca-pub-5429423113977975"
+                 data-ad-slot="XXXXXX"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <h2>🤔 الأسئلة الشائعة</h2>
+
+        <h3>س: هل 5D BIM يستبدل Quantity Surveyor؟</h3>
+        <p><strong>ج:</strong> <strong>لا!</strong> لكنه يغيّر دوره:</p>
+        <ul>
+            <li><strong>قبل 5D:</strong> 80% وقته في الحساب، 20% في التحليل</li>
+            <li><strong>مع 5D:</strong> 20% في التحقق من الأرقام، 80% في Value engineering والتحليل</li>
+        </ul>
+        <p>= دور أكثر استراتيجية !</p>
+
+        <h3>س: كم الوقت لتعلم 5D BIM؟</h3>
+        <p><strong>ج:</strong></p>
+        <ul>
+            <li>Basic: أسبوعين (Revit Schedules فقط)</li>
+            <li>Intermediate: شهرين (مع Navisworks/Dynamo)</li>
+            <li>Advanced: 6 أشهر (مع Cost integration كامل)</li>
+        </ul>
+
+        <h3>س: هل الأرقام دقيقة 100%؟</h3>
+        <p><strong>ج:</strong> لا شيء دقيق 100%. لكن:</p>
+        <ul>
+            <li>الكميات: دقيقة جداً (99%+) إذا النموذج صحيح</li>
+            <li>التكلفة: تعتمد على دقة بيانات الأسعار</li>
+        </ul>
+        <p><strong>القاعدة الذهبية:</strong> Garbage In = Garbage Out. نموذج جيد = نتائج ممتازة.</p>
+
+        <h2>✅ الخلاصة: لماذا 5D BIM ضروري؟</h2>
+
+        <p style="font-size: 1.1rem; line-height: 1.8;">
+            في عالم حيث <strong>التكلفة = كل شيء</strong>، القدرة على حساب وتحديث التكاليف <strong>فوراً</strong> = ميزة تنافسية هائلة.
+        </p>
+
+        <p><strong>5D BIM يمنحك:</strong></p>
+        <ul style="font-size: 1.05rem; line-height: 1.8;">
+            <li>✅ <strong>السرعة:</strong> قرارات أسرع بـ 10x</li>
+            <li>✅ <strong>الدقة:</strong> أخطاء أقل بـ 70%</li>
+            <li>✅ <strong>المرونة:</strong> تجريب البدائل بدون تكلفة</li>
+            <li>✅ <strong>الشفافية:</strong> المالك يرى كل شيء</li>
+        </ul>
+
+        <div style="background: #fff9c4; padding: 1.5rem; border-radius: 8px; border-right: 4px solid #fbc02d; margin: 2rem 0;">
+            <h3 style="margin-top: 0; color: #f57f17;">💡 نصيحة ذهبية:</h3>
+            <p style="margin-bottom: 0; font-size: 1.05rem;">
+                لا تنتظر حتى "تتعلم 5D كاملاً". <strong>ابدأ بسيط:</strong>
+                <br>• استخدم Revit Schedules لحصر كميات بسيط
+                <br>• جرب على غرفة واحدة
+                <br>• تعلم تدريجياً
+                <br><br>
+                بعد 3 مشاريع، سيصبح 5D <strong>عادة طبيعية</strong> في عملك!
+            </p>
+        </div>
+
+        <hr>
+
+        <!-- Next Article Teaser -->
+        <div class="next-article-teaser" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2rem; border-radius: 12px; color: white; margin: 2rem 0;">
+            <h3 style="color: white; margin-top: 0;">🚀 في الجزء التالي...</h3>
+            <p style="font-size: 1.15rem; line-height: 1.7; margin: 1rem 0;">
+                الآن تعرف <strong>ما هو</strong> 5D BIM و<strong>لماذا</strong> مهم. لكن...
+            </p>
+            <p style="font-size: 1.3rem; font-weight: bold; margin: 1rem 0;">
+                "هل الأرقام دقيقة فعلاً؟"
+            </p>
+            <p style="font-size: 1.05rem; line-height: 1.6;">
+                في <strong>الجزء الثاني</strong>، نكشف الحقيقة:<br>
+                • حدود الاستخراج التلقائي<br>
+                • متى تثق بالأرقام ومتى لا<br>
+                • كيف تضمن الدقة 95%+<br>
+                • الفخاخ الشائعة (وكيف تتجنبها!)
+            </p>
+            <p style="font-size: 0.95rem; font-style: italic; margin: 1.5rem 0 1rem 0;">
+                <strong>تحذير:</strong> قد يصدمك ما ستكتشفه عن "الدقة المثالية"!
+            </p>
+            <a href="5d-bim-part2.html" class="cta-button" style="display: inline-block; background: white; color: #667eea; padding: 14px 35px; border-radius: 30px; text-decoration: none; font-weight: bold; font-size: 1.1rem; margin-top: 1rem; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                اقرأ الجزء الثاني: الدقة في 5D →
+            </a>
+        </div>
+
+        <!-- Share Buttons -->
+        <div class="share-buttons" style="margin: 2rem 0;">
+            <span class="share-buttons-label">شارك هذا المقال:</span>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-btn facebook" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">فيسبوك</a>
+            <a href="https://twitter.com/intent/tweet?url=" class="share-btn twitter" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">تويتر</a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=" class="share-btn linkedin" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">لينكدإن</a>
+            <a href="https://wa.me/?text=" class="share-btn whatsapp" target="_blank" onclick="this.href+=encodeURIComponent(document.title + ' ' + window.location.href)">واتساب</a>
+            <button class="share-btn copy" onclick="navigator.clipboard.writeText(window.location.href);alert('تم نسخ الرابط!')">نسخ الرابط</button>
+        </div>
+
+        <hr>
+
+        <div style="background: #f5f5f5; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+            <h4 style="margin-top: 0;">📚 سلسلة 5D BIM الكاملة:</h4>
+            <ol style="line-height: 2;">
+                <li><strong>الجزء 1: عندما يتحدث النموذج بالأرقام</strong> (أنت هنا) ✅</li>
+                <li><a href="5d-bim-part2.html">الجزء 2: الدقة في 5D - التحديات والحلول</a> 🔜</li>
+                <li><a href="5d-bim-part3.html">الجزء 3: التكامل مع تقدير التكلفة</a></li>
+                <li><a href="5d-bim-part4.html">الجزء 4: 5D في الموقع - تتبع التكلفة الفعلية</a></li>
+            </ol>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p class="footer-text">CSI Crew Calculator • Built with <span class="footer-heart">❤️</span> by <span class="footer-author">Sameh Badawy Sayed</span></p>
+        </div>
+    </footer>
+
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</body>
+</html>

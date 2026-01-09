@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تقنيات EVM المتقدمة والتنبؤ بالمستقبل (Forecasting) - CSI Calculator</title>
+    <meta name="description" content="تعلم كيفية استخدام بيانات EVM للتنبؤ بمستقبل المشروع بدقة. شرح معادلات EAC, ETC, VAC و TCPI للتنبؤ بالتكلفة النهائية وموعد الانتهاء.">
+    <meta name="keywords" content="التنبؤ, Forecasting, EAC, ETC, VAC, TCPI, إدارة التكلفة, معادلات متقدمة">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="تقنيات EVM المتقدمة والتنبؤ بالمستقبل (Forecasting)">
+    <meta property="og:description" content="كيف تقرأ مستقبل مشروعك قبل حدوثه؟ دليلك المتقدم للتنبؤ">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://csi-calc.vercel.app/blog/articles/evm-advanced.html">
+    <meta property="og:image" content="../assets/evm-advanced.jpg">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "تقنيات EVM المتقدمة والتنبؤ بالمستقبل (Forecasting)",
+      "author": {
+        "@type": "Person",
+        "name": "Sameh Badawy Sayed"
+      },
+      "datePublished": "2026-01-07",
+      "image": "../assets/evm-advanced.jpg",
+      "articleSection": "إدارة المشاريع"
+    }
+    </script>
+    
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5429423113977975" crossorigin="anonymous"></script>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/lang-toggle.css">
+    <link rel="stylesheet" href="../../css/blog.css">
+    <link rel="stylesheet" href="../../css/ads.css">
+    <link rel="stylesheet" href="../../css/share-buttons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Scripts -->
+    <script src="../../js/ads.js"></script>
+    <script src="../../js/i18n.js"></script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../js/blog-i18n.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../../index.html" class="logo-container">
+                <img src="../../assets/logo.png" alt="SAMEH Logo" class="logo-image">
+                <span class="logo-text">CSI Calculator</span>
+            </a>
+            <div class="nav-links">
+                <a href="../../index.html" data-i18n="home" data-icon="🏠"><span>تصفح</span></a>
+                <a href="../../crew-calculator.html" data-i18n="crewCalculator" data-icon="🧮"><span>الحاسبة</span></a>
+                <a href="../../ai-planner.html" data-i18n="aiPlanner" data-icon="🤖"><span>المخطط الذكي</span></a>
+                <a href="../index.html" class="active" data-i18n="blog" data-icon="📚"><span>دليل التشغيل+مقالات فنية</span></a>
+                <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">🌙</button>
+                <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()"><span id="langIcon">EN</span></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Header -->
+    <div class="article-header">
+        <span class="article-category">إدارة المشاريع</span>
+        <h1>تقنيات EVM المتقدمة والتنبؤ بالمستقبل (Forecasting)</h1>
+        <div class="article-meta">
+            <span class="article-date">7 يناير 2026</span>
+            <span class="article-read-time">14 دقيقة قراءة</span>
+        </div>
+    </div>
+
+    <!-- Article Body -->
+    <div class="article-body">
+        <div class="article-image-container">
+            <img src="../assets/evm-advanced.jpg" alt="Advanced EVM Forecasting Charts" class="img-fluid rounded shadow mb-4">
+        </div>
+
+        <h2>🔮 فن قراءة المستقبل</h2>
+        <p>
+            توقفنا في المقالات السابقة عند معرفة "أين نحن الآن". لكن السؤال الذي يطرحه المالك أو المستثمر دائماً هو: "كم سيكلف المشروع في النهاية؟" و "هل سننتهي في الوقت المحدد؟". هنا تأتي قوة التنبؤ (Forecasting) في EVM.
+        </p>
+
+        <h2>1. التقدير عند الاكتمال (EAC - Estimate at Completion)</h2>
+        <p>
+            هذا الرقم يخبرنا: "بناءً على أدائنا الحالي، كم ستكون الفاتورة النهائية للمشروع؟".<br>
+            هناك 3 طرق رئيسية لحسابه، حسب تفاؤلك أو تشاؤمك:
+        </p>
+
+        <h3>أ. الطريقة المتفائلة (السيناريو الحالي مستمر)</h3>
+        <p>
+            نفترض أن الأداء الحالي (CPI) سيستمر لنهاية المشروع. هذه هي المعادلة الأكثر شيوعاً.
+        </p>
+        <p class="formula-box">EAC = BAC / CPI</p>
+        <p class="note">
+            * BAC: الميزانية الأصلية عند الاكتمال.<br>
+            مثال: ميزانيتنا 100,000 وأداؤنا الحالي CPI = 0.8 (سيء).<br>
+            EAC = 100,000 / 0.8 = <strong>125,000</strong>. (سنحتاج 25 ألف إضافية).
+        </p>
+
+        <h3>ب. الطريقة "شديدة" التشاؤم</h3>
+        <p>
+            نفترض أننا سنعاني من مشاكل التكلفة (CPI) ومشاكل الوقت (SPI) معاً فيما تبقى من العمل. وتستخدم عندما نكون ملزمين بموعد نهائي صارم.
+        </p>
+        <p class="formula-box">EAC = AC + [(BAC - EV) / (CPI × SPI)]</p>
+
+        <h2>2. التقدير لإتمام العمل (ETC - Estimate to Complete)</h2>
+        <p>
+            السؤال العملي: "كم من المال نحتاج في البنك اليوم لنتمكن من إنهاء ما تبقى من المشروع؟"
+        </p>
+        <p class="formula-box">ETC = EAC - AC</p>
+
+        <h2>3. الانحراف عند الاكتمال (VAC - Variance at Completion)</h2>
+        <p>
+            هل سنكون رابحين أم خاسرين في نهاية اللعبة؟
+        </p>
+        <p class="formula-box">VAC = BAC - EAC</p>
+        <ul>
+            <li>قيمة موجبة (+): سنوفر المال! 💰</li>
+            <li>قيمة سالبة (-): سنحتاج ميزانية إضافية! 💸</li>
+        </ul>
+
+        <h2>4. مؤشر الأداء المطلوب للاكتمال (TCPI)</h2>
+        <p>
+            هذا هو المؤشر "الشرير" أو "الضاغط". يخبرك بكفاءة العمل المطلوبة فيما تبقى من المشروع لتحقيق الميزانية الأصلية.
+        </p>
+        <p class="formula-box">TCPI = (BAC - EV) / (BAC - AC)</p>
+        <p>
+            إذا كان TCPI = 1.2، فهذا يعني: "يجب عليك أن تنتج عمل بقيمة 1.20 دولار مقابل كل دولار تصرفه من الآن فصاعداً لتعويض خسائر الماضي". وهذا غالباً ما يكون صعب التحقيق!
+        </p>
+
+        <h2>خلاصة</h2>
+        <p>
+            التنبؤات ليست تنجيماً، بل هي رياضيات دقيقة. استخدام هذه المعادلات يعطيك القوة للتفاوض مع المالك أو الإدارة العليا بالأرقام والحقائق وليس بالتوقعات والمشاعر.
+        </p>        <!-- Share Buttons -->
+        <div class="share-buttons">
+            <span class="share-buttons-label">���� ��� ������:</span>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-btn facebook" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">������</a>
+            <a href="https://twitter.com/intent/tweet?url=" class="share-btn twitter" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">�����</a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=" class="share-btn linkedin" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">�������</a>
+            <a href="https://wa.me/?text=" class="share-btn whatsapp" target="_blank" onclick="this.href+=encodeURIComponent(document.title + ' ' + window.location.href)">������</a>
+            <button class="share-btn copy" onclick="navigator.clipboard.writeText(window.location.href);alert('�� ��� ������!')">��� ������</button>
+        </div>
+        
+        
+        <hr>
+        <p><strong>المقال التالي:</strong> <a href="cost-estimation-methods.html">طرق تقدير التكلفة في المشاريع الإنشائية</a></p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p class="footer-text">CSI Crew Calculator • Built with <span class="footer-heart">❤️</span> by <span class="footer-author">Sameh Badawy Sayed</span></p>
+        </div>
+    </footer>
+</body>
+</html>

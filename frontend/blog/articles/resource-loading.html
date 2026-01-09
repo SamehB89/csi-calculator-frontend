@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحميل الموارد وموازنتها في المشاريع الإنشائية - CSI Calculator</title>
+    <meta name="description" content="دليل شامل لتحميل الموارد (Resource Loading) وموازنتها (Resource Leveling) في مشاريع البناء باستخدام P6 وMS Project.">
+    <meta name="keywords" content="Resource Loading, Resource Leveling, تحميل الموارد, موازنة الموارد, P6">
+    
+    <meta property="og:title" content="تحميل الموارد وموازنتها في المشاريع">
+    <meta property="og:description" content="كيف توازن بين الموارد المتاحة ومتطلبات المشروع؟">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="../assets/resource-loading.jpg">
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5429423113977975" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/lang-toggle.css">
+    <link rel="stylesheet" href="../../css/blog.css">
+    <link rel="stylesheet" href="../../css/ads.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="../../js/ads.js"></script>
+    <script src="../../js/i18n.js"></script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../js/blog-i18n.js"></script>
+    <style>
+        .share-buttons { display: flex; gap: 10px; margin: 20px 0; flex-wrap: wrap; }
+        .share-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 8px; text-decoration: none; color: white; font-weight: 500; transition: transform 0.2s, opacity 0.2s; }
+        .share-btn:hover { transform: translateY(-2px); opacity: 0.9; }
+        .share-btn.facebook { background: #1877f2; }
+        .share-btn.twitter { background: #1da1f2; }
+        .share-btn.linkedin { background: #0a66c2; }
+        .share-btn.whatsapp { background: #25d366; }
+        .share-btn.copy { background: #6c757d; cursor: pointer; border: none; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../../index.html" class="logo-container">
+                <img src="../../assets/logo.png" alt="SAMEH Logo" class="logo-image">
+                <span class="logo-text">CSI Calculator</span>
+            </a>
+            <div class="nav-links">
+                <a href="../../index.html" data-i18n="home" data-icon="🏠"><span>تصفح</span></a>
+                <a href="../../crew-calculator.html" data-i18n="crewCalculator" data-icon="🧮"><span>الحاسبة</span></a>
+                <a href="../../ai-planner.html" data-i18n="aiPlanner" data-icon="🤖"><span>المخطط الذكي</span></a>
+                <a href="../index.html" class="active" data-i18n="blog" data-icon="📚"><span>دليل التشغيل+مقالات فنية</span></a>
+                <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">🌙</button>
+                <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()"><span id="langIcon">EN</span></button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="article-header">
+        <span class="article-category">التخطيط والجدولة</span>
+        <h1>تحميل الموارد وموازنتها في المشاريع الإنشائية</h1>
+        <div class="article-meta">
+            <span class="article-date">8 يناير 2026</span>
+            <span class="article-read-time">14 دقيقة قراءة</span>
+        </div>
+    </div>
+
+    <div class="article-body">
+        <div class="article-image-container">
+            <img src="../assets/resource-loading.jpg" alt="Resource Loading" class="img-fluid rounded shadow mb-4">
+        </div>
+
+        <h2>👷 ما هو تحميل الموارد (Resource Loading)؟</h2>
+        <p>
+            تحميل الموارد هو عملية ربط الموارد (عمالة، معدات، مواد) بأنشطة الجدول الزمني لتحديد الاحتياجات اليومية والأسبوعية والشهرية من كل مورد.
+        </p>
+
+        <h2>📊 أنواع الموارد</h2>
+        <table class="pricing-table">
+            <tr><th>النوع</th><th>الوصف</th><th>أمثلة</th></tr>
+            <tr><td>Labor</td><td>العمالة والأيدي العاملة</td><td>نجار، حداد، عامل</td></tr>
+            <tr><td>Equipment</td><td>المعدات والآلات</td><td>رافعة، حفار، خلاطة</td></tr>
+            <tr><td>Material</td><td>المواد المستهلكة</td><td>خرسانة، حديد، أسمنت</td></tr>
+            <tr><td>Non-Labor</td><td>موارد غير بشرية</td><td>إيجار، تأمين</td></tr>
+        </table>
+
+        <h2>📈 Resource Histogram</h2>
+        <p>رسم بياني يُظهر توزيع الموارد على مدار المشروع:</p>
+        <ul>
+            <li>المحور X: الزمن (أيام/أسابيع/شهور)</li>
+            <li>المحور Y: كمية المورد</li>
+            <li>الخط الأحمر: الحد الأقصى المتاح</li>
+        </ul>
+
+        <h2>⚠️ مشكلة Over-Allocation</h2>
+        <p>عندما يتجاوز الطلب على مورد معين الكمية المتاحة:</p>
+        <ul>
+            <li>الطلب > الإتاحة = مشكلة!</li>
+            <li>يظهر باللون الأحمر في P6/MS Project</li>
+            <li>يجب حلها قبل تنفيذ الجدول</li>
+        </ul>
+
+        <h2>⚖️ موازنة الموارد (Resource Leveling)</h2>
+        <p>عملية تعديل الجدول لحل مشاكل Over-Allocation:</p>
+
+        <h3>طريقة 1: تأخير الأنشطة (Delay)</h3>
+        <p>تأجيل النشاط للاستفادة من Float المتاح.</p>
+
+        <h3>طريقة 2: تقسيم النشاط (Splitting)</h3>
+        <p>تقسيم النشاط إلى أجزاء مع فترات توقف.</p>
+
+        <h3>طريقة 3: زيادة الموارد</h3>
+        <p>إضافة موارد إضافية (تكلفة أعلى).</p>
+
+        <h3>طريقة 4: العمل الإضافي (Overtime)</h3>
+        <p>زيادة ساعات العمل اليومية.</p>
+
+        <h2>🔧 Resource Leveling في P6</h2>
+        <ol>
+            <li>Tools → Level Resources</li>
+            <li>اختر المشروع أو المشاريع</li>
+            <li>حدد Leveling Options:
+                <ul>
+                    <li>Preserve Minimum Float</li>
+                    <li>Level Within Float</li>
+                    <li>Max Percent Overscheduled</li>
+                </ul>
+            </li>
+            <li>اضغط Level</li>
+            <li>راجع النتائج</li>
+        </ol>
+
+        <h2>📊 S-Curve للموارد</h2>
+        <p>منحنى S يُظهر التوزيع التراكمي للموارد:</p>
+        <ul>
+            <li>البداية: بطيء (تجهيزات)</li>
+            <li>الوسط: سريع (الإنتاج الأعلى)</li>
+            <li>النهاية: بطيء (تشطيبات)</li>
+        </ul>
+
+        <h2>💡 نصائح عملية</h2>
+        <ul>
+            <li>Level manually أولاً قبل الـ Automatic Leveling.</li>
+            <li>استخدم Priority للتحكم في ترتيب الأنشطة.</li>
+            <li>راعِ الإجازات والعطلات في التقويم.</li>
+            <li>احتفظ بـ Baseline قبل Leveling.</li>
+            <li>راجع تأثير Leveling على المسار الحرج.</li>
+        </ul>
+
+        <!-- Share Buttons -->
+        <div class="share-buttons">
+            <span style="font-weight: bold; margin-left: 10px;">شارك هذا المقال:</span>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-btn facebook" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">فيسبوك</a>
+            <a href="https://twitter.com/intent/tweet?url=" class="share-btn twitter" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">تويتر</a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=" class="share-btn linkedin" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">لينكدإن</a>
+            <a href="https://wa.me/?text=" class="share-btn whatsapp" target="_blank" onclick="this.href+=encodeURIComponent(document.title + ' ' + window.location.href)">واتساب</a>
+            <button class="share-btn copy" onclick="navigator.clipboard.writeText(window.location.href);alert('تم نسخ الرابط!')">نسخ الرابط</button>
+        </div>
+        
+        <hr>
+        <p><strong>اقرأ أيضاً:</strong> <a href="primavera-p6-guide.html">Oracle Primavera P6: الدليل الشامل</a></p>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p class="footer-text">CSI Crew Calculator • Built with <span class="footer-heart">❤️</span> by <span class="footer-author">Sameh Badawy Sayed</span></p>
+        </div>
+    </footer>
+</body>
+</html>

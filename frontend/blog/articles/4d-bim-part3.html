@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4D BIM الجزء 3: Workflow العملي خطوة بخطوة - CSI Calculator</title>
+    <meta name="description" content="دليل عملي كامل لربط Primavera P6 مع Navisworks. خطوات تفصيلية، أخطاء شائعة، ونصائح من الخبرة لنجاح 4D BIM.">
+    <meta name="keywords" content="Navisworks workflow, P6 integration, 4D BIM tutorial, TimeLiner">
+    
+    <meta property="og:title" content="4D BIM: Workflow العملي الكامل">
+    <meta property="og:description" content="من P6 إلى أول محاكاة ناجحة - الدليل الشامل">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="../assets/placeholder-article.jpg">
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5429423113977975" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/lang-toggle.css">
+    <link rel="stylesheet" href="../../css/blog.css">
+    <link rel="stylesheet" href="../../css/ads.css">
+    <link rel="stylesheet" href="../../css/share-buttons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="../../js/ads.js"></script>
+    <script src="../../js/i18n.js"></script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../js/blog-i18n.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../../index.html" class="logo-container">
+                <img src="../../assets/logo.png" alt="SAMEH Logo" class="logo-image">
+                <span class="logo-text">CSI Calculator</span>
+            </a>
+            <div class="nav-links">
+                <a href="../../index.html" data-i18n="home" data-icon="🏠"><span>تصفح</span></a>
+                <a href="../../crew-calculator.html" data-i18n="crewCalculator" data-icon="🧮"><span>الحاسبة</span></a>
+                <a href="../../ai-planner.html" data-i18n="aiPlanner" data-icon="🤖"><span>المخطط الذكي</span></a>
+                <a href="../index.html" class="active" data-i18n="blog" data-icon="📚"><span>دليل التشغيل+مقالات فنية</span></a>
+                <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">🌙</button>
+                <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()"><span id="langIcon">EN</span></button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="article-header">
+        <span class="article-category">سلسلة 4D BIM - الجزء 3/4</span>
+        <h1>Workflow العملي: من P6 إلى أول محاكاة ناجحة</h1>
+        <div class="article-meta">
+            <span class="article-date">9 يناير 2026</span>
+            <span class="article-read-time">11 دقيقة قراءة</span>
+        </div>
+    </div>
+
+    <div class="article-body">
+        <div class="article-image-container">
+            <img src="../assets/placeholder-article.jpg" alt="4D BIM Workflow" class="img-fluid rounded shadow mb-4">
+        </div>
+
+        <div class="alert alert-info">
+            <strong>📚 سلسلة 4D BIM:</strong> <a href="4d-bim-part1.html">الجزء 1</a> → <a href="4d-bim-part2.html">الجزء 2</a> → <strong>الجزء 3</strong> → <a href="4d-bim-part4.html">الجزء 4</a>
+        </div>
+
+        <h2>🎯 المقدمة: الآن نبدأ العمل الحقيقي</h2>
+        
+        <p style="font-size: 1.1rem; line-height: 1.8;">
+            في <a href="4d-bim-part1.html">الجزء الأول</a> فهمنا الأهمية. في <a href="4d-bim-part2.html">الجزء الثاني</a> اخترنا البرنامج. الآن نأتي لأهم جزء: <strong>التطبيق العملي</strong>.
+        </p>
+
+        <p>
+            هذا المقال سيعلمك <strong>الـ Workflow الكامل</strong> من الصفر للنهاية. سأفترض أنك اخترت <strong>Navisworks</strong> (الأكثر شيوعاً) + <a href="primavera-p6-guide.html">Primavera P6</a>.
+        </p>
+
+        <div class="alert alert-success">
+            <strong>🎁 هدية:</strong> بنهاية هذا المقال، ستكون قادراً على إنشاء <strong>أول 4D simulation</strong> لمشروعك في أقل من يوم عمل!
+        </div>
+
+        <!-- AdSense Display Ad -->
+        <div class="ad-container ad-display" style="margin: 2rem 0; text-align: center; background: #f8f9fa; padding: 1rem; border-radius: 8px;">
+            <p style="font-size: 0.8rem; color: #666; margin-bottom: 0.5rem;">إعلان</p>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-5429423113977975"
+                 data-ad-slot="XXXXXX"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <h2>📦 المتطلبات (قبل البدء)</h2>
+
+        <h3>✅ ما تحتاجه:</h3>
+
+        <table class="pricing-table" style="margin: 1.5rem 0;">
+            <tr style="background: #f5f5f5;">
+                <th style="width: 30%;">العنصر</th>
+                <th style="width: 50%;">التفاصيل</th>
+                <th style="width: 20%;">الحالة</th>
+            </tr>
+            <tr>
+                <td><strong>النموذج 3D</strong></td>
+                <td>Revit model (RVT) - <a href="lod-guide.html">LOD</a> 300 كحد أدنى</td>
+                <td>جاهز؟ ✅</td>
+            </tr>
+            <tr>
+                <td><strong>الجدول الزمني</strong></td>
+                <td>P6 Schedule (.XER أو .XML)</td>
+                <td>جاهز؟ ✅</td>
+            </tr>
+            <tr>
+                <td><strong>Navisworks</strong></td>
+                <td>Navisworks Manage 2024+ (ليس Simulate!)</td>
+                <td>مثبت؟ ✅</td>
+            </tr>
+            <tr>
+                <td><strong>جهاز قوي</strong></td>
+                <td>16GB RAM, CPU i7+, GPU 4GB</td>
+                <td>متوفر؟ ✅</td>
+            </tr>
+        </table>
+
+        <div class="alert alert-warning">
+            <strong>⚠️ تحذير مهم:</strong> تأكد أن الجدول الزمني <strong>logic سليم</strong> و <strong>Baseline محفوظ</strong>. 4D يكشف كل الأخطاء في P6!
+        </div>
+
+        <h2>🔄 الـ Workflow: 7 خطوات للنجاح</h2>
+
+        <h3>الخطوة 1: التحضير في Revit (30 دقيقة)</h3>
+
+        <h4>أ. تنظيف النموذج:</h4>
+        <ul>
+            <li><strong>أخفِ ما لا تحتاجه:</strong> Furniture, MEP (إلا إذا مهمة في 4D)</li>
+            <li><strong>Worksets:</strong> فعّل Worksets إذا عندك (Optional)</li>
+            <li><strong>Phases:</strong> تأكد أن كل عنصر في Phase الصحيح</li>
+        </ul>
+
+        <h4>ب. إضافة Parameters (مهم جداً!):</h4>
+        <p>هذه الخطوة <strong>اختيارية</strong> لكن توفر وقت هائل لاحقاً:</p>
+
+        <pre style="background: #f5f5f5; padding: 15px; border-radius: 8px; font-size: 0.9rem;">
+<strong>في Revit:</strong>
+1. Manage → Project Parameters
+2. Add → اسم: "ActivityCode" | Type: Text
+3. Group: Construction | Categories: كل العناصر  
+4. OK
+
+<strong>الآن املأ ActivityCode لكل عنصر:</strong>
+مثال: Columns in 1st Floor → Activity Code = "A1020.10"
+        </pre>
+
+        <h4>ج. Export لـ Navisworks:</h4>
+        <p><strong>File → Export → CAD Formats → NWC</strong></p>
+        <ul>
+            <li>Convert Element Properties: <strong>✅ ON</strong></li>
+            <li>Divide file into levels: <strong>حسب الحاج</strong>ة</li>
+        </ul>
+
+        <hr>
+
+        <h3>الخطوة 2: Export الجدول من P6 (15 دقيقة)</h3>
+
+        <h4>في Primavera P6:</h4>
+        <ol style="line-height: 1.8;">
+            <li><strong>افتح المشروع</strong></li>
+            <li><strong>File → Export → Primavera PM (XER)</strong></li>
+            <li>اختر المشروع</li>
+            <li><strong>Settings:</strong>
+                <ul>
+                    <li>✅ Include Baselines</li>
+                    <li>✅ Include Resources (إذا محتاج)</li>
+                    <li>✅ Include Actual Dates</li>
+                </ul>
+            </li>
+            <li>Save كـ <code>Project_Schedule.xer</code></li>
+        </ol>
+
+        <div class="alert alert-info">
+            <strong>💡 Tip:</strong> يُفضل export نسخة <strong>مُبسطة</strong> من الجدول (Level 3-4 من WBS فقط). Navisworks يبطئ مع 5000+ نشاط!
+        </div>
+
+        <hr>
+
+        <h3>الخطوة 3: Import للنموذج في Navisworks (10 دقائق)</h3>
+
+        <ol style="line-height: 1.8;">
+            <li><strong>افتح Navisworks Manage</strong></li>
+            <li><strong>File → Open</strong> أو <strong>Append</strong></li>
+            <li>اختر ملف الـ <code>.nwc</code></li>
+            <li><strong>انتظر التحميل</strong> (قد يأخذ دقائق للملفات الكبيرة)</li>
+        </ol>
+
+        <h4>تحقق سريع:</h4>
+        <ul>
+            <li>دوّر النموذج (Mouse Scroll = Zoom)</li>
+            <li>تأكد أن كل العناصر ظهرت</li>
+            <li>افتح <strong>Selection Tree</strong> (F5) → شاهد الـ hierarchy</li>
+        </ul>
+
+        <hr>
+
+        <h3>الخطوة 4: Import الجدول (TimeLiner) - القلب النابض! (20 دقيقة)</h3>
+
+        <h4>أ. افتح TimeLiner:</h4>
+        <p><strong>Home Tab → Tools → TimeLiner</strong></p>
+
+        <h4>ب. Import Schedule:</h4>
+        <ol>
+            <li><strong>Data Sources → Add</strong></li>
+            <li>اختر <code>Project_Schedule.xer</code></li>
+            <li><strong>Type:</strong> Primavera (XER)</li>
+            <li><strong>Next → Next...</strong></li>
+            <li><strong>Field Mapping:</strong> (مهم!)
+                <table class="pricing-table" style="margin: 1rem 0; font-size: 0.85rem;">
+                    <tr style="background: #f5f5f5;">
+                        <th>P6 Field</th>
+                        <th>→</th>
+                        <th>Navisworks Field</th>
+                    </tr>
+                    <tr>
+                        <td>Activity ID</td>
+                        <td>→</td>
+                        <td>Task ID</td>
+                    </tr>
+                    <tr>
+                        <td>Activity Name</td>
+                        <td>→</td>
+                        <td>Task Name</td>
+                    </tr>
+                    <tr>
+                        <td>Start Date</td>
+                        <td>→</td>
+                        <td>Planned Start</td>
+                    </tr>
+                    <tr>
+                        <td>Finish Date</td>
+                        <td>→</td>
+                        <td>Planned End</td>
+                    </tr>
+                </table>
+            </li>
+            <li><strong>Finish → Close</strong></li>
+        </ol>
+
+        <p>الآن الجدول داخل Navisworks! 🎉</p>
+
+        <!-- AdSense In-Article Ad -->
+        <div class="ad-container ad-inarticle" style="margin: 2rem 0; background: #f8f9fa; padding: 1rem; border-radius: 8px;">
+            <p style="font-size: 0.8rem; color: #666; margin-bottom: 0.5rem;">إعلان</p>
+            <ins class="adsbygoogle"
+                 style="display:block; text-align:center;"
+                 data-ad-layout="in-article"
+                 data-ad-format="fluid"
+                 data-ad-client="ca-pub-5429423113977975"
+                 data-ad-slot="XXXXXX"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <hr>
+
+        <h3>الخطوة 5: الربط (Linking) - السحر الحقيقي! (1-3 ساعات)</h3>
+
+        <p>هذه <strong>أهم وأطول خطوة</strong>. هنا نربط كل عنصر بنشاطه.</p>
+
+        <h4>الطريقة A: Auto-Attach بالـ Parameter (الأسرع!):</h4>
+
+        <p><strong>إذا أضفت ActivityCode في Revit:</strong></p>
+        <ol>
+            <li>TimeLiner → <strong>Auto-Attach</strong></li>
+            <li><strong>Attach by:</strong> Parameter</li>
+            <li><strong>Parameter Name:</strong> "ActivityCode"</li>
+            <li><strong>Match with:</strong> Task ID</li>
+            <li><strong>Run → Done!</strong></li>
+        </ol>
+
+        <p>✅ في ثوانٍ، كل شيء مربوط!</p>
+
+        <h4>الطريقة B: Manual Selection Sets (إذا ما عندك Parameters):</h4>
+
+        <ol style="line-height: 1.8;">
+            <li><strong>حدد العناصر في النموذج</strong> (مثلاً: كل أعمدة الدور الأول)</li>
+            <li><strong>Sets → Save Selection</strong></li>
+            <li>اسم: "Columns_GF"</li>
+            <li><strong>في TimeLiner → اختر النشاط المناسب</strong></li>
+            <li><strong>Attach → Search Sets → اختر "Columns_GF"</strong></li>
+            <li><strong>Appearance:</strong> Construct</li>
+            <li><strong>OK</strong></li>
+        </ol>
+
+        <p>كرر لكل نشاط... (يأخذ وقت، لكن يعمل!)</p>
+
+        <div style="background: #fff3e0; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+            <h4 style="margin-top: 0; color: #f57c00;">🔥 Shortcut للمحترفين:</h4>
+            <p style="margin-bottom: 0;">استخدم <strong>Search Sets</strong> الذكية:</p>
+            <ul style="margin-bottom: 0;">
+                <li><strong>Find Items → Category = Walls + Level = 01</strong></li>
+                <li>Save → "Walls_L01"</li>
+                <li>Attach للنشاط المناسب</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <h3>الخطوة 6: الضبط والتجهيز (30 دقيقة)</h3>
+
+        <h4>أ. Simulation Settings:</h4>
+        <ol>
+            <li><strong>TimeLiner → Simulate Tab</strong></li>
+            <li><strong>Play Mode:</strong> Manual أو Auto</li>
+            <li><strong>Interval:</strong> 1 day (أو 1 week للسرعة)</li>
+            <li><strong>Appearance Rules:</strong>
+                <ul>
+                    <li>Before Start: <strong>Gray (50% transparent)</strong></li>
+                    <li>During: <strong>Orange (100%)</strong></li>
+                    <li>After End: <strong>Green (100%)</strong></li>
+                </ul>
+            </li>
+        </ol>
+
+        <h4>ب. Viewpoints:</h4>
+        <p>احفظ 3-5 viewpoints مهمة:</p>
+        <ul>
+            <li>Overall view</li>
+            <li>Critical zone view</li>
+            <li>Interface area view</li>
+        </ul>
+
+        <hr>
+
+        <h3>الخطوة 7: أول Simulation! 🎬 (5 دقائق)</h3>
+
+        <ol style="font-size: 1.1rem; line-height: 2;">
+            <li><strong>TimeLiner → Play button ▶️</strong></li>
+            <li><strong>شاهد السحر يحدث!</strong> 🤩</li>
+            <li><strong>Pause ⏸️ في أي وقت</strong></li>
+            <li><strong>Scrub timeline</strong> لتتنقل بين التواريخ</li>
+        </ol>
+
+        <div class="alert alert-success">
+            <strong>🎉 مبروك!</strong> أنشأت أول <strong>4D BIM simulation</strong> بنجاح! الآن أنت رسمياً في عالم الـ 4D.
+        </div>
+
+        <h2>⚠️ الأخطاء الشائعة (وحلولها!)</h2>
+
+        <table class="pricing-table" style="margin: 1.5rem 0;">
+            <tr style="background: #f5f5f5;">
+                <th style="width: 40%;">المشكلة</th>
+                <th style="width: 60%;">الحل</th>
+            </tr>
+            <tr>
+                <td><strong>العناصر لا تظهر في الوقت الصحيح</strong></td>
+                <td>تحقق من الربط - ربما ربطت الـ Set الخاطئ</td>
+            </tr>
+            <tr>
+                <td><strong>Navisworks بطيء جداً</strong></td>
+                <td>• قلل عدد الأنشطة<br>• استخدم Saved Viewpoints بدلاً من Real-time</td>
+            </tr>
+            <tr>
+                <td><strong>التواريخ غريبة</strong></td>
+                <td>تحقق من Time Zone في P6 vs Navisworks</td>
+            </tr>
+            <tr>
+                <td><strong>بعض العناصر ما تظهر أبداً</strong></td>
+                <td>تحقق: هل مربوطة؟ هل في Appearance = "Hide"?</td>
+            </tr>
+            <tr>
+                <td><strong>XER import failed</strong></td>
+                <td>جرب export كـ XML بدلاً من XER</td>
+            </tr>
+        </table>
+
+        <!-- AdSense Multiplex Ad -->
+        <div class="ad-container ad-multiplex" style="margin: 2rem 0; background: #f8f9fa; padding: 1rem; border-radius: 8px;">
+            <p style="font-size: 0.8rem; color: #666; margin-bottom: 0.5rem;">إعلان</p>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-format="autorelaxed"
+                 data-ad-client="ca-pub-5429423113977975"
+                 data-ad-slot="XXXXXX"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <h2>🎓 Tips من الخبرة</h2>
+
+        <h3>1. ابدأ بمرحلة واحدة فقط</h3>
+        <p>لا تحاول ربط المشروع كله من أول مرة. ابدأ بـ:</p>
+        <ul>
+            <li>الهيكل الخرساني فقط</li>
+            <li>أو دور واحد</li>
+            <li>أو المرحلة الأولى</li>
+        </ul>
+        <p>بعد النجاح، وسّع تدريجياً.</p>
+
+        <h3>2. استخدم Color coding ذكي</h3>
+        <ul>
+            <li><strong>Gray:</strong> لم يبدأ</li>
+            <li><strong>Orange/Yellow:</strong> جاري التنفيذ</li>
+            <li><strong>Green:</strong> مكتمل</li>
+            <li><strong>Red:</strong> Critical path</li>
+            <li><strong>Blue:</strong> Temporary works</li>
+        </ul>
+
+        <h3>3. اصنع Templates</h3>
+        <p>بعد أول مشروع ناجح:</p>
+        <ul>
+            <li>احفظ Appearance rules</li>
+            <li>احفظ naming conventions</li>
+            <li>اصنع template NWF file</li>
+        </ul>
+        <p>المرة القادمة ستأخذ 30% من الوقت!</p>
+
+        <h3>4. Clash Detection مع 4D</h3>
+        <p>استفد من قوة Navisworks:</p>
+        <ul>
+            <li>Run <strong>Clash Detection</strong> أولاً</li>
+            <li>حل كل Clashes</li>
+            <li><strong>ثم</strong> اعمل 4D</li>
+        </ul>
+        <p>= نموذج نظيف + simulation سليم</p>
+
+        <h2>📊 Export وعرض النتائج</h2>
+
+        <h3>أ. Export Animation:</h3>
+        <ol>
+            <li><strong>Output → Animation</strong></li>
+            <li>Choose viewpoints</li>
+            <li>Format: <strong>AVI</strong> or <strong>MP4</strong></li>
+            <li>Resolution: <strong>1920x1080</strong></li>
+            <li>Export → شارك مع الفريق!</li>
+        </ol>
+
+        <h3>ب. Export Images:</h3>
+        <ol>
+            <li>Move timeline لتاريخ مهم</li>
+            <li><strong>Output → Visual Report → Image</strong></li>
+            <li>استخدم في Presentations</li>
+        </ol>
+
+        <h3>ج. Interactive Viewer:</h3>
+        <p>احفظ كـ <strong>.NWD</strong> file:</p>
+        <ul>
+            <li>File → Save As → NWD</li>
+            <li>شارك مع المالك/الفريق</li>
+            <li>يشاهدونه في <strong>Navisworks Freedom</strong> (مجاني!)</li>
+        </ul>
+
+        <h2>✅ الخلاصة: أنت الآن جاهز!</h2>
+
+        <p style="font-size: 1.1rem; line-height: 1.8;">
+            بعد اتباع هذه الخطوات، لديك الآن <strong>4D BIM simulation</strong> كامل. القيمة الحقيقية ستظهر عندما:
+        </p>
+
+        <ul style="font-size: 1.05rem; line-height: 1.8;">
+            <li>تعرضه على المالك → <strong>فهم فوري</strong></li>
+            <li>تكتشف تضارب → <strong>حل قبل الموقع</strong></li>
+            <li>تخطط الموقع → <strong>قرارات مبنية على بيانات</strong></li>
+            <li>تتبع التقدم → <strong>Planned vs Actual</strong></li>
+        </ul>
+
+        <div style="background: #fff9c4; padding: 1.5rem; border-radius: 8px; border-right: 4px solid #fbc02d; margin: 2rem 0;">
+            <h3 style="margin-top: 0; color: #f57f17;">🎯 التحدي:</h3>
+            <p style="margin-bottom: 0; font-size: 1.05rem;">
+                خذمشروعك الحالي (أو مشروع قديم) وطبق عليه هذه الخطوات <strong>هذا الأسبوع</strong>. 
+                لا تنتظر المشروع "المناسب" - ابدأ الآن!
+            </p>
+        </div>
+
+        <hr>
+
+        <!-- Next Article Teaser -->
+        <div class="next-article-teaser" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2rem; border-radius: 12px; color: white; margin: 2rem 0;">
+            <h3 style="color: white; margin-top: 0;">🚀 في الجزء الأخير...</h3>
+            <p style="font-size: 1.15rem; line-height: 1.7; margin: 1rem 0;">
+                تعلمت النظرية، عرفت البرامج، أتقنت الـ Workflow. الآن نرى كل هذا <strong>في الواقع</strong>:
+            </p>
+            <p style="font-size: 1.3rem; font-weight: bold; margin: 1rem 0;">
+                "حالة دراسية كاملة: برج سكني 12 طابق"
+            </p>
+            <p style="font-size: 1.05rem; line-height: 1.6;">
+                في <strong>الجزء الرابع والأخير</strong>، سأريك مشروع حقيقي من الألف للياء:<br><br>
+                ✅ المشروع والتحديات<br>
+                ✅ التطبيق الكامل<br>
+                ✅ النتائج والتوفير<br>
+                ✅ <strong>Checklist نهائي: 30 نقطة للنجاح</strong>
+            </p>
+            <p style="font-size: 0.95rem; font-style: italic; margin: 1.5rem 0 1rem 0;">
+                <strong>هذا الجزء الأخير سيربط كل شيء معاً!</strong>
+            </p>
+            <a href="4d-bim-part4.html" class="cta-button" style="display: inline-block; background: white; color: #667eea; padding: 14px 35px; border-radius: 30px; text-decoration: none; font-weight: bold; font-size: 1.1rem; margin-top: 1rem; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                اقرأ الجزء الأخير: حالة دراسية كاملة →
+            </a>
+        </div>
+
+        <!-- Share Buttons -->
+        <div class="share-buttons" style="margin: 2rem 0;">
+            <span class="share-buttons-label">شارك هذا المقال:</span>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-btn facebook" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">فيسبوك</a>
+            <a href="https://twitter.com/intent/tweet?url=" class="share-btn twitter" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">تويتر</a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=" class="share-btn linkedin" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">لينكدإن</a>
+            <a href="https://wa.me/?text=" class="share-btn whatsapp" target="_blank" onclick="this.href+=encodeURIComponent(document.title + ' ' + window.location.href)">واتساب</a>
+            <button class="share-btn copy" onclick="navigator.clipboard.writeText(window.location.href);alert('تم نسخ الرابط!')">نسخ الرابط</button>
+        </div>
+
+        <hr>
+
+        <div style="background: #f5f5f5; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+            <h4 style="margin-top: 0;">📚 سلسلة 4D BIM الكاملة:</h4>
+            <ol style="line-height: 2;">
+                <li><a href="4d-bim-part1.html">الجزء 1: الثورة الخفية</a> ✅</li>
+                <li><a href="4d-bim-part2.html">الجزء 2: اختيار الأداة المناسبة</a> ✅</li>
+                <li><strong>الجزء 3: Workflow العملي</strong> (أنت هنا) ✅</li>
+                <li><a href="4d-bim-part4.html">الجزء 4: حالة دراسية كاملة</a> 🔜</li>
+            </ol>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p class="footer-text">CSI Crew Calculator • Built with <span class="footer-heart">❤️</span> by <span class="footer-author">Sameh Badawy Sayed</span></p>
+        </div>
+    </footer>
+
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced EVM Techniques and Forecasting (EAC, VAC, TCPI) - CSI Calculator</title>
+    <meta name="description" content="Learn how to use EVM data to accurately forecast your project future. Advanced guide to EAC, ETC, VAC and TCPI formulas for predicting final cost and completion date.">
+    <meta name="keywords" content="Forecasting, EAC, ETC, VAC, TCPI, Cost Management, Advanced Formulas, Project Control">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Advanced EVM Techniques and Forecasting (EAC, VAC, TCPI)">
+    <meta property="og:description" content="How to read your project's future before it happens? Your advanced guide to forecasting">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://csi-calc.vercel.app/blog/articles/evm-advanced-en.html">
+    <meta property="og:image" content="../assets/evm-advanced.jpg">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Advanced EVM Techniques and Forecasting (EAC, VAC, TCPI)",
+      "author": {
+        "@type": "Person",
+        "name": "Sameh Badawy Sayed"
+      },
+      "datePublished": "2026-01-07",
+      "image": "../assets/evm-advanced.jpg",
+      "articleSection": "Project Management"
+    }
+    </script>
+    
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5429423113977975" crossorigin="anonymous"></script>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/lang-toggle.css">
+    <link rel="stylesheet" href="../../css/blog.css">
+    <link rel="stylesheet" href="../../css/ads.css">
+    <link rel="stylesheet" href="../../css/share-buttons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Scripts -->
+    <script src="../../js/ads.js"></script>
+    <script src="../../js/i18n.js"></script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../js/blog-i18n.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../../index.html" class="logo-container">
+                <img src="../../assets/logo.png" alt="SAMEH Logo" class="logo-image">
+                <span class="logo-text">CSI Calculator</span>
+            </a>
+            <div class="nav-links">
+                <a href="../../index.html" data-i18n="home" data-icon="🏠"><span>Home</span></a>
+                <a href="../../crew-calculator.html" data-i18n="crewCalculator" data-icon="🧮"><span>Calculator</span></a>
+                <a href="../../ai-planner.html" data-i18n="aiPlanner" data-icon="🤖"><span>AI Planner</span></a>
+                <a href="../index-en.html" class="active" data-i18n="blog" data-icon="📚"><span>Manual & Tips</span></a>
+                <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">🌙</button>
+                <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()"><span id="langIcon">AR</span></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Header -->
+    <div class="article-header">
+        <span class="article-category">Project Management</span>
+        <h1>Advanced EVM Techniques and Forecasting (EAC, VAC, TCPI)</h1>
+        <div class="article-meta">
+            <span class="article-date">January 7, 2026</span>
+            <span class="article-read-time">14 min read</span>
+        </div>
+    </div>
+
+    <!-- Article Body -->
+    <div class="article-body">
+        <div class="article-image-container">
+            <img src="../assets/evm-advanced.jpg" alt="Advanced EVM Forecasting Charts" class="img-fluid rounded shadow mb-4">
+        </div>
+
+        <h2>🔮 The Art of Reading the Future</h2>
+        <p>
+            We stopped in previous articles at knowing "Where are we now". But the question the owner or investor always asks is: "How much will the project cost in the end?" and "Will we finish on time?". This is where the power of Forecasting in EVM comes in.
+        </p>
+
+        <h2>1. Estimate at Completion (EAC)</h2>
+        <p>
+            This number tells us: "Based on our current performance, what will the final bill for the project be?".<br>
+            There are 3 main ways to calculate it, depending on your optimism or pessimism:
+        </p>
+
+        <h3>A. The Optimistic Method (Current Scenario Continues)</h3>
+        <p>
+            We assume that the current cost performance (CPI) will continue until the end of the project. This is the most common formula.
+        </p>
+        <p class="formula-box">EAC = BAC / CPI</p>
+        <p class="note">
+            * BAC: Budget at Completion (Original Budget).<br>
+            Example: Our budget is 100,000 and current performance CPI = 0.8 (Bad).<br>
+            EAC = 100,000 / 0.8 = <strong>125,000</strong>. (We will need an extra 25k).
+        </p>
+
+        <h3>B. The "Severely" Pessimistic Method</h3>
+        <p>
+            We assume we will suffer from both cost problems (CPI) and schedule problems (SPI) together for the remaining work. Used when we are bound by a strict deadline.
+        </p>
+        <p class="formula-box">EAC = AC + [(BAC - EV) / (CPI × SPI)]</p>
+
+        <h2>2. Estimate to Complete (ETC)</h2>
+        <p>
+            The practical question: "How much money do we need in the bank today to finish the rest of the project?"
+        </p>
+        <p class="formula-box">ETC = EAC - AC</p>
+
+        <h2>3. Variance at Completion (VAC)</h2>
+        <p>
+            Will we be winners or losers at the end of the game?
+        </p>
+        <p class="formula-box">VAC = BAC - EAC</p>
+        <ul>
+            <li>Positive Value (+): We will save money! 💰</li>
+            <li>Negative Value (-): We will need extra budget! 💸</li>
+        </ul>
+
+        <h2>4. To-Complete Performance Index (TCPI)</h2>
+        <p>
+            This is the "Pressure" indicator. It tells you the efficiency required for the remaining work to meet the original budget.
+        </p>
+        <p class="formula-box">TCPI = (BAC - EV) / (BAC - AC)</p>
+        <p>
+            If TCPI = 1.2, it means: "You must produce $1.20 worth of work for every dollar you spend from now on to recover past losses". This is often hard to achieve!
+        </p>
+
+        <h2>Conclusion</h2>
+        <p>
+            Forecasting is not fortune-telling; it is precise mathematics. Using these formulas gives you the power to negotiate with the owner or upper management with numbers and facts, not expectations and feelings.
+        </p>        <!-- Share Buttons -->
+        <div class="share-buttons">
+            <span class="share-buttons-label">Share this article:</span>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-btn facebook" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">Facebook</a>
+            <a href="https://twitter.com/intent/tweet?url=" class="share-btn twitter" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">Twitter</a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=" class="share-btn linkedin" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">LinkedIn</a>
+            <a href="https://wa.me/?text=" class="share-btn whatsapp" target="_blank" onclick="this.href+=encodeURIComponent(document.title + ' ' + window.location.href)">WhatsApp</a>
+            <button class="share-btn copy" onclick="navigator.clipboard.writeText(window.location.href);alert('Link copied!')">Copy Link</button>
+        </div>
+        
+        
+        <hr>
+        <p><strong>Next Article:</strong> <a href="cost-estimation-methods-en.html">Construction Cost Estimation Methods</a></p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p class="footer-text">CSI Crew Calculator • Built with <span class="footer-heart">❤️</span> by <span class="footer-author">Sameh Badawy Sayed</span></p>
+        </div>
+    </footer>
+</body>
+</html>

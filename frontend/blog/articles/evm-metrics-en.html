@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Earned Value Management Elements and Performance Indices (SPI, CPI) - CSI Calculator</title>
+    <meta name="description" content="A detailed and simple explanation of key EVM terms like PV, EV, AC and how to calculate and analyze SPI and CPI performance indices to monitor your project.">
+    <meta name="keywords" content="PV, EV, AC, SPI, CPI, Performance Indices, EVM Formulas, Cost Management, Schedule Management">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Key Earned Value Management Elements and Performance Indices (SPI, CPI)">
+    <meta property="og:description" content="Your guide to understanding core EVM formulas and reading project performance metrics">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://csi-calc.vercel.app/blog/articles/evm-metrics-en.html">
+    <meta property="og:image" content="../assets/evm-metrics.jpg">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Key Earned Value Management Elements and Performance Indices (SPI, CPI)",
+      "author": {
+        "@type": "Person",
+        "name": "Sameh Badawy Sayed"
+      },
+      "datePublished": "2026-01-07",
+      "image": "../assets/evm-metrics.jpg",
+      "articleSection": "Project Management"
+    }
+    </script>
+    
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5429423113977975" crossorigin="anonymous"></script>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/lang-toggle.css">
+    <link rel="stylesheet" href="../../css/blog.css">
+    <link rel="stylesheet" href="../../css/ads.css">
+    <link rel="stylesheet" href="../../css/share-buttons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Scripts -->
+    <script src="../../js/ads.js"></script>
+    <script src="../../js/i18n.js"></script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../js/blog-i18n.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../../index.html" class="logo-container">
+                <img src="../../assets/logo.png" alt="SAMEH Logo" class="logo-image">
+                <span class="logo-text">CSI Calculator</span>
+            </a>
+            <div class="nav-links">
+                <a href="../../index.html" data-i18n="home" data-icon="🏠"><span>Home</span></a>
+                <a href="../../crew-calculator.html" data-i18n="crewCalculator" data-icon="🧮"><span>Calculator</span></a>
+                <a href="../../ai-planner.html" data-i18n="aiPlanner" data-icon="🤖"><span>AI Planner</span></a>
+                <a href="../index-en.html" class="active" data-i18n="blog" data-icon="📚"><span>Manual & Tips</span></a>
+                <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">🌙</button>
+                <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()"><span id="langIcon">AR</span></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Header -->
+    <div class="article-header">
+        <span class="article-category">Project Management</span>
+        <h1>Key Earned Value Management Elements and Performance Indices (SPI, CPI)</h1>
+        <div class="article-meta">
+            <span class="article-date">January 7, 2026</span>
+            <span class="article-read-time">12 min read</span>
+        </div>
+    </div>
+
+    <!-- Article Body -->
+    <div class="article-body">
+        <div class="article-image-container">
+            <img src="../assets/evm-metrics.jpg" alt="EVM Metrics Dashboard" class="img-fluid rounded shadow mb-4">
+        </div>
+
+        <h2>🔢 The Language of Numbers in Project Management</h2>
+        <p>
+            Earned Value Management relies on three fundamental values that form the backbone of any analysis. Understanding these values is the magic key to reading your project's health. Let's simplify them with a practical example: Imagine you are building a 40-meter wall in 4 days, with a budget of $100 per meter (Total budget $4000).
+        </p>
+
+        <h2>1. Planned Value (PV)</h2>
+        <p>
+            Also known as BCWS (Budgeted Cost of Work Scheduled).<br>
+            <strong>Meaning:</strong> What volume of work "should" we have completed according to the plan by today?<br>
+            <strong>Example:</strong> By the end of day 2, we were supposed to complete 20 meters.<br>
+            <strong>PV = 20 meters × $100 = $2000.</strong>
+        </p>
+
+        <h2>2. Earned Value (EV)</h2>
+        <p>
+            Also known as BCWP (Budgeted Cost of Work Performed).<br>
+            <strong>Meaning:</strong> What is the value of the work we have "actually" completed on the ground? (Regardless of its actual cost).<br>
+            <strong>Example:</strong> By the end of day 2, we have only completed 15 meters.<br>
+            <strong>EV = 15 meters × $100 (Planned Rate) = $1500.</strong>
+        </p>
+
+        <h2>3. Actual Cost (AC)</h2>
+        <p>
+            Also known as ACWP (Actual Cost of Work Performed).<br>
+            <strong>Meaning:</strong> How much did we actually pay out of pocket to complete this work?<br>
+            <strong>Example:</strong> To finish the 15 meters, we faced difficulties and spent $1800.<br>
+            <strong>AC = $1800.</strong>
+        </p>        <!-- Share Buttons -->
+        <div class="share-buttons">
+            <span class="share-buttons-label">Share this article:</span>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-btn facebook" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">Facebook</a>
+            <a href="https://twitter.com/intent/tweet?url=" class="share-btn twitter" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">Twitter</a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=" class="share-btn linkedin" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">LinkedIn</a>
+            <a href="https://wa.me/?text=" class="share-btn whatsapp" target="_blank" onclick="this.href+=encodeURIComponent(document.title + ' ' + window.location.href)">WhatsApp</a>
+            <button class="share-btn copy" onclick="navigator.clipboard.writeText(window.location.href);alert('Link copied!')">Copy Link</button>
+        </div>
+        
+
+        <hr>
+
+        <h2>📊 Performance Indices: How to Read Project Health?</h2>
+        <p>Now, using the three values above, we can calculate the two most important indicators in the world of project management:</p>
+
+        <h3>A. Schedule Performance Index (SPI)</h3>
+        <p class="formula-box">SPI = EV / PV</p>
+        <p>In our example: SPI = 1500 / 2000 = <strong>0.75</strong></p>
+        <ul>
+            <li><strong>SPI < 1:</strong> Project is Behind Schedule (Bad) 🔴 - We are accomplishing only 75% of what we planned.</li>
+            <li><strong>SPI = 1:</strong> Project is On Schedule (Good) 🟢</li>
+            <li><strong>SPI > 1:</strong> Project is Ahead of Schedule (Excellent) 🚀</li>
+        </ul>
+
+        <h3>B. Cost Performance Index (CPI)</h3>
+        <p class="formula-box">CPI = EV / AC</p>
+        <p>In our example: CPI = 1500 / 1800 = <strong>0.83</strong></p>
+        <ul>
+            <li><strong>CPI < 1:</strong> Project is Over Budget (Bad) 🔴 - For every dollar we spend, we get only 83 cents of value.</li>
+            <li><strong>CPI = 1:</strong> Project is On Budget (Good) 🟢</li>
+            <li><strong>CPI > 1:</strong> Project is Under Budget (Excellent) 💰</li>
+        </ul>
+
+        <h2>💡 Conclusion</h2>
+        <p>
+            In the simple wall example: We are behind schedule (SPI = 0.75) and losing money (CPI = 0.83). These numbers give the project manager a very early warning on day 2 to rectify the situation before the end of the project.
+        </p>        <!-- Share Buttons -->
+        <div class="share-buttons">
+            <span class="share-buttons-label">Share this article:</span>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-btn facebook" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">Facebook</a>
+            <a href="https://twitter.com/intent/tweet?url=" class="share-btn twitter" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">Twitter</a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=" class="share-btn linkedin" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">LinkedIn</a>
+            <a href="https://wa.me/?text=" class="share-btn whatsapp" target="_blank" onclick="this.href+=encodeURIComponent(document.title + ' ' + window.location.href)">WhatsApp</a>
+            <button class="share-btn copy" onclick="navigator.clipboard.writeText(window.location.href);alert('Link copied!')">Copy Link</button>
+        </div>
+        
+        
+        <hr>
+        <p><strong>Next Article:</strong> <a href="evm-implementation-en.html">Steps to Implement EVM in Construction Projects</a></p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p class="footer-text">CSI Crew Calculator • Built with <span class="footer-heart">❤️</span> by <span class="footer-author">Sameh Badawy Sayed</span></p>
+        </div>
+    </footer>
+</body>
+</html>

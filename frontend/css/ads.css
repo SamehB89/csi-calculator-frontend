@@ -1,0 +1,237 @@
+/* ========================================
+   Google AdSense Ad Units Styling
+   COMPLIANT WITH ADSENSE POLICIES
+   ======================================== */
+
+/* ========================================
+   NAVIGATION EXCLUSION ZONE
+   Prevent ads from appearing near navigation
+   ======================================== */
+.navbar,
+.navbar *,
+.nav-links,
+.nav-links *,
+header,
+header * {
+    /* Mark as non-ad zones */
+    data-ad-exclude: "true";
+}
+
+/* Ensure minimum spacing from navigation */
+.navbar + * {
+    margin-top: 20px !important;
+}
+
+/* ========================================
+   AD CONTAINER - CLEAR VISUAL SEPARATION
+   ======================================== */
+.ad-container {
+    width: 100%;
+    margin: 2.5rem 0; /* Increased from 1.5rem */
+    padding: 1.5rem;
+    text-align: center;
+    min-height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    /* Clear visual distinction */
+    background: rgba(128, 128, 128, 0.05);
+    border: 1px solid rgba(128, 128, 128, 0.15);
+    border-radius: 8px;
+    
+    /* Spacing from interactive elements */
+    position: relative;
+}
+
+/* Mandatory "Advertisement" Label */
+.ad-container::before {
+    content: "Advertisement";
+    display: block;
+    font-size: 0.65rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+/* Dark theme support */
+[data-theme="dark"] .ad-container {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .ad-container::before {
+    color: #aaa;
+}
+
+/* ========================================
+   RESPONSIVE AD STYLING
+   ======================================== */
+.ad-responsive {
+    display: block;
+    width: 100%;
+    max-width: 728px;
+    height: auto;
+    min-height: 90px;
+    margin: 0 auto;
+}
+
+/* ========================================
+   IN-ARTICLE AD - CLEARLY SEPARATED
+   ======================================== */
+.ad-in-article {
+    margin: 3rem auto; /* Increased from 2rem */
+    padding: 1.5rem;
+    background: rgba(128, 128, 128, 0.05);
+    border: 1px dashed rgba(128, 128, 128, 0.2);
+    border-radius: 8px;
+    position: relative;
+}
+
+.ad-in-article::before {
+    content: "Advertisement";
+    display: block;
+    font-size: 0.65rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* ========================================
+   SIDEBAR AD
+   ======================================== */
+.ad-sidebar {
+    position: sticky;
+    top: 100px; /* Increased from 80px to avoid navbar overlap */
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: rgba(128, 128, 128, 0.05);
+    border: 1px solid rgba(128, 128, 128, 0.15);
+    border-radius: 8px;
+}
+
+.ad-sidebar::before {
+    content: "Advertisement";
+    display: block;
+    font-size: 0.65rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.75rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* ========================================
+   FOOTER AD
+   ======================================== */
+.ad-footer {
+    margin-top: 3rem; /* Increased from 2rem */
+    padding: 1.5rem;
+    border-top: 2px solid var(--border-color);
+    background: rgba(128, 128, 128, 0.03);
+}
+
+.ad-footer::before {
+    content: "Advertisement";
+    display: block;
+    font-size: 0.65rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* ========================================
+   EXCLUSION ZONES - NO ADS NEAR THESE
+   ======================================== */
+.hero-section,
+.hero-buttons,
+.cta-button,
+.btn,
+button,
+a.cta-button,
+.walkthrough-cta {
+    /* Prevent Auto Ads from appearing here */
+    position: relative;
+}
+
+/* Ensure spacing between CTAs and any potential ads */
+.cta-button,
+.btn-primary,
+.calculate-btn {
+    margin: 1.5rem 0;
+}
+
+/* ========================================
+   AD LABEL (for manual ad insertions)
+   ======================================== */
+.ad-label {
+    display: block;
+    font-size: 0.65rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* ========================================
+   PRINT - HIDE ALL ADS
+   ======================================== */
+@media print {
+    .ad-container,
+    .ad-responsive,
+    .ad-in-article,
+    .ad-sidebar,
+    .ad-footer,
+    .adsbygoogle {
+        display: none !important;
+    }
+}
+
+/* ========================================
+   MOBILE RESPONSIVE
+   ======================================== */
+@media (max-width: 768px) {
+    .ad-container {
+        margin: 2rem 0;
+        padding: 1rem;
+        min-height: 50px;
+    }
+    
+    .ad-sidebar {
+        position: relative;
+        top: 0;
+        margin: 2rem 0;
+    }
+    
+    .ad-in-article,
+    .ad-footer {
+        padding: 1rem;
+        margin: 2rem 0;
+    }
+}
+
+/* ========================================
+   PREVENT ADS IN THESE SECTIONS
+   ======================================== */
+/* Google Auto Ads should avoid these areas */
+.section-card,
+.results-section,
+.cost-section,
+.crew-calculator-container {
+    /* Allow ads but with clear separation */
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}

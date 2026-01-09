@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Price Analysis in Construction Projects - CSI Calculator</title>
+    <meta name="description" content="Comprehensive guide to Unit Price Analysis (Rate Analysis) in construction, covering cost components: materials, labor, equipment, and overhead.">
+    <meta name="keywords" content="Unit Price, Rate Analysis, Cost Breakdown, Construction Pricing, BOQ">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Unit Price Analysis in Construction Projects">
+    <meta property="og:description" content="How to analyze an item price in BOQ? Your complete guide">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://csi-calc.vercel.app/blog/articles/unit-price-analysis-en.html">
+    <meta property="og:image" content="../assets/unit-price-analysis.jpg">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Unit Price Analysis in Construction Projects",
+      "author": {
+        "@type": "Person",
+        "name": "Sameh Badawy Sayed"
+      },
+      "datePublished": "2026-01-07",
+      "image": "../assets/unit-price-analysis.jpg",
+      "articleSection": "Cost Estimation"
+    }
+    </script>
+    
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5429423113977975" crossorigin="anonymous"></script>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/lang-toggle.css">
+    <link rel="stylesheet" href="../../css/blog.css">
+    <link rel="stylesheet" href="../../css/ads.css">
+    <link rel="stylesheet" href="../../css/share-buttons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Scripts -->
+    <script src="../../js/ads.js"></script>
+    <script src="../../js/i18n.js"></script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../js/blog-i18n.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../../index.html" class="logo-container">
+                <img src="../../assets/logo.png" alt="SAMEH Logo" class="logo-image">
+                <span class="logo-text">CSI Calculator</span>
+            </a>
+            <div class="nav-links">
+                <a href="../../index.html" data-i18n="home" data-icon="🏠"><span>Home</span></a>
+                <a href="../../crew-calculator.html" data-i18n="crewCalculator" data-icon="🧮"><span>Calculator</span></a>
+                <a href="../../ai-planner.html" data-i18n="aiPlanner" data-icon="🤖"><span>AI Planner</span></a>
+                <a href="../index-en.html" class="active" data-i18n="blog" data-icon="📚"><span>Manual & Tips</span></a>
+                <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">🌙</button>
+                <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()"><span id="langIcon">AR</span></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Header -->
+    <div class="article-header">
+        <span class="article-category">Cost Estimation</span>
+        <h1>Unit Price Analysis in Construction Projects</h1>
+        <div class="article-meta">
+            <span class="article-date">January 7, 2026</span>
+            <span class="article-read-time">12 min read</span>
+        </div>
+    </div>
+
+    <!-- Article Body -->
+    <div class="article-body">
+        <div class="article-image-container">
+            <img src="../assets/unit-price-analysis.jpg" alt="Unit Price Analysis" class="img-fluid rounded shadow mb-4">
+        </div>
+
+        <h2>📊 What is Unit Price Analysis?</h2>
+        <p>
+            Unit Price Analysis (or Rate Analysis) is the process of breaking down the price of any item in the Bill of Quantities (BOQ) into its fundamental components to accurately determine the true cost. This process is the cornerstone of professional pricing and enables contractors to submit competitive yet profitable bids.
+        </p>
+        <p>
+            When submitting a bid, a pricing engineer must know exactly "where the number comes from" for each item. This is fundamentally different from guessing or blindly transferring prices from previous projects.
+        </p>
+
+        <h2>🔧 The Four Components of Unit Price</h2>
+        <p>Every unit price consists of four main elements:</p>
+
+        <h3>1. Material Cost</h3>
+        <p>
+            Includes all raw materials required to execute the item, such as cement, sand, steel, and bricks. When calculating, consider:
+        </p>
+        <ul>
+            <li><strong>Current Prices:</strong> From approved suppliers (get recent quotations).</li>
+            <li><strong>Wastage:</strong> Varies by material type (e.g., bricks 5%, tiles 10%, steel 3%).</li>
+            <li><strong>Transportation:</strong> From supplier to site.</li>
+            <li><strong>Storage:</strong> If there are additional storage costs.</li>
+        </ul>
+
+        <h3>2. Labor Cost</h3>
+        <p>
+            Depends on Productivity Rates according to CSI standards or local experience:
+        </p>
+        <ul>
+            <li><strong>Productivity Rate:</strong> How many units does a worker/crew produce per day?</li>
+            <li><strong>Crew Composition:</strong> Number of skilled, unskilled workers, and supervisors.</li>
+            <li><strong>Labor Wages:</strong> Daily or hourly rate for each category.</li>
+        </ul>
+        <div class="formula-box">
+            Labor Cost per Unit = (Daily Crew Wages) ÷ (Daily Productivity)
+        </div>
+
+        <h3>3. Equipment Cost</h3>
+        <p>
+            Includes machinery and equipment needed to execute the item:
+        </p>
+        <ul>
+            <li><strong>Equipment Rental:</strong> By hour, day, or month.</li>
+            <li><strong>Fuel and Oil:</strong> Daily fuel consumption.</li>
+            <li><strong>Operator:</strong> Operator wage if not included in rental.</li>
+            <li><strong>Maintenance:</strong> Depreciation and periodic maintenance percentage.</li>
+        </ul>
+
+        <h3>4. Overhead & Profit</h3>
+        <p>
+            Added as a percentage on total direct costs:
+        </p>
+        <ul>
+            <li><strong>Overhead:</strong> Office expenses, management, insurance, bonds (typically 10-15%).</li>
+            <li><strong>Profit:</strong> Target profit margin (varies by competition and risk).</li>
+        </ul>
+
+        <h2>📝 Practical Example: Analyzing Reinforced Concrete Price per Cubic Meter</h2>
+        <p>Let's price "Column Reinforced Concrete Casting" with 350 kg/m³ cement content:</p>
+
+        <h3>A. Materials:</h3>
+        <table class="pricing-table">
+            <tr><th>Item</th><th>Quantity</th><th>Price</th><th>Total</th></tr>
+            <tr><td>Cement</td><td>0.35 ton</td><td>$100/ton</td><td>$35</td></tr>
+            <tr><td>Sand</td><td>0.4 m³</td><td>$25/m³</td><td>$10</td></tr>
+            <tr><td>Aggregate</td><td>0.8 m³</td><td>$30/m³</td><td>$24</td></tr>
+            <tr><td>Rebar</td><td>100 kg</td><td>$0.8/kg</td><td>$80</td></tr>
+            <tr><td colspan="3"><strong>Total Materials</strong></td><td><strong>$149</strong></td></tr>
+        </table>
+
+        <h3>B. Labor:</h3>
+        <p>Casting and rebar crew produces 8 m³/day, with daily cost of $200:</p>
+        <div class="formula-box">
+            Labor Cost = 200 ÷ 8 = <strong>$25/m³</strong>
+        </div>
+
+        <h3>C. Equipment:</h3>
+        <p>Mixer, pump, and vibrator with daily cost of $150 for producing 20 m³:</p>
+        <div class="formula-box">
+            Equipment Cost = 150 ÷ 20 = <strong>$7.5/m³</strong>
+        </div>
+
+        <h3>D. Total:</h3>
+        <ul>
+            <li>Direct Cost = 149 + 25 + 7.5 = <strong>$181.5/m³</strong></li>
+            <li>+ Overhead (15%) = $27.2</li>
+            <li>+ Profit (10%) = $18.15</li>
+            <li><strong>Final Unit Price = $226.85/m³</strong></li>
+        </ul>
+
+        <h2>💡 Tips for Accurate Pricing</h2>
+        <ul>
+            <li>Use local productivity rates, not just international ones.</li>
+            <li>Get quotes from at least 3 suppliers.</li>
+            <li>Don't forget wastage, transportation, and storage.</li>
+            <li>Document every analysis for future reference.</li>
+        </ul>        <!-- Share Buttons -->
+        <div class="share-buttons">
+            <span class="share-buttons-label">Share this article:</span>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-btn facebook" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">Facebook</a>
+            <a href="https://twitter.com/intent/tweet?url=" class="share-btn twitter" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">Twitter</a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=" class="share-btn linkedin" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">LinkedIn</a>
+            <a href="https://wa.me/?text=" class="share-btn whatsapp" target="_blank" onclick="this.href+=encodeURIComponent(document.title + ' ' + window.location.href)">WhatsApp</a>
+            <button class="share-btn copy" onclick="navigator.clipboard.writeText(window.location.href);alert('Link copied!')">Copy Link</button>
+        </div>
+        
+        
+        <hr>
+        <p><strong>Next Article:</strong> <a href="cost-breakdown-structure-en.html">Detailed Cost Breakdown Structure (CBS)</a></p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p class="footer-text">CSI Crew Calculator • Built with <span class="footer-heart">❤️</span> by <span class="footer-author">Sameh Badawy Sayed</span></p>
+        </div>
+    </footer>
+</body>
+</html>
