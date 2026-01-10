@@ -1,0 +1,204 @@
+/* الاختبارات التفاعلية - Interactive Quizzes */
+
+.article-quiz {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    margin: 3rem 0;
+    border: 2px solid var(--primary-color);
+}
+
+.article-quiz h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.quiz-question {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    margin-bottom: 1.5rem;
+}
+
+.quiz-question p {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.quiz-question label {
+    display: block;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+}
+
+.quiz-question label:hover {
+    background: rgba(102, 126, 234, 0.1);
+    border-color: var(--primary-color);
+}
+
+.quiz-question input[type="radio"] {
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+
+[dir="ltr"] .quiz-question input[type="radio"] {
+    margin-left: 0;
+    margin-right: 0.5rem;
+}
+
+.quiz-question label.correct {
+    background: rgba(76, 175, 80, 0.2);
+    border-color: #4CAF50;
+    color: #2E7D32;
+}
+
+.quiz-question label.incorrect {
+    background: rgba(244, 67, 54, 0.2);
+    border-color: #F44336;
+    color: #C62828;
+}
+
+.quiz-btn {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.quiz-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.quiz-btn:active {
+    transform: translateY(0);
+}
+
+.quiz-result {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+.quiz-result.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.quiz-result.success {
+    background: rgba(76, 175, 80, 0.2);
+    border: 2px solid #4CAF50;
+    color: #2E7D32;
+}
+
+.quiz-result.failure {
+    background: rgba(244, 67, 54, 0.2);
+    border: 2px solid #F44336;
+    color: #C62828;
+}
+
+.quiz-score {
+    font-size: 2rem;
+    margin: 1rem 0;
+    color: var(--primary-color);
+}
+
+/* Checklist Styles */
+.printable-checklist {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    margin: 2rem 0;
+    border-right: 4px solid var(--primary-color);
+}
+
+[dir="ltr"] .printable-checklist {
+    border-right: none;
+    border-left: 4px solid var(--primary-color);
+}
+
+.printable-checklist h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.checklist-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border-radius: var(--radius-sm);
+    transition: background 0.2s ease;
+}
+
+.checklist-item:hover {
+    background: rgba(102, 126, 234, 0.05);
+}
+
+.checklist-item input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-left: 0.75rem;
+    cursor: pointer;
+}
+
+[dir="ltr"] .checklist-item input[type="checkbox"] {
+    margin-left: 0;
+    margin-right: 0.75rem;
+}
+
+.checklist-item label {
+    flex: 1;
+    cursor: pointer;
+    user-select: none;
+}
+
+.checklist-item input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.print-btn {
+    background: var(--card-bg);
+    color: var(--text-color);
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--primary-color);
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.print-btn:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Print Styles */
+@media print {
+    .printable-checklist {
+        page-break-inside: avoid;
+    }
+    
+    .print-btn {
+        display: none;
+    }
+}

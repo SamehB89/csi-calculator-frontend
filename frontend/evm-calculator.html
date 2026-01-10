@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حاسبة إدارة القيمة المكتسبة (EVM Calculator) - CSI Calculator</title>
+    <meta name="description" content="احسب جميع مؤشرات إدارة القيمة المكتسبة (EVM) بسهولة: CPI, SPI, EAC, ETC, VAC, TCPI مع رسوم بيانية تفاعلية">
+    <meta name="keywords" content="EVM, Earned Value Management, CPI, SPI, Project Management, إدارة القيمة المكتسبة">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="حاسبة إدارة القيمة المكتسبة (E VM)">
+    <meta property="og:description" content="احسب جميع مؤشرات EVM تلقائياً مع رسوم بيانية تفاعلية">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://csi-calc.vercel.app/evm-calculator.html">
+    
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5429423113977975" crossorigin="anonymous"></script>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lang-toggle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Scripts -->
+    <script src="js/i18n.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    
+    <style>
+        .evm-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .evm-hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .evm-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .evm-hero p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+        
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .calculator-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .input-card, .output-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .input-card h2, .output-card h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .input-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+        
+        .input-group small {
+            display: block;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+        
+        .input-group input, .input-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid var(--border-color);
+            border-radius: var(--radius-md);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .input-group input:focus, .input-group select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        .calculate-btn {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            border-radius: var(--radius-md);
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+        
+        .calculate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        .result-item {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
+            padding: 1.25rem;
+            border-radius: var(--radius-md);
+            margin-bottom: 1rem;
+            border-right: 4px solid var(--primary-color);
+        }
+        
+        [dir="ltr"] .result-item {
+            border-right: none;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .result-item h3 {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+        
+        .result-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-color);
+        }
+        
+        .result-interpretation {
+            margin-top: 0.5rem;
+            padding: 0.5rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.9rem;
+        }
+        
+        .status-good {
+            background: rgba(76, 175, 80, 0.2);
+            color: #2E7D32;
+            border-right: 3px solid #4CAF50;
+        }
+        
+        [dir="ltr"] .status-good {
+            border-right: none;
+            border-left: 3px solid #4CAF50;
+        }
+        
+        .status-warning {
+            background: rgba(255, 152, 0, 0.2);
+            color: #E65100;
+            border-right: 3px solid #FF9800;
+        }
+        
+        [dir="ltr"] .status-warning {
+            border-right: none;
+            border-left: 3px solid #FF9800;
+        }
+        
+        .status-danger {
+            background: rgba(244, 67, 54, 0.2);
+            color: #C62828;
+            border-right: 3px solid #F44336;
+        }
+        
+        [dir="ltr"] .status-danger {
+            border-right: none;
+            border-left: 3px solid #F44336;
+        }
+        
+        .chart-container {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .chart-container h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+        
+        .actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .action-btn {
+            flex: 1;
+            padding: 0.75rem;
+            border: 2px solid var(--primary-color);
+            background: transparent;
+            color: var(--primary-color);
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .action-btn:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .help-section {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            margin-top: 2rem;
+        }
+        
+        .help-section h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .formula {
+            background: rgba(102, 126, 234, 0.1);
+            padding: 1rem;
+            border-radius: var(--radius-sm);
+            font-family: 'Courier New', monospace;
+            margin: 0.5rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo-container">
+                <img src="assets/logo.png" alt="SAMEH Logo" class="logo-image">
+                <span class="logo-text">CSI Calculator</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" data-i18n="home" data-icon="🏠">
+                    <span>الرئيسية</span>
+                </a>
+                <a href="crew-calculator.html" data-i18n="crewCalculator" data-icon="🧮">
+                    <span>حاسبة الفريق</span>
+                </a>
+                <a href="ai-planner.html" data-i18n="aiPlanner" data-icon="🤖">
+                    <span>المخطط الذكي</span>
+                </a>
+                <a href="evm-calculator.html" class="active" data-icon="📊">
+                    <span>حاسبة EVM</span>
+                </a>
+                <a href="blog/index.html" data-icon="📚">
+                    <span>دليل التشغيل</span>
+                </a>
+                <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">
+                    🌙
+                </button>
+                <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()">
+                    <span id="langIcon">EN</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="evm-container">
+        <!-- Hero Section -->
+        <div class="evm-hero">
+            <h1>📊 حاسبة إدارة القيمة المكتسبة (EVM)</h1>
+            <p>احسب جميع مؤشرات أداء المشروع تلقائياً بأقل مدخلات</p>
+        </div>
+
+        <!-- Calculator Grid -->
+        <div class="calculator-grid">
+            <!-- Input Card -->
+            <div class="input-card">
+                <h2>🔢 المدخلات</h2>
+                
+                <div class="input-group">
+                    <label for="pv">PV - القيمة المخططة (Planned Value)</label>
+                    <small>قيمة العمل المخطط إنجازه حتى تاريخ اليوم</small>
+                    <input type="number" id="pv" placeholder="مثال: 500000" step="0.01">
+                </div>
+                
+                <div class="input-group">
+                    <label for="ev">EV - القيمة المكتسبة (Earned Value)</label>
+                    <small>قيمة العمل المنجز فعلياً</small>
+                    <input type="number" id="ev" placeholder="مثال: 450000" step="0.01">
+                </div>
+                
+                <div class="input-group">
+                    <label for="ac">AC - التكلفة الفعلية (Actual Cost)</label>
+                    <small>التكلفة الفعلية للعمل المنجز</small>
+                    <input type="number" id="ac" placeholder="مثال: 480000" step="0.01">
+                </div>
+                
+                <div class="input-group">
+                    <label for="bac">BAC - ميزانية المشروع الكلية (Budget at Completion)</label>
+                    <small>إجمالي ميزانية المشروع</small>
+                    <input type="number" id="bac" placeholder="مثال: 1000000" step="0.01">
+                </div>
+                
+                <div class="input-group">
+                    <label for="duration">مدة المشروع الكلية</label>
+                    <input type="number" id="duration" placeholder="مثال: 12" step="1">
+                </div>
+                
+                <div class="input-group">
+                    <label for="elapsed">المدة المنقضية</label>
+                    <input type="number" id="elapsed" placeholder="مثال: 6" step="1">
+                </div>
+                
+                <div class="input-group">
+                    <label for="unit">الوحدة الزمنية</label>
+                    <select id="unit">
+                        <option value="days">أيام</option>
+                        <option value="weeks">أسابيع</option>
+                        <option value="months" selected>أشهر</option>
+                    </select>
+                </div>
+                
+                <button class="calculate-btn" onclick="calculateEVM()">
+                    🧮 احسب المؤشرات
+                </button>
+            </div>
+
+            <!-- Output Card -->
+            <div class="output-card">
+                <h2>📈 النتائج</h2>
+                <div id="results">
+                    <p style="text-align: center; color: var(--text-muted); padding: 2rem;">
+                        أدخل القيم في الحقول على اليسار واضغط على "احسب المؤشرات"
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Charts Section -->
+        <div id="chartsSection" style="display: none;">
+            <div class="chart-container">
+                <h2>📊 الرسوم البيانية</h2>
+                <canvas id="performanceChart"></canvas>
+            </div>
+            
+            <div class="chart-container">
+                <h2>📉 منحنى S</h2>
+                <canvas id="sCurveChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Help Section -->
+        <div class="help-section">
+            <h3>📚 دليل الاستخدام السريع</h3>
+            
+            <h4>المؤشرات المحسوبة:</h4>
+            <ul>
+                <li><strong>CV (Cost Variance):</strong> انحراف التكلفة = EV - AC</li>
+                <li><strong>SV (Schedule Variance):</strong> انحراف الجدول = EV - PV</li>
+                <li><strong>CPI (Cost Performance Index):</strong> مؤشر أداء التكلفة = EV / AC</li>
+                <li><strong>SPI (Schedule Performance Index):</strong> مؤشر أداء الجدول = EV / PV</li>
+                <li><strong>EAC (Estimate at Completion):</strong> التقدير عند الإنجاز = BAC / CPI</li>
+                <li><strong>ETC (Estimate to Complete):</strong> التقدير للإكمال = EAC - AC</li>
+                <li><strong>VAC (Variance at Completion):</strong> الانحراف عند الإنجاز = BAC - EAC</li>
+                <li><strong>TCPI (To-Complete Performance Index):</strong> مؤشر الأداء المطلوب = (BAC - EV) / (BAC - AC)</li>
+            </ul>
+            
+            <h4>قراءة النتائج:</h4>
+            <ul>
+                <li><strong style="color: #4CAF50;">✅ جيد:</strong> CPI > 1.0 أو SPI > 1.0 (أداء جيد)</li>
+                <li><strong style="color: #FF9800;">⚠️ تحذير:</strong> 0.9 < CPI/SPI < 1.0 (أداء مقبول)</li>
+                <li><strong style="color: #F44336;">❌ خطر:</strong> CPI < 0.9 أو SPI < 0.9 (أداء ضعيف)</li>
+            </ul>
+            
+            <p style="margin-top: 1rem;">
+                <strong>📖 تعلم المزيد:</strong> 
+                <a href="blog/articles/evm-introduction.html" style="color: var(--primary-color);">مقدمة في EVM</a> | 
+                <a href="blog/articles/evm-metrics.html" style="color: var(--primary-color);">مؤشرات EVM</a> |
+                <a href="blog/articles/evm-implementation.html" style="color: var(--primary-color);">تطبيق EVM</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p class="footer-text">
+                CSI Crew Calculator • Built with <span class="footer-heart">❤️</span> by <span class="footer-author">Sameh Badawy Sayed</span>
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/evm-calculator.js"></script>
+</body>
+</html>

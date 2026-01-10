@@ -1,0 +1,113 @@
+/* جدول المحتويات - Table of Contents Styles */
+
+.table-of-contents {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    margin: 2rem 0;
+    border-right: 4px solid var(--primary-color);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+[dir="ltr"] .table-of-contents {
+    border-right: none;
+    border-left: 4px solid var(--primary-color);
+}
+
+.table-of-contents h3 {
+    margin: 0 0 1rem 0;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.table-of-contents ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.table-of-contents li {
+    margin: 0.5rem 0;
+    transition: all 0.2s ease;
+}
+
+.table-of-contents li a {
+    color: var(--text-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: var(--radius-sm);
+    transition: all 0.2s ease;
+}
+
+.table-of-contents li a:hover {
+    background: rgba(102, 126, 234, 0.1);
+    color: var(--primary-color);
+    transform: translateX(-5px);
+}
+
+[dir="ltr"] .table-of-contents li a:hover {
+    transform: translateX(5px);
+}
+
+.table-of-contents li a::before {
+    content: "▶";
+    margin-left: 0.5rem;
+    font-size: 0.8rem;
+    opacity: 0.5;
+}
+
+[dir="ltr"] .table-of-contents li a::before {
+    margin-left: 0;
+    margin-right: 0.5rem;
+}
+
+.toc-level-1 {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.toc-level-2 {
+    padding-right: 1.5rem;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+[dir="ltr"] .toc-level-2 {
+    padding-right: 0;
+    padding-left: 1.5rem;
+}
+
+.toc-level-3 {
+    padding-right: 3rem;
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+[dir="ltr"] .toc-level-3 {
+    padding-right: 0;
+    padding-left: 3rem;
+}
+
+/* Sticky TOC للشاشات الكبيرة */
+@media (min-width: 1200px) {
+    .table-of-contents {
+        position: sticky;
+        top: 100px;
+        max-height: calc(100vh - 120px);
+        overflow-y: auto;
+    }
+}
+
+/* Active Section Highlight */
+.table-of-contents li a.active {
+    background: rgba(102, 126, 234, 0.15);
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.table-of-contents li a.active::before {
+    opacity: 1;
+}
