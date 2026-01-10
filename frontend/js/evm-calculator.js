@@ -37,7 +37,7 @@ function calculateEVM() {
         vac = bac - eac; // Variance at Completion
         
         // TCPI - To-Complete Performance Index
-        const remaining Work = bac - ev;
+        const remainingWork = bac - ev;
         const remainingBudget = bac - ac;
         tcpi = remainingWork / remainingBudget;
     }

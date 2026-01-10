@@ -9,7 +9,7 @@ const translations = {
         crewCalculator: 'حاسبة فريق العمل',
         aiPlanner: 'مساعد الذكاء',
         evmCalculator: 'حاسبة EVM',
-        blog: 'دليل التشغيل+مقالات فنية',
+        blog: 'مقالات مهمة',
         plannerTitle: '🤖 مساعد التخطيط الذكي',
         welcomeMsg: 'مرحبًا! أنا مساعد الذكاء. اكتب العمل المطلوب (مثال: أساسات منفصلة 100 م³ خرسانة) وسأقترح الأنشطة والمدة وفرق العمل.',
         searchPlaceholder: 'اكتب رسالتك...',
@@ -197,7 +197,7 @@ const translations = {
         crewCalculator: 'Crew Calculator',
         aiPlanner: 'AI Chat Wizard',
         evmCalculator: 'EVM Calculator',
-        blog: 'Manual+Knowledge Bites',
+        blog: 'Knowledge Bites',
         plannerTitle: '🤖 AI Construction Wizard',
         welcomeMsg: 'Hello! I am your AI assistant. Describe the work (e.g., Isolated foundations 100 m3 concrete) and I’ll propose tasks, duration, and crews.',
         searchPlaceholder: 'Type your message...',
