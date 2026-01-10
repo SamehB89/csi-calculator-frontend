@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" data-theme="light">
+<html lang="en" dir="ltr" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>حاسبة إدارة القيمة المكتسبة (EVM Calculator) - CSI Calculator</title>
-    <meta name="description" content="احسب جميع مؤشرات إدارة القيمة المكتسبة (EVM) بسهولة: CPI, SPI, EAC, ETC, VAC, TCPI مع رسوم بيانية تفاعلية">
-    <meta name="keywords" content="EVM, Earned Value Management, CPI, SPI, Project Management, إدارة القيمة المكتسبة">
+    <title>EVM Calculator - Earned Value Management | CSI Calculator</title>
+    <meta name="description" content="Calculate all Earned Value Management metrics: CPI, SPI, EAC, ETC, VAC, TCPI with interactive charts">
+    <meta name="keywords" content="EVM, Earned Value Management, CPI, SPI, Project Management">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="حاسبة إدارة القيمة المكتسبة (E VM)">
-    <meta property="og:description" content="احسب جميع مؤشرات EVM تلقائياً مع رسوم بيانية تفاعلية">
+    <meta property="og:title" content="EVM Calculator - Earned Value Management">
+    <meta property="og:description" content="Calculate all EVM metrics automatically with interactive charts">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://csi-calc.vercel.app/evm-calculator.html">
     
@@ -35,10 +35,10 @@
         }
         
         .evm-hero {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            background: linear-gradient(135deg, var(--primary-color), #764ba2);
             color: white;
             padding: 3rem 2rem;
-            border-radius: var(--radius-lg);
+            border-radius: 16px;
             text-align: center;
             margin-bottom: 2rem;
         }
@@ -67,9 +67,9 @@
         }
         
         .input-card, .output-card {
-            background: var(--card-bg);
+            background: var(--bg-secondary);
             padding: 2rem;
-            border-radius: var(--radius-lg);
+            border-radius: 16px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
         
@@ -87,7 +87,7 @@
             display: block;
             font-weight: 600;
             margin-bottom: 0.5rem;
-            color: var(--text-color);
+            color: var(--text-primary);
         }
         
         .input-group small {
@@ -100,8 +100,10 @@
             width: 100%;
             padding: 0.75rem;
             border: 2px solid var(--border-color);
-            border-radius: var(--radius-md);
+            border-radius: 8px;
             font-size: 1rem;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
             transition: all 0.3s ease;
         }
         
@@ -114,10 +116,10 @@
         .calculate-btn {
             width: 100%;
             padding: 1rem;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #ffffff !important;
             border: none;
-            border-radius: var(--radius-md);
+            border-radius: 8px;
             font-size: 1.1rem;
             font-weight: 700;
             cursor: pointer;
@@ -133,13 +135,8 @@
         .result-item {
             background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
             padding: 1.25rem;
-            border-radius: var(--radius-md);
+            border-radius: 8px;
             margin-bottom: 1rem;
-            border-right: 4px solid var(--primary-color);
-        }
-        
-        [dir="ltr"] .result-item {
-            border-right: none;
             border-left: 4px solid var(--primary-color);
         }
         
@@ -152,53 +149,38 @@
         .result-value {
             font-size: 2rem;
             font-weight: 700;
-            color: var(--text-color);
+            color: var(--text-primary);
         }
         
         .result-interpretation {
             margin-top: 0.5rem;
             padding: 0.5rem;
-            border-radius: var(--radius-sm);
+            border-radius: 4px;
             font-size: 0.9rem;
         }
         
         .status-good {
             background: rgba(76, 175, 80, 0.2);
             color: #2E7D32;
-            border-right: 3px solid #4CAF50;
-        }
-        
-        [dir="ltr"] .status-good {
-            border-right: none;
             border-left: 3px solid #4CAF50;
         }
         
         .status-warning {
             background: rgba(255, 152, 0, 0.2);
             color: #E65100;
-            border-right: 3px solid #FF9800;
-        }
-        
-        [dir="ltr"] .status-warning {
-            border-right: none;
             border-left: 3px solid #FF9800;
         }
         
         .status-danger {
             background: rgba(244, 67, 54, 0.2);
             color: #C62828;
-            border-right: 3px solid #F44336;
-        }
-        
-        [dir="ltr"] .status-danger {
-            border-right: none;
             border-left: 3px solid #F44336;
         }
         
         .chart-container {
-            background: var(--card-bg);
+            background: var(--bg-secondary);
             padding: 2rem;
-            border-radius: var(--radius-lg);
+            border-radius: 16px;
             margin-bottom: 2rem;
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
@@ -208,47 +190,16 @@
             margin-bottom: 1.5rem;
         }
         
-        .actions {
-            display: flex;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-        
-        .action-btn {
-            flex: 1;
-            padding: 0.75rem;
-            border: 2px solid var(--primary-color);
-            background: transparent;
-            color: var(--primary-color);
-            border-radius: var(--radius-md);
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .action-btn:hover {
-            background: var(--primary-color);
-            color: white;
-        }
-        
         .help-section {
-            background: var(--card-bg);
+            background: var(--bg-secondary);
             padding: 2rem;
-            border-radius: var(--radius-lg);
+            border-radius: 16px;
             margin-top: 2rem;
         }
         
         .help-section h3 {
             color: var(--primary-color);
             margin-bottom: 1rem;
-        }
-        
-        .formula {
-            background: rgba(102, 126, 234, 0.1);
-            padding: 1rem;
-            border-radius: var(--radius-sm);
-            font-family: 'Courier New', monospace;
-            margin: 0.5rem 0;
         }
     </style>
 </head>
@@ -257,7 +208,7 @@
     <nav class="navbar">
         <div class="container">
             <a href="index.html" class="logo-container">
-                <img src="assets/logo.png" alt="SAMEH Logo" class="logo-image">
+                <img src="assets/logo.png" alt="Logo" class="logo-image">
                 <span class="logo-text">CSI Calculator</span>
             </a>
             <div class="nav-links">
@@ -274,13 +225,13 @@
                     <span>EVM Calculator</span>
                 </a>
                 <a href="blog/index.html" data-i18n="blog" data-icon="📚">
-                    <span>Manual & Tips</span>
+                    <span>Knowledge Bites</span>
                 </a>
                 <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">
                     🌙
                 </button>
                 <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()">
-                    <span id="langIcon">EN</span>
+                    <span id="langIcon">AR</span>
                 </button>
             </div>
         </div>
@@ -290,70 +241,70 @@
     <div class="evm-container">
         <!-- Hero Section -->
         <div class="evm-hero">
-            <h1>📊 حاسبة إدارة القيمة المكتسبة (EVM)</h1>
-            <p>احسب جميع مؤشرات أداء المشروع تلقائياً بأقل مدخلات</p>
+            <h1 id="heroTitle">📊 Earned Value Management Calculator</h1>
+            <p id="heroSubtitle">Calculate all project performance metrics automatically</p>
         </div>
 
         <!-- Calculator Grid -->
         <div class="calculator-grid">
             <!-- Input Card -->
             <div class="input-card">
-                <h2>🔢 المدخلات</h2>
+                <h2 id="inputsTitle">🔢 Inputs</h2>
                 
                 <div class="input-group">
-                    <label for="pv">PV - القيمة المخططة (Planned Value)</label>
-                    <small>قيمة العمل المخطط إنجازه حتى تاريخ اليوم</small>
-                    <input type="number" id="pv" placeholder="مثال: 500000" step="0.01">
+                    <label for="pv" id="pvLabel">PV - Planned Value</label>
+                    <small id="pvHint">Value of work planned to be completed by today</small>
+                    <input type="number" id="pv" placeholder="e.g., 500000" step="0.01">
                 </div>
                 
                 <div class="input-group">
-                    <label for="ev">EV - القيمة المكتسبة (Earned Value)</label>
-                    <small>قيمة العمل المنجز فعلياً</small>
-                    <input type="number" id="ev" placeholder="مثال: 450000" step="0.01">
+                    <label for="ev" id="evLabel">EV - Earned Value</label>
+                    <small id="evHint">Value of work actually completed</small>
+                    <input type="number" id="ev" placeholder="e.g., 450000" step="0.01">
                 </div>
                 
                 <div class="input-group">
-                    <label for="ac">AC - التكلفة الفعلية (Actual Cost)</label>
-                    <small>التكلفة الفعلية للعمل المنجز</small>
-                    <input type="number" id="ac" placeholder="مثال: 480000" step="0.01">
+                    <label for="ac" id="acLabel">AC - Actual Cost</label>
+                    <small id="acHint">Actual cost of work completed</small>
+                    <input type="number" id="ac" placeholder="e.g., 480000" step="0.01">
                 </div>
                 
                 <div class="input-group">
-                    <label for="bac">BAC - ميزانية المشروع الكلية (Budget at Completion)</label>
-                    <small>إجمالي ميزانية المشروع</small>
-                    <input type="number" id="bac" placeholder="مثال: 1000000" step="0.01">
+                    <label for="bac" id="bacLabel">BAC - Budget at Completion</label>
+                    <small id="bacHint">Total project budget</small>
+                    <input type="number" id="bac" placeholder="e.g., 1000000" step="0.01">
                 </div>
                 
                 <div class="input-group">
-                    <label for="duration">مدة المشروع الكلية</label>
-                    <input type="number" id="duration" placeholder="مثال: 12" step="1">
+                    <label for="duration" id="durationLabel">Total Project Duration</label>
+                    <input type="number" id="duration" placeholder="e.g., 12" step="1">
                 </div>
                 
                 <div class="input-group">
-                    <label for="elapsed">المدة المنقضية</label>
-                    <input type="number" id="elapsed" placeholder="مثال: 6" step="1">
+                    <label for="elapsed" id="elapsedLabel">Elapsed Duration</label>
+                    <input type="number" id="elapsed" placeholder="e.g., 6" step="1">
                 </div>
                 
                 <div class="input-group">
-                    <label for="unit">الوحدة الزمنية</label>
+                    <label for="unit" id="unitLabel">Time Unit</label>
                     <select id="unit">
-                        <option value="days">أيام</option>
-                        <option value="weeks">أسابيع</option>
-                        <option value="months" selected>أشهر</option>
+                        <option value="days" id="optDays">Days</option>
+                        <option value="weeks" id="optWeeks">Weeks</option>
+                        <option value="months" selected id="optMonths">Months</option>
                     </select>
                 </div>
                 
-                <button class="calculate-btn" onclick="calculateEVM()">
-                    🧮 احسب المؤشرات
+                <button class="calculate-btn" onclick="calculateEVM()" id="calcBtn">
+                    🧮 Calculate Metrics
                 </button>
             </div>
 
             <!-- Output Card -->
             <div class="output-card">
-                <h2>📈 النتائج</h2>
+                <h2 id="resultsTitle">📈 Results</h2>
                 <div id="results">
-                    <p style="text-align: center; color: var(--text-muted); padding: 2rem;">
-                        أدخل القيم في الحقول على اليسار واضغط على "احسب المؤشرات"
+                    <p id="resultsPlaceholder" style="text-align: center; color: var(--text-muted); padding: 2rem;">
+                        Enter values in the input fields and click "Calculate Metrics"
                     </p>
                 </div>
             </div>
@@ -362,45 +313,38 @@
         <!-- Charts Section -->
         <div id="chartsSection" style="display: none;">
             <div class="chart-container">
-                <h2>📊 الرسوم البيانية</h2>
+                <h2 id="chartsTitle">📊 Charts</h2>
                 <canvas id="performanceChart"></canvas>
             </div>
             
             <div class="chart-container">
-                <h2>📉 منحنى S</h2>
+                <h2 id="sCurveTitle">📉 S-Curve</h2>
                 <canvas id="sCurveChart"></canvas>
             </div>
         </div>
 
         <!-- Help Section -->
         <div class="help-section">
-            <h3>📚 دليل الاستخدام السريع</h3>
+            <h3 id="helpTitle">📚 Quick Reference Guide</h3>
             
-            <h4>المؤشرات المحسوبة:</h4>
-            <ul>
-                <li><strong>CV (Cost Variance):</strong> انحراف التكلفة = EV - AC</li>
-                <li><strong>SV (Schedule Variance):</strong> انحراف الجدول = EV - PV</li>
-                <li><strong>CPI (Cost Performance Index):</strong> مؤشر أداء التكلفة = EV / AC</li>
-                <li><strong>SPI (Schedule Performance Index):</strong> مؤشر أداء الجدول = EV / PV</li>
-                <li><strong>EAC (Estimate at Completion):</strong> التقدير عند الإنجاز = BAC / CPI</li>
-                <li><strong>ETC (Estimate to Complete):</strong> التقدير للإكمال = EAC - AC</li>
-                <li><strong>VAC (Variance at Completion):</strong> الانحراف عند الإنجاز = BAC - EAC</li>
-                <li><strong>TCPI (To-Complete Performance Index):</strong> مؤشر الأداء المطلوب = (BAC - EV) / (BAC - AC)</li>
+            <h4 id="metricsHeading">Calculated Metrics:</h4>
+            <ul id="metricsList">
+                <li><strong>CV (Cost Variance):</strong> Cost deviation = EV - AC</li>
+                <li><strong>SV (Schedule Variance):</strong> Schedule deviation = EV - PV</li>
+                <li><strong>CPI (Cost Performance Index):</strong> Cost efficiency = EV / AC</li>
+                <li><strong>SPI (Schedule Performance Index):</strong> Schedule efficiency = EV / PV</li>
+                <li><strong>EAC (Estimate at Completion):</strong> Forecasted total cost = BAC / CPI</li>
+                <li><strong>ETC (Estimate to Complete):</strong> Cost to finish = EAC - AC</li>
+                <li><strong>VAC (Variance at Completion):</strong> Budget deviation = BAC - EAC</li>
+                <li><strong>TCPI (To-Complete Performance Index):</strong> Required efficiency = (BAC - EV) / (BAC - AC)</li>
             </ul>
             
-            <h4>قراءة النتائج:</h4>
-            <ul>
-                <li><strong style="color: #4CAF50;">✅ جيد:</strong> CPI > 1.0 أو SPI > 1.0 (أداء جيد)</li>
-                <li><strong style="color: #FF9800;">⚠️ تحذير:</strong> 0.9 < CPI/SPI < 1.0 (أداء مقبول)</li>
-                <li><strong style="color: #F44336;">❌ خطر:</strong> CPI < 0.9 أو SPI < 0.9 (أداء ضعيف)</li>
+            <h4 id="readingHeading">Reading Results:</h4>
+            <ul id="readingList">
+                <li><strong style="color: #4CAF50;">✅ Good:</strong> CPI > 1.0 or SPI > 1.0 (Good performance)</li>
+                <li><strong style="color: #FF9800;">⚠️ Warning:</strong> 0.9 < CPI/SPI < 1.0 (Acceptable)</li>
+                <li><strong style="color: #F44336;">❌ Critical:</strong> CPI < 0.9 or SPI < 0.9 (Poor performance)</li>
             </ul>
-            
-            <p style="margin-top: 1rem;">
-                <strong>📖 تعلم المزيد:</strong> 
-                <a href="blog/articles/evm-introduction.html" style="color: var(--primary-color);">مقدمة في EVM</a> | 
-                <a href="blog/articles/evm-metrics.html" style="color: var(--primary-color);">مؤشرات EVM</a> |
-                <a href="blog/articles/evm-implementation.html" style="color: var(--primary-color);">تطبيق EVM</a>
-            </p>
         </div>
     </div>
 
@@ -413,6 +357,376 @@
         </div>
     </footer>
 
-    <script src="js/evm-calculator.js"></script>
+    <script src="js/evm-i18n.js"></script>
+    <script>
+        // EVM Calculator Logic
+        let performanceChart = null;
+        let sCurveChart = null;
+
+        // Apply language on load
+        window.addEventListener('load', () => {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            const btn = document.getElementById('themeToggle');
+            if (btn) btn.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+            
+            // Apply saved language
+            const savedLang = localStorage.getItem('csi_lang') || 'en';
+            window.currentLang = savedLang;
+            applyEvmLanguage();
+        });
+
+        function applyEvmLanguage() {
+            const lang = window.currentLang || 'en';
+            const isArabic = lang === 'ar';
+            
+            // Update HTML direction and lang
+            document.documentElement.lang = lang;
+            document.documentElement.dir = isArabic ? 'rtl' : 'ltr';
+            
+            // Update lang toggle button
+            const langIcon = document.getElementById('langIcon');
+            if (langIcon) langIcon.textContent = isArabic ? 'EN' : 'AR';
+            
+            // Translations
+            const t = {
+                en: {
+                    heroTitle: '📊 Earned Value Management Calculator',
+                    heroSubtitle: 'Calculate all project performance metrics automatically',
+                    inputsTitle: '🔢 Inputs',
+                    resultsTitle: '📈 Results',
+                    pvLabel: 'PV - Planned Value',
+                    pvHint: 'Value of work planned to be completed by today',
+                    evLabel: 'EV - Earned Value',
+                    evHint: 'Value of work actually completed',
+                    acLabel: 'AC - Actual Cost',
+                    acHint: 'Actual cost of work completed',
+                    bacLabel: 'BAC - Budget at Completion',
+                    bacHint: 'Total project budget',
+                    durationLabel: 'Total Project Duration',
+                    elapsedLabel: 'Elapsed Duration',
+                    unitLabel: 'Time Unit',
+                    optDays: 'Days',
+                    optWeeks: 'Weeks',
+                    optMonths: 'Months',
+                    calcBtn: '🧮 Calculate Metrics',
+                    resultsPlaceholder: 'Enter values in the input fields and click "Calculate Metrics"',
+                    chartsTitle: '📊 Charts',
+                    sCurveTitle: '📉 S-Curve',
+                    helpTitle: '📚 Quick Reference Guide',
+                    metricsHeading: 'Calculated Metrics:',
+                    readingHeading: 'Reading Results:'
+                },
+                ar: {
+                    heroTitle: '📊 حاسبة إدارة القيمة المكتسبة (EVM)',
+                    heroSubtitle: 'احسب جميع مؤشرات أداء المشروع تلقائياً',
+                    inputsTitle: '🔢 المدخلات',
+                    resultsTitle: '📈 النتائج',
+                    pvLabel: 'PV - القيمة المخططة (Planned Value)',
+                    pvHint: 'قيمة العمل المخطط إنجازه حتى تاريخ اليوم',
+                    evLabel: 'EV - القيمة المكتسبة (Earned Value)',
+                    evHint: 'قيمة العمل المنجز فعلياً',
+                    acLabel: 'AC - التكلفة الفعلية (Actual Cost)',
+                    acHint: 'التكلفة الفعلية للعمل المنجز',
+                    bacLabel: 'BAC - ميزانية المشروع الكلية (Budget at Completion)',
+                    bacHint: 'إجمالي ميزانية المشروع',
+                    durationLabel: 'مدة المشروع الكلية',
+                    elapsedLabel: 'المدة المنقضية',
+                    unitLabel: 'الوحدة الزمنية',
+                    optDays: 'أيام',
+                    optWeeks: 'أسابيع',
+                    optMonths: 'أشهر',
+                    calcBtn: '🧮 احسب المؤشرات',
+                    resultsPlaceholder: 'أدخل القيم في الحقول واضغط على "احسب المؤشرات"',
+                    chartsTitle: '📊 الرسوم البيانية',
+                    sCurveTitle: '📉 منحنى S',
+                    helpTitle: '📚 دليل الاستخدام السريع',
+                    metricsHeading: 'المؤشرات المحسوبة:',
+                    readingHeading: 'قراءة النتائج:'
+                }
+            };
+            
+            const texts = t[lang];
+            
+            // Apply translations
+            Object.keys(texts).forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.textContent = texts[id];
+            });
+            
+            // Update placeholders
+            document.getElementById('pv').placeholder = lang === 'ar' ? 'مثال: 500000' : 'e.g., 500000';
+            document.getElementById('ev').placeholder = lang === 'ar' ? 'مثال: 450000' : 'e.g., 450000';
+            document.getElementById('ac').placeholder = lang === 'ar' ? 'مثال: 480000' : 'e.g., 480000';
+            document.getElementById('bac').placeholder = lang === 'ar' ? 'مثال: 1000000' : 'e.g., 1000000';
+            document.getElementById('duration').placeholder = lang === 'ar' ? 'مثال: 12' : 'e.g., 12';
+            document.getElementById('elapsed').placeholder = lang === 'ar' ? 'مثال: 6' : 'e.g., 6';
+            
+            // Update help section based on language
+            if (lang === 'ar') {
+                document.getElementById('metricsList').innerHTML = `
+                    <li><strong>CV (Cost Variance):</strong> انحراف التكلفة = EV - AC</li>
+                    <li><strong>SV (Schedule Variance):</strong> انحراف الجدول = EV - PV</li>
+                    <li><strong>CPI (Cost Performance Index):</strong> مؤشر أداء التكلفة = EV / AC</li>
+                    <li><strong>SPI (Schedule Performance Index):</strong> مؤشر أداء الجدول = EV / PV</li>
+                    <li><strong>EAC (Estimate at Completion):</strong> التقدير عند الإنجاز = BAC / CPI</li>
+                    <li><strong>ETC (Estimate to Complete):</strong> التقدير للإكمال = EAC - AC</li>
+                    <li><strong>VAC (Variance at Completion):</strong> الانحراف عند الإنجاز = BAC - EAC</li>
+                    <li><strong>TCPI (To-Complete Performance Index):</strong> مؤشر الأداء المطلوب = (BAC - EV) / (BAC - AC)</li>
+                `;
+                document.getElementById('readingList').innerHTML = `
+                    <li><strong style="color: #4CAF50;">✅ جيد:</strong> CPI > 1.0 أو SPI > 1.0 (أداء جيد)</li>
+                    <li><strong style="color: #FF9800;">⚠️ تحذير:</strong> 0.9 < CPI/SPI < 1.0 (أداء مقبول)</li>
+                    <li><strong style="color: #F44336;">❌ خطر:</strong> CPI < 0.9 أو SPI < 0.9 (أداء ضعيف)</li>
+                `;
+            } else {
+                document.getElementById('metricsList').innerHTML = `
+                    <li><strong>CV (Cost Variance):</strong> Cost deviation = EV - AC</li>
+                    <li><strong>SV (Schedule Variance):</strong> Schedule deviation = EV - PV</li>
+                    <li><strong>CPI (Cost Performance Index):</strong> Cost efficiency = EV / AC</li>
+                    <li><strong>SPI (Schedule Performance Index):</strong> Schedule efficiency = EV / PV</li>
+                    <li><strong>EAC (Estimate at Completion):</strong> Forecasted total cost = BAC / CPI</li>
+                    <li><strong>ETC (Estimate to Complete):</strong> Cost to finish = EAC - AC</li>
+                    <li><strong>VAC (Variance at Completion):</strong> Budget deviation = BAC - EAC</li>
+                    <li><strong>TCPI (To-Complete Performance Index):</strong> Required efficiency = (BAC - EV) / (BAC - AC)</li>
+                `;
+                document.getElementById('readingList').innerHTML = `
+                    <li><strong style="color: #4CAF50;">✅ Good:</strong> CPI > 1.0 or SPI > 1.0 (Good performance)</li>
+                    <li><strong style="color: #FF9800;">⚠️ Warning:</strong> 0.9 < CPI/SPI < 1.0 (Acceptable)</li>
+                    <li><strong style="color: #F44336;">❌ Critical:</strong> CPI < 0.9 or SPI < 0.9 (Poor performance)</li>
+                `;
+            }
+        }
+
+        // Override toggleLanguage for this page
+        function toggleLanguage() {
+            window.currentLang = window.currentLang === 'ar' ? 'en' : 'ar';
+            localStorage.setItem('csi_lang', window.currentLang);
+            applyEvmLanguage();
+            applyLanguage(); // Also apply main i18n
+        }
+
+        function calculateEVM() {
+            const lang = window.currentLang || 'en';
+            const pv = parseFloat(document.getElementById('pv').value);
+            const ev = parseFloat(document.getElementById('ev').value);
+            const ac = parseFloat(document.getElementById('ac').value);
+            const bac = parseFloat(document.getElementById('bac').value);
+            const duration = parseFloat(document.getElementById('duration').value);
+            const elapsed = parseFloat(document.getElementById('elapsed').value);
+            
+            // Validation
+            if (isNaN(pv) || isNaN(ev) || isNaN(ac)) {
+                alert(lang === 'ar' ? 'الرجاء إدخال القيم الأساسية (PV, EV, AC)' : 'Please enter basic values (PV, EV, AC)');
+                return;
+            }
+            
+            if (pv <= 0 || ev < 0 || ac <= 0) {
+                alert(lang === 'ar' ? 'القيم يجب أن تكون أكبر من صفر' : 'Values must be greater than zero');
+                return;
+            }
+            
+            // Calculate metrics
+            const cv = ev - ac;
+            const sv = ev - pv;
+            const cpi = ev / ac;
+            const spi = ev / pv;
+            
+            let eac, etc, vac, tcpi;
+            if (!isNaN(bac) && bac > 0) {
+                eac = bac / cpi;
+                etc = eac - ac;
+                vac = bac - eac;
+                const remainingWork = bac - ev;
+                const remainingBudget = bac - ac;
+                tcpi = remainingWork / remainingBudget;
+            }
+            
+            let estimatedDuration;
+            if (!isNaN(duration) && !isNaN(elapsed) && duration > 0 && elapsed > 0) {
+                estimatedDuration = duration / spi;
+            }
+            
+            displayResults({ cv, sv, cpi, spi, eac, etc, vac, tcpi, pv, ev, ac, bac, estimatedDuration, duration }, lang);
+            
+            document.getElementById('chartsSection').style.display = 'block';
+            createCharts({ cpi, spi, pv, ev, ac, bac }, lang);
+        }
+
+        function displayResults(m, lang) {
+            const isAr = lang === 'ar';
+            const t = {
+                cvTitle: isAr ? 'CV - انحراف التكلفة' : 'CV - Cost Variance',
+                svTitle: isAr ? 'SV - انحراف الجدول الزمني' : 'SV - Schedule Variance',
+                cpiTitle: isAr ? 'CPI - مؤشر أداء التكلفة' : 'CPI - Cost Performance Index',
+                spiTitle: isAr ? 'SPI - مؤشر أداء الجدول' : 'SPI - Schedule Performance Index',
+                eacTitle: isAr ? 'EAC - التقدير عند الإنجاز' : 'EAC - Estimate at Completion',
+                etcTitle: isAr ? 'ETC - التقدير للإكمال' : 'ETC - Estimate to Complete',
+                vacTitle: isAr ? 'VAC - الانحراف عند الإنجاز' : 'VAC - Variance at Completion',
+                tcpiTitle: isAr ? 'TCPI - مؤشر الأداء المطلوب' : 'TCPI - To-Complete Performance Index',
+                good: isAr ? '✅ ممتاز!' : '✅ Excellent!',
+                warning: isAr ? '⚠️ تحذير' : '⚠️ Warning',
+                danger: isAr ? '❌ خطر' : '❌ Critical',
+                underBudget: isAr ? 'توفير في التكلفة' : 'Under budget',
+                overBudget: isAr ? 'تجاوز في التكلفة - يتطلب إجراءات تصحيحية' : 'Over budget - corrective action needed',
+                aheadSchedule: isAr ? 'متقدم عن الجدول' : 'Ahead of schedule',
+                behindSchedule: isAr ? 'متأخر عن الجدول - يتطلب إجراءات تصحيحية' : 'Behind schedule - corrective action needed',
+                goodPerf: isAr ? 'أداء جيد' : 'Good performance',
+                acceptable: isAr ? 'أداء مقبول' : 'Acceptable performance',
+                poor: isAr ? 'أداء ضعيف - يتطلب تدخل فوري' : 'Poor performance - immediate action needed'
+            };
+            
+            const formatNum = (n) => new Intl.NumberFormat(isAr ? 'ar-EG' : 'en-US').format(n);
+            
+            let html = '';
+            
+            // CV
+            html += createResultItem(t.cvTitle, formatNum(m.cv), m.cv >= 0 ? 'status-good' : 'status-danger', 
+                m.cv >= 0 ? `${t.good} ${t.underBudget}` : `${t.danger} ${t.overBudget}`);
+            
+            // SV
+            html += createResultItem(t.svTitle, formatNum(m.sv), m.sv >= 0 ? 'status-good' : 'status-danger',
+                m.sv >= 0 ? `${t.good} ${t.aheadSchedule}` : `${t.danger} ${t.behindSchedule}`);
+            
+            // CPI
+            const cpiStatus = m.cpi >= 1 ? 'status-good' : (m.cpi >= 0.9 ? 'status-warning' : 'status-danger');
+            const cpiMsg = m.cpi >= 1 ? `${t.good} ${t.goodPerf}` : (m.cpi >= 0.9 ? `${t.warning} ${t.acceptable}` : `${t.danger} ${t.poor}`);
+            html += createResultItem(t.cpiTitle, m.cpi.toFixed(3), cpiStatus, cpiMsg);
+            
+            // SPI
+            const spiStatus = m.spi >= 1 ? 'status-good' : (m.spi >= 0.9 ? 'status-warning' : 'status-danger');
+            const spiMsg = m.spi >= 1 ? `${t.good} ${t.goodPerf}` : (m.spi >= 0.9 ? `${t.warning} ${t.acceptable}` : `${t.danger} ${t.poor}`);
+            html += createResultItem(t.spiTitle, m.spi.toFixed(3), spiStatus, spiMsg);
+            
+            // EAC
+            if (m.eac) {
+                html += createResultItem(t.eacTitle, formatNum(m.eac.toFixed(0)), m.eac <= m.bac ? 'status-good' : 'status-danger',
+                    isAr ? 'التكلفة المتوقعة النهائية للمشروع' : 'Forecasted final project cost');
+            }
+            
+            // ETC
+            if (m.etc) {
+                html += createResultItem(t.etcTitle, formatNum(m.etc.toFixed(0)), 'status-info',
+                    isAr ? 'التكلفة المتوقعة لإكمال المشروع' : 'Cost needed to complete the project');
+            }
+            
+            // VAC
+            if (m.vac !== undefined) {
+                html += createResultItem(t.vacTitle, formatNum(m.vac.toFixed(0)), m.vac >= 0 ? 'status-good' : 'status-danger',
+                    m.vac >= 0 ? (isAr ? 'المشروع متوقع أن ينتهي بتوفير' : 'Project expected to finish under budget') 
+                             : (isAr ? 'المشروع متوقع أن يتجاوز الميزانية' : 'Project expected to exceed budget'));
+            }
+            
+            // TCPI
+            if (m.tcpi) {
+                const tcpiStatus = m.tcpi <= m.cpi ? 'status-good' : (m.tcpi <= 1.1 ? 'status-warning' : 'status-danger');
+                html += createResultItem(t.tcpiTitle, m.tcpi.toFixed(3), tcpiStatus,
+                    m.tcpi <= m.cpi ? (isAr ? 'الأداء الحالي كافٍ' : 'Current performance is sufficient') 
+                                    : (isAr ? 'يتطلب تحسين الأداء' : 'Performance improvement needed'));
+            }
+            
+            document.getElementById('results').innerHTML = html;
+        }
+
+        function createResultItem(title, value, statusClass, interpretation) {
+            return `
+                <div class="result-item">
+                    <h3>${title}</h3>
+                    <div class="result-value">${value}</div>
+                    <div class="result-interpretation ${statusClass}">${interpretation}</div>
+                </div>
+            `;
+        }
+
+        function createCharts(m, lang) {
+            const isAr = lang === 'ar';
+            
+            if (performanceChart) performanceChart.destroy();
+            if (sCurveChart) sCurveChart.destroy();
+            
+            // Performance Chart
+            const perfCtx = document.getElementById('performanceChart').getContext('2d');
+            performanceChart = new Chart(perfCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['CPI', 'SPI'],
+                    datasets: [{
+                        label: isAr ? 'مؤشرات الأداء' : 'Performance Indices',
+                        data: [m.cpi, m.spi],
+                        backgroundColor: [
+                            m.cpi >= 1 ? 'rgba(76, 175, 80, 0.8)' : 'rgba(244, 67, 54, 0.8)',
+                            m.spi >= 1 ? 'rgba(76, 175, 80, 0.8)' : 'rgba(244, 67, 54, 0.8)'
+                        ],
+                        borderColor: [
+                            m.cpi >= 1 ? 'rgb(76, 175, 80)' : 'rgb(244, 67, 54)',
+                            m.spi >= 1 ? 'rgb(76, 175, 80)' : 'rgb(244, 67, 54)'
+                        ],
+                        borderWidth: 2,
+                        borderRadius: 8
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: { display: false },
+                        title: {
+                            display: true,
+                            text: isAr ? 'مؤشرات الأداء (يجب أن تكون >= 1.0)' : 'Performance Indices (should be >= 1.0)',
+                            font: { size: 16, family: 'Inter' }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: { callback: v => v.toFixed(2) }
+                        }
+                    }
+                }
+            });
+            
+            // S-Curve Chart
+            const sCurveCtx = document.getElementById('sCurveChart').getContext('2d');
+            sCurveChart = new Chart(sCurveCtx, {
+                type: 'line',
+                data: {
+                    labels: isAr ? ['البداية', 'الحالي', 'النهاية'] : ['Start', 'Current', 'End'],
+                    datasets: [
+                        {
+                            label: isAr ? 'القيمة المخططة (PV)' : 'Planned Value (PV)',
+                            data: [0, m.pv, m.bac || m.pv * 2],
+                            borderColor: 'rgb(102, 126, 234)',
+                            tension: 0.4,
+                            fill: false
+                        },
+                        {
+                            label: isAr ? 'القيمة المكتسبة (EV)' : 'Earned Value (EV)',
+                            data: [0, m.ev, null],
+                            borderColor: 'rgb(76, 175, 80)',
+                            tension: 0.4,
+                            fill: false
+                        },
+                        {
+                            label: isAr ? 'التكلفة الفعلية (AC)' : 'Actual Cost (AC)',
+                            data: [0, m.ac, null],
+                            borderColor: 'rgb(244, 67, 54)',
+                            tension: 0.4,
+                            fill: false
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: { display: true, position: 'top' },
+                        title: {
+                            display: true,
+                            text: isAr ? 'منحنى S - تقدم المشروع' : 'S-Curve - Project Progress',
+                            font: { size: 16, family: 'Inter' }
+                        }
+                    }
+                }
+            });
+        }
+    </script>
 </body>
 </html>
