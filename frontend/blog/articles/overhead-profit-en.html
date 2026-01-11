@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Overhead and Profit in Construction Pricing - CSI Calculator</title>
-    <meta name="description" content="Complete understanding of direct and indirect costs (Overhead) and how to calculate profit margin professionally in construction projects.">
-    <meta name="keywords" content="Overhead, Profit, Indirect Costs, Construction Pricing, Markup">
+    <title>Overhead and Profit: Complete Pricing Guide for Contractors - CSI Calculator</title>
+    <meta name="description" content="Master construction pricing: Direct costs, site overhead, home office overhead, profit margins, and markup calculation with formulas and examples.">
+    <meta name="keywords" content="Overhead, Profit, Indirect Costs, Construction Pricing, Markup, Cost Structure">
     
-    <meta property="og:title" content="Overhead and Profit in Construction Pricing">
-    <meta property="og:description" content="How to correctly calculate Overhead and Profit?">
+    <meta property="og:title" content="Overhead and Profit: Complete Pricing Guide">
+    <meta property="og:description" content="Calculate accurate markup with our comprehensive O&P guide">
     <meta property="og:type" content="article">
     <meta property="og:image" content="../assets/overhead-profit.jpg">
     
@@ -24,6 +24,119 @@
     <script src="../../js/i18n.js"></script>
     <script src="../../js/theme.js"></script>
     <script src="../../js/blog-i18n.js"></script>
+
+    <style>
+        .pricing-hero {
+            background: linear-gradient(135deg, #16a34a, #22c55e);
+            color: white;
+            padding: 2rem;
+            border-radius: 16px;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        .cost-card {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .direct-card { border-left: 5px solid #3b82f6; }
+        .site-card { border-left: 5px solid #f97316; }
+        .hq-card { border-left: 5px solid #8b5cf6; }
+        .profit-card { border-left: 5px solid #22c55e; }
+        .formula-box {
+            background: linear-gradient(135deg, #1e293b, #334155);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            text-align: center;
+            font-family: 'Courier New', monospace;
+        }
+        .calculation-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .calculation-table th {
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+        }
+        .calculation-table td {
+            padding: 0.875rem 1rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .total-row {
+            background: rgba(34, 197, 94, 0.1);
+            font-weight: 700;
+        }
+        .subtotal-row {
+            background: rgba(59, 130, 246, 0.1);
+        }
+        .percent-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            background: rgba(34, 197, 94, 0.2);
+            color: #16a34a;
+        }
+        .factor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .factor-card {
+            background: #f8fafc;
+            padding: 1rem;
+            border-radius: 12px;
+            border-left: 3px solid #3b82f6;
+        }
+        .pro-tip {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(34, 197, 94, 0.05));
+            border-left: 4px solid #22c55e;
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.5rem 0;
+        }
+        .warning-box {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(239, 68, 68, 0.05));
+            border-left: 4px solid #ef4444;
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.5rem 0;
+        }
+        .key-takeaway {
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: white;
+            padding: 2rem;
+            border-radius: 16px;
+            margin: 2rem 0;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        .comparison-table th {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            color: white;
+            padding: 1rem;
+        }
+        .comparison-table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #e5e7eb;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -36,7 +149,7 @@
                 <a href="../../index.html" data-i18n="home" data-icon="🏠"><span>Home</span></a>
                 <a href="../../crew-calculator.html" data-i18n="crewCalculator" data-icon="🧮"><span>Calculator</span></a>
                 <a href="../../ai-planner.html" data-i18n="aiPlanner" data-icon="🤖"><span>AI Planner</span></a>
-                <a href="../index-en.html" class="active" data-i18n="blog" data-icon="📚"><span>Manual & Tips</span></a>
+                <a href="../index-en.html" class="active" data-i18n="blog" data-icon="📚"><span>Knowledge Bites</span></a>
                 <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">🌙</button>
                 <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()"><span id="langIcon">AR</span></button>
             </div>
@@ -45,99 +158,363 @@
 
     <div class="article-header">
         <span class="article-category">Cost Estimation</span>
-        <h1>Overhead and Profit in Construction Pricing</h1>
+        <h1>Overhead and Profit: Complete Pricing Guide for Contractors</h1>
         <div class="article-meta">
-            <span class="article-date">January 7, 2026</span>
-            <span class="article-read-time">10 min read</span>
+            <span class="article-date">January 11, 2026</span>
+            <span class="article-read-time">20 min read</span>
         </div>
     </div>
 
     <div class="article-body">
-        <div class="article-image-container">
-            <img src="../assets/overhead-profit.jpg" alt="Overhead and Profit" class="img-fluid rounded shadow mb-4">
+        <div class="pricing-hero">
+            <h2 style="margin-top: 0;">💰 Master Construction Pricing</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 0;">Understanding O&P is the difference between profit and loss</p>
         </div>
 
-        <h2>💰 Understanding Cost Structure</h2>
-        <p>
-            When pricing any project, it's not enough to calculate only material, labor, and equipment costs. There are "hidden" costs that must be covered, plus a reasonable profit margin. Ignoring these elements is the main reason small contractors fail.
-        </p>
-
-        <h2>📊 Direct vs Indirect Costs</h2>
-        <h3>Direct Costs</h3>
-        <p>Directly linked to a specific BOQ item:</p>
-        <ul>
-            <li>Raw materials (cement, steel, bricks)</li>
-            <li>Direct execution labor</li>
-            <li>Equipment rental used for the item</li>
-            <li>Subcontractors for specific works</li>
-        </ul>
-
-        <h3>Indirect Costs (Overhead)</h3>
-        <p>Not linked to a specific item but necessary for project operation:</p>
-        <ul>
-            <li>Management salaries (Project Manager, Accountant)</li>
-            <li>Site office rental</li>
-            <li>Utilities (electricity, water, communications)</li>
-            <li>Insurance and bank guarantees</li>
-            <li>Safety equipment</li>
-        </ul>
-
-        <h2>🏢 Types of Overhead</h2>
-        <h3>1. Site Overhead</h3>
-        <p>Costs of operating the work site:</p>
-        <ul>
-            <li>Site offices and temporary storage</li>
-            <li>Security and guards</li>
-            <li>Testing and measurement equipment</li>
-            <li>Internal site transportation</li>
-        </ul>
-        <p><strong>Typical Rate:</strong> 5-8% of direct costs</p>
-
-        <h3>2. Home Office Overhead</h3>
-        <p>Costs of operating the parent company:</p>
-        <ul>
-            <li>Senior management salaries</li>
-            <li>Headquarters rental</li>
-            <li>Marketing and public relations</li>
-            <li>Software and licenses</li>
-        </ul>
-        <p><strong>Typical Rate:</strong> 3-5% of direct costs</p>
-
-        <h2>📈 Calculating Profit Margin</h2>
-        <p>Profit margin depends on several factors:</p>
-        <ul>
-            <li><strong>Competition Level:</strong> Competitive market = lower profit</li>
-            <li><strong>Risks:</strong> Complex project = higher profit</li>
-            <li><strong>Client Relationship:</strong> Repeat work may justify lower profit</li>
-            <li><strong>Project Size:</strong> Large projects accept lower percentages</li>
-        </ul>
+        <h2>🎯 Why Overhead & Profit Matter</h2>
+        <p>When pricing a project, it's not enough to calculate only material, labor, and equipment costs. There are <strong>"hidden" costs</strong> that must be covered, plus a <strong>reasonable profit margin</strong>. Ignoring these elements is the main reason small contractors fail.</p>
 
         <div class="formula-box">
-            <strong>Typical Profit Rates:</strong><br>
-            • Government projects: 5-8%<br>
-            • Competitive private sector: 8-12%<br>
-            • Specialized projects: 12-20%<br>
-            • High-risk projects: 15-25%
+            <strong style="font-size: 1.2rem;">Bid Price = Direct Costs + Overhead + Profit</strong>
         </div>
 
-        <h2>🧮 Practical Example</h2>
-        <p>Project with direct costs of $1,000,000:</p>
-        <table class="pricing-table">
-            <tr><td>Direct Costs</td><td>$1,000,000</td></tr>
-            <tr><td>+ Site Overhead (7%)</td><td>$70,000</td></tr>
-            <tr><td>+ Home Office Overhead (4%)</td><td>$40,000</td></tr>
-            <tr><td><strong>Total Cost</strong></td><td><strong>$1,110,000</strong></td></tr>
-            <tr><td>+ Profit (10%)</td><td>$111,000</td></tr>
-            <tr><td><strong>Bid Price</strong></td><td><strong>$1,221,000</strong></td></tr>
+        <hr>
+
+        <h2>📊 Understanding Cost Structure</h2>
+
+        <div class="cost-card direct-card">
+            <h3 style="color: #3b82f6; margin-top: 0;">💵 1. Direct Costs</h3>
+            <p>Costs directly linked to a specific BOQ item or work activity:</p>
+            <ul>
+                <li><strong>Materials:</strong> Cement, steel, bricks, aggregates, etc.</li>
+                <li><strong>Labor:</strong> Workers directly performing the work</li>
+                <li><strong>Equipment:</strong> Rental/operation costs for specific items</li>
+                <li><strong>Subcontractors:</strong> Specialized trades (MEP, finishing, etc.)</li>
+            </ul>
+            <p><span class="percent-badge">Typically 70-80% of total bid</span></p>
+        </div>
+
+        <div class="cost-card site-card">
+            <h3 style="color: #f97316; margin-top: 0;">🏗️ 2. Site Overhead (Job Overhead)</h3>
+            <p>Costs of operating the work site, not tied to specific items:</p>
+
+            <table class="comparison-table">
+                <tr>
+                    <th>Category</th>
+                    <th>Items</th>
+                    <th>Typical %</th>
+                </tr>
+                <tr>
+                    <td><strong>Supervision</strong></td>
+                    <td>Project Manager, Site Engineer, Foreman</td>
+                    <td>2-4%</td>
+                </tr>
+                <tr>
+                    <td><strong>Site Facilities</strong></td>
+                    <td>Offices, stores, toilets, fencing</td>
+                    <td>1-2%</td>
+                </tr>
+                <tr>
+                    <td><strong>Utilities</strong></td>
+                    <td>Electricity, water, communications</td>
+                    <td>0.5-1%</td>
+                </tr>
+                <tr>
+                    <td><strong>Safety</strong></td>
+                    <td>PPE, signage, first aid, safety officer</td>
+                    <td>0.5-1%</td>
+                </tr>
+                <tr>
+                    <td><strong>Small Tools</strong></td>
+                    <td>Hand tools, consumables</td>
+                    <td>0.5-1%</td>
+                </tr>
+                <tr>
+                    <td><strong>QA/QC</strong></td>
+                    <td>Testing, inspection, documentation</td>
+                    <td>0.5-1%</td>
+                </tr>
+            </table>
+
+            <p><span class="percent-badge">Total Site Overhead: 5-10%</span></p>
+        </div>
+
+        <div class="cost-card hq-card">
+            <h3 style="color: #8b5cf6; margin-top: 0;">🏢 3. Home Office Overhead (General Overhead)</h3>
+            <p>Costs of operating the parent company, allocated to projects:</p>
+
+            <table class="comparison-table">
+                <tr>
+                    <th>Category</th>
+                    <th>Items</th>
+                    <th>Typical %</th>
+                </tr>
+                <tr>
+                    <td><strong>Management</strong></td>
+                    <td>Directors, admin staff, HR</td>
+                    <td>1-2%</td>
+                </tr>
+                <tr>
+                    <td><strong>Office</strong></td>
+                    <td>Rent, utilities, furniture</td>
+                    <td>0.5-1%</td>
+                </tr>
+                <tr>
+                    <td><strong>Professional</strong></td>
+                    <td>Legal, accounting, insurance</td>
+                    <td>0.5-1%</td>
+                </tr>
+                <tr>
+                    <td><strong>Marketing</strong></td>
+                    <td>Business development, tendering</td>
+                    <td>0.5-1%</td>
+                </tr>
+                <tr>
+                    <td><strong>IT & Software</strong></td>
+                    <td>Systems, licenses, support</td>
+                    <td>0.3-0.5%</td>
+                </tr>
+            </table>
+
+            <p><span class="percent-badge">Total HQ Overhead: 3-6%</span></p>
+        </div>
+
+        <div class="cost-card profit-card">
+            <h3 style="color: #22c55e; margin-top: 0;">📈 4. Profit Margin</h3>
+            <p>The return on investment for the contractor. Affected by:</p>
+
+            <div class="factor-grid">
+                <div class="factor-card">
+                    <h4>Competition Level</h4>
+                    <p>More bidders = lower profit margins feasible</p>
+                </div>
+                <div class="factor-card">
+                    <h4>Project Risk</h4>
+                    <p>Complex/risky projects require higher profit</p>
+                </div>
+                <div class="factor-card">
+                    <h4>Client Relationship</h4>
+                    <p>Repeat work may justify lower margin</p>
+                </div>
+                <div class="factor-card">
+                    <h4>Project Size</h4>
+                    <p>Larger projects can accept lower %</p>
+                </div>
+            </div>
+
+            <table class="comparison-table">
+                <tr>
+                    <th>Project Type</th>
+                    <th>Typical Profit %</th>
+                </tr>
+                <tr>
+                    <td>Government (competitive)</td>
+                    <td>5-8%</td>
+                </tr>
+                <tr>
+                    <td>Private (competitive)</td>
+                    <td>8-12%</td>
+                </tr>
+                <tr>
+                    <td>Specialized/complex</td>
+                    <td>12-18%</td>
+                </tr>
+                <tr>
+                    <td>High-risk/urgent</td>
+                    <td>15-25%</td>
+                </tr>
+                <tr>
+                    <td>Negotiated (sole source)</td>
+                    <td>10-15%</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <h2>🧮 Complete Worked Example</h2>
+        <p>Project with $1,000,000 in direct costs:</p>
+
+        <table class="calculation-table">
+            <tr>
+                <th>Component</th>
+                <th>Rate</th>
+                <th>Amount</th>
+            </tr>
+            <tr>
+                <td>Direct Costs (Materials, Labor, Equipment)</td>
+                <td>-</td>
+                <td>$1,000,000</td>
+            </tr>
+            <tr>
+                <td>+ Site Overhead</td>
+                <td>7%</td>
+                <td>$70,000</td>
+            </tr>
+            <tr>
+                <td>+ Home Office Overhead</td>
+                <td>4%</td>
+                <td>$40,000</td>
+            </tr>
+            <tr class="subtotal-row">
+                <td><strong>Total Cost</strong></td>
+                <td>-</td>
+                <td><strong>$1,110,000</strong></td>
+            </tr>
+            <tr>
+                <td>+ Profit (on total cost)</td>
+                <td>10%</td>
+                <td>$111,000</td>
+            </tr>
+            <tr class="total-row">
+                <td><strong>BID PRICE</strong></td>
+                <td>-</td>
+                <td><strong>$1,221,000</strong></td>
+            </tr>
         </table>
 
-        <h2>⚠️ Common Mistakes</h2>
-        <ul>
-            <li>Forgetting bank guarantee costs (can reach 2-3%).</li>
-            <li>Not accounting for financing costs if payment is delayed.</li>
-            <li>Underestimating management and supervision expenses.</li>
-            <li>Not reviewing percentages periodically with market changes.</li>
-        </ul>        <!-- Share Buttons -->
+        <div class="formula-box">
+            <strong>Combined O&P Markup:</strong><br><br>
+            ($1,221,000 - $1,000,000) / $1,000,000 = <strong>22.1%</strong>
+        </div>
+
+        <h3>Alternative: Single Markup Method</h3>
+        <p>Some contractors apply a single combined markup:</p>
+
+        <table class="calculation-table">
+            <tr>
+                <th>Component</th>
+                <th>Rate</th>
+                <th>Amount</th>
+            </tr>
+            <tr>
+                <td>Direct Costs</td>
+                <td>-</td>
+                <td>$1,000,000</td>
+            </tr>
+            <tr>
+                <td>+ Combined O&P</td>
+                <td>22%</td>
+                <td>$220,000</td>
+            </tr>
+            <tr class="total-row">
+                <td><strong>BID PRICE</strong></td>
+                <td>-</td>
+                <td><strong>$1,220,000</strong></td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <h2>🔢 Important Formulas</h2>
+
+        <div class="formula-box">
+            <strong>Markup vs Margin:</strong><br><br>
+            Markup % = (Selling Price - Cost) / Cost × 100<br>
+            Margin % = (Selling Price - Cost) / Selling Price × 100<br><br>
+            <em>Example: If cost = $100, sell = $125:</em><br>
+            Markup = 25% | Margin = 20%
+        </div>
+
+        <div class="formula-box">
+            <strong>Break-even Analysis:</strong><br><br>
+            Min Bid = Direct + Site OH + HQ OH + (Contingency)<br>
+            At break-even: Profit = 0
+        </div>
+
+        <hr>
+
+        <h2>⚠️ Common Pricing Mistakes</h2>
+
+        <div class="warning-box">
+            <h4 style="margin-top: 0;">❌ Mistakes to Avoid</h4>
+            <ul style="margin-bottom: 0;">
+                <li><strong>Forgetting bank guarantee costs</strong> — can reach 2-3% of contract value</li>
+                <li><strong>Not accounting for financing costs</strong> — if payment is delayed</li>
+                <li><strong>Underestimating supervision</strong> — projects often need more than planned</li>
+                <li><strong>Static percentages</strong> — not reviewing with market changes</li>
+                <li><strong>Ignoring scope complexity</strong> — same % for different risk projects</li>
+                <li><strong>Confusing markup and margin</strong> — leads to underpricing</li>
+            </ul>
+        </div>
+
+        <div class="pro-tip">
+            <h4 style="margin-top: 0;">✅ Best Practices</h4>
+            <ul style="margin-bottom: 0;">
+                <li>Calculate site overhead from first principles, not just %</li>
+                <li>Track actual overhead costs on completed projects</li>
+                <li>Adjust profit based on risk assessment of each bid</li>
+                <li>Include escalation for long-duration projects</li>
+                <li>Account for cash flow and financing costs</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <h2>📊 O&P by Project Size</h2>
+
+        <table class="comparison-table">
+            <tr>
+                <th>Project Value</th>
+                <th>Site OH</th>
+                <th>HQ OH</th>
+                <th>Profit</th>
+                <th>Total O&P</th>
+            </tr>
+            <tr>
+                <td>&lt; $500K</td>
+                <td>8-10%</td>
+                <td>5-6%</td>
+                <td>10-15%</td>
+                <td>23-31%</td>
+            </tr>
+            <tr>
+                <td>$500K - $2M</td>
+                <td>7-9%</td>
+                <td>4-5%</td>
+                <td>10-12%</td>
+                <td>21-26%</td>
+            </tr>
+            <tr>
+                <td>$2M - $10M</td>
+                <td>6-8%</td>
+                <td>3-4%</td>
+                <td>8-10%</td>
+                <td>17-22%</td>
+            </tr>
+            <tr>
+                <td>$10M - $50M</td>
+                <td>5-7%</td>
+                <td>3-4%</td>
+                <td>6-8%</td>
+                <td>14-19%</td>
+            </tr>
+            <tr>
+                <td>&gt; $50M</td>
+                <td>4-6%</td>
+                <td>2-3%</td>
+                <td>5-7%</td>
+                <td>11-16%</td>
+            </tr>
+        </table>
+
+        <div class="key-takeaway">
+            <h3 style="margin-top: 0;">🎯 Key Takeaways</h3>
+            <ol style="margin-bottom: 0;">
+                <li><strong>Always include overhead</strong> — ignoring it leads to losses</li>
+                <li><strong>Calculate site OH specifically</strong> — don't just apply a blanket %</li>
+                <li><strong>Know your HQ overhead rate</strong> — from actual company financials</li>
+                <li><strong>Profit varies by risk</strong> — higher risk = higher margin</li>
+                <li><strong>Review costs regularly</strong> — market conditions change</li>
+                <li><strong>Don't undercut for volume</strong> — it rarely works out</li>
+            </ol>
+        </div>
+
+        <div class="pro-tip" style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(34, 197, 94, 0.05));">
+            <h3>🧮 Calculate Your Labor Costs!</h3>
+            <p>Use our <a href="../../crew-calculator.html" style="color: #22c55e; font-weight: 700;">CSI Crew Calculator</a> to get accurate labor and equipment costs based on CSI productivity data. Then apply your O&P to get the final bid price.</p>
+        </div>
+
         <div class="share-buttons">
             <span class="share-buttons-label">Share this article:</span>
             <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-btn facebook" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">Facebook</a>
@@ -147,9 +524,8 @@
             <button class="share-btn copy" onclick="navigator.clipboard.writeText(window.location.href);alert('Link copied!')">Copy Link</button>
         </div>
         
-        
         <hr>
-        <p><strong>Next Article:</strong> <a href="contract-types-en.html">Types of Construction Contracts: Comprehensive Guide</a></p>
+        <p><strong>Related:</strong> <a href="cost-estimation-methods-en.html">Cost Estimation Methods</a> | <a href="contract-types-en.html">Construction Contract Types</a></p>
     </div>
 
     <footer class="site-footer">
