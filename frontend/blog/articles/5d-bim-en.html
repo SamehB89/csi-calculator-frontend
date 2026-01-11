@@ -3,100 +3,751 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>5D BIM: Quantity Takeoff and Cost - CSI Calculator</title>
-    <meta name="description" content="Complete guide to 5D BIM: quantity takeoff and cost estimation from BIM model">
+    <title>5D BIM Complete Course: Master Cost Estimation with BIM | CSI Calculator</title>
+    <meta name="description" content="Complete 5D BIM course: Learn quantity takeoff, cost estimation from BIM models, software comparison, real-world examples, and best practices for construction cost management.">
+    <meta name="keywords" content="5D BIM, Quantity Takeoff, Cost Estimation, BIM QTO, CostX, Vico Office, Construction Cost, BIM Cost Integration">
+    
+    <meta property="og:title" content="5D BIM Complete Course: Master Cost Estimation with BIM">
+    <meta property="og:description" content="Learn 5D BIM from basics to advanced with practical examples">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="images/5d-bim-concept.png">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "5D BIM Complete Course",
+      "description": "Master cost estimation with BIM - from basics to advanced",
+      "provider": {
+        "@type": "Organization",
+        "name": "CSI Calculator",
+        "sameAs": "https://csi-calc.vercel.app"
+      }
+    }
+    </script>
+    
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5429423113977975" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../css/theme.css">
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/lang-toggle.css">
     <link rel="stylesheet" href="../../css/blog.css">
+    <link rel="stylesheet" href="../../css/ads.css">
     <link rel="stylesheet" href="../../css/share-buttons.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="../../js/ads.js"></script>
     <script src="../../js/i18n.js"></script>
     <script src="../../js/theme.js"></script>
+    <script src="../../js/blog-i18n.js"></script>
+    
+    <style>
+        .course-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .lesson-card {
+            background: var(--bg-secondary);
+            border: 2px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            transition: all 0.3s ease;
+        }
+        
+        .lesson-card:hover {
+            border-color: #10b981;
+            box-shadow: 0 8px 30px rgba(16, 185, 129, 0.15);
+        }
+        
+        .lesson-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            border-radius: 50%;
+            font-weight: 700;
+            margin-left: 1rem;
+        }
+        
+        .pro-tip {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(16, 185, 129, 0.05));
+            border-left: 4px solid #10b981;
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.5rem 0;
+        }
+        
+        .pro-tip::before {
+            content: "💡 Pro Tip";
+            display: block;
+            font-weight: 700;
+            color: #10b981;
+            margin-bottom: 0.5rem;
+        }
+        
+        .warning-box {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(245, 158, 11, 0.05));
+            border-left: 4px solid #f59e0b;
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.5rem 0;
+        }
+        
+        .warning-box::before {
+            content: "⚠️ Important";
+            display: block;
+            font-weight: 700;
+            color: #f59e0b;
+            margin-bottom: 0.5rem;
+        }
+        
+        .real-example {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(59, 130, 246, 0.05));
+            border-left: 4px solid #3b82f6;
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.5rem 0;
+        }
+        
+        .real-example::before {
+            content: "📋 Real-World Example";
+            display: block;
+            font-weight: 700;
+            color: #3b82f6;
+            margin-bottom: 0.5rem;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .comparison-table th {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .comparison-table td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            background: var(--bg-secondary);
+        }
+        
+        .comparison-table tr:hover td {
+            background: var(--bg-tertiary);
+        }
+        
+        .key-takeaway {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 1.5rem 2rem;
+            border-radius: 16px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .key-takeaway h4 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .cost-formula {
+            background: linear-gradient(145deg, #1e293b, #0f172a);
+            padding: 1.5rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+            color: #e2e8f0;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 1.5rem 0;
+            font-family: 'Fira Code', monospace;
+        }
+        
+        .roi-box {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(139, 92, 246, 0.05));
+            border: 2px dashed #8b5cf6;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+        
+        .roi-box h4 {
+            color: #8b5cf6;
+            margin-bottom: 1rem;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
         <div class="container">
             <a href="../../index.html" class="logo-container">
-                <img src="../../assets/logo.png" alt="Logo" class="logo-image">
+                <img src="../../assets/logo.png" alt="CSI Logo" class="logo-image">
                 <span class="logo-text">CSI Calculator</span>
             </a>
             <div class="nav-links">
-                <a href="../../index.html"><span>Home</span></a>
-                <a href="../../crew-calculator.html"><span>Calculator</span></a>
-                <a href="../../ai-planner.html"><span>AI Planner</span></a>
-                <a href="../index-en.html" class="active"><span>Blog</span></a>
-                <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()">🌙</button>
-                <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()"><span>AR</span></button>
+                <a href="../../index.html" data-i18n="home" data-icon="🏠"><span>Home</span></a>
+                <a href="../../crew-calculator.html" data-i18n="crewCalculator" data-icon="🧮"><span>Calculator</span></a>
+                <a href="../../ai-planner.html" data-i18n="aiPlanner" data-icon="🤖"><span>AI Planner</span></a>
+                <a href="../../evm-calculator.html" data-i18n="evmCalculator" data-icon="📊"><span>EVM Calculator</span></a>
+                <a href="../index-en.html" class="active" data-i18n="blog" data-icon="📚"><span>Knowledge Bites</span></a>
+                <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">🌙</button>
+                <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()"><span id="langIcon">AR</span></button>
             </div>
         </div>
     </nav>
 
     <div class="article-header">
+        <span class="course-badge">📚 Complete Course</span>
         <span class="article-category">BIM Dimensions</span>
-        <h1>5D BIM: Quantity Takeoff and Cost from Model</h1>
+        <h1>5D BIM: Master Cost Estimation with BIM</h1>
+        <p style="font-size: 1.2rem; opacity: 0.9; margin-top: 1rem;">From Quantity Takeoff to Cost Management - Everything You Need</p>
         <div class="article-meta">
-            <span class="article-date">January 8, 2026</span>
-            <span class="article-read-time">18 min read</span>
+            <span class="article-date">Updated: January 2026</span>
+            <span class="article-read-time">40 min course</span>
         </div>
     </div>
 
-    <div class="article-body">
-        <div class="article-image-container">
-            <img src="../assets/5d-bim.jpg" alt="5D BIM">
-        </div>
-
-        <h2>💰 What is 5D BIM?</h2>
+    <div class="article-body" style="max-width: 900px;">
+        
+        <!-- Hero Image -->
         <div class="concept-image-wrapper" style="margin: 2rem 0;">
-            <img src="images/5d-bim-concept.png" alt="5D BIM = 4D BIM + Cost Integration" style="width: 100%; max-width: 800px; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.15);">
+            <img src="images/5d-bim-concept.png" alt="5D BIM = 4D BIM + Cost (Quantity Takeoff + Pricing)" style="width: 100%; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.15);">
         </div>
-        <p>Adding cost dimension: automatic quantity extraction linked to prices.</p>
 
-        <h2>🎯 Benefits</h2>
-        <ul>
-            <li><strong>Accuracy:</strong> Reduce takeoff errors</li>
-            <li><strong>Speed:</strong> 40-60% faster</li>
-            <li><strong>Instant Updates:</strong> With design changes</li>
-            <li><strong>Alternative Analysis:</strong> What-if scenarios</li>
-        </ul>
+        <!-- Introduction -->
+        <div class="alert alert-info" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(5, 150, 105, 0.1)); border: none; border-radius: 16px; padding: 2rem;">
+            <h3 style="margin-bottom: 1rem;">🎯 What You'll Learn in This Course</h3>
+            <ul style="margin: 0; line-height: 2;">
+                <li>✅ What 5D BIM is and how it differs from traditional QTO</li>
+                <li>✅ The complete 5D workflow from model to estimate</li>
+                <li>✅ Software comparison: CostX vs Vico vs Cubicost</li>
+                <li>✅ Model requirements for accurate quantity takeoff</li>
+                <li>✅ Real-world ROI and case studies</li>
+                <li>✅ Best practices and common pitfalls to avoid</li>
+            </ul>
+        </div>
 
-        <h2>📊 Quantity Takeoff</h2>
-        <table class="pricing-table">
-            <tr><th>Type</th><th>Unit</th><th>Example</th></tr>
-            <tr><td>Volume</td><td>m³</td><td>Concrete</td></tr>
-            <tr><td>Area</td><td>m²</td><td>Flooring</td></tr>
-            <tr><td>Length</td><td>m</td><td>Pipes</td></tr>
-            <tr><td>Count</td><td>ea</td><td>Doors</td></tr>
+        <!-- Table of Contents -->
+        <h2>📋 Course Contents</h2>
+        <div class="lesson-card">
+            <ol style="line-height: 2.2;">
+                <li><a href="#module-1">Module 1: Understanding 5D BIM</a></li>
+                <li><a href="#module-2">Module 2: The 5D Workflow</a></li>
+                <li><a href="#module-3">Module 3: Quantity Takeoff Methods</a></li>
+                <li><a href="#module-4">Module 4: Software & Tools</a></li>
+                <li><a href="#module-5">Module 5: Model Requirements (LOD)</a></li>
+                <li><a href="#module-6">Module 6: Cost Integration</a></li>
+                <li><a href="#module-7">Module 7: Best Practices & ROI</a></li>
+                <li><a href="#quiz">Final Quiz</a></li>
+            </ol>
+        </div>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 1 -->
+        <h2 id="module-1"><span class="lesson-number">1</span> Module 1: Understanding 5D BIM</h2>
+        
+        <h3>1.1 What is 5D BIM?</h3>
+        <p>
+            <strong>5D BIM</strong> adds the dimension of <em>cost</em> to your 4D model. It connects 3D geometry with schedule (4D) and links both to <strong>cost data</strong> for real-time budget tracking and estimate updates.
+        </p>
+        
+        <div class="key-takeaway">
+            <h4>🔑 Key Formula</h4>
+            <p style="font-size: 1.3rem; margin: 0;"><strong>5D BIM = 4D (3D + Time) + Cost Integration</strong></p>
+        </div>
+
+        <h3>1.2 5D vs Traditional Estimation</h3>
+        <table class="comparison-table">
+            <tr>
+                <th>Aspect</th>
+                <th>Traditional QTO</th>
+                <th>5D BIM</th>
+            </tr>
+            <tr>
+                <td>Data Source</td>
+                <td>2D drawings (PDF, CAD)</td>
+                <td>3D intelligent model</td>
+            </tr>
+            <tr>
+                <td>Accuracy</td>
+                <td>Manual calculations prone to error</td>
+                <td>Automated extraction</td>
+            </tr>
+            <tr>
+                <td>Update Time</td>
+                <td>Days to weeks</td>
+                <td>Minutes to hours</td>
+            </tr>
+            <tr>
+                <td>Change Impact</td>
+                <td>Manual recalculation</td>
+                <td>Automatic update</td>
+            </tr>
+            <tr>
+                <td>Visualization</td>
+                <td>Separate spreadsheets</td>
+                <td>Visual cost breakdown</td>
+            </tr>
         </table>
 
-        <h2>💻 Software</h2>
+        <div class="real-example">
+            <strong>Industry Statistics:</strong><br>
+            • <strong>40-60%</strong> faster quantity takeoff with 5D BIM<br>
+            • <strong>3-5%</strong> reduction in cost estimation errors<br>
+            • <strong>80%</strong> reduction in change order cost calculation time
+        </div>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 2 -->
+        <h2 id="module-2"><span class="lesson-number">2</span> Module 2: The 5D Workflow</h2>
+        
+        <h3>2.1 Complete 5D Workflow</h3>
+        <div class="workflow-container">
+            <div class="workflow-step">
+                <div class="workflow-number">1</div>
+                <div class="workflow-content">
+                    <h4>Receive BIM Model</h4>
+                    <p>Import IFC/RVT from design team</p>
+                </div>
+            </div>
+            <div class="workflow-step">
+                <div class="workflow-number">2</div>
+                <div class="workflow-content">
+                    <h4>Model Verification</h4>
+                    <p>Check LOD, completeness, naming conventions</p>
+                </div>
+            </div>
+            <div class="workflow-step">
+                <div class="workflow-number">3</div>
+                <div class="workflow-content">
+                    <h4>Classification Mapping</h4>
+                    <p>Map elements to cost codes (CSI, UniFormat)</p>
+                </div>
+            </div>
+            <div class="workflow-step">
+                <div class="workflow-number">4</div>
+                <div class="workflow-content">
+                    <h4>Quantity Takeoff</h4>
+                    <p>Extract quantities by measurement rules</p>
+                </div>
+            </div>
+            <div class="workflow-step">
+                <div class="workflow-number">5</div>
+                <div class="workflow-content">
+                    <h4>Cost Database Link</h4>
+                    <p>Connect to pricing databases (RSMeans, etc.)</p>
+                </div>
+            </div>
+            <div class="workflow-step">
+                <div class="workflow-number">6</div>
+                <div class="workflow-content">
+                    <h4>Generate Estimate</h4>
+                    <p>Calculate costs, add markups, generate reports</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="warning-box">
+            <strong>Critical Step:</strong> Model verification is crucial! An incomplete or poorly-modeled BIM file will lead to inaccurate quantities. Always check LOD before starting takeoff.
+        </div>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 3 -->
+        <h2 id="module-3"><span class="lesson-number">3</span> Module 3: Quantity Takeoff Methods</h2>
+        
+        <h3>3.1 Types of Quantities</h3>
+        <table class="comparison-table">
+            <tr>
+                <th>Type</th>
+                <th>Unit</th>
+                <th>Common Uses</th>
+                <th>BIM Parameter</th>
+            </tr>
+            <tr>
+                <td><strong>Volume</strong></td>
+                <td>m³ / CY</td>
+                <td>Concrete, Excavation</td>
+                <td>Volume</td>
+            </tr>
+            <tr>
+                <td><strong>Area</strong></td>
+                <td>m² / SF</td>
+                <td>Flooring, Painting, Formwork</td>
+                <td>Area, Surface Area</td>
+            </tr>
+            <tr>
+                <td><strong>Length</strong></td>
+                <td>m / LF</td>
+                <td>Pipes, Cables, Curbs</td>
+                <td>Length, Perimeter</td>
+            </tr>
+            <tr>
+                <td><strong>Count</strong></td>
+                <td>ea / nr</td>
+                <td>Doors, Windows, Fixtures</td>
+                <td>Count</td>
+            </tr>
+            <tr>
+                <td><strong>Weight</strong></td>
+                <td>kg / ton</td>
+                <td>Steel, Rebar</td>
+                <td>Material Takeoff</td>
+            </tr>
+        </table>
+
+        <h3>3.2 Measurement Rules</h3>
+        <p>Different standards define HOW to measure quantities:</p>
         <ul>
-            <li><strong>CostX</strong> - Exactal</li>
-            <li><strong>Vico Office</strong> - Trimble</li>
-            <li><strong>Cubicost</strong> - Glodon</li>
+            <li><strong>NRM2 (UK):</strong> New Rules of Measurement for detailed cost planning</li>
+            <li><strong>SMM7 (UK):</strong> Standard Method of Measurement (being replaced by NRM)</li>
+            <li><strong>CSI MasterFormat (USA):</strong> Classification for organizing construction data</li>
+            <li><strong>UniFormat (USA):</strong> Classification by building elements</li>
+            <li><strong>OmniClass:</strong> International classification system</li>
         </ul>
 
-        <h2>💡 Best Practices</h2>
+        <div class="pro-tip">
+            Different measurement standards can give <strong>different quantities</strong> for the same element! Always confirm which standard your client/contract requires before starting takeoff.
+        </div>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 4 -->
+        <h2 id="module-4"><span class="lesson-number">4</span> Module 4: Software & Tools</h2>
+        
+        <h3>4.1 Software Comparison</h3>
+        <table class="comparison-table">
+            <tr>
+                <th>Software</th>
+                <th>Company</th>
+                <th>Best For</th>
+                <th>Price Range</th>
+            </tr>
+            <tr>
+                <td><strong>CostX</strong></td>
+                <td>Exactal</td>
+                <td>General contractors, QS firms</td>
+                <td>$5,000+/year</td>
+            </tr>
+            <tr>
+                <td><strong>Vico Office</strong></td>
+                <td>Trimble</td>
+                <td>Integrated 4D+5D workflow</td>
+                <td>Enterprise</td>
+            </tr>
+            <tr>
+                <td><strong>Cubicost</strong></td>
+                <td>Glodon</td>
+                <td>Asian markets, detailed MEP</td>
+                <td>$3,000+/year</td>
+            </tr>
+            <tr>
+                <td><strong>Navisworks</strong></td>
+                <td>Autodesk</td>
+                <td>Basic QTO + Clash Detection</td>
+                <td>$2,940/year</td>
+            </tr>
+            <tr>
+                <td><strong>Revit Schedules</strong></td>
+                <td>Autodesk</td>
+                <td>Quick native takeoff</td>
+                <td>Included with Revit</td>
+            </tr>
+            <tr>
+                <td><strong>BIM Assure</strong></td>
+                <td>Invicara</td>
+                <td>Cloud-based validation</td>
+                <td>SaaS pricing</td>
+            </tr>
+        </table>
+
+        <h3>4.2 Tool Deep Dive: CostX</h3>
+        <div class="lesson-card">
+            <h4>🔷 CostX by Exactal</h4>
+            <p><strong>Pros:</strong></p>
+            <ul>
+                <li>✅ Direct 3D model measurement</li>
+                <li>✅ Live links to 2D drawings</li>
+                <li>✅ Excel-like workbooks</li>
+                <li>✅ Revision comparison tools</li>
+            </ul>
+            <p><strong>Cons:</strong></p>
+            <ul>
+                <li>❌ Steep learning curve</li>
+                <li>❌ Higher cost than alternatives</li>
+                <li>❌ Limited 4D integration</li>
+            </ul>
+        </div>
+
+        <h3>4.3 Tool Deep Dive: Vico Office</h3>
+        <div class="lesson-card">
+            <h4>🔶 Vico Office by Trimble</h4>
+            <p><strong>Pros:</strong></p>
+            <ul>
+                <li>✅ True 4D+5D integration</li>
+                <li>✅ Location-based scheduling</li>
+                <li>✅ Flowline visualization</li>
+                <li>✅ Advanced analytics</li>
+            </ul>
+            <p><strong>Cons:</strong></p>
+            <ul>
+                <li>❌ Enterprise pricing</li>
+                <li>❌ Complex implementation</li>
+                <li>❌ Requires training</li>
+            </ul>
+        </div>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 5 -->
+        <h2 id="module-5"><span class="lesson-number">5</span> Module 5: Model Requirements (LOD)</h2>
+        
+        <h3>5.1 LOD for 5D BIM</h3>
+        <table class="comparison-table">
+            <tr>
+                <th>LOD</th>
+                <th>Quantity Accuracy</th>
+                <th>Typical Use</th>
+            </tr>
+            <tr>
+                <td><strong>LOD 100</strong></td>
+                <td>±50%</td>
+                <td>Conceptual estimate, order of magnitude</td>
+            </tr>
+            <tr>
+                <td><strong>LOD 200</strong></td>
+                <td>±30%</td>
+                <td>Schematic design budget</td>
+            </tr>
+            <tr>
+                <td><strong>LOD 300</strong></td>
+                <td>±15%</td>
+                <td>Design development estimate</td>
+            </tr>
+            <tr>
+                <td><strong>LOD 350</strong></td>
+                <td>±10%</td>
+                <td>Construction documents estimate</td>
+            </tr>
+            <tr>
+                <td><strong>LOD 400</strong></td>
+                <td>±5%</td>
+                <td>Bid/tender estimate, shop drawings</td>
+            </tr>
+        </table>
+
+        <div class="warning-box">
+            <strong>LOD Mismatch:</strong> If you try to get LOD 400 quantities from an LOD 200 model, you'll get <strong>garbage data</strong>. Always verify model LOD before promising estimate accuracy!
+        </div>
+
+        <h3>5.2 Model Preparation Checklist</h3>
         <ul>
-            <li>✅ Define appropriate LOD (300+)</li>
-            <li>✅ Use unified classification</li>
-            <li>✅ Review quantities before pricing</li>
-            <li>✅ Account for wastage</li>
+            <li>☐ All elements have correct category/family</li>
+            <li>☐ Materials are properly assigned</li>
+            <li>☐ No duplicate/overlapping elements</li>
+            <li>☐ Room boundaries are closed</li>
+            <li>☐ Floor/ceiling/wall joins are correct</li>
+            <li>☐ MEP systems are properly connected</li>
+            <li>☐ Shared parameters for cost codes exist</li>
         </ul>
 
-        <div class="share-buttons">
-            <span class="share-buttons-label">Share:</span>
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 6 -->
+        <h2 id="module-6"><span class="lesson-number">6</span> Module 6: Cost Integration</h2>
+        
+        <h3>6.1 Cost Structure</h3>
+        <div class="cost-formula">
+            Total Cost = (Quantity × Unit Rate) + Labor + Equipment + Markup
+        </div>
+
+        <h3>6.2 Cost Databases</h3>
+        <table class="comparison-table">
+            <tr>
+                <th>Database</th>
+                <th>Coverage</th>
+                <th>Update Frequency</th>
+            </tr>
+            <tr>
+                <td><strong>RSMeans</strong></td>
+                <td>USA, Canada</td>
+                <td>Quarterly</td>
+            </tr>
+            <tr>
+                <td><strong>Spon's</strong></td>
+                <td>UK, Ireland</td>
+                <td>Annual</td>
+            </tr>
+            <tr>
+                <td><strong>Rawlinsons</strong></td>
+                <td>Australia, NZ</td>
+                <td>Annual</td>
+            </tr>
+            <tr>
+                <td><strong>BCIS</strong></td>
+                <td>UK</td>
+                <td>Continuous</td>
+            </tr>
+            <tr>
+                <td><strong>ENR</strong></td>
+                <td>USA (Indices)</td>
+                <td>Weekly</td>
+            </tr>
+        </table>
+
+        <div class="real-example">
+            <strong>Cost Integration Example:</strong><br>
+            A hospital project linked their Revit model to RSMeans database. When the architect changed from vinyl flooring to terrazzo in a 5,000 m² area, the cost impact ($2.3M additional) was calculated <strong>in minutes</strong> instead of the 2 days it would take manually.
+        </div>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 7 -->
+        <h2 id="module-7"><span class="lesson-number">7</span> Module 7: Best Practices & ROI</h2>
+
+        <h3>7.1 Do's ✅</h3>
+        <ul>
+            <li>✅ <strong>Define QTO requirements</strong> in EIR/BEP</li>
+            <li>✅ <strong>Verify LOD</strong> before starting takeoff</li>
+            <li>✅ <strong>Use standard classification</strong> (CSI, UniFormat)</li>
+            <li>✅ <strong>Document assumptions</strong> for non-modeled items</li>
+            <li>✅ <strong>Include wastage factors</strong> in calculations</li>
+            <li>✅ <strong>Cross-check</strong> automated quantities with spot checks</li>
+        </ul>
+
+        <h3>7.2 Don'ts ❌</h3>
+        <ul>
+            <li>❌ <strong>Trust blindly:</strong> Always verify model accuracy</li>
+            <li>❌ <strong>Ignore non-modeled items:</strong> Site work, temporary works</li>
+            <li>❌ <strong>Skip model audit:</strong> Duplicates, overlaps, missing elements</li>
+            <li>❌ <strong>Use wrong units:</strong> m² vs ft² can cause major errors</li>
+        </ul>
+
+        <div class="roi-box">
+            <h4>💰 ROI of 5D BIM</h4>
+            <table class="comparison-table" style="margin: 1rem 0;">
+                <tr>
+                    <th>Metric</th>
+                    <th>Before 5D</th>
+                    <th>After 5D</th>
+                    <th>Improvement</th>
+                </tr>
+                <tr>
+                    <td>QTO Time</td>
+                    <td>40 hours</td>
+                    <td>16 hours</td>
+                    <td><strong>60% faster</strong></td>
+                </tr>
+                <tr>
+                    <td>Update Time</td>
+                    <td>8 hours</td>
+                    <td>30 min</td>
+                    <td><strong>95% faster</strong></td>
+                </tr>
+                <tr>
+                    <td>Error Rate</td>
+                    <td>5-10%</td>
+                    <td>1-3%</td>
+                    <td><strong>70% reduction</strong></td>
+                </tr>
+            </table>
+        </div>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- QUIZ -->
+        <h2 id="quiz">🎯 Final Quiz</h2>
+        
+        <div class="lesson-card" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.05), rgba(5, 150, 105, 0.05));">
+            <h4>🧪 Test Your Knowledge</h4>
+            
+            <p><strong>1. What does 5D BIM add to 4D?</strong></p>
+            <label><input type="radio" name="q1" value="a"> Sustainability data</label><br>
+            <label><input type="radio" name="q1" value="b"> Cost/Quantity data</label><br>
+            <label><input type="radio" name="q1" value="c"> Facility management</label><br>
+            <br>
+            
+            <p><strong>2. What minimum LOD is recommended for detailed estimates?</strong></p>
+            <label><input type="radio" name="q2" value="a"> LOD 100</label><br>
+            <label><input type="radio" name="q2" value="b"> LOD 200</label><br>
+            <label><input type="radio" name="q2" value="c"> LOD 300+</label><br>
+            <br>
+            
+            <p><strong>3. Which is a common USA cost database?</strong></p>
+            <label><input type="radio" name="q3" value="a"> Spon's</label><br>
+            <label><input type="radio" name="q3" value="b"> RSMeans</label><br>
+            <label><input type="radio" name="q3" value="c"> BCIS</label><br>
+            <br>
+            
+            <button onclick="checkQuiz5D()" style="background: linear-gradient(135deg, #10b981, #059669); color: white; border: none; padding: 1rem 2rem; border-radius: 8px; font-weight: 600; cursor: pointer;">Check Answers</button>
+            <div id="quiz-result" style="margin-top: 1rem; font-weight: 600;"></div>
+        </div>
+
+        <script>
+        function checkQuiz5D() {
+            const answers = {q1: 'b', q2: 'c', q3: 'b'};
+            let score = 0;
+            for (let q in answers) {
+                const selected = document.querySelector(`input[name="${q}"]:checked`);
+                if (selected && selected.value === answers[q]) score++;
+            }
+            const result = document.getElementById('quiz-result');
+            if (score === 3) {
+                result.innerHTML = '🎉 Perfect! You are ready for 5D BIM!';
+                result.style.color = '#10b981';
+            } else if (score >= 2) {
+                result.innerHTML = '👍 Good job! Review the modules you missed.';
+                result.style.color = '#f59e0b';
+            } else {
+                result.innerHTML = '📚 Keep learning! Review the course again.';
+                result.style.color = '#ef4444';
+            }
+        }
+        </script>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- Next Steps -->
+        <div class="key-takeaway">
+            <h4>🚀 What's Next?</h4>
+            <p>Continue your BIM journey with <a href="6d-bim-en.html" style="color: white; text-decoration: underline;">6D BIM: Sustainability Integration</a></p>
+        </div>
+
+        <!-- Share Buttons -->
+        <div class="share-buttons" style="margin-top: 3rem;">
+            <span class="share-buttons-label">Share this course:</span>
             <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-btn facebook" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">Facebook</a>
             <a href="https://twitter.com/intent/tweet?url=" class="share-btn twitter" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">Twitter</a>
             <a href="https://www.linkedin.com/shareArticle?mini=true&url=" class="share-btn linkedin" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">LinkedIn</a>
-            <button class="share-btn copy" onclick="navigator.clipboard.writeText(window.location.href);alert('Linked copied!')">Copy Link</button>
+            <a href="https://wa.me/?text=" class="share-btn whatsapp" target="_blank" onclick="this.href+=encodeURIComponent(document.title + ' ' + window.location.href)">WhatsApp</a>
+            <button class="share-btn copy" onclick="navigator.clipboard.writeText(window.location.href);alert('Link copied!')">Copy Link</button>
         </div>
+        
     </div>
 
     <footer class="site-footer">
         <div class="footer-content">
-            <p>CSI Calculator • Built with ❤️ by Sameh Badawy Sayed</p>
+            <p class="footer-text">CSI Calculator • Built with <span class="footer-heart">❤️</span> by <span class="footer-author">Sameh Badawy Sayed</span></p>
         </div>
     </footer>
 </body>
