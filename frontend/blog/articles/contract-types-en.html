@@ -3,14 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Types of Construction Contracts: Comprehensive Guide - CSI Calculator</title>
-    <meta name="description" content="Comprehensive comparison of construction contract types: Lump Sum, Unit Price, Cost Plus, and when to use each with their advantages and disadvantages.">
-    <meta name="keywords" content="Construction Contracts, Lump Sum, Unit Price, Cost Plus, FIDIC, Contract Types">
+    <title>Construction Contract Types: Complete Guide with Risk Analysis - CSI Calculator</title>
+    <meta name="description" content="Master construction contracts: Lump Sum, Unit Price, Cost Plus, GMP, Target Cost, Design-Build, CMAR. Includes risk matrices, payment flows, and selection criteria.">
+    <meta name="keywords" content="Construction Contracts, Lump Sum, Unit Price, Cost Plus, FIDIC, GMP, Design-Build, Contract Types, Risk Allocation">
     
-    <meta property="og:title" content="Types of Construction Contracts: Comprehensive Guide">
-    <meta property="og:description" content="What's the difference between Lump Sum and Unit Price? When to choose each?">
+    <meta property="og:title" content="Construction Contract Types: Complete Guide">
+    <meta property="og:description" content="Choose the right contract type with our comprehensive risk and benefit analysis">
     <meta property="og:type" content="article">
     <meta property="og:image" content="../assets/contract-types.jpg">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "name": "Construction Contract Types Guide",
+      "description": "Complete analysis of construction contract types"
+    }
+    </script>
     
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5429423113977975" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../css/theme.css">
@@ -24,6 +33,140 @@
     <script src="../../js/i18n.js"></script>
     <script src="../../js/theme.js"></script>
     <script src="../../js/blog-i18n.js"></script>
+
+    <style>
+        .contract-hero {
+            background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+            color: white;
+            padding: 2rem;
+            border-radius: 16px;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        .contract-card {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            transition: all 0.3s;
+        }
+        .contract-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        .lumpsum-card { border-left: 5px solid #3b82f6; }
+        .unitprice-card { border-left: 5px solid #f97316; }
+        .costplus-card { border-left: 5px solid #22c55e; }
+        .gmp-card { border-left: 5px solid #8b5cf6; }
+        .designbuild-card { border-left: 5px solid #ec4899; }
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        .card-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        .risk-meter {
+            display: flex;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        .risk-block {
+            flex: 1;
+            padding: 0.75rem;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+        .owner-risk { background: rgba(239, 68, 68, 0.2); color: #dc2626; }
+        .contractor-risk { background: rgba(59, 130, 246, 0.2); color: #1d4ed8; }
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        @media (max-width: 768px) {
+            .two-column { grid-template-columns: 1fr; }
+        }
+        .pros-box {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(34, 197, 94, 0.05));
+            border: 2px solid #22c55e;
+            border-radius: 12px;
+            padding: 1rem;
+        }
+        .cons-box {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(239, 68, 68, 0.05));
+            border: 2px solid #ef4444;
+            border-radius: 12px;
+            padding: 1rem;
+        }
+        .when-box {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(59, 130, 246, 0.05));
+            border-left: 4px solid #3b82f6;
+            padding: 1rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1rem 0;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .comparison-table th {
+            background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        .comparison-table td {
+            padding: 0.875rem;
+            border-bottom: 1px solid #e5e7eb;
+            text-align: center;
+        }
+        .risk-low { color: #22c55e; font-weight: 600; }
+        .risk-med { color: #f59e0b; font-weight: 600; }
+        .risk-high { color: #ef4444; font-weight: 600; }
+        .decision-tree {
+            background: linear-gradient(135deg, #1e293b, #334155);
+            color: white;
+            padding: 2rem;
+            border-radius: 16px;
+            margin: 1.5rem 0;
+        }
+        .decision-node {
+            background: rgba(255,255,255,0.1);
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 0.75rem 0;
+        }
+        .pro-tip {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(34, 197, 94, 0.05));
+            border-left: 4px solid #22c55e;
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.5rem 0;
+        }
+        .key-takeaway {
+            background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+            color: white;
+            padding: 2rem;
+            border-radius: 16px;
+            margin: 2rem 0;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -36,7 +179,7 @@
                 <a href="../../index.html" data-i18n="home" data-icon="🏠"><span>Home</span></a>
                 <a href="../../crew-calculator.html" data-i18n="crewCalculator" data-icon="🧮"><span>Calculator</span></a>
                 <a href="../../ai-planner.html" data-i18n="aiPlanner" data-icon="🤖"><span>AI Planner</span></a>
-                <a href="../index-en.html" class="active" data-i18n="blog" data-icon="📚"><span>Manual & Tips</span></a>
+                <a href="../index-en.html" class="active" data-i18n="blog" data-icon="📚"><span>Knowledge Bites</span></a>
                 <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">🌙</button>
                 <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()"><span id="langIcon">AR</span></button>
             </div>
@@ -45,109 +188,421 @@
 
     <div class="article-header">
         <span class="article-category">Contracts</span>
-        <h1>Types of Construction Contracts: Comprehensive Guide</h1>
+        <h1>Construction Contract Types: Complete Guide with Risk Analysis</h1>
         <div class="article-meta">
-            <span class="article-date">January 7, 2026</span>
-            <span class="article-read-time">14 min read</span>
+            <span class="article-date">January 11, 2026</span>
+            <span class="article-read-time">25 min read</span>
         </div>
     </div>
 
     <div class="article-body">
-        <div class="article-image-container">
-            <img src="../assets/contract-types.jpg" alt="Construction Contracts" class="img-fluid rounded shadow mb-4">
+        <div class="contract-hero">
+            <h2 style="margin-top: 0;">📜 Choose the Right Contract Type</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 0;">There's no "best" contract — only the "most suitable" for your project conditions</p>
         </div>
 
-        <h2>📜 Why Does Contract Type Matter?</h2>
-        <p>
-            Choosing the right contract type is a strategic decision that affects risk distribution between owner and contractor, payment method, and change management. There's no "best" type, but rather the "most suitable" for each situation.
-        </p>
+        <h2>🎯 Why Does Contract Type Matter?</h2>
+        <p>Choosing the right contract type is a <strong>strategic decision</strong> that fundamentally affects:</p>
+        <ul>
+            <li><strong>Risk distribution</strong> between owner and contractor</li>
+            <li><strong>Payment structure</strong> and cash flow</li>
+            <li><strong>Change management</strong> flexibility and cost</li>
+            <li><strong>Project delivery speed</strong></li>
+            <li><strong>Quality control</strong> mechanisms</li>
+            <li><strong>Dispute likelihood</strong></li>
+        </ul>
 
-        <h2>💵 1. Lump Sum / Fixed Price Contract</h2>
-        <h3>Description:</h3>
-        <p>A total fixed price for the entire project is agreed upon before starting. The contractor commits to delivering all work at this amount regardless of actual costs.</p>
+        <h2>📋 Contract Type Overview</h2>
+        <ol>
+            <li><a href="#lumpsum">Lump Sum / Fixed Price</a></li>
+            <li><a href="#unitprice">Unit Price / Re-measurement</a></li>
+            <li><a href="#costplus">Cost Plus / Reimbursable</a></li>
+            <li><a href="#gmp">Guaranteed Maximum Price (GMP)</a></li>
+            <li><a href="#targetcost">Target Cost</a></li>
+            <li><a href="#designbuild">Design-Build</a></li>
+        </ol>
+
+        <hr>
+
+        <div class="contract-card lumpsum-card" id="lumpsum">
+            <div class="card-header">
+                <div class="card-icon" style="background: linear-gradient(135deg, #3b82f6, #1d4ed8); color: white;">💵</div>
+                <h2 style="margin: 0; color: #3b82f6;">1. Lump Sum / Fixed Price Contract</h2>
+            </div>
+
+            <p><strong>Definition:</strong> A total fixed price for the entire project agreed before starting. The contractor delivers all work at this amount regardless of actual costs incurred.</p>
+
+            <div class="risk-meter">
+                <div class="risk-block contractor-risk">
+                    <strong>Contractor Risk</strong><br>HIGH ⬆️
+                </div>
+                <div class="risk-block owner-risk">
+                    <strong>Owner Risk</strong><br>LOW ⬇️
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="pros-box">
+                    <h4 style="color: #16a34a; margin-top: 0;">✅ Advantages</h4>
+                    <ul style="margin-bottom: 0;">
+                        <li><strong>Owner:</strong> Knows final cost upfront</li>
+                        <li><strong>Contractor:</strong> Higher profit if efficient</li>
+                        <li>Simple administration</li>
+                        <li>Clear scope definition</li>
+                        <li>Competitive bidding possible</li>
+                    </ul>
+                </div>
+                <div class="cons-box">
+                    <h4 style="color: #dc2626; margin-top: 0;">❌ Disadvantages</h4>
+                    <ul style="margin-bottom: 0;">
+                        <li>Requires 100% complete design</li>
+                        <li>Contractor bears all price risk</li>
+                        <li>Changes are costly and complex</li>
+                        <li>Disputes over scope interpretation</li>
+                        <li>Longer pre-contract period</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="when-box">
+                <strong>🎯 When to Use:</strong> Design is 100% complete, specifications are clear, few changes expected, traditional delivery, building projects with defined scope.
+            </div>
+
+            <table class="comparison-table">
+                <tr>
+                    <th>FIDIC Form</th>
+                    <th>Payment Mechanism</th>
+                    <th>Typical Use</th>
+                </tr>
+                <tr>
+                    <td>Red Book (with modifications)</td>
+                    <td>Milestone or monthly based on progress %</td>
+                    <td>Buildings, defined infrastructure</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="contract-card unitprice-card" id="unitprice">
+            <div class="card-header">
+                <div class="card-icon" style="background: linear-gradient(135deg, #f97316, #ea580c); color: white;">📏</div>
+                <h2 style="margin: 0; color: #f97316;">2. Unit Price / Re-measurement Contract</h2>
+            </div>
+
+            <p><strong>Definition:</strong> Prices are set for each work unit (e.g., $100/m³ concrete). Actual quantities are measured during execution, and payment is based on measured amounts.</p>
+
+            <div class="risk-meter">
+                <div class="risk-block contractor-risk">
+                    <strong>Contractor Risk</strong><br>MEDIUM ⬌
+                </div>
+                <div class="risk-block owner-risk">
+                    <strong>Owner Risk</strong><br>MEDIUM ⬌
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="pros-box">
+                    <h4 style="color: #16a34a; margin-top: 0;">✅ Advantages</h4>
+                    <ul style="margin-bottom: 0;">
+                        <li>High flexibility for quantity changes</li>
+                        <li>Can start before design complete</li>
+                        <li>Fair — pay only for actual work</li>
+                        <li>Easier to handle variations</li>
+                        <li>Suits civil/infrastructure works</li>
+                    </ul>
+                </div>
+                <div class="cons-box">
+                    <h4 style="color: #dc2626; margin-top: 0;">❌ Disadvantages</h4>
+                    <ul style="margin-bottom: 0;">
+                        <li>Final cost unknown until completion</li>
+                        <li>Continuous measurement effort</li>
+                        <li>Disputes over measurement methods</li>
+                        <li>Rate verification required</li>
+                        <li>More administrative overhead</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="when-box">
+                <strong>🎯 When to Use:</strong> Quantities uncertain (excavation, piling), site conditions variable, civil engineering works, FIDIC Red Book projects.
+            </div>
+
+            <table class="comparison-table">
+                <tr>
+                    <th>FIDIC Form</th>
+                    <th>Payment Mechanism</th>
+                    <th>Typical Use</th>
+                </tr>
+                <tr>
+                    <td>Red Book (traditional)</td>
+                    <td>Monthly based on measured quantities</td>
+                    <td>Civil works, excavation, infrastructure</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="contract-card costplus-card" id="costplus">
+            <div class="card-header">
+                <div class="card-icon" style="background: linear-gradient(135deg, #22c55e, #16a34a); color: white;">💳</div>
+                <h2 style="margin: 0; color: #22c55e;">3. Cost Plus / Reimbursable Contract</h2>
+            </div>
+
+            <p><strong>Definition:</strong> Owner pays all actual contractor costs plus a fee (percentage or fixed) for overhead and profit. Full transparency on costs required.</p>
+
+            <div class="risk-meter">
+                <div class="risk-block contractor-risk">
+                    <strong>Contractor Risk</strong><br>LOW ⬇️
+                </div>
+                <div class="risk-block owner-risk">
+                    <strong>Owner Risk</strong><br>HIGH ⬆️
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="pros-box">
+                    <h4 style="color: #16a34a; margin-top: 0;">✅ Advantages</h4>
+                    <ul style="margin-bottom: 0;">
+                        <li>Maximum flexibility for changes</li>
+                        <li>Can start immediately</li>
+                        <li>No risk for contractor</li>
+                        <li>Promotes collaboration</li>
+                        <li>Suits complex/unique projects</li>
+                    </ul>
+                </div>
+                <div class="cons-box">
+                    <h4 style="color: #dc2626; margin-top: 0;">❌ Disadvantages</h4>
+                    <ul style="margin-bottom: 0;">
+                        <li>No budget ceiling</li>
+                        <li>No cost reduction incentive</li>
+                        <li>Requires strict oversight</li>
+                        <li>Cost audit complexity</li>
+                        <li>Higher owner administration</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="when-box">
+                <strong>🎯 When to Use:</strong> Emergency works, disaster restoration, R&D projects, scope completely unclear, trusted contractor relationship, fast-track required.
+            </div>
+
+            <h4>Cost Plus Variations:</h4>
+            <ul>
+                <li><strong>Cost + Fixed Fee:</strong> Fixed amount for profit regardless of cost</li>
+                <li><strong>Cost + % Fee:</strong> Fee as percentage of cost (less common)</li>
+                <li><strong>Cost + Fee + Incentive:</strong> Bonus for under-budget delivery</li>
+            </ul>
+        </div>
+
+        <div class="contract-card gmp-card" id="gmp">
+            <div class="card-header">
+                <div class="card-icon" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed); color: white;">🔒</div>
+                <h2 style="margin: 0; color: #8b5cf6;">4. Guaranteed Maximum Price (GMP)</h2>
+            </div>
+
+            <p><strong>Definition:</strong> Cost Plus contract with a guaranteed maximum ceiling. Owner pays actual costs up to the ceiling; contractor absorbs any overrun.</p>
+
+            <div class="risk-meter">
+                <div class="risk-block contractor-risk">
+                    <strong>Contractor Risk</strong><br>MEDIUM-HIGH ⬆️
+                </div>
+                <div class="risk-block owner-risk">
+                    <strong>Owner Risk</strong><br>MEDIUM-LOW ⬌
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="pros-box">
+                    <h4 style="color: #16a34a; margin-top: 0;">✅ Advantages</h4>
+                    <ul style="margin-bottom: 0;">
+                        <li>Budget certainty with ceiling</li>
+                        <li>Flexibility of Cost Plus</li>
+                        <li>Contractor efficiency incentive</li>
+                        <li>Savings can be shared</li>
+                        <li>Early contractor involvement</li>
+                    </ul>
+                </div>
+                <div class="cons-box">
+                    <h4 style="color: #dc2626; margin-top: 0;">❌ Disadvantages</h4>
+                    <ul style="margin-bottom: 0;">
+                        <li>Complex to establish ceiling</li>
+                        <li>Scope changes affect GMP</li>
+                        <li>Disputes over ceiling adjustments</li>
+                        <li>Requires detailed cost tracking</li>
+                        <li>Contingency negotiations</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="when-box">
+                <strong>🎯 When to Use:</strong> Design still developing, owner needs cost certainty, collaborative approach desired, CMAR delivery, complex projects.
+            </div>
+        </div>
+
+        <div class="contract-card" id="targetcost" style="border-left: 5px solid #eab308;">
+            <div class="card-header">
+                <div class="card-icon" style="background: linear-gradient(135deg, #eab308, #ca8a04); color: white;">🎯</div>
+                <h2 style="margin: 0; color: #ca8a04;">5. Target Cost Contract</h2>
+            </div>
+
+            <p><strong>Definition:</strong> A target cost is agreed. Savings or overruns are shared between owner and contractor according to a pain/gain share formula.</p>
+
+            <div class="pro-tip">
+                <strong>💡 Example Pain/Gain Share:</strong><br>
+                Target: $10M | Actual: $9M | Saving: $1M<br>
+                Split 50/50 → Owner saves $500K, Contractor bonus $500K<br><br>
+                Target: $10M | Actual: $11M | Overrun: $1M<br>
+                Split 50/50 → Owner pays extra $500K, Contractor absorbs $500K
+            </div>
+
+            <div class="when-box">
+                <strong>🎯 When to Use:</strong> Collaborative delivery (NEC, alliance), shared risk appetite, complex infrastructure, when innovation is valued.
+            </div>
+        </div>
+
+        <div class="contract-card designbuild-card" id="designbuild">
+            <div class="card-header">
+                <div class="card-icon" style="background: linear-gradient(135deg, #ec4899, #db2777); color: white;">🏗️</div>
+                <h2 style="margin: 0; color: #ec4899;">6. Design-Build (D-B)</h2>
+            </div>
+
+            <p><strong>Definition:</strong> Single entity responsible for both design and construction. Often combined with Lump Sum or GMP pricing.</p>
+
+            <div class="two-column">
+                <div class="pros-box">
+                    <h4 style="color: #16a34a; margin-top: 0;">✅ Advantages</h4>
+                    <ul style="margin-bottom: 0;">
+                        <li>Single point of responsibility</li>
+                        <li>Faster delivery (parallel work)</li>
+                        <li>Fewer coordination disputes</li>
+                        <li>Innovation opportunity</li>
+                        <li>Early cost certainty</li>
+                    </ul>
+                </div>
+                <div class="cons-box">
+                    <h4 style="color: #dc2626; margin-top: 0;">❌ Disadvantages</h4>
+                    <ul style="margin-bottom: 0;">
+                        <li>Less owner design control</li>
+                        <li>Quality depends on D-B team</li>
+                        <li>Bid evaluation complexity</li>
+                        <li>Scope changes difficult</li>
+                        <li>Limited competition sometimes</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="when-box">
+                <strong>🎯 When to Use:</strong> Speed is priority, owner has limited design resources, performance specification preferred, industrial/process facilities.
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>📊 Complete Comparison Matrix</h2>
         
-        <h3>Advantages:</h3>
-        <ul>
-            <li><strong>For Owner:</strong> Knows final cost upfront (defined budget).</li>
-            <li><strong>For Contractor:</strong> Opportunity for higher profit if executed efficiently.</li>
-            <li>Easier administration since price is fixed.</li>
-        </ul>
-
-        <h3>Disadvantages:</h3>
-        <ul>
-            <li>Requires complete and detailed drawings and specifications before contracting.</li>
-            <li>Contractor bears all price increase risks.</li>
-            <li>Changes are costly and complex.</li>
-        </ul>
-
-        <h3>When to Use?</h3>
-        <div class="alert alert-info">
-            When drawings are 100% complete, specifications are clear, and few changes are expected.
-        </div>
-
-        <h2>📏 2. Unit Price / Re-measurement Contract</h2>
-        <h3>Description:</h3>
-        <p>A price is set for each work unit (e.g., $100/m³ concrete). Actual executed quantities are measured and payment is based on them.</p>
-        
-        <h3>Advantages:</h3>
-        <ul>
-            <li>High flexibility to handle quantity changes.</li>
-            <li>Can start before design completion.</li>
-            <li>Greater fairness - payment for actual quantities only.</li>
-        </ul>
-
-        <h3>Disadvantages:</h3>
-        <ul>
-            <li>Owner doesn't know final cost upfront.</li>
-            <li>Requires continuous effort to measure and approve quantities.</li>
-            <li>Disputes may arise over measurement methods.</li>
-        </ul>
-
-        <h3>When to Use?</h3>
-        <div class="alert alert-info">
-            When quantities are not precisely defined or expected to change (like excavation works).
-        </div>
-
-        <h2>💳 3. Cost Plus Contract</h2>
-        <h3>Description:</h3>
-        <p>Owner pays all actual contractor costs + a percentage (Fee) as profit and administrative expenses.</p>
-        
-        <h3>Advantages:</h3>
-        <ul>
-            <li>Maximum flexibility for changes.</li>
-            <li>Can start immediately without complete design.</li>
-            <li>No risk for contractor from price increases.</li>
-        </ul>
-
-        <h3>Disadvantages:</h3>
-        <ul>
-            <li>No budget ceiling (complete risk on owner).</li>
-            <li>Contractor has no incentive to reduce costs.</li>
-            <li>Requires strict financial oversight from owner.</li>
-        </ul>
-
-        <h3>When to Use?</h3>
-        <div class="alert alert-info">
-            In emergencies, restoration, or when scope is completely unclear.
-        </div>
-
-        <h2>📊 Comparison Table</h2>
-        <table class="pricing-table">
-            <tr><th>Factor</th><th>Lump Sum</th><th>Unit Price</th><th>Cost Plus</th></tr>
-            <tr><td>Owner Risk</td><td>Low</td><td>Medium</td><td>High</td></tr>
-            <tr><td>Contractor Risk</td><td>High</td><td>Medium</td><td>Low</td></tr>
-            <tr><td>Final Cost Known</td><td>Upfront</td><td>Approximately</td><td>Unknown</td></tr>
-            <tr><td>Change Flexibility</td><td>Low</td><td>Medium</td><td>High</td></tr>
-            <tr><td>Design Requirements</td><td>100% Complete</td><td>70%+ Partial</td><td>Preliminary Only</td></tr>
+        <table class="comparison-table">
+            <tr>
+                <th>Factor</th>
+                <th>Lump Sum</th>
+                <th>Unit Price</th>
+                <th>Cost Plus</th>
+                <th>GMP</th>
+            </tr>
+            <tr>
+                <td><strong>Owner Risk</strong></td>
+                <td class="risk-low">Low</td>
+                <td class="risk-med">Medium</td>
+                <td class="risk-high">High</td>
+                <td class="risk-med">Medium</td>
+            </tr>
+            <tr>
+                <td><strong>Contractor Risk</strong></td>
+                <td class="risk-high">High</td>
+                <td class="risk-med">Medium</td>
+                <td class="risk-low">Low</td>
+                <td class="risk-med">Medium-High</td>
+            </tr>
+            <tr>
+                <td><strong>Cost Certainty</strong></td>
+                <td>Known upfront</td>
+                <td>Approximate</td>
+                <td>Unknown</td>
+                <td>Ceiling known</td>
+            </tr>
+            <tr>
+                <td><strong>Change Flexibility</strong></td>
+                <td class="risk-high">Low</td>
+                <td class="risk-med">Medium</td>
+                <td class="risk-low">High</td>
+                <td class="risk-med">Medium</td>
+            </tr>
+            <tr>
+                <td><strong>Design Completion</strong></td>
+                <td>100%</td>
+                <td>70%+</td>
+                <td>Minimal</td>
+                <td>60-80%</td>
+            </tr>
+            <tr>
+                <td><strong>Admin Effort</strong></td>
+                <td>Low</td>
+                <td>Medium</td>
+                <td>High</td>
+                <td>Medium-High</td>
+            </tr>
+            <tr>
+                <td><strong>FIDIC Form</strong></td>
+                <td>Yellow Book</td>
+                <td>Red Book</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
         </table>
 
-        <h2>🔄 Hybrid Contracts</h2>
-        <p>In reality, many contracts combine multiple types:</p>
-        <ul>
-            <li><strong>GMP (Guaranteed Maximum Price):</strong> Cost Plus but with a maximum ceiling.</li>
-            <li><strong>Target Cost:</strong> Incentive for sharing savings or losses.</li>
-            <li><strong>Lump Sum + Unit Rates:</strong> Lump sum for fixed works + unit rate for variable ones.</li>
-        </ul>        <!-- Share Buttons -->
+        <div class="decision-tree">
+            <h3 style="margin-top: 0; text-align: center;">🛤️ Contract Selection Decision Guide</h3>
+            
+            <div class="decision-node">
+                <strong>Q1: Is design complete?</strong><br>
+                → Yes (100%): Consider <strong>Lump Sum</strong><br>
+                → Partial (70%+): Consider <strong>Unit Price or GMP</strong><br>
+                → Minimal: Consider <strong>Cost Plus or Design-Build</strong>
+            </div>
+            
+            <div class="decision-node">
+                <strong>Q2: What's your risk tolerance?</strong><br>
+                → Want cost certainty: <strong>Lump Sum or GMP</strong><br>
+                → Can accept uncertainty: <strong>Cost Plus or Unit Price</strong>
+            </div>
+            
+            <div class="decision-node">
+                <strong>Q3: How likely are changes?</strong><br>
+                → Few changes expected: <strong>Lump Sum</strong><br>
+                → Moderate changes: <strong>Unit Price or GMP</strong><br>
+                → Many changes likely: <strong>Cost Plus</strong>
+            </div>
+            
+            <div class="decision-node">
+                <strong>Q4: How fast do you need to start?</strong><br>
+                → Can wait for full design: <strong>Lump Sum</strong><br>
+                → Need early start: <strong>GMP, Cost Plus, or Design-Build</strong>
+            </div>
+        </div>
+
+        <div class="key-takeaway">
+            <h3 style="margin-top: 0;">🎯 Key Takeaways</h3>
+            <ol style="margin-bottom: 0;">
+                <li><strong>No "best" contract</strong> — only "most suitable" for your conditions</li>
+                <li><strong>Risk allocation</strong> is the fundamental differentiator</li>
+                <li><strong>Design completeness</strong> drives contract selection</li>
+                <li><strong>Hybrid contracts</strong> often work best in practice</li>
+                <li><strong>Match expectations</strong> — discuss risk before contract</li>
+            </ol>
+        </div>
+
+        <div class="pro-tip" style="background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(124, 58, 237, 0.05));">
+            <h3>📊 Calculate Your Project!</h3>
+            <p>Whatever contract type you choose, accurate productivity data is essential. Use our <a href="../../crew-calculator.html" style="color: #7c3aed; font-weight: 700;">Crew Calculator</a> for CSI-based productivity rates to build reliable estimates.</p>
+        </div>
+
         <div class="share-buttons">
             <span class="share-buttons-label">Share this article:</span>
             <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-btn facebook" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">Facebook</a>
@@ -157,9 +612,8 @@
             <button class="share-btn copy" onclick="navigator.clipboard.writeText(window.location.href);alert('Link copied!')">Copy Link</button>
         </div>
         
-        
         <hr>
-        <p><strong>Read Also:</strong> <a href="evm-introduction-en.html">Introduction to Earned Value Management (EVM)</a></p>
+        <p><strong>Related:</strong> <a href="fidic-contracts-en.html">FIDIC Contracts: Complete Guide</a> | <a href="evm-introduction-en.html">Earned Value Management (EVM)</a></p>
     </div>
 
     <footer class="site-footer">
