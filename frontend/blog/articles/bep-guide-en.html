@@ -185,33 +185,37 @@
         </ul>
 
         <h3>5.2 Example: 3D Coordination Process Map</h3>
-        <pre style="background: #f5f5f5; padding: 15px; border-radius: 8px;">
-┌──────────────────┐
-│ Upload models    │ ← Model Authors
-│ to Navisworks    │
-└────────┬─────────┘
-         ↓
-┌──────────────────┐
-│ Run Clash        │ ← BIM Coordinator
-│ Detection        │
-└────────┬─────────┘
-         ↓
-┌──────────────────┐
-│ Review results   │ ← BIM Coordinator
-│ Classify clashes │
-└────────┬─────────┘
-         ↓
-    ┌────┴────┐
-    │ Clashes │
-    │ found?  │
-    └────┬────┘
-    Yes ↓    ↓ No
-┌────────────┐  ┌──────────────┐
-│ Issue BCF  │  │ Issue        │
-│ to teams   │  │ Coordination │
-│            │  │ Approved     │
-└────────────┘  └──────────────┘
-        </pre>
+        <div class="workflow-container">
+            <div class="workflow-step">
+                <div class="workflow-number">1</div>
+                <div class="workflow-content">
+                    <h4>Upload models to Navisworks</h4>
+                    <p>Model Authors</p>
+                </div>
+            </div>
+            <div class="workflow-step">
+                <div class="workflow-number">2</div>
+                <div class="workflow-content">
+                    <h4>Run Clash Detection</h4>
+                    <p>BIM Coordinator</p>
+                </div>
+            </div>
+            <div class="workflow-step">
+                <div class="workflow-number">3</div>
+                <div class="workflow-content">
+                    <h4>Review results & Classify clashes</h4>
+                    <p>BIM Coordinator</p>
+                </div>
+            </div>
+            <div class="workflow-step">
+                <div class="workflow-number">4</div>
+                <div class="workflow-content">
+                    <h4>Clashes found? → Issue BCF to teams</h4>
+                    <p>If No Clashes → Coordination Approved ✅</p>
+                </div>
+            </div>
+        </div>
+
 
         <hr>
 

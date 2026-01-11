@@ -134,27 +134,37 @@
         <h2 id="iso-context">🌍 3. EIR في سياق ISO 19650</h2>
 
         <h3>3.1 هرمية المتطلبات حسب ISO 19650:</h3>
-        <pre style="background: #f5f5f5; padding: 15px; border-radius: 8px; direction: ltr;">
-┌─────────────────────────────────────────┐
-│ OIR - Organizational Info Requirements  │
-│ (ما تحتاجه المنظمة ككل)                 │
-└────────────────┬────────────────────────┘
-                 ↓
-┌─────────────────────────────────────────┐
-│ AIR - Asset Info Requirements           │
-│ (ما تحتاجه لتشغيل الأصل/المبنى)         │
-└────────────────┬────────────────────────┘
-                 ↓
-┌─────────────────────────────────────────┐
-│ PIR - Project Info Requirements         │
-│ (ما تحتاجه خلال مراحل المشروع)          │
-└────────────────┬────────────────────────┘
-                 ↓
-┌─────────────────────────────────────────┐
-│ EIR - Exchange Info Requirements        │
-│ (ما يجب تسليمه في كل مرحلة)             │
-└─────────────────────────────────────────┘
-        </pre>
+        <div class="workflow-container">
+            <div class="workflow-step">
+                <div class="workflow-number">1</div>
+                <div class="workflow-content">
+                    <h4>OIR - Organizational Info Requirements</h4>
+                    <p>ما تحتاجه المنظمة ككل</p>
+                </div>
+            </div>
+            <div class="workflow-step">
+                <div class="workflow-number">2</div>
+                <div class="workflow-content">
+                    <h4>AIR - Asset Info Requirements</h4>
+                    <p>ما تحتاجه لتشغيل الأصل/المبنى</p>
+                </div>
+            </div>
+            <div class="workflow-step">
+                <div class="workflow-number">3</div>
+                <div class="workflow-content">
+                    <h4>PIR - Project Info Requirements</h4>
+                    <p>ما تحتاجه خلال مراحل المشروع</p>
+                </div>
+            </div>
+            <div class="workflow-step">
+                <div class="workflow-number">4</div>
+                <div class="workflow-content">
+                    <h4>EIR - Exchange Info Requirements</h4>
+                    <p>ما يجب تسليمه في كل مرحلة</p>
+                </div>
+            </div>
+        </div>
+
 
         <h3>3.2 دورة تبادل المعلومات:</h3>
         <ol>
@@ -299,19 +309,51 @@
         </table>
 
         <h3>7.2 التسلسل:</h3>
-        <pre style="background: #f5f5f5; padding: 15px; border-radius: 8px;">
-المالك يُعد EIR
-       ↓
-EIR يُرفق في وثائق المناقصة
-       ↓
-المتقدمون يُعدون Pre-BEP (خطة أولية)
-       ↓
-الفائز يُعد BEP تفصيلي
-       ↓
-المالك يُراجع ويعتمد BEP
-       ↓
-التنفيذ وفق BEP
-        </pre>
+        <div class="workflow-container">
+            <div class="workflow-step">
+                <div class="workflow-number">1</div>
+                <div class="workflow-content">
+                    <h4>المالك يُعد EIR</h4>
+                    <p>تحديد جميع متطلبات المعلومات</p>
+                </div>
+            </div>
+            <div class="workflow-step">
+                <div class="workflow-number">2</div>
+                <div class="workflow-content">
+                    <h4>EIR يُرفق في وثائق المناقصة</h4>
+                    <p>جزء من مستندات العقد</p>
+                </div>
+            </div>
+            <div class="workflow-step">
+                <div class="workflow-number">3</div>
+                <div class="workflow-content">
+                    <h4>المتقدمون يُعدون Pre-BEP</h4>
+                    <p>خطة أولية للاستجابة للمتطلبات</p>
+                </div>
+            </div>
+            <div class="workflow-step">
+                <div class="workflow-number">4</div>
+                <div class="workflow-content">
+                    <h4>الفائز يُعد BEP تفصيلي</h4>
+                    <p>خطة تنفيذ BIM الكاملة</p>
+                </div>
+            </div>
+            <div class="workflow-step">
+                <div class="workflow-number">5</div>
+                <div class="workflow-content">
+                    <h4>المالك يُراجع ويعتمد BEP</h4>
+                    <p>الموافقة على خطة التنفيذ</p>
+                </div>
+            </div>
+            <div class="workflow-step">
+                <div class="workflow-number">6</div>
+                <div class="workflow-content">
+                    <h4>التنفيذ وفق BEP</h4>
+                    <p>العمل والتسليم حسب الخطة المعتمدة</p>
+                </div>
+            </div>
+        </div>
+
 
         <hr>
 
