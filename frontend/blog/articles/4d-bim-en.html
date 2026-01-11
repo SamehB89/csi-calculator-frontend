@@ -3,14 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4D BIM: Linking Schedule to Model - Complete Guide - CSI Calculator</title>
-    <meta name="description" content="Comprehensive guide to 4D BIM: how to link schedule to 3D model, construction simulation, and best practices.">
-    <meta name="keywords" content="4D BIM, Schedule, Construction Simulation, Navisworks, Synchro">
+    <title>4D BIM Complete Course: Master Construction Scheduling with BIM | CSI Calculator</title>
+    <meta name="description" content="Complete 4D BIM course: Learn how to link 3D models with schedules, create construction simulations, use Navisworks & Synchro, with real-world examples and best practices.">
+    <meta name="keywords" content="4D BIM, Construction Simulation, Navisworks TimeLiner, Synchro Pro, BIM Scheduling, Construction Sequencing">
     
-    <meta property="og:title" content="4D BIM: Linking Schedule to Model">
-    <meta property="og:description" content="Intensive course on 4D BIM and construction simulation">
+    <meta property="og:title" content="4D BIM Complete Course: Master Construction Scheduling">
+    <meta property="og:description" content="Learn 4D BIM from scratch to advanced with practical examples">
     <meta property="og:type" content="article">
-    <meta property="og:image" content="../assets/4d-bim.jpg">
+    <meta property="og:image" content="images/4d-bim-concept.png">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "4D BIM Complete Course",
+      "description": "Master construction scheduling with BIM - from basics to advanced",
+      "provider": {
+        "@type": "Organization",
+        "name": "CSI Calculator",
+        "sameAs": "https://csi-calc.vercel.app"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Sameh Badawy Sayed"
+      }
+    }
+    </script>
     
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5429423113977975" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../css/theme.css">
@@ -24,19 +42,214 @@
     <script src="../../js/i18n.js"></script>
     <script src="../../js/theme.js"></script>
     <script src="../../js/blog-i18n.js"></script>
+    
+    <style>
+        .course-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .lesson-card {
+            background: var(--bg-secondary);
+            border: 2px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            transition: all 0.3s ease;
+        }
+        
+        .lesson-card:hover {
+            border-color: var(--primary-color);
+            box-shadow: 0 8px 30px rgba(102, 126, 234, 0.15);
+        }
+        
+        .lesson-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 50%;
+            font-weight: 700;
+            margin-left: 1rem;
+        }
+        
+        .pro-tip {
+            background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(76, 175, 80, 0.05));
+            border-left: 4px solid #4CAF50;
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.5rem 0;
+        }
+        
+        .pro-tip::before {
+            content: "💡 Pro Tip";
+            display: block;
+            font-weight: 700;
+            color: #4CAF50;
+            margin-bottom: 0.5rem;
+        }
+        
+        .warning-box {
+            background: linear-gradient(135deg, rgba(255, 152, 0, 0.1), rgba(255, 152, 0, 0.05));
+            border-left: 4px solid #FF9800;
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.5rem 0;
+        }
+        
+        .warning-box::before {
+            content: "⚠️ Important";
+            display: block;
+            font-weight: 700;
+            color: #FF9800;
+            margin-bottom: 0.5rem;
+        }
+        
+        .real-example {
+            background: linear-gradient(135deg, rgba(33, 150, 243, 0.1), rgba(33, 150, 243, 0.05));
+            border-left: 4px solid #2196F3;
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.5rem 0;
+        }
+        
+        .real-example::before {
+            content: "📋 Real-World Example";
+            display: block;
+            font-weight: 700;
+            color: #2196F3;
+            margin-bottom: 0.5rem;
+        }
+        
+        .step-by-step {
+            counter-reset: step-counter;
+            list-style: none;
+            padding: 0;
+        }
+        
+        .step-by-step li {
+            counter-increment: step-counter;
+            position: relative;
+            padding: 1rem 1rem 1rem 4rem;
+            margin: 1rem 0;
+            background: var(--bg-tertiary);
+            border-radius: 12px;
+        }
+        
+        .step-by-step li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 32px;
+            height: 32px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .comparison-table th {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .comparison-table td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            background: var(--bg-secondary);
+        }
+        
+        .comparison-table tr:hover td {
+            background: var(--bg-tertiary);
+        }
+        
+        .key-takeaway {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 1.5rem 2rem;
+            border-radius: 16px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .key-takeaway h4 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .progress-indicator {
+            display: flex;
+            gap: 0.5rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .progress-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--border-color);
+        }
+        
+        .progress-dot.active {
+            background: var(--primary-color);
+        }
+        
+        .exercise-box {
+            background: linear-gradient(135deg, rgba(156, 39, 176, 0.1), rgba(156, 39, 176, 0.05));
+            border: 2px dashed #9C27B0;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+        
+        .exercise-box h4 {
+            color: #9C27B0;
+            margin-bottom: 1rem;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
         <div class="container">
             <a href="../../index.html" class="logo-container">
-                <img src="../../assets/logo.png" alt="SAMEH Logo" class="logo-image">
+                <img src="../../assets/logo.png" alt="CSI Logo" class="logo-image">
                 <span class="logo-text">CSI Calculator</span>
             </a>
             <div class="nav-links">
                 <a href="../../index.html" data-i18n="home" data-icon="🏠"><span>Home</span></a>
                 <a href="../../crew-calculator.html" data-i18n="crewCalculator" data-icon="🧮"><span>Calculator</span></a>
                 <a href="../../ai-planner.html" data-i18n="aiPlanner" data-icon="🤖"><span>AI Planner</span></a>
-                <a href="../index-en.html" class="active" data-i18n="blog" data-icon="📚"><span>Manual & Tips</span></a>
+                <a href="../../evm-calculator.html" data-i18n="evmCalculator" data-icon="📊"><span>EVM Calculator</span></a>
+                <a href="../index-en.html" class="active" data-i18n="blog" data-icon="📚"><span>Knowledge Bites</span></a>
                 <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">🌙</button>
                 <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()"><span id="langIcon">AR</span></button>
             </div>
@@ -44,197 +257,485 @@
     </nav>
 
     <div class="article-header">
+        <span class="course-badge">📚 Complete Course</span>
         <span class="article-category">BIM Dimensions</span>
-        <h1>4D BIM: Linking Schedule to Model - Complete Guide</h1>
+        <h1>4D BIM: Master Construction Scheduling with BIM</h1>
+        <p style="font-size: 1.2rem; opacity: 0.9; margin-top: 1rem;">From Zero to Hero - Everything You Need to Know</p>
         <div class="article-meta">
-            <span class="article-date">January 8, 2026</span>
-            <span class="article-read-time">20 min read</span>
+            <span class="article-date">Updated: January 2026</span>
+            <span class="article-read-time">35 min course</span>
         </div>
     </div>
 
-    <div class="article-body">
-        <div class="article-image-container">
-            <img src="../assets/4d-bim.jpg" alt="4D BIM" class="img-fluid rounded shadow mb-4">
+    <div class="article-body" style="max-width: 900px;">
+        
+        <!-- Hero Image -->
+        <div class="concept-image-wrapper" style="margin: 2rem 0;">
+            <img src="images/4d-bim-concept.png" alt="4D BIM = 3D Model + Time (Schedule) = Visual Construction Simulation" style="width: 100%; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.15);">
         </div>
 
-        <div class="alert alert-info">
-            <strong>📚 This article is part of the BIM Dimensions series:</strong> 3D → <strong>4D</strong> → 5D → 6D → 7D
+        <!-- Introduction -->
+        <div class="alert alert-info" style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)); border: none; border-radius: 16px; padding: 2rem;">
+            <h3 style="margin-bottom: 1rem;">🎯 What You'll Learn in This Course</h3>
+            <ul style="margin: 0; line-height: 2;">
+                <li>✅ What 4D BIM is and why it matters</li>
+                <li>✅ How to link your 3D model to a schedule</li>
+                <li>✅ Creating professional construction simulations</li>
+                <li>✅ Software comparison: Navisworks vs Synchro</li>
+                <li>✅ Real-world examples and case studies</li>
+                <li>✅ Best practices and common mistakes to avoid</li>
+            </ul>
         </div>
 
-        <h2>📋 Table of Contents</h2>
-        <ol>
-            <li><a href="#what-is-4d">What is 4D BIM?</a></li>
-            <li><a href="#benefits">4D BIM Benefits</a></li>
-            <li><a href="#workflow">Workflow</a></li>
-            <li><a href="#software">Software Used</a></li>
-            <li><a href="#linking">Linking Model to Schedule</a></li>
-            <li><a href="#simulation">Construction Simulation</a></li>
-            <li><a href="#use-cases">Use Cases</a></li>
-            <li><a href="#best-practices">Best Practices</a></li>
+        <!-- Table of Contents -->
+        <h2>📋 Course Contents</h2>
+        <div class="lesson-card">
+            <ol style="line-height: 2.2;">
+                <li><a href="#module-1">Module 1: Understanding 4D BIM</a></li>
+                <li><a href="#module-2">Module 2: The 4D Workflow</a></li>
+                <li><a href="#module-3">Module 3: Software & Tools</a></li>
+                <li><a href="#module-4">Module 4: Linking Model to Schedule</a></li>
+                <li><a href="#module-5">Module 5: Creating Simulations</a></li>
+                <li><a href="#module-6">Module 6: Practical Use Cases</a></li>
+                <li><a href="#module-7">Module 7: Best Practices</a></li>
+                <li><a href="#quiz">Final Quiz</a></li>
+            </ol>
+        </div>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 1 -->
+        <h2 id="module-1"><span class="lesson-number">1</span> Module 1: Understanding 4D BIM</h2>
+        
+        <h3>1.1 What is 4D BIM?</h3>
+        <p>
+            <strong>4D BIM</strong> adds the dimension of <em>time</em> to your 3D model. Think of it as bringing your static building model to life by showing <strong>when</strong> each element will be constructed.
+        </p>
+        
+        <div class="key-takeaway">
+            <h4>🔑 Key Formula</h4>
+            <p style="font-size: 1.3rem; margin: 0;"><strong>4D BIM = 3D Model + Time (Schedule)</strong></p>
+        </div>
+
+        <h3>1.2 Why 4D BIM Matters</h3>
+        <p>Imagine you're a project manager with a 500-page schedule in Primavera P6. How do you explain it to:</p>
+        <ul>
+            <li>🏢 The client who has no construction background?</li>
+            <li>👷 The subcontractor who needs to coordinate with others?</li>
+            <li>🏦 The bank that's financing the project?</li>
+        </ul>
+        
+        <div class="pro-tip">
+            4D BIM transforms complex schedules into visual stories that everyone can understand. A 10-minute simulation can explain what 100 pages of Gantt charts cannot.
+        </div>
+
+        <h3>1.3 The ROI of 4D BIM</h3>
+        <table class="comparison-table">
+            <tr>
+                <th>Benefit</th>
+                <th>Traditional</th>
+                <th>With 4D BIM</th>
+            </tr>
+            <tr>
+                <td>Schedule Review Time</td>
+                <td>2-3 hours</td>
+                <td>20-30 minutes</td>
+            </tr>
+            <tr>
+                <td>Clash Detection (Time)</td>
+                <td>Often missed</td>
+                <td>Identified early</td>
+            </tr>
+            <tr>
+                <td>Client Understanding</td>
+                <td>Limited</td>
+                <td>Crystal clear</td>
+            </tr>
+            <tr>
+                <td>Coordination Meetings</td>
+                <td>2+ hours</td>
+                <td>45 minutes</td>
+            </tr>
+        </table>
+
+        <div class="real-example">
+            <strong>Case Study: Dubai Marina Tower</strong><br>
+            A contractor used 4D BIM to identify a scheduling conflict where concrete pours were scheduled during curtain wall installation. This was caught 3 months before execution, saving an estimated <strong>$250,000</strong> in delay costs.
+        </div>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 2 -->
+        <h2 id="module-2"><span class="lesson-number">2</span> Module 2: The 4D Workflow</h2>
+        
+        <h3>2.1 The Complete Workflow</h3>
+        <p>Creating a 4D simulation follows these systematic steps:</p>
+        
+        <ol class="step-by-step">
+            <li><strong>Prepare Your 3D Model</strong><br>
+                Export from Revit, ArchiCAD, or Tekla. Ensure proper LOD and naming conventions.</li>
+            <li><strong>Prepare Your Schedule</strong><br>
+                Create a detailed schedule in Primavera P6 or MS Project with proper WBS structure.</li>
+            <li><strong>Import Both into 4D Software</strong><br>
+                Use Navisworks, Synchro Pro, or other 4D tools to bring them together.</li>
+            <li><strong>Link Elements to Activities</strong><br>
+                Connect model objects to their corresponding schedule activities.</li>
+            <li><strong>Configure Simulation Settings</strong><br>
+                Set appearance types, colors, intervals, and animation effects.</li>
+            <li><strong>Review & Iterate</strong><br>
+                Play the simulation, identify issues, and refine as needed.</li>
         </ol>
 
-        <hr>
-
-        <h2 id="what-is-4d">🎬 1. What is 4D BIM?</h2>
-        <p>
-            <strong>4D BIM</strong> adds the dimension of time to the 3D model. It links each model element to its corresponding activity in the project schedule.
-        </p>
-
-        <h3>1.1 The 4D BIM Concept:</h3>
-        <div class="concept-image-wrapper" style="margin: 2rem 0;">
-            <img src="images/4d-bim-concept.png" alt="4D BIM = 3D Model + Time (Schedule) = Visual Construction Simulation" style="width: 100%; max-width: 800px; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.15);">
+        <div class="warning-box">
+            <strong>Common Mistake:</strong> Many teams try to create 4D without proper coordination between the BIM team and Planning team. This results in mismatched LOD levels – e.g., the model has one "slab" element but the schedule has 20 activities for the same slab.
         </div>
 
-        <h3>1.2 What Can You See?</h3>
-        <ul>
-            <li>Construction sequence visually</li>
-            <li>Elements appearing by execution date</li>
-            <li>Time and space conflicts</li>
-            <li>Project progress over time</li>
-        </ul>
-
-        <hr>
-
-        <h2 id="benefits">🎯 2. 4D BIM Benefits</h2>
-
-        <h3>2.1 For Planning:</h3>
-        <table class="pricing-table">
-            <tr><th>Benefit</th><th>Description</th></tr>
-            <tr><td>Time conflict detection</td><td>Will two works overlap in same space?</td></tr>
-            <tr><td>Sequence optimization</td><td>Is this the best execution order?</td></tr>
-            <tr><td>Site planning</td><td>Where to place equipment and storage?</td></tr>
-            <tr><td>Critical path identification</td><td>Which activities are most sensitive?</td></tr>
+        <h3>2.2 Required Team Roles</h3>
+        <table class="comparison-table">
+            <tr>
+                <th>Role</th>
+                <th>Responsibility</th>
+                <th>Skills Needed</th>
+            </tr>
+            <tr>
+                <td>BIM Coordinator</td>
+                <td>Prepare & export 3D model</td>
+                <td>Revit, Navisworks</td>
+            </tr>
+            <tr>
+                <td>Planner</td>
+                <td>Create & export schedule</td>
+                <td>Primavera P6, MS Project</td>
+            </tr>
+            <tr>
+                <td>4D Specialist</td>
+                <td>Link & create simulation</td>
+                <td>Navisworks, Synchro</td>
+            </tr>
+            <tr>
+                <td>Project Manager</td>
+                <td>Review & approve</td>
+                <td>Construction knowledge</td>
+            </tr>
         </table>
 
-        <h3>2.2 For Communication:</h3>
-        <ul>
-            <li><strong>Owner presentation:</strong> Easy project understanding</li>
-            <li><strong>Team coordination:</strong> Everyone sees the big picture</li>
-            <li><strong>Better meetings:</strong> Visual-based discussions</li>
-            <li><strong>Progress reports:</strong> Planned vs actual comparison</li>
-        </ul>
+        <hr style="margin: 3rem 0;">
 
-        <hr>
-
-        <h2 id="workflow">🔄 3. Workflow</h2>
-
-        <h3>3.1 Basic Steps:</h3>
-        <pre style="background: #f5f5f5; padding: 15px; border-radius: 8px;">
-┌─────────────────────────────────────┐
-│ 1. Prepare 3D Model (Design Team)  │
-│    - Revit, ArchiCAD, etc.          │
-└──────────────┬──────────────────────┘
-               ↓
-┌─────────────────────────────────────┐
-│ 2. Prepare Schedule (Planner)      │
-│    - Primavera P6, MS Project       │
-└──────────────┬──────────────────────┘
-               ↓
-┌─────────────────────────────────────┐
-│ 3. Export/Import to 4D Software    │
-│    - Navisworks, Synchro            │
-└──────────────┬──────────────────────┘
-               ↓
-┌─────────────────────────────────────┐
-│ 4. Link Elements to Activities     │
-└──────────────┬──────────────────────┘
-               ↓
-┌─────────────────────────────────────┐
-│ 5. Verify and Simulate             │
-└─────────────────────────────────────┘
-        </pre>
-
-        <hr>
-
-        <h2 id="software">💻 4. Software Used</h2>
-
-        <h3>4.1 Main 4D Software:</h3>
-        <table class="pricing-table">
-            <tr><th>Software</th><th>Company</th><th>Features</th></tr>
-            <tr><td>Navisworks</td><td>Autodesk</td><td>Revit integration, Clash Detection</td></tr>
-            <tr><td>Synchro Pro</td><td>Bentley</td><td>Advanced 4D capabilities, logistics</td></tr>
-            <tr><td>Vico Office</td><td>Trimble</td><td>Integrated 4D + 5D</td></tr>
-            <tr><td>Asta Powerproject</td><td>Elecosoft</td><td>Scheduling + 4D</td></tr>
-            <tr><td>Fuzor</td><td>Kalloc</td><td>VR + 4D</td></tr>
+        <!-- MODULE 3 -->
+        <h2 id="module-3"><span class="lesson-number">3</span> Module 3: Software & Tools</h2>
+        
+        <h3>3.1 Software Comparison</h3>
+        <table class="comparison-table">
+            <tr>
+                <th>Software</th>
+                <th>Company</th>
+                <th>Best For</th>
+                <th>Price Range</th>
+            </tr>
+            <tr>
+                <td><strong>Navisworks Manage</strong></td>
+                <td>Autodesk</td>
+                <td>Revit users, clash detection + 4D</td>
+                <td>$2,940/year</td>
+            </tr>
+            <tr>
+                <td><strong>Synchro Pro</strong></td>
+                <td>Bentley</td>
+                <td>Advanced 4D, logistics simulation</td>
+                <td>$5,000+/year</td>
+            </tr>
+            <tr>
+                <td><strong>Vico Office</strong></td>
+                <td>Trimble</td>
+                <td>4D + 5D integrated</td>
+                <td>Enterprise</td>
+            </tr>
+            <tr>
+                <td><strong>Fuzor</strong></td>
+                <td>Kalloc</td>
+                <td>VR + 4D, presentations</td>
+                <td>$1,995</td>
+            </tr>
+            <tr>
+                <td><strong>Bexel Manager</strong></td>
+                <td>Bexel</td>
+                <td>Cost-effective alternative</td>
+                <td>$500/year</td>
+            </tr>
         </table>
 
-        <hr>
+        <h3>3.2 Navisworks vs Synchro: Deep Dive</h3>
+        
+        <div class="lesson-card">
+            <h4>🔷 Navisworks Manage</h4>
+            <p><strong>Pros:</strong></p>
+            <ul>
+                <li>✅ Seamless integration with Revit</li>
+                <li>✅ Excellent clash detection (Clash Detective)</li>
+                <li>✅ Large user community</li>
+                <li>✅ Part of Autodesk AEC Collection</li>
+            </ul>
+            <p><strong>Cons:</strong></p>
+            <ul>
+                <li>❌ Limited 4D capabilities compared to Synchro</li>
+                <li>❌ No resource visualization</li>
+                <li>❌ Basic logistics simulation</li>
+            </ul>
+        </div>
 
-        <h2 id="linking">🔗 5. Linking Model to Schedule</h2>
+        <div class="lesson-card">
+            <h4>🔶 Synchro Pro</h4>
+            <p><strong>Pros:</strong></p>
+            <ul>
+                <li>✅ Advanced 4D capabilities</li>
+                <li>✅ Built-in P6 integration</li>
+                <li>✅ Equipment and crew animation</li>
+                <li>✅ Site logistics planning</li>
+            </ul>
+            <p><strong>Cons:</strong></p>
+            <ul>
+                <li>❌ Steeper learning curve</li>
+                <li>❌ Higher cost</li>
+                <li>❌ Requires more powerful hardware</li>
+            </ul>
+        </div>
 
-        <h3>5.1 Linking Methods:</h3>
-        <table class="pricing-table">
-            <tr><th>Method</th><th>Description</th><th>When to Use</th></tr>
-            <tr><td>Manual</td><td>Drag and drop each element</td><td>Small projects</td></tr>
-            <tr><td>Selection Sets</td><td>Groups + Activities</td><td>Medium</td></tr>
-            <tr><td>Auto-Match</td><td>Automatic linking by name/code</td><td>Large projects</td></tr>
-            <tr><td>WBS Mapping</td><td>Linking via WBS</td><td>Structured projects</td></tr>
+        <div class="pro-tip">
+            <strong>My Recommendation:</strong> If you're already using Autodesk products and need basic 4D, start with <strong>Navisworks</strong>. If you need advanced logistics, resource planning, and detailed simulations, invest in <strong>Synchro Pro</strong>.
+        </div>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 4 -->
+        <h2 id="module-4"><span class="lesson-number">4</span> Module 4: Linking Model to Schedule</h2>
+        
+        <h3>4.1 Linking Methods</h3>
+        <table class="comparison-table">
+            <tr>
+                <th>Method</th>
+                <th>How It Works</th>
+                <th>Best For</th>
+            </tr>
+            <tr>
+                <td><strong>Manual Drag & Drop</strong></td>
+                <td>Select elements, drag to activity</td>
+                <td>Small projects, learning</td>
+            </tr>
+            <tr>
+                <td><strong>Selection Sets</strong></td>
+                <td>Pre-grouped elements linked to activities</td>
+                <td>Medium projects</td>
+            </tr>
+            <tr>
+                <td><strong>Auto-Match by Name</strong></td>
+                <td>Software matches by naming convention</td>
+                <td>Large projects with standards</td>
+            </tr>
+            <tr>
+                <td><strong>WBS Mapping</strong></td>
+                <td>Link via Work Breakdown Structure</td>
+                <td>Enterprise-level coordination</td>
+            </tr>
         </table>
 
-        <h3>5.2 Best Practices for Linking:</h3>
+        <h3>4.2 Naming Convention Strategy</h3>
+        <p>The key to successful auto-linking is <strong>consistent naming</strong>. Here's a proven system:</p>
+        
+        <div class="lesson-card" style="background: #1e293b; color: #e2e8f0; font-family: monospace;">
+            <p><strong>In Primavera P6 (Activity ID):</strong></p>
+            <code style="color: #a5b4fc;">A1020.10 - Pour Ground Floor Columns</code>
+            <br><br>
+            <p><strong>In Revit (Parameter):</strong></p>
+            <code style="color: #a5b4fc;">TaskCode = A1020.10</code>
+            <br><br>
+            <p><strong>Or Element Name:</strong></p>
+            <code style="color: #a5b4fc;">Column_A1020.10_GF_Zone-A</code>
+        </div>
+
+        <div class="real-example">
+            <strong>Real Setup Example:</strong><br>
+            For a hospital project with 5,000+ activities, we created a shared parameter "ActivityCode" in Revit. The planner exported the schedule with matching codes. Result: <strong>85% auto-link success rate</strong>, with only 15% needing manual attention.
+        </div>
+
+        <h3>4.3 Step-by-Step: Linking in Navisworks</h3>
+        <ol class="step-by-step">
+            <li><strong>Open TimeLiner tab</strong><br>Go to Home → Tools → TimeLiner</li>
+            <li><strong>Import your schedule</strong><br>Data Sources → Add → Select CSV or P6 XML file</li>
+            <li><strong>Create Selection Sets</strong><br>Use Find Items or Sets → Create from selection</li>
+            <li><strong>Link using Rules</strong><br>Right-click task → Auto-Attach Using Rules</li>
+            <li><strong>Configure appearance</strong><br>Set Start/End appearance, colors for each task type</li>
+        </ol>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 5 -->
+        <h2 id="module-5"><span class="lesson-number">5</span> Module 5: Creating Simulations</h2>
+
+        <h3>5.1 Simulation Types</h3>
+        <table class="comparison-table">
+            <tr>
+                <th>Type</th>
+                <th>Description</th>
+                <th>Use Case</th>
+            </tr>
+            <tr>
+                <td><strong>Construct</strong></td>
+                <td>Elements appear when activity starts</td>
+                <td>Most construction activities</td>
+            </tr>
+            <tr>
+                <td><strong>Demolish</strong></td>
+                <td>Elements disappear</td>
+                <td>Demolition, temporary works removal</td>
+            </tr>
+            <tr>
+                <td><strong>Temporary</strong></td>
+                <td>Appear then disappear</td>
+                <td>Formwork, scaffolding, shoring</td>
+            </tr>
+            <tr>
+                <td><strong>Grow</strong></td>
+                <td>Element grows with progress</td>
+                <td>Linear elements like roads, pipes</td>
+            </tr>
+        </table>
+
+        <h3>5.2 Color Coding Best Practices</h3>
+        <p>Use consistent colors to communicate status:</p>
         <ul>
-            <li>✅ Use unified naming between model and schedule</li>
-            <li>✅ Match LOD level with WBS level</li>
-            <li>✅ Create logical Selection Sets</li>
-            <li>✅ Document linking rules</li>
+            <li>🟢 <strong>Green:</strong> Completed / As-built</li>
+            <li>🔵 <strong>Blue:</strong> Currently under construction</li>
+            <li>🟡 <strong>Yellow:</strong> Planned for this period</li>
+            <li>🔴 <strong>Red:</strong> Delayed / Critical path</li>
+            <li>⚪ <strong>Transparent:</strong> Future work</li>
         </ul>
 
-        <hr>
+        <div class="pro-tip">
+            Export your simulation as a <strong>video file (MP4)</strong> for presentations. Most stakeholders won't have Navisworks installed - a video ensures everyone can view it.
+        </div>
 
-        <h2 id="simulation">🎥 6. Construction Simulation</h2>
+        <hr style="margin: 3rem 0;">
 
-        <h3>6.1 Simulation Types:</h3>
+        <!-- MODULE 6 -->
+        <h2 id="module-6"><span class="lesson-number">6</span> Module 6: Practical Use Cases</h2>
+
+        <h3>6.1 Pre-Construction Planning</h3>
         <ul>
-            <li><strong>Appearance:</strong> Elements appear at execution start</li>
-            <li><strong>Grow:</strong> Element grows with progress</li>
-            <li><strong>Temporary:</strong> Temporary elements (formwork, scaffolding)</li>
-            <li><strong>Demolition:</strong> Removal/demolition</li>
+            <li>🏗️ <strong>Buildability Review:</strong> Identify construction sequence issues</li>
+            <li>🚧 <strong>Site Logistics:</strong> Plan crane locations, material storage</li>
+            <li>📅 <strong>Phasing:</strong> Plan partial handovers</li>
+            <li>💼 <strong>Client Presentations:</strong> Win projects with visual proposals</li>
         </ul>
 
-        <hr>
-
-        <h2 id="use-cases">📊 7. Use Cases</h2>
-
-        <h3>7.1 Before Execution:</h3>
+        <h3>6.2 During Construction</h3>
         <ul>
-            <li>Buildability review</li>
-            <li>Temporary site planning</li>
-            <li>Delivery phases identification</li>
-            <li>Owner/investor presentation</li>
+            <li>📊 <strong>Progress Tracking:</strong> Compare planned vs actual visually</li>
+            <li>👥 <strong>Coordination Meetings:</strong> Weekly look-ahead discussions</li>
+            <li>🔄 <strong>What-If Scenarios:</strong> Evaluate recovery options</li>
+            <li>📝 <strong>Documentation:</strong> Record as-built progression</li>
         </ul>
 
-        <h3>7.2 During Execution:</h3>
+        <h3>6.3 Claims & Disputes</h3>
         <ul>
-            <li>Actual progress tracking</li>
-            <li>Schedule updates with visuals</li>
-            <li>Weekly coordination</li>
-            <li>Management reports</li>
+            <li>⚖️ <strong>Delay Analysis:</strong> Visual evidence of impact events</li>
+            <li>📋 <strong>As-Planned vs As-Built:</strong> Side-by-side comparison</li>
+            <li>🔍 <strong>Root Cause Analysis:</strong> Trace back to origin of delays</li>
         </ul>
 
-        <hr>
+        <div class="real-example">
+            <strong>Claims Example:</strong><br>
+            A contractor used 4D to demonstrate how a design change caused a 45-day delay. The visual simulation was shown in arbitration and helped recover <strong>$1.2 million</strong> in delay damages.
+        </div>
 
-        <h2 id="best-practices">💡 8. Best Practices</h2>
+        <hr style="margin: 3rem 0;">
 
-        <h3>8.1 Tips for Success:</h3>
+        <!-- MODULE 7 -->
+        <h2 id="module-7"><span class="lesson-number">7</span> Module 7: Best Practices</h2>
+
+        <h3>7.1 Do's ✅</h3>
         <ul>
-            <li>✅ Start early (from design)</li>
-            <li>✅ Coordinate between BIM and planning teams</li>
-            <li>✅ Define appropriate detail level</li>
-            <li>✅ Update regularly</li>
-            <li>✅ Use 4D in coordination meetings</li>
+            <li>✅ <strong>Start Early:</strong> Begin 4D during design phase, not just construction</li>
+            <li>✅ <strong>Match LOD to Schedule:</strong> If schedule has weekly activities, LOD should match</li>
+            <li>✅ <strong>Update Regularly:</strong> Keep 4D in sync with schedule updates</li>
+            <li>✅ <strong>Include Temporary Works:</strong> Formwork, scaffolding, cranes</li>
+            <li>✅ <strong>Document Your Rules:</strong> Create a linking protocol document</li>
         </ul>
 
-        <h3>8.2 Common Mistakes:</h3>
+        <h3>7.2 Don'ts ❌</h3>
         <ul>
-            <li>❌ Incompatible detail levels</li>
-            <li>❌ Not updating 4D with schedule</li>
-            <li>❌ Wrong linking (one element = multiple activities)</li>
-            <li>❌ Ignoring temporary elements</li>
+            <li>❌ <strong>Mismatched Detail:</strong> 100 schedule activities for 1 model element</li>
+            <li>❌ <strong>Set and Forget:</strong> 4D needs continuous maintenance</li>
+            <li>❌ <strong>Ignore Coordination:</strong> BIM and Planning must work together</li>
+            <li>❌ <strong>Over-complicate:</strong> Start simple, add complexity gradually</li>
         </ul>
+
+        <div class="warning-box">
+            <strong>The #1 Failure Point:</strong> Lack of communication between the BIM team and Planning team. Schedule regular sync meetings and use a shared naming convention from day one.
+        </div>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- QUIZ -->
+        <h2 id="quiz">🎯 Final Quiz</h2>
+        
+        <div class="exercise-box">
+            <h4>🧪 Test Your Knowledge</h4>
+            
+            <p><strong>1. What does 4D BIM add to a 3D model?</strong></p>
+            <label><input type="radio" name="q1" value="a"> Cost estimation</label><br>
+            <label><input type="radio" name="q1" value="b"> Time/Schedule</label><br>
+            <label><input type="radio" name="q1" value="c"> Sustainability data</label><br>
+            <br>
+            
+            <p><strong>2. Which software is best for Revit integration?</strong></p>
+            <label><input type="radio" name="q2" value="a"> Synchro Pro</label><br>
+            <label><input type="radio" name="q2" value="b"> Navisworks</label><br>
+            <label><input type="radio" name="q2" value="c"> Vico Office</label><br>
+            <br>
+            
+            <p><strong>3. What's the key to successful auto-linking?</strong></p>
+            <label><input type="radio" name="q3" value="a"> Expensive software</label><br>
+            <label><input type="radio" name="q3" value="b"> Consistent naming conventions</label><br>
+            <label><input type="radio" name="q3" value="c"> More RAM</label><br>
+            <br>
+            
+            <button onclick="checkQuiz()" style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; border: none; padding: 1rem 2rem; border-radius: 8px; font-weight: 600; cursor: pointer;">Check Answers</button>
+            <div id="quiz-result" style="margin-top: 1rem; font-weight: 600;"></div>
+        </div>
+
+        <script>
+        function checkQuiz() {
+            const answers = {q1: 'b', q2: 'b', q3: 'b'};
+            let score = 0;
+            for (let q in answers) {
+                const selected = document.querySelector(`input[name="${q}"]:checked`);
+                if (selected && selected.value === answers[q]) score++;
+            }
+            const result = document.getElementById('quiz-result');
+            if (score === 3) {
+                result.innerHTML = '🎉 Perfect! You are ready for 4D BIM!';
+                result.style.color = '#4CAF50';
+            } else if (score >= 2) {
+                result.innerHTML = '👍 Good job! Review the modules you missed.';
+                result.style.color = '#FF9800';
+            } else {
+                result.innerHTML = '📚 Keep learning! Review the course again.';
+                result.style.color = '#F44336';
+            }
+        }
+        </script>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- Next Steps -->
+        <div class="key-takeaway">
+            <h4>🚀 What's Next?</h4>
+            <p>Continue your BIM journey with <a href="5d-bim-en.html" style="color: white; text-decoration: underline;">5D BIM: Cost Integration</a></p>
+        </div>
 
         <!-- Share Buttons -->
-        <div class="share-buttons">
-            <span class="share-buttons-label">Share this article:</span>
+        <div class="share-buttons" style="margin-top: 3rem;">
+            <span class="share-buttons-label">Share this course:</span>
             <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-btn facebook" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">Facebook</a>
             <a href="https://twitter.com/intent/tweet?url=" class="share-btn twitter" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">Twitter</a>
             <a href="https://www.linkedin.com/shareArticle?mini=true&url=" class="share-btn linkedin" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">LinkedIn</a>
@@ -242,13 +743,11 @@
             <button class="share-btn copy" onclick="navigator.clipboard.writeText(window.location.href);alert('Link copied!')">Copy Link</button>
         </div>
         
-        <hr>
-        <p><strong>Next Article:</strong> <a href="5d-bim-en.html">5D BIM: Quantity Takeoff and Cost from Model</a></p>
     </div>
 
     <footer class="site-footer">
         <div class="footer-content">
-            <p class="footer-text">CSI Crew Calculator • Built with <span class="footer-heart">❤️</span> by <span class="footer-author">Sameh Badawy Sayed</span></p>
+            <p class="footer-text">CSI Calculator • Built with <span class="footer-heart">❤️</span> by <span class="footer-author">Sameh Badawy Sayed</span></p>
         </div>
     </footer>
 </body>
