@@ -3,14 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Construction Scheduling Fundamentals - CSI Calculator</title>
-    <meta name="description" content="Comprehensive guide to construction scheduling fundamentals: schedule types, activity relationships, and time constraints.">
-    <meta name="keywords" content="Scheduling, Planning, Baseline, Milestones, Construction Schedule">
+    <title>Construction Scheduling Fundamentals: Complete Course - CSI Calculator</title>
+    <meta name="description" content="Comprehensive 8-module course on construction scheduling. Master WBS, activity relationships, CPM, Gantt charts, resource leveling, baseline management, and delay analysis with real examples.">
+    <meta name="keywords" content="construction scheduling, CPM, Gantt chart, WBS, baseline, milestones, Primavera P6, project planning">
     
-    <meta property="og:title" content="Construction Scheduling Fundamentals">
-    <meta property="og:description" content="How to build a professional project schedule?">
+    <meta property="og:title" content="Construction Scheduling Fundamentals: Complete Course">
+    <meta property="og:description" content="Master project scheduling with 8 comprehensive modules covering all scheduling fundamentals">
     <meta property="og:type" content="article">
     <meta property="og:image" content="../assets/scheduling-fundamentals.jpg">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "Construction Scheduling Fundamentals",
+      "description": "Complete guide to construction project scheduling",
+      "provider": {
+        "@type": "Organization",
+        "name": "CSI Calculator"
+      }
+    }
+    </script>
     
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5429423113977975" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../css/theme.css">
@@ -20,10 +33,143 @@
     <link rel="stylesheet" href="../../css/ads.css">
     <link rel="stylesheet" href="../../css/share-buttons.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <script src="../../js/ads.js"></script>
     <script src="../../js/i18n.js"></script>
     <script src="../../js/theme.js"></script>
     <script src="../../js/blog-i18n.js"></script>
+
+    <style>
+        .course-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #0ea5e9, #0284c7);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        .module-card {
+            background: linear-gradient(135deg, rgba(14, 165, 233, 0.05), rgba(14, 165, 233, 0.1));
+            border-left: 4px solid #0ea5e9;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+        .module-number {
+            color: #0ea5e9;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        .formula-box {
+            background: linear-gradient(135deg, #1e293b, #334155);
+            color: #fff;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+        }
+        .pro-tip {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(34, 197, 94, 0.05));
+            border-left: 4px solid #22c55e;
+            padding: 1rem 1.5rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+        }
+        .warning-box {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(239, 68, 68, 0.05));
+            border-left: 4px solid #ef4444;
+            padding: 1rem 1.5rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        .comparison-table th {
+            background: linear-gradient(135deg, #0ea5e9, #0284c7);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+        }
+        .comparison-table td {
+            padding: 0.875rem 1rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .comparison-table tr:hover {
+            background: rgba(14, 165, 233, 0.05);
+        }
+        .key-takeaway {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(99, 102, 241, 0.05));
+            border: 2px solid #6366f1;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 12px;
+        }
+        .workflow-step {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            margin: 0.5rem 0;
+            border: 1px solid #e5e7eb;
+        }
+        .step-number {
+            background: linear-gradient(135deg, #0ea5e9, #0284c7);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        .gantt-example {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 12px;
+            overflow-x: auto;
+        }
+        .activity-bar {
+            height: 24px;
+            border-radius: 4px;
+            margin: 4px 0;
+        }
+        .quiz-container {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(168, 85, 247, 0.05));
+            padding: 2rem;
+            border-radius: 16px;
+            margin: 2rem 0;
+            border: 2px solid #a855f7;
+        }
+        .quiz-question {
+            margin: 1.5rem 0;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+        }
+        .quiz-options { list-style: none; padding: 0; }
+        .quiz-option {
+            padding: 0.75rem;
+            margin: 0.5rem 0;
+            background: #f3f4f6;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .quiz-option:hover {
+            background: #e5e7eb;
+            transform: translateX(5px);
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -36,7 +182,7 @@
                 <a href="../../index.html" data-i18n="home" data-icon="🏠"><span>Home</span></a>
                 <a href="../../crew-calculator.html" data-i18n="crewCalculator" data-icon="🧮"><span>Calculator</span></a>
                 <a href="../../ai-planner.html" data-i18n="aiPlanner" data-icon="🤖"><span>AI Planner</span></a>
-                <a href="../index-en.html" class="active" data-i18n="blog" data-icon="📚"><span>Manual & Tips</span></a>
+                <a href="../index-en.html" class="active" data-i18n="blog" data-icon="📚"><span>Knowledge Bites</span></a>
                 <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">🌙</button>
                 <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()"><span id="langIcon">AR</span></button>
             </div>
@@ -44,105 +190,817 @@
     </nav>
 
     <div class="article-header">
+        <span class="course-badge">📚 COMPLETE COURSE</span>
         <span class="article-category">Planning & Scheduling</span>
         <h1>Construction Scheduling Fundamentals</h1>
         <div class="article-meta">
-            <span class="article-date">January 8, 2026</span>
-            <span class="article-read-time">12 min read</span>
+            <span class="article-date">January 11, 2026</span>
+            <span class="article-read-time">30 min read</span>
+            <span>8 Modules</span>
         </div>
     </div>
 
     <div class="article-body">
-        <div class="article-image-container">
-            <img src="../assets/scheduling-fundamentals.jpg" alt="Project Scheduling" class="img-fluid rounded shadow mb-4">
+        <div class="key-takeaway">
+            <h3>🎯 Course Overview</h3>
+            <p>Master the fundamentals of construction project scheduling. This 8-module course covers everything from basic concepts to advanced techniques including CPM, resource loading, baseline management, and delay analysis.</p>
+            <p><strong>Prerequisites:</strong> Basic project management knowledge</p>
+            <p><strong>Level:</strong> Beginner to Intermediate</p>
         </div>
 
-        <h2>📅 What is Project Scheduling?</h2>
-        <p>
-            Project scheduling is the process of determining activity sequence, durations, and start/finish dates to complete the project on time. It's an essential tool for managing construction projects and ensuring coordination among all parties.
-        </p>
-
-        <h2>🎯 Importance of Scheduling</h2>
-        <ul>
-            <li><strong>For Owner:</strong> Know expected delivery date.</li>
-            <li><strong>For Contractor:</strong> Organize resources, labor, and equipment.</li>
-            <li><strong>For Consultant:</strong> Monitor progress and delays.</li>
-            <li><strong>For Financing:</strong> Link payments to completion percentages.</li>
-        </ul>
-
-        <h2>📊 Types of Schedules</h2>
-        <h3>1. Master Schedule</h3>
-        <p>Overview of entire project showing main milestones and major phases.</p>
-
-        <h3>2. Detailed Schedule</h3>
-        <p>Activities detailed with greater precision including relationships and resources.</p>
-
-        <h3>3. Two-Week Look-Ahead</h3>
-        <p>Short-term operational plan for daily execution.</p>
-
-        <h3>4. Phase Schedule</h3>
-        <p>Detail for specific phase like foundations or structure.</p>
-
-        <h2>🔗 Activity Relationships</h2>
-        <table class="pricing-table">
-            <tr><th>Relationship Type</th><th>Meaning</th><th>Example</th></tr>
-            <tr><td>FS (Finish-to-Start)</td><td>A finishes before B starts</td><td>Excavation then pouring</td></tr>
-            <tr><td>SS (Start-to-Start)</td><td>A and B start together</td><td>Excavation and hauling</td></tr>
-            <tr><td>FF (Finish-to-Finish)</td><td>A and B finish together</td><td>Inspection and handover</td></tr>
-            <tr><td>SF (Start-to-Finish)</td><td>A starts before B finishes</td><td>Rarely used</td></tr>
-        </table>
-
-        <h2>⏱️ Lead and Lag</h2>
-        <ul>
-            <li><strong>Lag (Delay):</strong> Mandatory waiting period. Example: Pour concrete then wait 7 days for curing.</li>
-            <li><strong>Lead (Advancement):</strong> Start next activity before previous ends. Example: Start finishing before structure is 80% complete.</li>
-        </ul>
-
-        <h2>🚧 Constraints</h2>
-        <ul>
-            <li><strong>As Soon As Possible:</strong> Start at earliest possible time.</li>
-            <li><strong>As Late As Possible:</strong> Delay to latest possible moment.</li>
-            <li><strong>Start No Earlier Than:</strong> Cannot start before specific date.</li>
-            <li><strong>Finish No Later Than:</strong> Cannot finish after specific date.</li>
-            <li><strong>Must Start On:</strong> Must start on specific date.</li>
-            <li><strong>Must Finish On:</strong> Must finish on specific date.</li>
-        </ul>
-
-        <h2>📍 Milestones</h2>
-        <p>Zero-duration activities (Duration = 0) representing important points:</p>
-        <ul>
-            <li>Project Start</li>
-            <li>Foundation Completion</li>
-            <li>Structure Completion</li>
-            <li>Preliminary Handover</li>
-            <li>Final Handover</li>
-        </ul>
-
-        <h2>📐 Steps to Create Schedule</h2>
+        <h2>📋 Course Modules</h2>
         <ol>
-            <li><strong>Define Activities:</strong> Break down work into measurable activities.</li>
-            <li><strong>Estimate Durations:</strong> Determine each activity duration.</li>
-            <li><strong>Define Relationships:</strong> Link activities together.</li>
-            <li><strong>Assign Resources:</strong> Link labor and equipment.</li>
-            <li><strong>Identify Critical Path:</strong> Know most important activities.</li>
-            <li><strong>Optimize:</strong> Balance resources and reduce risks.</li>
+            <li><a href="#module1">Introduction to Project Scheduling</a></li>
+            <li><a href="#module2">Work Breakdown Structure (WBS)</a></li>
+            <li><a href="#module3">Activity Attributes and Relationships</a></li>
+            <li><a href="#module4">Duration Estimation Methods</a></li>
+            <li><a href="#module5">Schedule Calculation (CPM Basics)</a></li>
+            <li><a href="#module6">Schedule Types and Presentations</a></li>
+            <li><a href="#module7">Baseline and Progress Tracking</a></li>
+            <li><a href="#module8">Delay Analysis Fundamentals</a></li>
         </ol>
 
-        <h2>🛠️ Common Scheduling Software</h2>
-        <ul>
-            <li><strong>Oracle Primavera P6:</strong> For large, complex projects.</li>
-            <li><strong>Microsoft Project:</strong> For medium projects.</li>
-            <li><strong>Asta Powerproject:</strong> Popular in UK.</li>
-            <li><strong>Excel:</strong> For small, simple projects.</li>
-        </ul>
+        <hr>
 
-        <h2>💡 Tips for Beginners</h2>
-        <ul>
-            <li>Start with WBS before creating schedule.</li>
-            <li>Don't over-detail initially.</li>
-            <li>Review schedule with execution team.</li>
-            <li>Update schedule at least weekly.</li>
-        </ul>        <!-- Share Buttons -->
+        <div class="module-card" id="module1">
+            <div class="module-number">📖 MODULE 1: Introduction to Project Scheduling</div>
+            <h2>What is Project Scheduling?</h2>
+            
+            <p>Project scheduling is the process of determining the sequence of activities, their durations, start and finish dates, and resource requirements to complete a project on time and within budget.</p>
+
+            <h3>1.1 Why Scheduling Matters</h3>
+            <table class="comparison-table">
+                <tr>
+                    <th>Stakeholder</th>
+                    <th>Primary Scheduling Need</th>
+                    <th>Key Questions Answered</th>
+                </tr>
+                <tr>
+                    <td>Owner/Client</td>
+                    <td>Project completion date</td>
+                    <td>When will I get my building?</td>
+                </tr>
+                <tr>
+                    <td>Contractor</td>
+                    <td>Resource planning</td>
+                    <td>What crews do I need and when?</td>
+                </tr>
+                <tr>
+                    <td>Subcontractors</td>
+                    <td>Work window</td>
+                    <td>When do I mobilize?</td>
+                </tr>
+                <tr>
+                    <td>Consultant/PM</td>
+                    <td>Progress monitoring</td>
+                    <td>Are we on track?</td>
+                </tr>
+                <tr>
+                    <td>Lender/Bank</td>
+                    <td>Payment schedule</td>
+                    <td>When are draw requests expected?</td>
+                </tr>
+                <tr>
+                    <td>Procurement</td>
+                    <td>Material lead times</td>
+                    <td>When must I order materials?</td>
+                </tr>
+            </table>
+
+            <h3>1.2 Scheduling vs. Planning</h3>
+            <table class="comparison-table">
+                <tr>
+                    <th>Aspect</th>
+                    <th>Planning</th>
+                    <th>Scheduling</th>
+                </tr>
+                <tr>
+                    <td>Focus</td>
+                    <td>WHAT needs to be done</td>
+                    <td>WHEN it will be done</td>
+                </tr>
+                <tr>
+                    <td>Output</td>
+                    <td>Scope, WBS, specifications</td>
+                    <td>Dates, durations, sequences</td>
+                </tr>
+                <tr>
+                    <td>Question</td>
+                    <td>What activities are needed?</td>
+                    <td>When do they start/finish?</td>
+                </tr>
+                <tr>
+                    <td>Sequence</td>
+                    <td>Comes first</td>
+                    <td>Follows planning</td>
+                </tr>
+            </table>
+
+            <div class="pro-tip">
+                <strong>💡 Key Insight:</strong> Planning defines the scope (WHAT); Scheduling defines the timeline (WHEN). You cannot schedule effectively without first completing proper planning.
+            </div>
+
+            <h3>1.3 The Scheduling Process</h3>
+            <div class="workflow-step"><span class="step-number">1</span><div><strong>Define Activities</strong> - Break work into schedulable units</div></div>
+            <div class="workflow-step"><span class="step-number">2</span><div><strong>Sequence Activities</strong> - Determine dependencies/relationships</div></div>
+            <div class="workflow-step"><span class="step-number">3</span><div><strong>Estimate Durations</strong> - Calculate how long each takes</div></div>
+            <div class="workflow-step"><span class="step-number">4</span><div><strong>Assign Resources</strong> - Link labor, equipment, materials</div></div>
+            <div class="workflow-step"><span class="step-number">5</span><div><strong>Calculate Schedule</strong> - Run CPM, determine critical path</div></div>
+            <div class="workflow-step"><span class="step-number">6</span><div><strong>Optimize</strong> - Level resources, compress if needed</div></div>
+            <div class="workflow-step"><span class="step-number">7</span><div><strong>Baseline</strong> - Lock approved schedule for comparison</div></div>
+        </div>
+
+        <hr>
+
+        <div class="module-card" id="module2">
+            <div class="module-number">🏗️ MODULE 2: Work Breakdown Structure (WBS)</div>
+            <h2>The Foundation of Every Schedule</h2>
+
+            <h3>2.1 What is WBS?</h3>
+            <p>The <strong>Work Breakdown Structure (WBS)</strong> is a hierarchical decomposition of the total scope of work. It's the foundation upon which the schedule is built.</p>
+
+            <h3>2.2 WBS Levels</h3>
+            <table class="comparison-table">
+                <tr>
+                    <th>Level</th>
+                    <th>Name</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Project</td>
+                    <td>Office Building Project</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Phase</td>
+                    <td>Structure, Finishes, MEP</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Deliverable</td>
+                    <td>Foundations, Columns, Slabs</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Work Package</td>
+                    <td>Ground Floor Slab</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Activity</td>
+                    <td>GF Slab Formwork, Rebar, Pour</td>
+                </tr>
+            </table>
+
+            <h3>2.3 WBS Example: Residential Villa</h3>
+            <div style="background: #f8fafc; padding: 1.5rem; border-radius: 12px; font-family: monospace; overflow-x: auto;">
+<pre style="margin: 0;">
+Villa Project
+├── 1.0 Preliminaries
+│   ├── 1.1 Site Preparation
+│   ├── 1.2 Temporary Facilities
+│   └── 1.3 Surveying
+├── 2.0 Substructure
+│   ├── 2.1 Excavation
+│   ├── 2.2 Foundations
+│   │   ├── 2.2.1 Foundation Formwork
+│   │   ├── 2.2.2 Foundation Rebar
+│   │   └── 2.2.3 Foundation Pour
+│   └── 2.3 Ground Beams
+├── 3.0 Superstructure
+│   ├── 3.1 Columns
+│   ├── 3.2 Beams
+│   └── 3.3 Slabs
+├── 4.0 Finishes
+│   ├── 4.1 Masonry
+│   ├── 4.2 Plastering
+│   ├── 4.3 Flooring
+│   └── 4.4 Painting
+├── 5.0 MEP
+│   ├── 5.1 Electrical
+│   ├── 5.2 Plumbing
+│   └── 5.3 HVAC
+└── 6.0 External Works
+</pre>
+            </div>
+
+            <div class="warning-box">
+                <strong>⚠️ Common Mistake:</strong> Creating activities directly without a WBS leads to missing work, poor organization, and difficulty tracking progress. Always build WBS first!
+            </div>
+
+            <h3>2.4 The 100% Rule</h3>
+            <p>The WBS must represent 100% of the project scope. Each level must equal the sum of its children. Nothing missing, nothing duplicated.</p>
+        </div>
+
+        <hr>
+
+        <div class="module-card" id="module3">
+            <div class="module-number">🔗 MODULE 3: Activity Attributes and Relationships</div>
+            <h2>Connecting Activities Together</h2>
+
+            <h3>3.1 Activity Attributes</h3>
+            <p>Each activity in a schedule has key attributes:</p>
+            <ul>
+                <li><strong>Activity ID:</strong> Unique identifier (e.g., A1000, STR-001)</li>
+                <li><strong>Activity Name:</strong> Clear, descriptive work description</li>
+                <li><strong>Duration:</strong> Time to complete (working days)</li>
+                <li><strong>Calendar:</strong> Work schedule (5-day, 7-day, custom)</li>
+                <li><strong>Resources:</strong> Labor, equipment, materials</li>
+                <li><strong>Predecessors:</strong> Activities that must complete first</li>
+                <li><strong>Successors:</strong> Activities that follow</li>
+            </ul>
+
+            <h3>3.2 Relationship Types (PDM)</h3>
+            <table class="comparison-table">
+                <tr>
+                    <th>Type</th>
+                    <th>Symbol</th>
+                    <th>Meaning</th>
+                    <th>Example</th>
+                    <th>Usage</th>
+                </tr>
+                <tr>
+                    <td>Finish-to-Start</td>
+                    <td>FS</td>
+                    <td>B starts when A finishes</td>
+                    <td>Pour concrete → Cure concrete</td>
+                    <td>80-90%</td>
+                </tr>
+                <tr>
+                    <td>Start-to-Start</td>
+                    <td>SS</td>
+                    <td>B starts when A starts</td>
+                    <td>Excavate → Haul spoil</td>
+                    <td>5-10%</td>
+                </tr>
+                <tr>
+                    <td>Finish-to-Finish</td>
+                    <td>FF</td>
+                    <td>B finishes when A finishes</td>
+                    <td>Install cables → Terminate cables</td>
+                    <td>5-10%</td>
+                </tr>
+                <tr>
+                    <td>Start-to-Finish</td>
+                    <td>SF</td>
+                    <td>B finishes when A starts</td>
+                    <td>New system starts → Old system shuts down</td>
+                    <td>&lt;1%</td>
+                </tr>
+            </table>
+
+            <h3>3.3 Lag and Lead</h3>
+            <div class="formula-box">
+                <strong>Lag (Positive):</strong> Waiting time between activities
+                Example: FS + 7 days = B starts 7 days AFTER A finishes
+                
+                <strong>Lead (Negative):</strong> Overlap between activities
+                Example: FS - 3 days = B starts 3 days BEFORE A finishes
+            </div>
+
+            <p><strong>Common Lag Examples:</strong></p>
+            <ul>
+                <li>Concrete curing: 7-28 days lag</li>
+                <li>Paint drying: 1 day lag</li>
+                <li>Material delivery: Lead time lag</li>
+                <li>Permit approval: Waiting period lag</li>
+            </ul>
+
+            <div class="pro-tip">
+                <strong>💡 Best Practice:</strong> Use FS relationships whenever possible. They're clearest and easiest to understand. Overuse of SS/FF with lags makes schedules complex and error-prone.
+            </div>
+
+            <h3>3.4 Constraints</h3>
+            <table class="comparison-table">
+                <tr>
+                    <th>Constraint</th>
+                    <th>Meaning</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>As Soon As Possible (ASAP)</td>
+                    <td>Start earliest possible</td>
+                    <td>Default for most activities</td>
+                </tr>
+                <tr>
+                    <td>As Late As Possible (ALAP)</td>
+                    <td>Start latest possible</td>
+                    <td>Delay non-critical work</td>
+                </tr>
+                <tr>
+                    <td>Start No Earlier Than (SNET)</td>
+                    <td>Cannot start before date</td>
+                    <td>Material delivery date</td>
+                </tr>
+                <tr>
+                    <td>Finish No Later Than (FNLT)</td>
+                    <td>Must finish by date</td>
+                    <td>Contractual milestone</td>
+                </tr>
+                <tr>
+                    <td>Must Start On (MSO)</td>
+                    <td>Fixed start date</td>
+                    <td>Scheduled inspection</td>
+                </tr>
+                <tr>
+                    <td>Must Finish On (MFO)</td>
+                    <td>Fixed finish date</td>
+                    <td>Contractual deadline</td>
+                </tr>
+            </table>
+
+            <div class="warning-box">
+                <strong>⚠️ Warning:</strong> Hard constraints (MSO, MFO) override CPM logic and can hide critical paths. Use sparingly and only when truly required by external factors.
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="module-card" id="module4">
+            <div class="module-number">⏱️ MODULE 4: Duration Estimation Methods</div>
+            <h2>How Long Will It Take?</h2>
+
+            <h3>4.1 Duration Formula</h3>
+            <div class="formula-box">
+                <strong>Duration = Quantity ÷ (Daily Output × Number of Crews)</strong>
+                
+                Example:
+                Quantity: 500 m² wall plastering
+                Daily Output: 25 m²/day per crew
+                Crews: 2
+                Duration = 500 ÷ (25 × 2) = 10 days
+            </div>
+
+            <h3>4.2 Estimation Methods</h3>
+            <table class="comparison-table">
+                <tr>
+                    <th>Method</th>
+                    <th>Description</th>
+                    <th>Best For</th>
+                    <th>Accuracy</th>
+                </tr>
+                <tr>
+                    <td>Analogous</td>
+                    <td>Based on similar past projects</td>
+                    <td>Early estimates, limited data</td>
+                    <td>±25-50%</td>
+                </tr>
+                <tr>
+                    <td>Parametric</td>
+                    <td>Unit rates × quantities</td>
+                    <td>Standard construction work</td>
+                    <td>±10-20%</td>
+                </tr>
+                <tr>
+                    <td>Bottom-up</td>
+                    <td>Detailed crew/resource calculation</td>
+                    <td>Detailed schedules</td>
+                    <td>±5-10%</td>
+                </tr>
+                <tr>
+                    <td>Three-point (PERT)</td>
+                    <td>(Optimistic + 4×Most Likely + Pessimistic) ÷ 6</td>
+                    <td>Uncertainty handling</td>
+                    <td>Statistical</td>
+                </tr>
+                <tr>
+                    <td>Expert Judgment</td>
+                    <td>Experienced professionals' input</td>
+                    <td>Complex/unique work</td>
+                    <td>Varies</td>
+                </tr>
+            </table>
+
+            <h3>4.3 PERT Estimation Example</h3>
+            <div class="formula-box">
+                <strong>PERT Duration = (O + 4M + P) ÷ 6</strong>
+                
+                Activity: Install structural steel
+                Optimistic (O): 8 days (everything perfect)
+                Most Likely (M): 12 days (normal conditions)
+                Pessimistic (P): 20 days (problems occur)
+                
+                PERT Duration = (8 + 4×12 + 20) ÷ 6 = 76 ÷ 6 = 12.7 days ≈ 13 days
+            </div>
+
+            <h3>4.4 Factors Affecting Duration</h3>
+            <ul>
+                <li><strong>Labor productivity:</strong> Skill level, motivation, experience</li>
+                <li><strong>Weather:</strong> Rain, heat, cold impact outdoor work</li>
+                <li><strong>Site conditions:</strong> Access, congestion, layered work</li>
+                <li><strong>Equipment availability:</strong> Crane, pump, scaffolding</li>
+                <li><strong>Work hours:</strong> Standard day, overtime, shifts</li>
+                <li><strong>Learning curve:</strong> Repetitive work gets faster</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <div class="module-card" id="module5">
+            <div class="module-number">🧮 MODULE 5: Schedule Calculation (CPM Basics)</div>
+            <h2>Forward Pass, Backward Pass, Float</h2>
+
+            <h3>5.1 Critical Path Method (CPM)</h3>
+            <p>CPM calculates the longest path through the network - this is the <strong>minimum project duration</strong>. Activities on this path have zero float and cannot be delayed.</p>
+
+            <h3>5.2 Key Terms</h3>
+            <table class="comparison-table">
+                <tr>
+                    <th>Term</th>
+                    <th>Meaning</th>
+                </tr>
+                <tr>
+                    <td>Early Start (ES)</td>
+                    <td>Earliest possible start date</td>
+                </tr>
+                <tr>
+                    <td>Early Finish (EF)</td>
+                    <td>ES + Duration - 1</td>
+                </tr>
+                <tr>
+                    <td>Late Finish (LF)</td>
+                    <td>Latest finish without delaying project</td>
+                </tr>
+                <tr>
+                    <td>Late Start (LS)</td>
+                    <td>LF - Duration + 1</td>
+                </tr>
+                <tr>
+                    <td>Total Float (TF)</td>
+                    <td>LS - ES (or LF - EF)</td>
+                </tr>
+                <tr>
+                    <td>Free Float (FF)</td>
+                    <td>Delay without affecting successor ES</td>
+                </tr>
+                <tr>
+                    <td>Critical Path</td>
+                    <td>Longest path; activities with TF = 0</td>
+                </tr>
+            </table>
+
+            <h3>5.3 Calculation Process</h3>
+            <div class="workflow-step"><span class="step-number">1</span><div><strong>Forward Pass</strong> - Calculate Early Start and Early Finish for all activities (left to right)</div></div>
+            <div class="workflow-step"><span class="step-number">2</span><div><strong>Identify End Date</strong> - The maximum EF is the project completion date</div></div>
+            <div class="workflow-step"><span class="step-number">3</span><div><strong>Backward Pass</strong> - Calculate Late Finish and Late Start (right to left)</div></div>
+            <div class="workflow-step"><span class="step-number">4</span><div><strong>Calculate Float</strong> - TF = LS - ES for each activity</div></div>
+            <div class="workflow-step"><span class="step-number">5</span><div><strong>Identify Critical Path</strong> - Activities with TF = 0</div></div>
+
+            <h3>5.4 Simple CPM Example</h3>
+            <div class="gantt-example">
+                <table class="comparison-table">
+                    <tr>
+                        <th>Activity</th>
+                        <th>Duration</th>
+                        <th>Predecessors</th>
+                        <th>ES</th>
+                        <th>EF</th>
+                        <th>LS</th>
+                        <th>LF</th>
+                        <th>TF</th>
+                        <th>Critical?</th>
+                    </tr>
+                    <tr style="background: rgba(239, 68, 68, 0.1);"><td>A - Excavation</td><td>3</td><td>-</td><td>1</td><td>3</td><td>1</td><td>3</td><td>0</td><td>✅ Yes</td></tr>
+                    <tr style="background: rgba(239, 68, 68, 0.1);"><td>B - Foundation</td><td>5</td><td>A</td><td>4</td><td>8</td><td>4</td><td>8</td><td>0</td><td>✅ Yes</td></tr>
+                    <tr><td>C - Site Office</td><td>2</td><td>A</td><td>4</td><td>5</td><td>7</td><td>8</td><td>3</td><td>No</td></tr>
+                    <tr style="background: rgba(239, 68, 68, 0.1);"><td>D - Columns</td><td>4</td><td>B</td><td>9</td><td>12</td><td>9</td><td>12</td><td>0</td><td>✅ Yes</td></tr>
+                </table>
+                <p><strong>Critical Path:</strong> A → B → D (Total: 3 + 5 + 4 = 12 days)</p>
+            </div>
+
+            <div class="pro-tip">
+                <strong>💡 Float Strategy:</strong> Use float wisely. Activities with float provide flexibility for resource leveling and risk buffering. Don't consume it unnecessarily.
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="module-card" id="module6">
+            <div class="module-number">📊 MODULE 6: Schedule Types and Presentations</div>
+            <h2>Different Views for Different Needs</h2>
+
+            <h3>6.1 Schedule Levels</h3>
+            <table class="comparison-table">
+                <tr>
+                    <th>Level</th>
+                    <th>Name</th>
+                    <th>Detail</th>
+                    <th>Audience</th>
+                    <th>Timeframe</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Master/Summary</td>
+                    <td>Milestones only</td>
+                    <td>Executives, owners</td>
+                    <td>Project life</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Summary Schedule</td>
+                    <td>Major phases</td>
+                    <td>Management</td>
+                    <td>Project life</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Contractor Schedule</td>
+                    <td>All activities</td>
+                    <td>Project team</td>
+                    <td>Project life</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Detailed Schedule</td>
+                    <td>Crew-level detail</td>
+                    <td>Field supervisors</td>
+                    <td>Phase</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Look-Ahead</td>
+                    <td>Day-by-day work</td>
+                    <td>Foremen, crews</td>
+                    <td>2-4 weeks</td>
+                </tr>
+            </table>
+
+            <h3>6.2 Presentation Formats</h3>
+            
+            <h4>Gantt Chart (Bar Chart)</h4>
+            <p>Most common format. Shows activities as horizontal bars against time axis.</p>
+            <ul>
+                <li>✅ Easy to read and understand</li>
+                <li>✅ Shows timing at a glance</li>
+                <li>❌ Doesn't clearly show dependencies</li>
+                <li>❌ Can become cluttered for large projects</li>
+            </ul>
+
+            <h4>Network Diagram (PDM)</h4>
+            <p>Shows activities as nodes/boxes with arrows for relationships.</p>
+            <ul>
+                <li>✅ Clearly shows dependencies</li>
+                <li>✅ Good for CPM analysis</li>
+                <li>❌ Harder to read for non-schedulers</li>
+                <li>❌ No direct time reference</li>
+            </ul>
+
+            <h4>Milestone Chart</h4>
+            <p>Shows only key dates (diamonds or triangles).</p>
+            <ul>
+                <li>✅ High-level overview</li>
+                <li>✅ Great for executive reporting</li>
+                <li>❌ No activity detail</li>
+            </ul>
+
+            <h3>6.3 Two-Week Look-Ahead</h3>
+            <p>The look-ahead schedule is the short-term operational plan used for daily execution:</p>
+            <ul>
+                <li>Filters next 2-4 weeks from master schedule</li>
+                <li>Adds assignment detail</li>
+                <li>Tracks daily completion</li>
+                <li>Identifies and removes constraints</li>
+                <li>Updated weekly</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <div class="module-card" id="module7">
+            <div class="module-number">📈 MODULE 7: Baseline and Progress Tracking</div>
+            <h2>Measuring Performance</h2>
+
+            <h3>7.1 What is a Baseline?</h3>
+            <p>The <strong>baseline</strong> is the approved, "frozen" schedule against which progress is measured. It represents the original plan and becomes the reference for delay analysis.</p>
+
+            <h3>7.2 Baseline Rules</h3>
+            <ul>
+                <li>✅ Save baseline after schedule is approved</li>
+                <li>✅ Baseline should be realistic and achievable</li>
+                <li>✅ Include contractual milestones</li>
+                <li>✅ Resource-load critical activities</li>
+                <li>❌ Don't change baseline without formal change order</li>
+                <li>❌ Don't baseline schedule with negative float</li>
+            </ul>
+
+            <h3>7.3 Progress Update Methods</h3>
+            <table class="comparison-table">
+                <tr>
+                    <th>Method</th>
+                    <th>Description</th>
+                    <th>Pros</th>
+                    <th>Cons</th>
+                </tr>
+                <tr>
+                    <td>Percent Complete</td>
+                    <td>Estimate 0-100% progress</td>
+                    <td>Simple, quick</td>
+                    <td>Subjective, "90% complete syndrome"</td>
+                </tr>
+                <tr>
+                    <td>Duration Remaining</td>
+                    <td>Days left to finish</td>
+                    <td>Forces forward thinking</td>
+                    <td>Needs experience</td>
+                </tr>
+                <tr>
+                    <td>Physical Progress</td>
+                    <td>Measure actual quantities</td>
+                    <td>Most accurate</td>
+                    <td>Time-consuming</td>
+                </tr>
+                <tr>
+                    <td>0/50/100 Rule</td>
+                    <td>0% until started, 50% when started, 100% when done</td>
+                    <td>Simple, consistent</td>
+                    <td>Less granular</td>
+                </tr>
+            </table>
+
+            <h3>7.4 Key Progress Metrics</h3>
+            <div class="formula-box">
+                <strong>Schedule Performance Index (SPI):</strong>
+                SPI = Earned Value ÷ Planned Value
+                SPI > 1.0 = Ahead of schedule
+                SPI < 1.0 = Behind schedule
+
+                <strong>Schedule Variance (SV):</strong>
+                SV = Earned Value - Planned Value
+                SV positive = Ahead of schedule
+                SV negative = Behind schedule
+            </div>
+
+            <div class="warning-box">
+                <strong>⚠️ 90% Complete Syndrome:</strong> Many activities seem stuck at 90% forever. Always verify physical progress; don't rely solely on percent estimates.
+            </div>
+
+            <h3>7.5 Monthly Schedule Update Process</h3>
+            <ol>
+                <li>Record actual start/finish dates</li>
+                <li>Update remaining durations</li>
+                <li>Add any new activities</li>
+                <li>Update logic if needed</li>
+                <li>Recalculate schedule (run CPM)</li>
+                <li>Compare to baseline</li>
+                <li>Identify variances and causes</li>
+                <li>Develop recovery plan if behind</li>
+                <li>Issue update report</li>
+            </ol>
+        </div>
+
+        <hr>
+
+        <div class="module-card" id="module8">
+            <div class="module-number">⚖️ MODULE 8: Delay Analysis Fundamentals</div>
+            <h2>Understanding Project Delays</h2>
+
+            <h3>8.1 Types of Delays</h3>
+            <table class="comparison-table">
+                <tr>
+                    <th>Type</th>
+                    <th>Responsibility</th>
+                    <th>Time Extension?</th>
+                    <th>Cost Recovery?</th>
+                </tr>
+                <tr>
+                    <td>Excusable Compensable</td>
+                    <td>Owner-caused</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>Excusable Non-Compensable</td>
+                    <td>No one's fault (force majeure)</td>
+                    <td>Yes</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>Non-Excusable</td>
+                    <td>Contractor-caused</td>
+                    <td>No</td>
+                    <td>No (may owe LD)</td>
+                </tr>
+                <tr>
+                    <td>Concurrent</td>
+                    <td>Both parties</td>
+                    <td>Usually</td>
+                    <td>Usually not</td>
+                </tr>
+            </table>
+
+            <h3>8.2 Common Delay Causes</h3>
+            <p><strong>Owner-Caused:</strong></p>
+            <ul>
+                <li>Late design/information</li>
+                <li>Changed scope</li>
+                <li>Site access issues</li>
+                <li>Late owner-furnished equipment</li>
+            </ul>
+
+            <p><strong>Contractor-Caused:</strong></p>
+            <ul>
+                <li>Insufficient resources</li>
+                <li>Poor coordination</li>
+                <li>Subcontractor failures</li>
+                <li>Material procurement issues</li>
+            </ul>
+
+            <p><strong>Neither Party:</strong></p>
+            <ul>
+                <li>Force majeure (pandemic, war)</li>
+                <li>Unusual weather</li>
+                <li>Third-party actions</li>
+                <li>Unforeseen site conditions</li>
+            </ul>
+
+            <h3>8.3 Basic Delay Analysis Methods</h3>
+            <table class="comparison-table">
+                <tr>
+                    <th>Method</th>
+                    <th>Complexity</th>
+                    <th>When Used</th>
+                </tr>
+                <tr>
+                    <td>Impacted As-Planned</td>
+                    <td>Simple</td>
+                    <td>Prospective analysis</td>
+                </tr>
+                <tr>
+                    <td>As-Built Analysis</td>
+                    <td>Medium</td>
+                    <td>After completion</td>
+                </tr>
+                <tr>
+                    <td>Window Analysis</td>
+                    <td>Complex</td>
+                    <td>Concurrent delays</td>
+                </tr>
+                <tr>
+                    <td>Time Impact Analysis</td>
+                    <td>Complex</td>
+                    <td>Each event analyzed</td>
+                </tr>
+            </table>
+
+            <div class="pro-tip">
+                <strong>💡 Documentation Tips:</strong> Always document delays contemporaneously. Keep daily logs, photos, meeting minutes, and correspondence. Good records are essential for successful delay claims.
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="quiz-container">
+            <h2>🎓 Course Quiz</h2>
+            <p>Test your scheduling knowledge:</p>
+
+            <div class="quiz-question">
+                <strong>Q1: What is the most common relationship type (80-90% of activities)?</strong>
+                <ul class="quiz-options">
+                    <li class="quiz-option" onclick="this.style.background='#22c55e'; this.style.color='white'; this.innerHTML += ' ✅'">Finish-to-Start (FS)</li>
+                    <li class="quiz-option" onclick="this.style.background='#ef4444'; this.style.color='white'">Start-to-Start (SS)</li>
+                    <li class="quiz-option" onclick="this.style.background='#ef4444'; this.style.color='white'">Finish-to-Finish (FF)</li>
+                    <li class="quiz-option" onclick="this.style.background='#ef4444'; this.style.color='white'">Start-to-Finish (SF)</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question">
+                <strong>Q2: An activity with Total Float = 0 is:</strong>
+                <ul class="quiz-options">
+                    <li class="quiz-option" onclick="this.style.background='#22c55e'; this.style.color='white'; this.innerHTML += ' ✅'">Critical - any delay impacts project end</li>
+                    <li class="quiz-option" onclick="this.style.background='#ef4444'; this.style.color='white'">Non-critical - has flexibility</li>
+                    <li class="quiz-option" onclick="this.style.background='#ef4444'; this.style.color='white'">Cannot be determined</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question">
+                <strong>Q3: The baseline schedule should be:</strong>
+                <ul class="quiz-options">
+                    <li class="quiz-option" onclick="this.style.background='#ef4444'; this.style.color='white'">Updated whenever progress changes</li>
+                    <li class="quiz-option" onclick="this.style.background='#22c55e'; this.style.color='white'; this.innerHTML += ' ✅'">Frozen after approval, changed only by formal change order</li>
+                    <li class="quiz-option" onclick="this.style.background='#ef4444'; this.style.color='white'">Created at the end of the project</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="key-takeaway">
+            <h3>🎯 Course Takeaways</h3>
+            <ol>
+                <li><strong>WBS First:</strong> Always build WBS before creating schedule</li>
+                <li><strong>FS Preferred:</strong> Use Finish-to-Start relationships whenever possible</li>
+                <li><strong>Estimate Carefully:</strong> Use parametric/bottom-up methods for accuracy</li>
+                <li><strong>CPM Matters:</strong> Understand forward/backward pass and float</li>
+                <li><strong>Baseline Is Sacred:</strong> Don't change baseline without formal approval</li>
+                <li><strong>Update Regularly:</strong> Weekly look-ahead, monthly full update</li>
+                <li><strong>Document Delays:</strong> Records are essential for claims</li>
+            </ol>
+        </div>
+
+        <div class="pro-tip" style="background: linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(14, 165, 233, 0.05));">
+            <h3>🤖 Try Our AI Planner!</h3>
+            <p>Practice scheduling with our <a href="../../ai-planner.html" style="color: #0ea5e9; font-weight: 700;">AI Planner</a>. It helps you create optimized project schedules with proper activity sequences and resource assignments.</p>
+        </div>
+
         <div class="share-buttons">
             <span class="share-buttons-label">Share this article:</span>
             <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-btn facebook" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">Facebook</a>
@@ -152,9 +1010,8 @@
             <button class="share-btn copy" onclick="navigator.clipboard.writeText(window.location.href);alert('Link copied!')">Copy Link</button>
         </div>
         
-        
         <hr>
-        <p><strong>Next Article:</strong> <a href="cpm-critical-path-en.html">Critical Path Method (CPM) in Construction</a></p>
+        <p><strong>Next Article:</strong> <a href="cpm-critical-path-en.html">Critical Path Method (CPM) - Advanced Course</a></p>
     </div>
 
     <footer class="site-footer">

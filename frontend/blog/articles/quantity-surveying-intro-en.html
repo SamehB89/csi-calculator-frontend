@@ -3,14 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introduction to Quantity Surveying - CSI Calculator</title>
-    <meta name="description" content="Comprehensive guide to understanding the role of Quantity Surveyor and stages of quantity take-off in construction projects.">
-    <meta name="keywords" content="Quantity Surveying, QS, BOQ, Quantity Surveyor, Take-off">
+    <title>Quantity Surveying: Complete Professional Course - CSI Calculator</title>
+    <meta name="description" content="Comprehensive 8-module course on Quantity Surveying. Master BOQ preparation, measurement rules, take-off techniques, pricing methods, and cost control with real-world examples.">
+    <meta name="keywords" content="Quantity Surveying, QS, BOQ, Bill of Quantities, Take-off, Measurement, Cost Estimation, Construction Cost">
     
-    <meta property="og:title" content="Introduction to Quantity Surveying">
-    <meta property="og:description" content="What is Quantity Surveying and why is it important?">
+    <meta property="og:title" content="Quantity Surveying: Complete Professional Course">
+    <meta property="og:description" content="Master quantity surveying with 8 comprehensive modules covering BOQ, measurement rules, and cost control">
     <meta property="og:type" content="article">
     <meta property="og:image" content="../assets/quantity-surveying-intro.jpg">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "Quantity Surveying: Professional Course",
+      "description": "Complete guide to quantity surveying and cost management",
+      "provider": {
+        "@type": "Organization",
+        "name": "CSI Calculator"
+      }
+    }
+    </script>
     
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5429423113977975" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../css/theme.css">
@@ -20,10 +33,98 @@
     <link rel="stylesheet" href="../../css/ads.css">
     <link rel="stylesheet" href="../../css/share-buttons.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <script src="../../js/ads.js"></script>
     <script src="../../js/i18n.js"></script>
     <script src="../../js/theme.js"></script>
     <script src="../../js/blog-i18n.js"></script>
+
+    <style>
+        .course-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        .module-card {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.05), rgba(139, 92, 246, 0.1));
+            border-left: 4px solid #8b5cf6;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+        .module-number {
+            color: #8b5cf6;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        .formula-box {
+            background: linear-gradient(135deg, #1e293b, #334155);
+            color: #fff;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+        }
+        .pro-tip {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(34, 197, 94, 0.05));
+            border-left: 4px solid #22c55e;
+            padding: 1rem 1.5rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+        }
+        .warning-box {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(239, 68, 68, 0.05));
+            border-left: 4px solid #ef4444;
+            padding: 1rem 1.5rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        .comparison-table th {
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+        }
+        .comparison-table td {
+            padding: 0.875rem 1rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .comparison-table tr:hover {
+            background: rgba(139, 92, 246, 0.05);
+        }
+        .key-takeaway {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(99, 102, 241, 0.05));
+            border: 2px solid #6366f1;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 12px;
+        }
+        .example-box {
+            background: white;
+            border: 2px solid #8b5cf6;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+        }
+        .take-off-sheet {
+            background: #f8fafc;
+            padding: 1rem;
+            border-radius: 8px;
+            font-family: monospace;
+            overflow-x: auto;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -36,7 +137,7 @@
                 <a href="../../index.html" data-i18n="home" data-icon="🏠"><span>Home</span></a>
                 <a href="../../crew-calculator.html" data-i18n="crewCalculator" data-icon="🧮"><span>Calculator</span></a>
                 <a href="../../ai-planner.html" data-i18n="aiPlanner" data-icon="🤖"><span>AI Planner</span></a>
-                <a href="../index-en.html" class="active" data-i18n="blog" data-icon="📚"><span>Manual & Tips</span></a>
+                <a href="../index-en.html" class="active" data-i18n="blog" data-icon="📚"><span>Knowledge Bites</span></a>
                 <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">🌙</button>
                 <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()"><span id="langIcon">AR</span></button>
             </div>
@@ -44,105 +145,743 @@
     </nav>
 
     <div class="article-header">
+        <span class="course-badge">📚 COMPLETE COURSE</span>
         <span class="article-category">Quantity Surveying</span>
-        <h1>Introduction to Quantity Surveying</h1>
+        <h1>Quantity Surveying: Complete Professional Course</h1>
         <div class="article-meta">
-            <span class="article-date">January 8, 2026</span>
-            <span class="article-read-time">10 min read</span>
+            <span class="article-date">January 11, 2026</span>
+            <span class="article-read-time">35 min read</span>
+            <span>8 Modules</span>
         </div>
     </div>
 
     <div class="article-body">
-        <div class="article-image-container">
-            <img src="../assets/quantity-surveying-intro.jpg" alt="Quantity Surveying" class="img-fluid rounded shadow mb-4">
+        <div class="key-takeaway">
+            <h3>🎯 Course Overview</h3>
+            <p>Master the art and science of Quantity Surveying. This comprehensive 8-module course covers everything from BOQ preparation to final account management, with practical examples and industry best practices.</p>
+            <p><strong>Prerequisites:</strong> Basic understanding of construction drawings</p>
+            <p><strong>Level:</strong> Beginner to Professional</p>
         </div>
 
-        <h2>📐 What is Quantity Surveying?</h2>
-        <p>
-            Quantity Surveying is the art and science of extracting material quantities and work items from engineering drawings and specifications. It's the cornerstone for project pricing, bid preparation, and cost control during execution.
-        </p>
-
-        <h2>👷 Role of the Quantity Surveyor (QS)</h2>
-        <p>The Quantity Surveyor (QS) is the specialist in construction cost management. Their duties include:</p>
-        <ul>
-            <li><strong>Pre-Contract Phase:</strong>
-                <ul>
-                    <li>Preparing preliminary cost estimates</li>
-                    <li>Taking off quantities from drawings</li>
-                    <li>Preparing Bill of Quantities (BOQ)</li>
-                    <li>Analyzing and comparing bids</li>
-                </ul>
-            </li>
-            <li><strong>Post-Contract Phase:</strong>
-                <ul>
-                    <li>Measuring executed works</li>
-                    <li>Preparing monthly interim payments</li>
-                    <li>Evaluating change orders</li>
-                    <li>Preparing final account</li>
-                </ul>
-            </li>
-        </ul>
-
-        <h2>📊 Importance of Accurate Take-off</h2>
-        <ul>
-            <li><strong>For Owner:</strong> Know expected cost before starting.</li>
-            <li><strong>For Contractor:</strong> Accurate pricing ensures profit and avoids loss.</li>
-            <li><strong>For Consultant:</strong> Basis for comparing bids.</li>
-            <li><strong>For Financing:</strong> Banks need reliable estimates.</li>
-        </ul>
-
-        <h2>📋 Bill of Quantities (BOQ)</h2>
-        <p>BOQ is the official document containing:</p>
-        <ul>
-            <li>Detailed description of each work item</li>
-            <li>Unit of measurement (m³, m², LM, No....)</li>
-            <li>Measured quantity</li>
-            <li>Unit rate (filled by contractor)</li>
-            <li>Total amount for each item</li>
-        </ul>
-
-        <h3>Example BOQ Item:</h3>
-        <table class="pricing-table">
-            <tr><th>Code</th><th>Description</th><th>Unit</th><th>Qty</th><th>Rate</th><th>Amount</th></tr>
-            <tr><td>03.01</td><td>RC concrete for foundations (300 kg/m³)</td><td>m³</td><td>150</td><td>$120</td><td>$18,000</td></tr>
-        </table>
-
-        <h2>📏 Common Units of Measurement</h2>
-        <ul>
-            <li><strong>m³ (Cubic Meter):</strong> For concrete, excavation, backfill</li>
-            <li><strong>m² (Square Meter):</strong> For flooring, painting, formwork</li>
-            <li><strong>LM (Linear Meter):</strong> For pipes, cables, edges</li>
-            <li><strong>kg/ton:</strong> For reinforcement and metals</li>
-            <li><strong>No.:</strong> For doors, windows, units</li>
-        </ul>
-
-        <h2>🔄 Stages of Quantity Take-off</h2>
+        <h2>📋 Course Modules</h2>
         <ol>
-            <li><strong>Receive Drawings:</strong> Ensure completeness and updates.</li>
-            <li><strong>Study Project:</strong> Understand general concept and details.</li>
-            <li><strong>Divide Works:</strong> By specialty (structural, architectural, mechanical...).</li>
-            <li><strong>Measure:</strong> Extract dimensions from drawings.</li>
-            <li><strong>Calculate:</strong> Apply engineering formulas.</li>
-            <li><strong>Compile:</strong> Organize quantities in tables.</li>
-            <li><strong>Review:</strong> Verify accuracy.</li>
+            <li><a href="#module1">Introduction to Quantity Surveying</a></li>
+            <li><a href="#module2">Role of the Quantity Surveyor</a></li>
+            <li><a href="#module3">Measurement Rules and Standards</a></li>
+            <li><a href="#module4">Take-off Techniques and Methods</a></li>
+            <li><a href="#module5">Bill of Quantities (BOQ) Preparation</a></li>
+            <li><a href="#module6">Pricing and Rate Analysis</a></li>
+            <li><a href="#module7">Interim Payments and Valuations</a></li>
+            <li><a href="#module8">Final Account and Claims</a></li>
         </ol>
 
-        <h2>🛠️ Modern Take-off Tools</h2>
-        <ul>
-            <li><strong>Excel:</strong> For simple calculations and organization.</li>
-            <li><strong>Bluebeam Revu:</strong> For measuring from PDF.</li>
-            <li><strong>PlanSwift:</strong> Specialized take-off software.</li>
-            <li><strong>CostX:</strong> 2D and 3D take-off.</li>
-            <li><strong>Revit/Navisworks:</strong> Take-off from BIM models.</li>
-        </ul>
+        <hr>
 
-        <h2>💡 Tips for Beginners</h2>
-        <ul>
-            <li>Start with large elements then move to details.</li>
-            <li>Document source of every number (sheet number, detail).</li>
-            <li>Check calculations using different method.</li>
-            <li>Learn to read engineering drawings accurately.</li>
-        </ul>        <!-- Share Buttons -->
+        <div class="module-card" id="module1">
+            <div class="module-number">📖 MODULE 1: Introduction to Quantity Surveying</div>
+            <h2>What is Quantity Surveying?</h2>
+            
+            <p><strong>Quantity Surveying (QS)</strong> is the art and science of extracting material quantities and work items from engineering drawings and specifications. It forms the foundation for project pricing, bid preparation, and cost control throughout construction.</p>
+
+            <h3>1.1 The Three Pillars of QS</h3>
+            <ol>
+                <li><strong>Measurement</strong> - Accurately quantifying work from drawings</li>
+                <li><strong>Valuation</strong> - Pricing measured work</li>
+                <li><strong>Cost Management</strong> - Controlling project costs</li>
+            </ol>
+
+            <h3>1.2 Why QS is Critical</h3>
+            <table class="comparison-table">
+                <tr>
+                    <th>Stakeholder</th>
+                    <th>QS Importance</th>
+                </tr>
+                <tr>
+                    <td>Owner/Client</td>
+                    <td>Know expected cost before starting; basis for budget approval</td>
+                </tr>
+                <tr>
+                    <td>Contractor</td>
+                    <td>Accurate pricing ensures profit; prevents losses from underestimation</td>
+                </tr>
+                <tr>
+                    <td>Consultant</td>
+                    <td>Fair basis for comparing bids; value engineering</td>
+                </tr>
+                <tr>
+                    <td>Bank/Financing</td>
+                    <td>Reliable estimates for loan approval; draw schedules</td>
+                </tr>
+                <tr>
+                    <td>Subcontractors</td>
+                    <td>Clear scope definition; fair payment terms</td>
+                </tr>
+            </table>
+
+            <h3>1.3 QS vs. Estimating</h3>
+            <p>Often confused, but different:</p>
+            <ul>
+                <li><strong>Quantity Surveying:</strong> Measuring quantities from drawings (WHAT and HOW MUCH)</li>
+                <li><strong>Estimating:</strong> Applying rates to quantities to get costs (HOW MUCH MONEY)</li>
+            </ul>
+
+            <div class="pro-tip">
+                <strong>💡 Career Insight:</strong> Quantity Surveyors are among the highest-paid professionals in construction due to their critical role in financial management. In the UK, senior QS professionals earn £70,000-120,000+.
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="module-card" id="module2">
+            <div class="module-number">👷 MODULE 2: Role of the Quantity Surveyor</div>
+            <h2>QS Duties Throughout Project Lifecycle</h2>
+
+            <h3>2.1 Pre-Contract Phase</h3>
+            <table class="comparison-table">
+                <tr>
+                    <th>Task</th>
+                    <th>Description</th>
+                    <th>Deliverable</th>
+                </tr>
+                <tr>
+                    <td>Feasibility Estimate</td>
+                    <td>Budget-level cost based on area rates</td>
+                    <td>Order of magnitude estimate (±30%)</td>
+                </tr>
+                <tr>
+                    <td>Preliminary Estimate</td>
+                    <td>Elemental cost plan from sketch design</td>
+                    <td>Cost plan (±15-20%)</td>
+                </tr>
+                <tr>
+                    <td>Quantity Take-off</td>
+                    <td>Detailed measurement from drawings</td>
+                    <td>Take-off sheets</td>
+                </tr>
+                <tr>
+                    <td>BOQ Preparation</td>
+                    <td>Compile measured quantities into BOQ</td>
+                    <td>Bill of Quantities</td>
+                </tr>
+                <tr>
+                    <td>Tender Analysis</td>
+                    <td>Compare and evaluate contractor bids</td>
+                    <td>Tender report</td>
+                </tr>
+            </table>
+
+            <h3>2.2 Post-Contract Phase</h3>
+            <table class="comparison-table">
+                <tr>
+                    <th>Task</th>
+                    <th>Description</th>
+                    <th>Frequency</th>
+                </tr>
+                <tr>
+                    <td>Interim Valuations</td>
+                    <td>Measure executed work for payment</td>
+                    <td>Monthly</td>
+                </tr>
+                <tr>
+                    <td>Variation Orders</td>
+                    <td>Evaluate changes to scope</td>
+                    <td>As needed</td>
+                </tr>
+                <tr>
+                    <td>Claims Assessment</td>
+                    <td>Review contractor claims</td>
+                    <td>As submitted</td>
+                </tr>
+                <tr>
+                    <td>Cost Reporting</td>
+                    <td>Track budget vs actual</td>
+                    <td>Monthly</td>
+                </tr>
+                <tr>
+                    <td>Final Account</td>
+                    <td>Settle all amounts due</td>
+                    <td>Project end</td>
+                </tr>
+            </table>
+
+            <h3>2.3 Types of QS Roles</h3>
+            <ul>
+                <li><strong>Client-side QS:</strong> Protect owner's interests, cost control</li>
+                <li><strong>Contractor QS:</strong> Maximize contractor's entitlements, commercial management</li>
+                <li><strong>Consultant QS:</strong> Independent measurement and valuation</li>
+                <li><strong>PQS (Principal QS):</strong> Lead QS on major projects</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <div class="module-card" id="module3">
+            <div class="module-number">📏 MODULE 3: Measurement Rules and Standards</div>
+            <h2>Standard Methods of Measurement</h2>
+
+            <h3>3.1 Major Measurement Standards</h3>
+            <table class="comparison-table">
+                <tr>
+                    <th>Standard</th>
+                    <th>Region</th>
+                    <th>Notes</th>
+                </tr>
+                <tr>
+                    <td>SMM7 (Standard Method of Measurement 7th Ed.)</td>
+                    <td>UK (Legacy)</td>
+                    <td>Traditional detailed measurement</td>
+                </tr>
+                <tr>
+                    <td>NRM2 (New Rules of Measurement 2)</td>
+                    <td>UK (Current)</td>
+                    <td>RICS standard, replaces SMM7</td>
+                </tr>
+                <tr>
+                    <td>CSI MasterFormat</td>
+                    <td>USA/Canada</td>
+                    <td>50 Divisions, work results focus</td>
+                </tr>
+                <tr>
+                    <td>POMI</td>
+                    <td>Australia</td>
+                    <td>Australian measurement standard</td>
+                </tr>
+                <tr>
+                    <td>CESMM4</td>
+                    <td>UK Civil</td>
+                    <td>Civil engineering measurement</td>
+                </tr>
+            </table>
+
+            <h3>3.2 Units of Measurement</h3>
+            <table class="comparison-table">
+                <tr>
+                    <th>Unit</th>
+                    <th>Symbol</th>
+                    <th>Used For</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>Cubic Meter</td>
+                    <td>m³</td>
+                    <td>Volume works</td>
+                    <td>Concrete, excavation, backfill</td>
+                </tr>
+                <tr>
+                    <td>Square Meter</td>
+                    <td>m²</td>
+                    <td>Area works</td>
+                    <td>Flooring, painting, formwork</td>
+                </tr>
+                <tr>
+                    <td>Linear Meter</td>
+                    <td>LM / m</td>
+                    <td>Length works</td>
+                    <td>Pipes, cables, curbs, skirting</td>
+                </tr>
+                <tr>
+                    <td>Kilogram/Tonne</td>
+                    <td>kg / t</td>
+                    <td>Weight works</td>
+                    <td>Reinforcement, structural steel</td>
+                </tr>
+                <tr>
+                    <td>Number</td>
+                    <td>No. / EA</td>
+                    <td>Counted items</td>
+                    <td>Doors, windows, fixtures</td>
+                </tr>
+                <tr>
+                    <td>Lump Sum</td>
+                    <td>LS / Item</td>
+                    <td>Complete items</td>
+                    <td>Mobilization, insurance</td>
+                </tr>
+            </table>
+
+            <h3>3.3 Measurement Rules Examples</h3>
+            <div class="example-box">
+                <h4>Concrete Measurement (per NRM2):</h4>
+                <ul>
+                    <li>✅ Measure gross volume (no deductions for reinforcement)</li>
+                    <li>✅ Deduct openings > 0.5 m³</li>
+                    <li>✅ State concrete grade (C20, C30, etc.)</li>
+                    <li>✅ Separate by element (foundations, columns, slabs)</li>
+                </ul>
+            </div>
+
+            <div class="example-box">
+                <h4>Formwork Measurement:</h4>
+                <ul>
+                    <li>✅ Measure contact area (SFCA or m²)</li>
+                    <li>✅ Separate by type (edge, soffit, curved)</li>
+                    <li>✅ State height ranges (0-3m, 3-6m, >6m)</li>
+                    <li>✅ Note number of uses if relevant</li>
+                </ul>
+            </div>
+
+            <div class="warning-box">
+                <strong>⚠️ Critical:</strong> Always specify which measurement standard you're using. Different standards have different rules - mixing them causes disputes!
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="module-card" id="module4">
+            <div class="module-number">🔍 MODULE 4: Take-off Techniques and Methods</div>
+            <h2>Extracting Quantities from Drawings</h2>
+
+            <h3>4.1 Take-off Process</h3>
+            <ol>
+                <li><strong>Receive Drawings:</strong> Ensure completeness, check revision dates</li>
+                <li><strong>Study Project:</strong> Understand scope, specifications, details</li>
+                <li><strong>Plan Take-off:</strong> Decide order, grouping, methodology</li>
+                <li><strong>Measure:</strong> Extract dimensions from drawings</li>
+                <li><strong>Calculate:</strong> Apply formulas, compute quantities</li>
+                <li><strong>Compile:</strong> Organize in standard format</li>
+                <li><strong>Check:</strong> Verify calculations, cross-reference</li>
+            </ol>
+
+            <h3>4.2 Take-off Methods</h3>
+            <table class="comparison-table">
+                <tr>
+                    <th>Method</th>
+                    <th>Description</th>
+                    <th>Best For</th>
+                </tr>
+                <tr>
+                    <td>Traditional (Cut & Shuffle)</td>
+                    <td>Paper-based, dimension paper</td>
+                    <td>Training, detailed understanding</td>
+                </tr>
+                <tr>
+                    <td>Direct Billing</td>
+                    <td>Measure directly into BOQ format</td>
+                    <td>Simple projects</td>
+                </tr>
+                <tr>
+                    <td>Spreadsheet</td>
+                    <td>Excel with formulas</td>
+                    <td>Most common today</td>
+                </tr>
+                <tr>
+                    <td>On-screen (PDF)</td>
+                    <td>Software measures from PDFs</td>
+                    <td>Large projects</td>
+                </tr>
+                <tr>
+                    <td>BIM Extraction</td>
+                    <td>Quantities from 3D model</td>
+                    <td>BIM projects</td>
+                </tr>
+            </table>
+
+            <h3>4.3 Dimension Paper Layout</h3>
+            <div class="take-off-sheet">
+<pre>
+┌─────────────────────────────────────────────────────────────────────┐
+│ DIMENSION PAPER                            Sheet: 1    Project: Villa │
+├──────┬────────┬────────┬────────┬───────────────────────────────────┤
+│ Times│   Dim  │   Dim  │   Dim  │        Description                │
+├──────┼────────┼────────┼────────┼───────────────────────────────────┤
+│   4  │  6.00  │  0.60  │  0.60  │ RC Foundations Type F1            │
+│      │        │        │        │ Concrete grade C30                │
+│      │        │  =     │  8.64  │ m³                                │
+├──────┼────────┼────────┼────────┼───────────────────────────────────┤
+│   2  │  8.00  │  0.60  │  0.60  │ RC Foundations Type F2            │
+│      │        │        │        │ Concrete grade C30                │
+│      │        │  =     │  5.76  │ m³                                │
+├──────┴────────┴────────┴────────┴───────────────────────────────────┤
+│                              Total Foundations Concrete = 14.40 m³   │
+└─────────────────────────────────────────────────────────────────────┘
+</pre>
+            </div>
+
+            <h3>4.4 Common Formulas</h3>
+            <div class="formula-box">
+                <strong>Volume:</strong> L × W × H = m³
+                <strong>Area:</strong> L × W = m²
+                <strong>Perimeter:</strong> 2(L + W) = m
+                <strong>Circle Area:</strong> π × r² = m²
+                <strong>Cylinder Volume:</strong> π × r² × h = m³
+                <strong>Rebar Weight:</strong> Length × Unit Weight (kg/m)
+            </div>
+
+            <h3>4.5 Rebar Unit Weights</h3>
+            <table class="comparison-table">
+                <tr>
+                    <th>Bar Diameter</th>
+                    <th>Weight (kg/m)</th>
+                    <th>Common Use</th>
+                </tr>
+                <tr><td>Ø8</td><td>0.395</td><td>Stirrups, ties</td></tr>
+                <tr><td>Ø10</td><td>0.617</td><td>Slabs, stirrups</td></tr>
+                <tr><td>Ø12</td><td>0.888</td><td>Slabs, beams</td></tr>
+                <tr><td>Ø16</td><td>1.578</td><td>Beams, columns</td></tr>
+                <tr><td>Ø20</td><td>2.466</td><td>Columns, footings</td></tr>
+                <tr><td>Ø25</td><td>3.853</td><td>Heavy structural</td></tr>
+                <tr><td>Ø32</td><td>6.313</td><td>Deep foundations</td></tr>
+            </table>
+
+            <div class="pro-tip">
+                <strong>💡 Pro Tip:</strong> Always add waste allowance (typically 5-10% for concrete, 3-5% for rebar, 10-15% for tiles).
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="module-card" id="module5">
+            <div class="module-number">📋 MODULE 5: Bill of Quantities (BOQ) Preparation</div>
+            <h2>Creating Professional BOQ Documents</h2>
+
+            <h3>5.1 BOQ Structure</h3>
+            <ol>
+                <li><strong>Preliminaries:</strong> General conditions, temporary works, insurance</li>
+                <li><strong>Preambles:</strong> Measurement rules, workmanship standards</li>
+                <li><strong>Measured Works:</strong> Main quantity items by trade/element</li>
+                <li><strong>Provisional Items:</strong> Unknown/undefined scope</li>
+                <li><strong>Prime Cost Sums:</strong> Pre-defined amounts for specific work</li>
+                <li><strong>Contingency:</strong> Risk allowance (typically 5-10%)</li>
+                <li><strong>Summary:</strong> Trade/section totals</li>
+            </ol>
+
+            <h3>5.2 BOQ Item Components</h3>
+            <table class="comparison-table">
+                <tr>
+                    <th>Component</th>
+                    <th>Purpose</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>Item Code</td>
+                    <td>Unique reference</td>
+                    <td>03.01.01</td>
+                </tr>
+                <tr>
+                    <td>Description</td>
+                    <td>Detailed work specification</td>
+                    <td>"Reinforced concrete C30/37 in foundations..."</td>
+                </tr>
+                <tr>
+                    <td>Unit</td>
+                    <td>Measurement unit</td>
+                    <td>m³</td>
+                </tr>
+                <tr>
+                    <td>Quantity</td>
+                    <td>Measured amount</td>
+                    <td>145.50</td>
+                </tr>
+                <tr>
+                    <td>Rate</td>
+                    <td>Unit price (contractor fills)</td>
+                    <td>$125.00</td>
+                </tr>
+                <tr>
+                    <td>Amount</td>
+                    <td>Qty × Rate</td>
+                    <td>$18,187.50</td>
+                </tr>
+            </table>
+
+            <h3>5.3 Sample BOQ Extract</h3>
+            <div class="take-off-sheet" style="font-size: 0.9rem;">
+<pre>
+BILL NO. 3: CONCRETE WORKS
+─────────────────────────────────────────────────────────────────────────────
+Item │ Description                                          │ Unit │   Qty  │  Rate  │  Amount
+─────┼──────────────────────────────────────────────────────┼──────┼────────┼────────┼──────────
+3.01 │ FOUNDATIONS                                          │      │        │        │
+     │                                                      │      │        │        │
+3.01.│ Blinding concrete C10 50mm thick                    │  m²  │  85.00 │        │
+ 01  │ under foundations                                    │      │        │        │
+     │                                                      │      │        │        │
+3.01.│ Reinforced concrete grade C30/37                    │  m³  │ 145.50 │        │
+ 02  │ in isolated pad foundations, including               │      │        │        │
+     │ placing and vibrating                                │      │        │        │
+     │                                                      │      │        │        │
+3.01.│ Formwork to edges of foundations                    │  m²  │  42.00 │        │
+ 03  │ plain vertical not exceeding 500mm high              │      │        │        │
+     │                                                      │      │        │        │
+3.01.│ High yield steel reinforcement bars                 │  kg  │7,850.00│        │
+ 04  │ to BS 4449, including cutting, bending               │      │        │        │
+     │ and fixing                                           │      │        │        │
+─────┴──────────────────────────────────────────────────────┴──────┴────────┴────────┴──────────
+                                          ELEMENT TOTAL TO SUMMARY:
+</pre>
+            </div>
+
+            <h3>5.4 BOQ Preparation Best Practices</h3>
+            <ul>
+                <li>✅ Use consistent numbering system throughout</li>
+                <li>✅ Description must be complete and unambiguous</li>
+                <li>✅ Reference specifications and drawing numbers</li>
+                <li>✅ Group related items logically</li>
+                <li>✅ Provide sufficient decimal places (2 for most, 3 for small quantities)</li>
+                <li>✅ Include preambles explaining measurement conventions</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <div class="module-card" id="module6">
+            <div class="module-number">💰 MODULE 6: Pricing and Rate Analysis</div>
+            <h2>Building Up Unit Rates</h2>
+
+            <h3>6.1 Rate Components</h3>
+            <div class="formula-box">
+                <strong>Unit Rate = Material + Labor + Equipment + OH&P</strong>
+                
+                Where:
+                Material = (Quantity × Unit Price) + Waste
+                Labor = Labor-Hours × Hourly Rate
+                Equipment = Equipment Hours × Hourly Rate
+                OH&P = (Material + Labor + Equipment) × Markup %
+            </div>
+
+            <h3>6.2 Rate Build-up Example</h3>
+            <div class="example-box">
+                <h4>Item: Reinforced Concrete C30 in Foundations (per m³)</h4>
+                <table class="comparison-table">
+                    <tr>
+                        <th>Component</th>
+                        <th>Quantity</th>
+                        <th>Unit Rate</th>
+                        <th>Amount</th>
+                    </tr>
+                    <tr>
+                        <td><strong>MATERIALS:</strong></td><td></td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <td>Cement (360 kg/m³)</td>
+                        <td>0.36 t</td>
+                        <td>$120/t</td>
+                        <td>$43.20</td>
+                    </tr>
+                    <tr>
+                        <td>Sand</td>
+                        <td>0.45 m³</td>
+                        <td>$35/m³</td>
+                        <td>$15.75</td>
+                    </tr>
+                    <tr>
+                        <td>Aggregate 20mm</td>
+                        <td>0.85 m³</td>
+                        <td>$40/m³</td>
+                        <td>$34.00</td>
+                    </tr>
+                    <tr>
+                        <td>Water/admixtures</td>
+                        <td>LS</td>
+                        <td>LS</td>
+                        <td>$5.00</td>
+                    </tr>
+                    <tr>
+                        <td>Waste (5%)</td>
+                        <td></td>
+                        <td></td>
+                        <td>$4.90</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Materials Subtotal:</strong></td>
+                        <td></td>
+                        <td></td>
+                        <td><strong>$102.85</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>LABOR:</strong></td><td></td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <td>Concrete gang (1.5 hrs/m³)</td>
+                        <td>1.5 hrs</td>
+                        <td>$25/hr</td>
+                        <td>$37.50</td>
+                    </tr>
+                    <tr>
+                        <td><strong>EQUIPMENT:</strong></td><td></td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <td>Mixer/pump (0.5 hr/m³)</td>
+                        <td>0.5 hr</td>
+                        <td>$40/hr</td>
+                        <td>$20.00</td>
+                    </tr>
+                    <tr>
+                        <td>Vibrator</td>
+                        <td>LS</td>
+                        <td></td>
+                        <td>$3.00</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Direct Cost:</strong></td>
+                        <td></td>
+                        <td></td>
+                        <td><strong>$163.35</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Overhead (10%)</td>
+                        <td></td>
+                        <td></td>
+                        <td>$16.34</td>
+                    </tr>
+                    <tr>
+                        <td>Profit (8%)</td>
+                        <td></td>
+                        <td></td>
+                        <td>$14.38</td>
+                    </tr>
+                    <tr style="background: rgba(139, 92, 246, 0.1);">
+                        <td><strong>UNIT RATE:</strong></td>
+                        <td></td>
+                        <td></td>
+                        <td><strong>$194.07/m³</strong></td>
+                    </tr>
+                </table>
+            </div>
+
+            <h3>6.3 markup Benchmarks</h3>
+            <table class="comparison-table">
+                <tr>
+                    <th>Item</th>
+                    <th>Typical Range</th>
+                </tr>
+                <tr><td>General Overhead</td><td>8-15%</td></tr>
+                <tr><td>Profit</td><td>5-12%</td></tr>
+                <tr><td>Preliminaries</td><td>10-20% of works</td></tr>
+                <tr><td>Contingency</td><td>5-10%</td></tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <div class="module-card" id="module7">
+            <div class="module-number">📊 MODULE 7: Interim Payments and Valuations</div>
+            <h2>Monthly Progress Payments</h2>
+
+            <h3>7.1 Interim Valuation Process</h3>
+            <ol>
+                <li>Schedule joint site measurement (QS + Contractor)</li>
+                <li>Measure completed permanent works</li>
+                <li>Assess value of materials on site</li>
+                <li>Value preliminaries (time-related items)</li>
+                <li>Include approved variations</li>
+                <li>Deduct retention (typically 5-10%)</li>
+                <li>Deduct previous payments</li>
+                <li>Issue payment certificate</li>
+            </ol>
+
+            <h3>7.2 Valuation Calculation</h3>
+            <div class="formula-box">
+                <strong>Payment Due = Gross Valuation - Retention - Previous Payments</strong>
+                
+                <strong>Example:</strong>
+                Permanent works to date: $500,000
+                Materials on site: $50,000
+                Preliminaries: $75,000
+                Approved variations: $25,000
+                ─────────────────────────
+                Gross Valuation: $650,000
+                Less: Retention (10%): -$65,000
+                Less: Previous payments: -$400,000
+                ─────────────────────────
+                <strong>Amount Due: $185,000</strong>
+            </div>
+
+            <h3>7.3 Retention Release</h3>
+            <p>Retention is typically released in two stages:</p>
+            <ul>
+                <li><strong>First Half (50%):</strong> At Practical/Substantial Completion</li>
+                <li><strong>Second Half (50%):</strong> At end of Defects Liability Period (typically 12 months)</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <div class="module-card" id="module8">
+            <div class="module-number">⚖️ MODULE 8: Final Account and Claims</div>
+            <h2>Project Financial Close-out</h2>
+
+            <h3>8.1 Final Account Components</h3>
+            <ol>
+                <li><strong>Measured Works:</strong> As-built final quantities</li>
+                <li><strong>Variations:</strong> All approved changes</li>
+                <li><strong>Claims:</strong> Approved contractor claims</li>
+                <li><strong>Dayworks:</strong> Work done on cost-plus basis</li>
+                <li><strong>Adjustments:</strong> PC sums, contingency, provisional</li>
+                <li><strong>Deductions:</strong> Defects, back-charges, liquidated damages</li>
+            </ol>
+
+            <h3>8.2 Common Claim Types</h3>
+            <table class="comparison-table">
+                <tr>
+                    <th>Claim Type</th>
+                    <th>Basis</th>
+                    <th>Typical Compensation</th>
+                </tr>
+                <tr>
+                    <td>Extension of Time (EOT)</td>
+                    <td>Delay caused by employer</td>
+                    <td>Additional time + prelims</td>
+                </tr>
+                <tr>
+                    <td>Prolongation</td>
+                    <td>Extended site presence</td>
+                    <td>Time-related costs</td>
+                </tr>
+                <tr>
+                    <td>Disruption</td>
+                    <td>Loss of productivity</td>
+                    <td>Additional labor costs</td>
+                </tr>
+                <tr>
+                    <td>Acceleration</td>
+                    <td>Speeding up work</td>
+                    <td>Premium costs</td>
+                </tr>
+                <tr>
+                    <td>Loss & Expense</td>
+                    <td>Direct loss from breach</td>
+                    <td>Proven actual costs</td>
+                </tr>
+            </table>
+
+            <h3>8.3 Final Account Checklist</h3>
+            <ul>
+                <li>☐ All variations measured and agreed</li>
+                <li>☐ Outstanding claims resolved</li>
+                <li>☐ Defects made good or valued</li>
+                <li>☐ All PC sums and provisional items adjusted</li>
+                <li>☐ As-built drawings received</li>
+                <li>☐ Warranties and guarantees collected</li>
+                <li>☐ Retention release processed</li>
+                <li>☐ Final certificate issued</li>
+            </ul>
+
+            <div class="warning-box">
+                <strong>⚠️ Time Limits:</strong> Most contracts have strict time limits for submitting final account claims. Missing deadlines can result in loss of entitlement!
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="key-takeaway">
+            <h3>🎯 Course Takeaways</h3>
+            <ol>
+                <li><strong>QS is Essential:</strong> Critical role in project financial management</li>
+                <li><strong>Standards Matter:</strong> Always specify measurement rules used</li>
+                <li><strong>Accuracy is Everything:</strong> Small errors multiply into big money</li>
+                <li><strong>Document Everything:</strong> Source all quantities to drawings</li>
+                <li><strong>Know Your Contracts:</strong> Payment terms, variations, claims procedures</li>
+                <li><strong>Technology Helps:</strong> Use software tools to improve efficiency</li>
+                <li><strong>Continuous Learning:</strong> Standards and methods evolve</li>
+            </ol>
+        </div>
+
+        <div class="pro-tip" style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(139, 92, 246, 0.05));">
+            <h3>🧮 Practice with Our Tools!</h3>
+            <p>Put your QS knowledge to work with our <a href="../../crew-calculator.html" style="color: #8b5cf6; font-weight: 700;">Crew Calculator</a>. It provides CSI productivity data that integrates perfectly with your quantity take-offs for complete project costing.</p>
+        </div>
+
         <div class="share-buttons">
             <span class="share-buttons-label">Share this article:</span>
             <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-btn facebook" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">Facebook</a>
@@ -151,7 +890,6 @@
             <a href="https://wa.me/?text=" class="share-btn whatsapp" target="_blank" onclick="this.href+=encodeURIComponent(document.title + ' ' + window.location.href)">WhatsApp</a>
             <button class="share-btn copy" onclick="navigator.clipboard.writeText(window.location.href);alert('Link copied!')">Copy Link</button>
         </div>
-        
         
         <hr>
         <p><strong>Next Article:</strong> <a href="structural-quantity-takeoff-en.html">Structural Quantity Take-off: Methods and Best Practices</a></p>
