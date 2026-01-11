@@ -3,26 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cost Breakdown Structure (CBS) in Construction - CSI Calculator</title>
-    <meta name="description" content="Comprehensive guide to understanding and creating Cost Breakdown Structure CBS and its relationship with WBS in construction project cost management.">
-    <meta name="keywords" content="CBS, Cost Breakdown Structure, WBS, Cost Control, Cost Coding, Budget Management">
+    <title>Cost Breakdown Structure (CBS): Complete Guide with Coding System - CSI Calculator</title>
+    <meta name="description" content="Master Cost Breakdown Structure: relationship with WBS, coding systems, CSI MasterFormat, integration with schedule, and ERP implementation. Complete professional guide.">
+    <meta name="keywords" content="CBS, Cost Breakdown Structure, WBS, Cost Control, Cost Coding, Budget Management, CSI MasterFormat">
     
-    <meta property="og:title" content="Cost Breakdown Structure (CBS) in Construction">
-    <meta property="og:description" content="How to organize your project costs professionally?">
+    <meta property="og:title" content="Cost Breakdown Structure (CBS): Complete Guide">
+    <meta property="og:description" content="How to organize your project costs professionally">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://csi-calc.vercel.app/blog/articles/cost-breakdown-structure-en.html">
     <meta property="og:image" content="../assets/cost-breakdown-structure.jpg">
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Cost Breakdown Structure (CBS) in Construction",
-      "author": {"@type": "Person", "name": "Sameh Badawy Sayed"},
-      "datePublished": "2026-01-07",
-      "articleSection": "Cost Estimation"
-    }
-    </script>
     
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5429423113977975" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../css/theme.css">
@@ -36,6 +24,122 @@
     <script src="../../js/i18n.js"></script>
     <script src="../../js/theme.js"></script>
     <script src="../../js/blog-i18n.js"></script>
+
+    <style>
+        .cbs-hero {
+            background: linear-gradient(135deg, #6366f1, #4f46e5);
+            color: white;
+            padding: 2rem;
+            border-radius: 16px;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        .structure-card {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .level-card {
+            background: #f8fafc;
+            border-left: 4px solid;
+            padding: 1rem 1.5rem;
+            margin: 0.75rem 0;
+            border-radius: 0 12px 12px 0;
+        }
+        .level-1 { border-color: #3b82f6; }
+        .level-2 { border-color: #10b981; }
+        .level-3 { border-color: #f59e0b; }
+        .level-4 { border-color: #8b5cf6; }
+        .code-box {
+            background: linear-gradient(135deg, #1e293b, #334155);
+            color: #34d399;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+        }
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        @media (max-width: 768px) {
+            .comparison-grid { grid-template-columns: 1fr; }
+        }
+        .wbs-card {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(59, 130, 246, 0.05));
+            border: 2px solid #3b82f6;
+            border-radius: 12px;
+            padding: 1.25rem;
+        }
+        .cbs-card-compare {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(16, 185, 129, 0.05));
+            border: 2px solid #10b981;
+            border-radius: 12px;
+            padding: 1.25rem;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .comparison-table th {
+            background: linear-gradient(135deg, #6366f1, #4f46e5);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        .comparison-table td {
+            padding: 0.875rem 1rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .pro-tip {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(34, 197, 94, 0.05));
+            border-left: 4px solid #22c55e;
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.5rem 0;
+        }
+        .warning-box {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(239, 68, 68, 0.05));
+            border-left: 4px solid #ef4444;
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.5rem 0;
+        }
+        .key-takeaway {
+            background: linear-gradient(135deg, #6366f1, #4f46e5);
+            color: white;
+            padding: 2rem;
+            border-radius: 16px;
+            margin: 2rem 0;
+        }
+        .integration-flow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin: 1.5rem 0;
+        }
+        .flow-item {
+            background: #f8fafc;
+            padding: 0.75rem 1.25rem;
+            border-radius: 8px;
+            border: 2px solid #e5e7eb;
+            font-weight: 600;
+        }
+        .flow-arrow {
+            color: #6366f1;
+            font-size: 1.5rem;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -48,7 +152,7 @@
                 <a href="../../index.html" data-i18n="home" data-icon="🏠"><span>Home</span></a>
                 <a href="../../crew-calculator.html" data-i18n="crewCalculator" data-icon="🧮"><span>Calculator</span></a>
                 <a href="../../ai-planner.html" data-i18n="aiPlanner" data-icon="🤖"><span>AI Planner</span></a>
-                <a href="../index-en.html" class="active" data-i18n="blog" data-icon="📚"><span>Manual & Tips</span></a>
+                <a href="../index-en.html" class="active" data-i18n="blog" data-icon="📚"><span>Knowledge Bites</span></a>
                 <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">🌙</button>
                 <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()"><span id="langIcon">AR</span></button>
             </div>
@@ -57,90 +161,355 @@
 
     <div class="article-header">
         <span class="article-category">Cost Estimation</span>
-        <h1>Cost Breakdown Structure (CBS) in Construction</h1>
+        <h1>Cost Breakdown Structure (CBS): Complete Professional Guide</h1>
         <div class="article-meta">
-            <span class="article-date">January 7, 2026</span>
-            <span class="article-read-time">10 min read</span>
+            <span class="article-date">January 11, 2026</span>
+            <span class="article-read-time">20 min read</span>
         </div>
     </div>
 
     <div class="article-body">
-        <div class="article-image-container">
-            <img src="../assets/cost-breakdown-structure.jpg" alt="Cost Breakdown Structure" class="img-fluid rounded shadow mb-4">
+        <div class="cbs-hero">
+            <h2 style="margin-top: 0;">📊 Organize Your Project Costs Like a Pro</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 0;">CBS is the financial backbone of project control</p>
         </div>
 
-        <h2>📊 What is Cost Breakdown Structure (CBS)?</h2>
-        <p>
-            Cost Breakdown Structure (CBS) is a comprehensive hierarchical classification of all project costs. While WBS focuses on "what we will build", CBS focuses on "how much everything will cost". Both are complementary and indispensable.
-        </p>
+        <h2>📋 Table of Contents</h2>
+        <ol>
+            <li><a href="#what-is-cbs">What is Cost Breakdown Structure?</a></li>
+            <li><a href="#wbs-relationship">CBS vs WBS Relationship</a></li>
+            <li><a href="#structure">Typical CBS Structure</a></li>
+            <li><a href="#coding">Cost Coding Systems</a></li>
+            <li><a href="#masterformat">CSI MasterFormat Integration</a></li>
+            <li><a href="#integration">Schedule & ERP Integration</a></li>
+            <li><a href="#implementation">Implementation Guide</a></li>
+        </ol>
 
-        <h2>🔗 Relationship Between CBS and WBS</h2>
-        <p>
-            Think of CBS as a financial layer parallel to WBS. Each work package in WBS should have a corresponding cost code in CBS:
-        </p>
-        <ul>
-            <li><strong>WBS:</strong> Answers "What?" - What are the activities and deliverables?</li>
-            <li><strong>CBS:</strong> Answers "How much?" - What is the cost of each element?</li>
-        </ul>
+        <hr>
 
-        <h2>📁 Typical CBS Structure</h2>
-        <p>CBS is organized in hierarchical levels:</p>
+        <h2 id="what-is-cbs">📊 1. What is Cost Breakdown Structure (CBS)?</h2>
+        <p><strong>Cost Breakdown Structure (CBS)</strong> is a comprehensive hierarchical classification of all project costs. While WBS focuses on <em>"what we will build"</em>, CBS focuses on <em>"how much everything will cost"</em>.</p>
+
+        <div class="structure-card">
+            <h3>CBS Purpose</h3>
+            <ul>
+                <li><strong>Budget Organization:</strong> Structure project budget logically</li>
+                <li><strong>Cost Tracking:</strong> Monitor spending against baseline</li>
+                <li><strong>Variance Analysis:</strong> Identify over/under budget areas</li>
+                <li><strong>Historical Data:</strong> Build pricing database for future projects</li>
+                <li><strong>Reporting:</strong> Generate financial reports at any level</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <h2 id="wbs-relationship">🔗 2. CBS vs WBS Relationship</h2>
         
-        <h3>Level 1: Main Classification</h3>
-        <ul>
-            <li>01 - Structural Works</li>
-            <li>02 - Architectural Works</li>
-            <li>03 - Electrical Works</li>
-            <li>04 - Mechanical Works</li>
-            <li>05 - Site Works</li>
-        </ul>
-
-        <h3>Level 2: Details</h3>
-        <p>Example for Structural Works (01):</p>
-        <ul>
-            <li>01.01 - Excavation Works</li>
-            <li>01.02 - Concrete Works</li>
-            <li>01.03 - Reinforcement Works</li>
-            <li>01.04 - Formwork</li>
-        </ul>
-
-        <h3>Level 3: Fine Details</h3>
-        <p>Example for Concrete Works (01.02):</p>
-        <ul>
-            <li>01.02.01 - Foundation Concrete</li>
-            <li>01.02.02 - Column Concrete</li>
-            <li>01.02.03 - Slab Concrete</li>
-            <li>01.02.04 - Beam Concrete</li>
-        </ul>
-
-        <h2>🏷️ Cost Coding System</h2>
-        <p>
-            Good coding ensures easy tracking and reporting. Example coding system:
-        </p>
-        <div class="formula-box">
-            <strong>XX.YY.ZZ.NNN</strong><br>
-            XX = Main Division (e.g., 01 for Structural)<br>
-            YY = Sub-Division (e.g., 02 for Concrete)<br>
-            ZZ = Type (e.g., 03 for Slabs)<br>
-            NNN = Sequential Number
+        <div class="comparison-grid">
+            <div class="wbs-card">
+                <h3 style="color: #1d4ed8; margin-top: 0;">📋 WBS (Work Breakdown Structure)</h3>
+                <p><strong>Answers:</strong> "What?" - What are the activities and deliverables?</p>
+                <ul style="margin-bottom: 0;">
+                    <li>Deliverable-oriented</li>
+                    <li>Scope decomposition</li>
+                    <li>Work packages</li>
+                    <li>100% rule (all scope)</li>
+                </ul>
+            </div>
+            <div class="cbs-card-compare">
+                <h3 style="color: #16a34a; margin-top: 0;">💰 CBS (Cost Breakdown Structure)</h3>
+                <p><strong>Answers:</strong> "How much?" - What is the cost of each element?</p>
+                <ul style="margin-bottom: 0;">
+                    <li>Cost-oriented</li>
+                    <li>Budget decomposition</li>
+                    <li>Cost accounts</li>
+                    <li>All costs covered</li>
+                </ul>
+            </div>
         </div>
 
-        <h2>📈 Benefits of Organized CBS</h2>
-        <ul>
-            <li><strong>Accurate Tracking:</strong> Know where every dollar goes.</li>
-            <li><strong>Comparisons:</strong> Easily compare actual vs planned costs.</li>
-            <li><strong>Reporting:</strong> Generate financial reports at any detail level.</li>
-            <li><strong>Integration:</strong> Link CBS with accounting systems and ERP.</li>
-            <li><strong>Lessons Learned:</strong> Build historical pricing database.</li>
-        </ul>
+        <h3>Integration Model</h3>
+        <div class="integration-flow">
+            <div class="flow-item">WBS<br><small>Work Package</small></div>
+            <span class="flow-arrow">↔️</span>
+            <div class="flow-item">CBS<br><small>Cost Account</small></div>
+            <span class="flow-arrow">↔️</span>
+            <div class="flow-item">Schedule<br><small>Activity</small></div>
+            <span class="flow-arrow">↔️</span>
+            <div class="flow-item">Resources<br><small>Labor/Equip</small></div>
+        </div>
 
-        <h2>💡 Implementation Tips</h2>
-        <ul>
-            <li>Use a unified coding system across all company projects.</li>
-            <li>Don't make CBS too complex - 4 levels usually suffice.</li>
-            <li>Ensure CBS aligns with WBS for easy integration.</li>
-            <li>Train accounting team on using correct codes.</li>
-        </ul>        <!-- Share Buttons -->
+        <div class="pro-tip">
+            <strong>💡 Best Practice:</strong> Each Work Package in WBS should have a corresponding Cost Account in CBS. This creates a Control Account for earned value management.
+        </div>
+
+        <hr>
+
+        <h2 id="structure">📁 3. Typical CBS Structure</h2>
+
+        <div class="level-card level-1">
+            <h4 style="color: #3b82f6; margin-top: 0;">Level 1: Major Divisions</h4>
+            <ul style="margin-bottom: 0;">
+                <li>01 - Structural Works</li>
+                <li>02 - Architectural Works</li>
+                <li>03 - Electrical Works</li>
+                <li>04 - Mechanical Works</li>
+                <li>05 - Site Works</li>
+                <li>06 - Preliminaries & General</li>
+            </ul>
+        </div>
+
+        <div class="level-card level-2">
+            <h4 style="color: #10b981; margin-top: 0;">Level 2: Sub-Divisions (Example: 01 Structural)</h4>
+            <ul style="margin-bottom: 0;">
+                <li>01.01 - Excavation & Earthworks</li>
+                <li>01.02 - Concrete Works</li>
+                <li>01.03 - Reinforcement Works</li>
+                <li>01.04 - Formwork</li>
+                <li>01.05 - Precast Elements</li>
+                <li>01.06 - Structural Steel</li>
+            </ul>
+        </div>
+
+        <div class="level-card level-3">
+            <h4 style="color: #f59e0b; margin-top: 0;">Level 3: Work Categories (Example: 01.02 Concrete)</h4>
+            <ul style="margin-bottom: 0;">
+                <li>01.02.01 - Foundation Concrete (FC)</li>
+                <li>01.02.02 - Column Concrete (CC)</li>
+                <li>01.02.03 - Beam Concrete (BC)</li>
+                <li>01.02.04 - Slab Concrete (SC)</li>
+                <li>01.02.05 - Wall Concrete (WC)</li>
+            </ul>
+        </div>
+
+        <div class="level-card level-4">
+            <h4 style="color: #8b5cf6; margin-top: 0;">Level 4: Cost Elements (Example: 01.02.01 Foundation)</h4>
+            <ul style="margin-bottom: 0;">
+                <li>01.02.01.001 - Raft Foundation</li>
+                <li>01.02.01.002 - Isolated Footings</li>
+                <li>01.02.01.003 - Combined Footings</li>
+                <li>01.02.01.004 - Ground Beams</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <h2 id="coding">🏷️ 4. Cost Coding Systems</h2>
+
+        <h3>4.1 Typical Code Structure</h3>
+        <div class="code-box">
+            <strong>XX.YY.ZZ.NNN</strong><br><br>
+            XX = Major Division (01-99)<br>
+            YY = Sub-Division (01-99)<br>
+            ZZ = Work Category (01-99)<br>
+            NNN = Sequential Item (001-999)
+        </div>
+
+        <h3>4.2 Extended Coding (with Location)</h3>
+        <div class="code-box">
+            <strong>PRJ-BLD-FLR-DIV.SUB.CAT.NUM</strong><br><br>
+            PRJ = Project Code (HQ1)<br>
+            BLD = Building (TWR-A, TWR-B)<br>
+            FLR = Floor Level (B2, GF, TYP, RF)<br>
+            DIV.SUB.CAT.NUM = CBS Code
+        </div>
+
+        <div class="pro-tip">
+            <strong>💡 Example:</strong><br>
+            <code>HQ1-TWRA-GF-01.02.04.001</code> = HQ1 Project, Tower A, Ground Floor, Structural Works, Concrete, Slab Concrete, Item 001
+        </div>
+
+        <h3>4.3 Code Attributes</h3>
+        <table class="comparison-table">
+            <tr>
+                <th>Attribute</th>
+                <th>Purpose</th>
+                <th>Example</th>
+            </tr>
+            <tr>
+                <td><strong>Description</strong></td>
+                <td>Clear name of cost item</td>
+                <td>Ground Floor Slab C30</td>
+            </tr>
+            <tr>
+                <td><strong>Unit</strong></td>
+                <td>Measurement unit</td>
+                <td>m³, m², kg, LS</td>
+            </tr>
+            <tr>
+                <td><strong>Rate</strong></td>
+                <td>Unit price</td>
+                <td>$150/m³</td>
+            </tr>
+            <tr>
+                <td><strong>Budget Qty</strong></td>
+                <td>Baseline quantity</td>
+                <td>450 m³</td>
+            </tr>
+            <tr>
+                <td><strong>Budget Cost</strong></td>
+                <td>Qty × Rate</td>
+                <td>$67,500</td>
+            </tr>
+            <tr>
+                <td><strong>WBS Link</strong></td>
+                <td>Related work package</td>
+                <td>WBS 1.3.2</td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <h2 id="masterformat">📚 5. CSI MasterFormat Integration</h2>
+        <p>Many organizations align CBS with <strong>CSI MasterFormat</strong> for standardization:</p>
+
+        <table class="comparison-table">
+            <tr>
+                <th>Division</th>
+                <th>Title</th>
+                <th>CBS Category</th>
+            </tr>
+            <tr>
+                <td>Div 03</td>
+                <td>Concrete</td>
+                <td>Structural - Concrete</td>
+            </tr>
+            <tr>
+                <td>Div 04</td>
+                <td>Masonry</td>
+                <td>Architectural - Walls</td>
+            </tr>
+            <tr>
+                <td>Div 05</td>
+                <td>Metals</td>
+                <td>Structural - Steel</td>
+            </tr>
+            <tr>
+                <td>Div 09</td>
+                <td>Finishes</td>
+                <td>Architectural - Finishes</td>
+            </tr>
+            <tr>
+                <td>Div 23</td>
+                <td>HVAC</td>
+                <td>Mechanical - HVAC</td>
+            </tr>
+            <tr>
+                <td>Div 26</td>
+                <td>Electrical</td>
+                <td>Electrical - Power</td>
+            </tr>
+        </table>
+
+        <div class="pro-tip">
+            <strong>💡 Practical Tip:</strong> Using CSI codes allows you to leverage industry databases like RSMeans for benchmarking and validation of your cost estimates. Our <a href="../../crew-calculator.html" style="color: #22c55e; font-weight: 700;">CSI Calculator</a> uses this standard for productivity rates!
+        </div>
+
+        <hr>
+
+        <h2 id="integration">🔄 6. Schedule & ERP Integration</h2>
+
+        <h3>6.1 Schedule Integration (5D BIM)</h3>
+        <table class="comparison-table">
+            <tr>
+                <th>Element</th>
+                <th>Link</th>
+                <th>Purpose</th>
+            </tr>
+            <tr>
+                <td>Activity</td>
+                <td>CBS Code</td>
+                <td>Time-phased cost</td>
+            </tr>
+            <tr>
+                <td>Resource</td>
+                <td>CBS + Rate</td>
+                <td>Cost loading</td>
+            </tr>
+            <tr>
+                <td>Baseline</td>
+                <td>CBS Budget</td>
+                <td>BCWS/PV</td>
+            </tr>
+            <tr>
+                <td>Progress</td>
+                <td>CBS Actual</td>
+                <td>BCWP/EV</td>
+            </tr>
+        </table>
+
+        <h3>6.2 ERP/Accounting Integration</h3>
+        <table class="comparison-table">
+            <tr>
+                <th>System</th>
+                <th>CBS Use</th>
+            </tr>
+            <tr>
+                <td><strong>Procurement</strong></td>
+                <td>Purchase orders linked to CBS codes</td>
+            </tr>
+            <tr>
+                <td><strong>Invoicing</strong></td>
+                <td>Invoice items coded to CBS</td>
+            </tr>
+            <tr>
+                <td><strong>Cost Reports</strong></td>
+                <td>Budget vs Actual by CBS level</td>
+            </tr>
+            <tr>
+                <td><strong>Cash Flow</strong></td>
+                <td>Forecast by CBS category</td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <h2 id="implementation">🛠️ 7. Implementation Guide</h2>
+
+        <h3>7.1 Setup Steps</h3>
+        <ol>
+            <li><strong>Define Structure:</strong> Determine levels and categories for your organization</li>
+            <li><strong>Create Coding:</strong> Design unique, logical coding system</li>
+            <li><strong>Document:</strong> Write CBS Manual with descriptions and rules</li>
+            <li><strong>Train Team:</strong> Ensure everyone uses correct codes</li>
+            <li><strong>Integrate:</strong> Link to schedule, accounting, and procurement</li>
+            <li><strong>Enforce:</strong> Make CBS mandatory for all transactions</li>
+        </ol>
+
+        <h3>7.2 Best Practices</h3>
+        <div class="pro-tip">
+            <ul style="margin: 0;">
+                <li>Use <strong>unified coding</strong> across all company projects</li>
+                <li>Keep CBS <strong>simple</strong> - 4 levels usually suffice</li>
+                <li>Ensure CBS <strong>aligns with WBS</strong> for integration</li>
+                <li>Train <strong>accounting team</strong> on using correct codes</li>
+                <li>Build <strong>historical database</strong> for future estimating</li>
+            </ul>
+        </div>
+
+        <div class="warning-box">
+            <h4 style="margin-top: 0;">❌ Common Mistakes</h4>
+            <ul style="margin-bottom: 0;">
+                <li>Creating too many levels (complexity kills adoption)</li>
+                <li>Inconsistent coding between projects</li>
+                <li>Not linking CBS to WBS and schedule</li>
+                <li>Allowing transactions without CBS codes</li>
+                <li>Not updating CBS when scope changes</li>
+            </ul>
+        </div>
+
+        <div class="key-takeaway">
+            <h3 style="margin-top: 0;">🎯 Key Takeaways</h3>
+            <ol style="margin-bottom: 0;">
+                <li><strong>CBS is financial layer</strong> parallel to WBS</li>
+                <li><strong>Coding is critical</strong> — unique, logical, consistent</li>
+                <li><strong>Integrate everywhere</strong> — schedule, ERP, procurement</li>
+                <li><strong>Simple is better</strong> — 4 levels maximum</li>
+                <li><strong>Build history</strong> — CBS enables benchmarking</li>
+                <li><strong>Enforce usage</strong> — worthless if not used consistently</li>
+            </ol>
+        </div>
+
         <div class="share-buttons">
             <span class="share-buttons-label">Share this article:</span>
             <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-btn facebook" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">Facebook</a>
@@ -150,9 +519,8 @@
             <button class="share-btn copy" onclick="navigator.clipboard.writeText(window.location.href);alert('Link copied!')">Copy Link</button>
         </div>
         
-        
         <hr>
-        <p><strong>Next Article:</strong> <a href="material-takeoff-en.html">Material Take-off and Cost Calculation</a></p>
+        <p><strong>Related:</strong> <a href="material-takeoff-en.html">Material Take-off Guide</a> | <a href="cost-estimation-methods-en.html">Cost Estimation Methods</a></p>
     </div>
 
     <footer class="site-footer">
