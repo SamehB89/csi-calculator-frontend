@@ -215,37 +215,44 @@
         <h2 id="examples">📝 5. Detailed Examples</h2>
 
         <h3>5.1 Example: Concrete Column</h3>
-        <pre style="background: #f5f5f5; padding: 15px; border-radius: 8px;">
-LOD 100:
-├── Shape: General rectangle
-├── Info: "Structural column"
-└── Use: Feasibility study
-
-LOD 200:
-├── Shape: ~40×40 approximate
-├── Info: Concrete, approximate location
-└── Use: Preliminary design
-
-LOD 300:
-├── Shape: 40×40×300cm exactly
-├── Info: C30, specific location, Grid C-3
-└── Use: Quantity takeoff, Clash Detection
-
-LOD 350:
-├── Shape: + MEP penetrations
-├── Info: + coordination with systems
-└── Use: Full coordination
-
-LOD 400:
-├── Shape: + full rebar (8Φ16 + 4Φ12)
-├── Info: + all execution details
-└── Use: Shop Drawings
-
-LOD 500:
-├── Shape: Actual executed location
-├── Info: + pour date, Mix Design
-└── Use: FM, maintenance records
-        </pre>
+        <div style="display: grid; gap: 1rem; margin: 1.5rem 0;">
+            <div style="background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(239, 68, 68, 0.05)); border-left: 4px solid #ef4444; padding: 1rem 1.5rem; border-radius: 0 12px 12px 0;">
+                <h4 style="margin: 0 0 0.5rem 0; color: #ef4444;">LOD 100 - Conceptual</h4>
+                <p style="margin: 0.25rem 0;"><strong>Shape:</strong> General rectangle</p>
+                <p style="margin: 0.25rem 0;"><strong>Info:</strong> "Structural column"</p>
+                <p style="margin: 0.25rem 0;"><strong>Use:</strong> Feasibility study</p>
+            </div>
+            <div style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(245, 158, 11, 0.05)); border-left: 4px solid #f59e0b; padding: 1rem 1.5rem; border-radius: 0 12px 12px 0;">
+                <h4 style="margin: 0 0 0.5rem 0; color: #f59e0b;">LOD 200 - Approximate</h4>
+                <p style="margin: 0.25rem 0;"><strong>Shape:</strong> ~40×40 approximate</p>
+                <p style="margin: 0.25rem 0;"><strong>Info:</strong> Concrete, approximate location</p>
+                <p style="margin: 0.25rem 0;"><strong>Use:</strong> Preliminary design</p>
+            </div>
+            <div style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(34, 197, 94, 0.05)); border-left: 4px solid #22c55e; padding: 1rem 1.5rem; border-radius: 0 12px 12px 0;">
+                <h4 style="margin: 0 0 0.5rem 0; color: #22c55e;">LOD 300 - Precise</h4>
+                <p style="margin: 0.25rem 0;"><strong>Shape:</strong> 40×40×300cm exactly</p>
+                <p style="margin: 0.25rem 0;"><strong>Info:</strong> C30, specific location, Grid C-3</p>
+                <p style="margin: 0.25rem 0;"><strong>Use:</strong> Quantity takeoff, Clash Detection</p>
+            </div>
+            <div style="background: linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(14, 165, 233, 0.05)); border-left: 4px solid #0ea5e9; padding: 1rem 1.5rem; border-radius: 0 12px 12px 0;">
+                <h4 style="margin: 0 0 0.5rem 0; color: #0ea5e9;">LOD 350 - Coordination</h4>
+                <p style="margin: 0.25rem 0;"><strong>Shape:</strong> + MEP penetrations</p>
+                <p style="margin: 0.25rem 0;"><strong>Info:</strong> + coordination with systems</p>
+                <p style="margin: 0.25rem 0;"><strong>Use:</strong> Full coordination</p>
+            </div>
+            <div style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(139, 92, 246, 0.05)); border-left: 4px solid #8b5cf6; padding: 1rem 1.5rem; border-radius: 0 12px 12px 0;">
+                <h4 style="margin: 0 0 0.5rem 0; color: #8b5cf6;">LOD 400 - Fabrication</h4>
+                <p style="margin: 0.25rem 0;"><strong>Shape:</strong> + full rebar (8Φ16 + 4Φ12)</p>
+                <p style="margin: 0.25rem 0;"><strong>Info:</strong> + all execution details</p>
+                <p style="margin: 0.25rem 0;"><strong>Use:</strong> Shop Drawings</p>
+            </div>
+            <div style="background: linear-gradient(135deg, rgba(236, 72, 153, 0.1), rgba(236, 72, 153, 0.05)); border-left: 4px solid #ec4899; padding: 1rem 1.5rem; border-radius: 0 12px 12px 0;">
+                <h4 style="margin: 0 0 0.5rem 0; color: #ec4899;">LOD 500 - As-Built</h4>
+                <p style="margin: 0.25rem 0;"><strong>Shape:</strong> Actual executed location</p>
+                <p style="margin: 0.25rem 0;"><strong>Info:</strong> + pour date, Mix Design</p>
+                <p style="margin: 0.25rem 0;"><strong>Use:</strong> FM, maintenance records</p>
+            </div>
+        </div>
 
         <hr>
 
