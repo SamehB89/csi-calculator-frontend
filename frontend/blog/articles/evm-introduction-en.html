@@ -3,37 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comprehensive Introduction to Earned Value Management (EVM) in Construction - CSI Calculator</title>
-    <meta name="description" content="A comprehensive guide to understanding Earned Value Management (EVM) and its importance in controlling construction project costs and schedules efficiently.">
-    <meta name="keywords" content="EVM, Earned Value Management, Project Management, Construction Cost, Schedule, Project Control">
+    <title>EVM Complete Course: Master Earned Value Management for Projects | CSI Calculator</title>
+    <meta name="description" content="Complete EVM course: Learn Earned Value Management including PV, EV, AC, SPI, CPI, forecasting (EAC, ETC, VAC), S-curves, and real-world project control applications.">
+    <meta name="keywords" content="EVM, Earned Value Management, PV, EV, AC, SPI, CPI, EAC, ETC, Project Control, Cost Management, Schedule Performance">
     
-    <!-- Open Graph -->
-    <meta property="og:title" content="Comprehensive Introduction to Earned Value Management (EVM) in Construction">
-    <meta property="og:description" content="Learn how to integrate scope, time, and cost to accurately measure your project performance">
+    <meta property="og:title" content="EVM Complete Course: Master Earned Value Management">
+    <meta property="og:description" content="Learn project cost and schedule control with EVM">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://csi-calc.vercel.app/blog/articles/evm-introduction-en.html">
-    <meta property="og:image" content="../assets/evm-introduction.jpg">
     
-    <!-- Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Comprehensive Introduction to Earned Value Management (EVM) in Construction",
-      "author": {
-        "@type": "Person",
-        "name": "Sameh Badawy Sayed"
-      },
-      "datePublished": "2026-01-07",
-      "image": "../assets/evm-introduction.jpg",
-      "articleSection": "Project Management"
+      "@type": "Course",
+      "name": "Earned Value Management Complete Course",
+      "description": "Master project control with Earned Value Management"
     }
     </script>
     
-    <!-- AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5429423113977975" crossorigin="anonymous"></script>
-    
-    <!-- Stylesheets -->
     <link rel="stylesheet" href="../../css/theme.css">
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/lang-toggle.css">
@@ -41,89 +28,629 @@
     <link rel="stylesheet" href="../../css/ads.css">
     <link rel="stylesheet" href="../../css/share-buttons.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Scripts -->
     <script src="../../js/ads.js"></script>
     <script src="../../js/i18n.js"></script>
     <script src="../../js/theme.js"></script>
     <script src="../../js/blog-i18n.js"></script>
+    
+    <style>
+        .course-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .lesson-card {
+            background: var(--bg-secondary);
+            border: 2px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            transition: all 0.3s ease;
+        }
+        
+        .lesson-card:hover {
+            border-color: #8b5cf6;
+            box-shadow: 0 8px 30px rgba(139, 92, 246, 0.15);
+        }
+        
+        .lesson-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+            color: white;
+            border-radius: 50%;
+            font-weight: 700;
+            margin-left: 1rem;
+        }
+        
+        .pro-tip {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(139, 92, 246, 0.05));
+            border-left: 4px solid #8b5cf6;
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.5rem 0;
+        }
+        
+        .pro-tip::before {
+            content: "💡 EVM Pro Tip";
+            display: block;
+            font-weight: 700;
+            color: #8b5cf6;
+            margin-bottom: 0.5rem;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .comparison-table th {
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .comparison-table td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            background: var(--bg-secondary);
+        }
+        
+        .key-takeaway {
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+            color: white;
+            padding: 1.5rem 2rem;
+            border-radius: 16px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .formula-box {
+            background: linear-gradient(145deg, #1e293b, #0f172a);
+            padding: 1.5rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+            color: #a78bfa;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 1.5rem 0;
+            font-family: 'Fira Code', monospace;
+        }
+        
+        .metric-card {
+            display: inline-block;
+            background: var(--bg-secondary);
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1rem 1.5rem;
+            margin: 0.5rem;
+            text-align: center;
+        }
+        
+        .metric-card.good { border-color: #22c55e; }
+        .metric-card.bad { border-color: #ef4444; }
+        
+        .status-good { color: #22c55e; font-weight: 600; }
+        .status-bad { color: #ef4444; font-weight: 600; }
+    </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <a href="../../index.html" class="logo-container">
-                <img src="../../assets/logo.png" alt="SAMEH Logo" class="logo-image">
+                <img src="../../assets/logo.png" alt="CSI Logo" class="logo-image">
                 <span class="logo-text">CSI Calculator</span>
             </a>
             <div class="nav-links">
                 <a href="../../index.html" data-i18n="home" data-icon="🏠"><span>Home</span></a>
                 <a href="../../crew-calculator.html" data-i18n="crewCalculator" data-icon="🧮"><span>Calculator</span></a>
                 <a href="../../ai-planner.html" data-i18n="aiPlanner" data-icon="🤖"><span>AI Planner</span></a>
-                <a href="../index-en.html" class="active" data-i18n="blog" data-icon="📚"><span>Manual & Tips</span></a>
+                <a href="../../evm-calculator.html" data-i18n="evmCalculator" data-icon="📊"><span>EVM Calculator</span></a>
+                <a href="../index-en.html" class="active" data-i18n="blog" data-icon="📚"><span>Knowledge Bites</span></a>
                 <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">🌙</button>
                 <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()"><span id="langIcon">AR</span></button>
             </div>
         </div>
     </nav>
 
-    <!-- Article Header -->
     <div class="article-header">
+        <span class="course-badge">📊 Complete Course</span>
         <span class="article-category">Project Management</span>
-        <h1>Comprehensive Introduction to Earned Value Management (EVM) in Construction</h1>
+        <h1>Earned Value Management (EVM): Complete Mastery Course</h1>
+        <p style="font-size: 1.2rem; opacity: 0.9; margin-top: 1rem;">Integrate Scope, Schedule, and Cost for True Project Control</p>
         <div class="article-meta">
-            <span class="article-date">January 7, 2026</span>
-            <span class="article-read-time">10 min read</span>
+            <span class="article-date">Updated: January 2026</span>
+            <span class="article-read-time">60 min course</span>
         </div>
     </div>
 
-    <!-- Article Body -->
-    <div class="article-body">
-        <div class="article-image-container">
-            <img src="../assets/evm-introduction.jpg" alt="EVM Dashboard" class="img-fluid rounded shadow mb-4">
+    <div class="article-body" style="max-width: 900px;">
+        
+        <!-- Hero Image -->
+        <div class="article-hero-wrapper" style="margin: 2rem 0;">
+            <img src="../assets/evm-introduction.jpg" alt="EVM Dashboard with S-Curves" style="width: 100%; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.15);">
         </div>
 
-        <h2>🏗️ What is Earned Value Management (EVM)?</h2>
-        <p>
-            Earned Value Management (EVM) is one of the most powerful methodologies used globally in construction project management. It is not just a tool for cost monitoring, but an integrated system that combines Scope, Schedule, and Resources to provide an accurate and comprehensive picture of project performance at any point in time.
-        </p>
-        <p>
-            Unlike traditional methods that only compare the planned budget with actual expenses, EVM answers the critical questions that keep every project manager awake at night: "Did we actually get value for what we spent?" and "Are we sticking to the schedule?".
-        </p>
+        <!-- Introduction -->
+        <div class="alert alert-info" style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(124, 58, 237, 0.1)); border: none; border-radius: 16px; padding: 2rem;">
+            <h3 style="margin-bottom: 1rem;">🎯 What You'll Learn in This Course</h3>
+            <ul style="margin: 0; line-height: 2;">
+                <li>✅ EVM fundamentals and history</li>
+                <li>✅ Core metrics: PV, EV, AC</li>
+                <li>✅ Variance analysis: CV, SV</li>
+                <li>✅ Performance indices: CPI, SPI</li>
+                <li>✅ Forecasting: EAC, ETC, VAC, TCPI</li>
+                <li>✅ S-Curves and reporting</li>
+                <li>✅ Real-world worked example</li>
+            </ul>
+        </div>
 
-        <h2>📊 Why Do We Need EVM in Construction?</h2>
-        <p>
-            In construction projects, you might spend 50% of the budget, but that doesn't necessarily mean you have completed 50% of the work. This is where relying solely on "Actual Cost" as an indicator of progress becomes dangerous.
-        </p>
-        <ul>
-            <li><strong>Unified View:</strong> Integrates time and cost measurements into a single system.</li>
-            <li><strong>Early Warning:</strong> Detects deviations before they escalate and become catastrophic.</li>
-            <li><strong>Accurate Forecasting:</strong> Estimates the final project cost and expected completion time based on current performance, not wishful thinking.</li>
-        </ul>
-
-        <h2>🔑 Three Key Questions EVM Answers</h2>
-        <div class="info-box">
-            <ol>
-                <li><strong>Where are we now?</strong> (Measuring current performance)</li>
-                <li><strong>Where are we heading?</strong> (Forecasting the future)</li>
-                <li><strong>How can we correct the course?</strong> (Decision making)</li>
+        <!-- Table of Contents -->
+        <h2>📋 Course Contents</h2>
+        <div class="lesson-card">
+            <ol style="line-height: 2.2;">
+                <li><a href="#module-1">Module 1: What is EVM?</a></li>
+                <li><a href="#module-2">Module 2: Core Metrics (PV, EV, AC)</a></li>
+                <li><a href="#module-3">Module 3: Variances (CV, SV)</a></li>
+                <li><a href="#module-4">Module 4: Performance Indices (CPI, SPI)</a></li>
+                <li><a href="#module-5">Module 5: Forecasting (EAC, ETC, VAC)</a></li>
+                <li><a href="#module-6">Module 6: TCPI - To-Complete Performance</a></li>
+                <li><a href="#module-7">Module 7: S-Curves and Reporting</a></li>
+                <li><a href="#module-8">Module 8: Worked Example</a></li>
+                <li><a href="#quiz">Final Quiz</a></li>
             </ol>
         </div>
 
-        <h2>📉 The Three Core Elements (Brief Overview)</h2>
-        <p>We will discuss these elements in detail in the next article, but for a general understanding:</p>
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 1 -->
+        <h2 id="module-1"><span class="lesson-number">1</span> Module 1: What is EVM?</h2>
+        
+        <h3>1.1 Definition</h3>
+        <p>
+            <strong>Earned Value Management (EVM)</strong> is a project management methodology that integrates scope, schedule, and cost to objectively measure project performance and progress.
+        </p>
+        
+        <div class="key-takeaway">
+            <h4>🔑 The Core Question EVM Answers</h4>
+            <p>"For every dollar spent, how much value did we actually earn?"</p>
+        </div>
+
+        <h3>1.2 History</h3>
         <ul>
-            <li><strong>Planned Value (PV):</strong> What we planned to accomplish and spend up to this moment.</li>
-            <li><strong>Earned Value (EV):</strong> The real value of the work actually performed (the "heart" of the system).</li>
-            <li><strong>Actual Cost (AC):</strong> What we actually spent to accomplish that work.</li>
+            <li><strong>1960s:</strong> Developed by US DoD for defense projects</li>
+            <li><strong>1967:</strong> Cost/Schedule Control Systems Criteria (C/SCSC)</li>
+            <li><strong>1990s:</strong> Adopted by PMI and commercial sector</li>
+            <li><strong>Today:</strong> Standard in PMBOK, ISO 21508</li>
         </ul>
 
-        <h2>🚀 Conclusion</h2>
-        <p>
-            Implementing Earned Value Management is not a luxury in complex projects, but a necessity to ensure staying within budget and schedule. In this article series, we will take you step-by-step from basic concepts to professional practical application and how to use this data to make smart management decisions.
-        </p>        <!-- Share Buttons -->
-        <div class="share-buttons">
-            <span class="share-buttons-label">Share this article:</span>
+        <h3>1.3 Why Traditional Methods Fail</h3>
+        <table class="comparison-table">
+            <tr>
+                <th>Scenario</th>
+                <th>Traditional View</th>
+                <th>EVM View</th>
+            </tr>
+            <tr>
+                <td>Spent 50% of budget</td>
+                <td>"We're on track"</td>
+                <td>"But only 40% work done = Over budget!"</td>
+            </tr>
+            <tr>
+                <td>Spent less than planned</td>
+                <td>"We're saving money"</td>
+                <td>"But behind schedule = Problem!"</td>
+            </tr>
+        </table>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 2 -->
+        <h2 id="module-2"><span class="lesson-number">2</span> Module 2: Core Metrics (PV, EV, AC)</h2>
+        
+        <h3>2.1 Planned Value (PV)</h3>
+        <div class="formula-box">
+            PV = Budgeted Cost of Work Scheduled (BCWS)<br>
+            "What we PLANNED to accomplish by now"
+        </div>
+        <p>PV is the authorized budget for work scheduled to be completed by a specific date.</p>
+
+        <h3>2.2 Earned Value (EV)</h3>
+        <div class="formula-box">
+            EV = Budgeted Cost of Work Performed (BCWP)<br>
+            "The VALUE of work we ACTUALLY completed"
+        </div>
+        <p>EV is the budget authorized for the work that has been completed. This is the "heart" of EVM.</p>
+
+        <h3>2.3 Actual Cost (AC)</h3>
+        <div class="formula-box">
+            AC = Actual Cost of Work Performed (ACWP)<br>
+            "What we ACTUALLY SPENT"
+        </div>
+        <p>AC is the total cost incurred for the work performed.</p>
+
+        <h3>2.4 Budget at Completion (BAC)</h3>
+        <div class="formula-box">
+            BAC = Total Project Budget<br>
+            "The complete authorized budget"
+        </div>
+
+        <div class="pro-tip">
+            <strong>Memory trick:</strong> PV looks forward (planned), EV looks at achievement (earned), AC looks at spending (actual).
+        </div>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 3 -->
+        <h2 id="module-3"><span class="lesson-number">3</span> Module 3: Variances (CV, SV)</h2>
+        
+        <h3>3.1 Cost Variance (CV)</h3>
+        <div class="formula-box">
+            CV = EV - AC
+        </div>
+        <table class="comparison-table">
+            <tr>
+                <th>Result</th>
+                <th>Meaning</th>
+            </tr>
+            <tr>
+                <td><span class="status-good">CV > 0</span></td>
+                <td>Under budget ✅</td>
+            </tr>
+            <tr>
+                <td><span class="status-bad">CV < 0</span></td>
+                <td>Over budget ❌</td>
+            </tr>
+            <tr>
+                <td>CV = 0</td>
+                <td>On budget</td>
+            </tr>
+        </table>
+
+        <h3>3.2 Schedule Variance (SV)</h3>
+        <div class="formula-box">
+            SV = EV - PV
+        </div>
+        <table class="comparison-table">
+            <tr>
+                <th>Result</th>
+                <th>Meaning</th>
+            </tr>
+            <tr>
+                <td><span class="status-good">SV > 0</span></td>
+                <td>Ahead of schedule ✅</td>
+            </tr>
+            <tr>
+                <td><span class="status-bad">SV < 0</span></td>
+                <td>Behind schedule ❌</td>
+            </tr>
+            <tr>
+                <td>SV = 0</td>
+                <td>On schedule</td>
+            </tr>
+        </table>
+
+        <div class="pro-tip">
+            Both variances compare to <strong>EV</strong>. CV compares EV to what you spent (AC). SV compares EV to what you planned (PV).
+        </div>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 4 -->
+        <h2 id="module-4"><span class="lesson-number">4</span> Module 4: Performance Indices (CPI, SPI)</h2>
+        
+        <h3>4.1 Cost Performance Index (CPI)</h3>
+        <div class="formula-box">
+            CPI = EV / AC<br>
+            "Dollars of value per dollar spent"
+        </div>
+        <table class="comparison-table">
+            <tr>
+                <th>Result</th>
+                <th>Meaning</th>
+            </tr>
+            <tr>
+                <td><span class="status-good">CPI > 1.0</span></td>
+                <td>Getting more value than cost ✅</td>
+            </tr>
+            <tr>
+                <td><span class="status-bad">CPI < 1.0</span></td>
+                <td>Spending more than value earned ❌</td>
+            </tr>
+            <tr>
+                <td>CPI = 1.0</td>
+                <td>On budget</td>
+            </tr>
+        </table>
+
+        <h3>4.2 Schedule Performance Index (SPI)</h3>
+        <div class="formula-box">
+            SPI = EV / PV<br>
+            "Rate of progress vs plan"
+        </div>
+        <table class="comparison-table">
+            <tr>
+                <th>Result</th>
+                <th>Meaning</th>
+            </tr>
+            <tr>
+                <td><span class="status-good">SPI > 1.0</span></td>
+                <td>Ahead of schedule ✅</td>
+            </tr>
+            <tr>
+                <td><span class="status-bad">SPI < 1.0</span></td>
+                <td>Behind schedule ❌</td>
+            </tr>
+            <tr>
+                <td>SPI = 1.0</td>
+                <td>On schedule</td>
+            </tr>
+        </table>
+
+        <div class="key-takeaway">
+            <h4>🎯 Index Interpretation</h4>
+            <p>CPI = 0.80 means: For every $1 spent, you only get $0.80 of value<br>
+            SPI = 0.90 means: For every 10 days planned, you completed 9 days of work</p>
+        </div>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 5 -->
+        <h2 id="module-5"><span class="lesson-number">5</span> Module 5: Forecasting (EAC, ETC, VAC)</h2>
+        
+        <h3>5.1 Estimate at Completion (EAC)</h3>
+        <p>Forecasted total cost at project end:</p>
+        
+        <table class="comparison-table">
+            <tr>
+                <th>Formula</th>
+                <th>When to Use</th>
+            </tr>
+            <tr>
+                <td><strong>EAC = BAC / CPI</strong></td>
+                <td>Current cost performance will continue</td>
+            </tr>
+            <tr>
+                <td><strong>EAC = AC + (BAC - EV)</strong></td>
+                <td>Original estimates still valid for remaining</td>
+            </tr>
+            <tr>
+                <td><strong>EAC = AC + (BAC - EV) / CPI</strong></td>
+                <td>CPI trend continues for remaining work</td>
+            </tr>
+            <tr>
+                <td><strong>EAC = AC + (BAC - EV) / (CPI × SPI)</strong></td>
+                <td>Both cost and schedule affect remaining</td>
+            </tr>
+        </table>
+
+        <h3>5.2 Estimate to Complete (ETC)</h3>
+        <div class="formula-box">
+            ETC = EAC - AC<br>
+            "How much more will we spend?"
+        </div>
+
+        <h3>5.3 Variance at Completion (VAC)</h3>
+        <div class="formula-box">
+            VAC = BAC - EAC<br>
+            "Final expected over/under budget"
+        </div>
+        <ul>
+            <li><span class="status-good">VAC > 0</span> = Will finish under budget</li>
+            <li><span class="status-bad">VAC < 0</span> = Will finish over budget</li>
+        </ul>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 6 -->
+        <h2 id="module-6"><span class="lesson-number">6</span> Module 6: TCPI - To-Complete Performance Index</h2>
+        
+        <h3>6.1 TCPI Formula</h3>
+        <div class="formula-box">
+            TCPI = (BAC - EV) / (BAC - AC)<br>
+            "Required efficiency to meet BAC"
+        </div>
+
+        <h3>6.2 Interpretation</h3>
+        <table class="comparison-table">
+            <tr>
+                <th>TCPI</th>
+                <th>Meaning</th>
+            </tr>
+            <tr>
+                <td><span class="status-good">TCPI < 1.0</span></td>
+                <td>Easy to achieve - can relax slightly</td>
+            </tr>
+            <tr>
+                <td>TCPI = 1.0</td>
+                <td>Must maintain current efficiency</td>
+            </tr>
+            <tr>
+                <td><span class="status-bad">TCPI > 1.0</span></td>
+                <td>Must improve efficiency to meet budget</td>
+            </tr>
+            <tr>
+                <td><span class="status-bad">TCPI > 1.2</span></td>
+                <td>Very difficult - consider re-baselining</td>
+            </tr>
+        </table>
+
+        <div class="pro-tip">
+            If current CPI = 0.80 and TCPI = 1.25, you need to improve efficiency by 45%+ for remaining work. That's usually unrealistic!
+        </div>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 7 -->
+        <h2 id="module-7"><span class="lesson-number">7</span> Module 7: S-Curves and Reporting</h2>
+        
+        <h3>7.1 The S-Curve</h3>
+        <p>A graphical representation of cumulative costs, labor, or progress over time. Shows:</p>
+        <ul>
+            <li><strong>PV curve:</strong> Planned cumulative spending (baseline)</li>
+            <li><strong>EV curve:</strong> Earned value over time</li>
+            <li><strong>AC curve:</strong> Actual cumulative spending</li>
+        </ul>
+
+        <h3>7.2 Reading the S-Curve</h3>
+        <ul>
+            <li><strong>EV below PV:</strong> Behind schedule</li>
+            <li><strong>AC above EV:</strong> Over budget</li>
+            <li><strong>Gap between curves:</strong> Magnitude of variance</li>
+        </ul>
+
+        <h3>7.3 EVM Reporting Best Practices</h3>
+        <ul>
+            <li>✅ Report weekly or monthly depending on project size</li>
+            <li>✅ Include trend analysis (is CPI improving or worsening?)</li>
+            <li>✅ Show variances in both $ and %</li>
+            <li>✅ Include narrative explaining variances</li>
+            <li>✅ Present corrective action plans</li>
+        </ul>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 8 -->
+        <h2 id="module-8"><span class="lesson-number">8</span> Module 8: Worked Example</h2>
+        
+        <h3>8.1 Project Data</h3>
+        <table class="comparison-table">
+            <tr>
+                <th>Metric</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Budget at Completion (BAC)</td>
+                <td>$1,000,000</td>
+            </tr>
+            <tr>
+                <td>Planned Value (PV)</td>
+                <td>$400,000</td>
+            </tr>
+            <tr>
+                <td>Earned Value (EV)</td>
+                <td>$350,000</td>
+            </tr>
+            <tr>
+                <td>Actual Cost (AC)</td>
+                <td>$450,000</td>
+            </tr>
+        </table>
+
+        <h3>8.2 Calculate Variances</h3>
+        <div class="formula-box">
+            CV = EV - AC = $350,000 - $450,000 = <span class="status-bad">-$100,000</span><br><br>
+            SV = EV - PV = $350,000 - $400,000 = <span class="status-bad">-$50,000</span>
+        </div>
+        <p><strong>Interpretation:</strong> $100K over budget and $50K worth of work behind schedule.</p>
+
+        <h3>8.3 Calculate Indices</h3>
+        <div class="formula-box">
+            CPI = EV / AC = $350,000 / $450,000 = <span class="status-bad">0.78</span><br><br>
+            SPI = EV / PV = $350,000 / $400,000 = <span class="status-bad">0.875</span>
+        </div>
+        <p><strong>Interpretation:</strong> Getting $0.78 value per $1 spent. Progressing at 87.5% of planned rate.</p>
+
+        <h3>8.4 Forecast Completion</h3>
+        <div class="formula-box">
+            EAC = BAC / CPI = $1,000,000 / 0.78 = <strong>$1,282,051</strong><br><br>
+            VAC = BAC - EAC = $1,000,000 - $1,282,051 = <span class="status-bad">-$282,051</span>
+        </div>
+        <p><strong>Interpretation:</strong> Project will finish approximately $282K over budget if current trend continues.</p>
+
+        <div class="key-takeaway">
+            <h4>📊 Project Status Summary</h4>
+            <p>Status: <strong>Over Budget & Behind Schedule</strong><br>
+            Projected Overrun: ~$282,000 (28% over budget)<br>
+            Action Required: Immediate corrective measures</p>
+        </div>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- QUIZ -->
+        <h2 id="quiz">🎯 Final Quiz</h2>
+        
+        <div class="lesson-card" style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.05), rgba(124, 58, 237, 0.05));">
+            <h4>🧪 Test Your EVM Knowledge</h4>
+            
+            <p><strong>1. What does CPI = 0.8 mean?</strong></p>
+            <label><input type="radio" name="q1" value="a"> 80% complete</label><br>
+            <label><input type="radio" name="q1" value="b"> Getting $0.80 value per $1 spent</label><br>
+            <label><input type="radio" name="q1" value="c"> 20% under budget</label><br>
+            <br>
+            
+            <p><strong>2. If SV is negative, the project is:</strong></p>
+            <label><input type="radio" name="q2" value="a"> Over budget</label><br>
+            <label><input type="radio" name="q2" value="b"> Behind schedule</label><br>
+            <label><input type="radio" name="q2" value="c"> Under budget</label><br>
+            <br>
+            
+            <p><strong>3. EAC = BAC / CPI is used when:</strong></p>
+            <label><input type="radio" name="q3" value="a"> Cost trend will continue</label><br>
+            <label><input type="radio" name="q3" value="b"> Original estimates are valid</label><br>
+            <label><input type="radio" name="q3" value="c"> Schedule is the issue</label><br>
+            <br>
+            
+            <p><strong>4. CV = EV - AC measures:</strong></p>
+            <label><input type="radio" name="q4" value="a"> Schedule variance</label><br>
+            <label><input type="radio" name="q4" value="b"> Cost variance</label><br>
+            <label><input type="radio" name="q4" value="c"> Efficiency</label><br>
+            <br>
+            
+            <button onclick="checkQuizEVM()" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed); color: white; border: none; padding: 1rem 2rem; border-radius: 8px; font-weight: 600; cursor: pointer;">Check Answers</button>
+            <div id="quiz-result" style="margin-top: 1rem; font-weight: 600;"></div>
+        </div>
+
+        <script>
+        function checkQuizEVM() {
+            const answers = {q1: 'b', q2: 'b', q3: 'a', q4: 'b'};
+            let score = 0;
+            for (let q in answers) {
+                const selected = document.querySelector(`input[name="${q}"]:checked`);
+                if (selected && selected.value === answers[q]) score++;
+            }
+            const result = document.getElementById('quiz-result');
+            if (score === 4) {
+                result.innerHTML = '🎉 Perfect! You mastered EVM!';
+                result.style.color = '#8b5cf6';
+            } else if (score >= 3) {
+                result.innerHTML = '👍 Great job! Review the topics you missed.';
+                result.style.color = '#f59e0b';
+            } else {
+                result.innerHTML = '📚 Keep learning! Review the course modules.';
+                result.style.color = '#ef4444';
+            }
+        }
+        </script>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- CTA -->
+        <div class="key-takeaway">
+            <h4>🚀 Practice EVM Now!</h4>
+            <p>Try our <a href="../../evm-calculator.html" style="color: white; text-decoration: underline;">EVM Calculator</a> to apply what you learned!</p>
+        </div>
+
+        <!-- Share Buttons -->
+        <div class="share-buttons" style="margin-top: 3rem;">
+            <span class="share-buttons-label">Share this course:</span>
             <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-btn facebook" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">Facebook</a>
             <a href="https://twitter.com/intent/tweet?url=" class="share-btn twitter" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">Twitter</a>
             <a href="https://www.linkedin.com/shareArticle?mini=true&url=" class="share-btn linkedin" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">LinkedIn</a>
@@ -131,15 +658,11 @@
             <button class="share-btn copy" onclick="navigator.clipboard.writeText(window.location.href);alert('Link copied!')">Copy Link</button>
         </div>
         
-        
-        <hr>
-        <p><strong>Next Article:</strong> <a href="evm-metrics-en.html">Key Elements and Performance Metrics in EVM (PV, EV, AC, SPI, CPI)</a></p>
     </div>
 
-    <!-- Footer -->
     <footer class="site-footer">
         <div class="footer-content">
-            <p class="footer-text">CSI Crew Calculator • Built with <span class="footer-heart">❤️</span> by <span class="footer-author">Sameh Badawy Sayed</span></p>
+            <p class="footer-text">CSI Calculator • Built with <span class="footer-heart">❤️</span> by <span class="footer-author">Sameh Badawy Sayed</span></p>
         </div>
     </footer>
 </body>

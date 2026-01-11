@@ -3,36 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comprehensive Guide to CSI Standards - CSI Calculator</title>
-    <meta name="description" content="Learn about CSI (Construction Specifications Institute) standards, MasterFormat, UniFormat, and how to apply them in construction projects for uniformity and accuracy.">
-    <meta name="keywords" content="CSI, construction standards, Construction Specifications Institute, MasterFormat, UniFormat, construction classification">
+    <title>CSI MasterFormat Complete Course: Construction Specifications Institute Standards | CSI Calculator</title>
+    <meta name="description" content="Complete CSI MasterFormat course: Learn construction classification systems including MasterFormat, UniFormat, OmniClass, and how to apply CSI standards in specifications, estimating, and project management.">
+    <meta name="keywords" content="CSI, MasterFormat, UniFormat, Construction Specifications Institute, Division 03, Construction Classification, OmniClass, SectionFormat">
     
-    <!-- Open Graph -->
-    <meta property="og:title" content="Comprehensive Guide to CSI Standards">
-    <meta property="og:description" content="Learn about CSI standards and how to apply them in construction projects">
+    <meta property="og:title" content="CSI MasterFormat Complete Course">
+    <meta property="og:description" content="Master construction classification with CSI standards">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://csi-calc.vercel.app/blog/articles/csi-standards-guide-en.html">
     
-    <!-- Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Comprehensive Guide to CSI Standards",
-      "author": {
-        "@type": "Person",
-        "name": "Sameh Badawy Sayed"
-      },
-      "datePublished": "2026-01-02",
-      "description": "Learn about CSI standards and how to apply them in construction projects",
-      "articleSection": "CSI Standards"
+      "@type": "Course",
+      "name": "CSI MasterFormat Complete Course",
+      "description": "Master construction classification and specification standards",
+      "provider": {"@type": "Organization", "name": "CSI Calculator"}
     }
     </script>
     
-    <!-- AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5429423113977975" crossorigin="anonymous"></script>
-    
-    <!-- Stylesheets -->
     <link rel="stylesheet" href="../../css/theme.css">
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/lang-toggle.css">
@@ -40,310 +29,806 @@
     <link rel="stylesheet" href="../../css/ads.css">
     <link rel="stylesheet" href="../../css/share-buttons.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Scripts -->
-    <script src="../../js/i18n.js"></script>
     <script src="../../js/ads.js"></script>
+    <script src="../../js/i18n.js"></script>
     <script src="../../js/theme.js"></script>
     <script src="../../js/blog-i18n.js"></script>
+    
+    <style>
+        .course-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .lesson-card {
+            background: var(--bg-secondary);
+            border: 2px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            transition: all 0.3s ease;
+        }
+        
+        .lesson-card:hover {
+            border-color: #f59e0b;
+            box-shadow: 0 8px 30px rgba(245, 158, 11, 0.15);
+        }
+        
+        .lesson-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: white;
+            border-radius: 50%;
+            font-weight: 700;
+            margin-left: 1rem;
+        }
+        
+        .pro-tip {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(245, 158, 11, 0.05));
+            border-left: 4px solid #f59e0b;
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.5rem 0;
+        }
+        
+        .pro-tip::before {
+            content: "💡 Industry Tip";
+            display: block;
+            font-weight: 700;
+            color: #f59e0b;
+            margin-bottom: 0.5rem;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .comparison-table th {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .comparison-table td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            background: var(--bg-secondary);
+        }
+        
+        .key-takeaway {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: white;
+            padding: 1.5rem 2rem;
+            border-radius: 16px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .division-code {
+            display: inline-block;
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            color: #fbbf24;
+            padding: 0.25rem 0.75rem;
+            border-radius: 6px;
+            font-family: 'Fira Code', monospace;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        
+        .example-box {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(59, 130, 246, 0.05));
+            border-left: 4px solid #3b82f6;
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.5rem 0;
+        }
+        
+        .example-box::before {
+            content: "📋 Practical Example";
+            display: block;
+            font-weight: 700;
+            color: #3b82f6;
+            margin-bottom: 0.5rem;
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <a href="../../index.html" class="logo-container">
-                <img src="../../assets/logo.png" alt="SAMEH Logo" class="logo-image">
+                <img src="../../assets/logo.png" alt="CSI Logo" class="logo-image">
                 <span class="logo-text">CSI Calculator</span>
             </a>
             <div class="nav-links">
-                <a href="../../index.html" data-i18n="home" data-icon="🏠">
-                    <span>Home</span>
-                </a>
-                <a href="../../crew-calculator.html" data-i18n="crewCalculator" data-icon="🧮">
-                    <span>Calculator</span>
-                </a>
-                <a href="../../ai-planner.html" data-i18n="aiPlanner" data-icon="🤖">
-                    <span>AI Planner</span>
-                </a>
-                <a href="../index-en.html" class="active" data-i18n="blog" data-icon="📚">
-                    <span>Manual+Knowledge Bites</span>
-                </a>
-                <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">
-                    🌙
-                </button>
-                <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()">
-                    <span id="langIcon">AR</span>
-                </button>
+                <a href="../../index.html" data-i18n="home" data-icon="🏠"><span>Home</span></a>
+                <a href="../../crew-calculator.html" data-i18n="crewCalculator" data-icon="🧮"><span>Calculator</span></a>
+                <a href="../../ai-planner.html" data-i18n="aiPlanner" data-icon="🤖"><span>AI Planner</span></a>
+                <a href="../../evm-calculator.html" data-i18n="evmCalculator" data-icon="📊"><span>EVM Calculator</span></a>
+                <a href="../index-en.html" class="active" data-i18n="blog" data-icon="📚"><span>Knowledge Bites</span></a>
+                <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">🌙</button>
+                <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()"><span id="langIcon">AR</span></button>
             </div>
         </div>
     </nav>
 
-    <!-- Article Header -->
     <div class="article-header">
+        <span class="course-badge">📚 Complete Course</span>
         <span class="article-category">CSI Standards</span>
-        <h1>Comprehensive Guide to CSI Standards</h1>
+        <h1>CSI MasterFormat: Master Construction Classification</h1>
+        <p style="font-size: 1.2rem; opacity: 0.9; margin-top: 1rem;">The Complete Guide to Construction Specifications Institute Standards</p>
         <div class="article-meta">
-            <span class="article-date">January 2, 2026</span>
-            <span class="article-read-time">12 min read</span>
+            <span class="article-date">Updated: January 2026</span>
+            <span class="article-read-time">50 min course</span>
         </div>
     </div>
 
-    <!-- Article Body -->
-    <div class="article-body">
-        <h2>📋 What is the Construction Specifications Institute (CSI)?</h2>
+    <div class="article-body" style="max-width: 900px;">
+        
+        <!-- Introduction -->
+        <div class="alert alert-info" style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(217, 119, 6, 0.1)); border: none; border-radius: 16px; padding: 2rem;">
+            <h3 style="margin-bottom: 1rem;">🎯 What You'll Learn in This Course</h3>
+            <ul style="margin: 0; line-height: 2;">
+                <li>✅ History and purpose of CSI</li>
+                <li>✅ MasterFormat™ structure and divisions</li>
+                <li>✅ UniFormat™ for elemental classification</li>
+                <li>✅ OmniClass™ and SectionFormat™</li>
+                <li>✅ How to write specifications using CSI</li>
+                <li>✅ Cost estimating with CSI structure</li>
+                <li>✅ Real-world application examples</li>
+            </ul>
+        </div>
+
+        <!-- Table of Contents -->
+        <h2>📋 Course Contents</h2>
+        <div class="lesson-card">
+            <ol style="line-height: 2.2;">
+                <li><a href="#module-1">Module 1: What is CSI?</a></li>
+                <li><a href="#module-2">Module 2: MasterFormat™ Deep Dive</a></li>
+                <li><a href="#module-3">Module 3: UniFormat™ for Elemental Costs</a></li>
+                <li><a href="#module-4">Module 4: OmniClass™ and Other Standards</a></li>
+                <li><a href="#module-5">Module 5: Writing Specifications</a></li>
+                <li><a href="#module-6">Module 6: CSI for Cost Estimating</a></li>
+                <li><a href="#module-7">Module 7: Best Practices & Implementation</a></li>
+                <li><a href="#quiz">Final Quiz</a></li>
+            </ol>
+        </div>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 1 -->
+        <h2 id="module-1"><span class="lesson-number">1</span> Module 1: What is CSI?</h2>
+        
+        <h3>1.1 Construction Specifications Institute (CSI)</h3>
         <p>
-            The <strong>Construction Specifications Institute (CSI)</strong> is a professional organization founded in 1948 in the United States, dedicated to improving and standardizing communication in the construction industry. The institute developed a set of standards and systems that have become globally adopted for:
+            Founded in <strong>1948</strong>, CSI is a professional association dedicated to improving communication in the construction industry through standardization of construction documents and project delivery.
         </p>
+        
+        <h3>1.2 Why Standards Matter</h3>
+        <p>Before CSI standards, every architect, engineer, and contractor organized information differently:</p>
         <ul>
-            <li>Organizing and classifying construction information</li>
-            <li>Writing technical specifications</li>
-            <li>Cost estimation and quantity surveying</li>
-            <li>Construction project management</li>
+            <li>❌ No common language across projects</li>
+            <li>❌ Difficult to compare bids</li>
+            <li>❌ Errors due to miscommunication</li>
+            <li>❌ Time wasted searching for information</li>
+        </ul>
+        
+        <div class="key-takeaway">
+            <h4>🔑 Core CSI Standards</h4>
+            <p><strong>MasterFormat™</strong> - Work results (by trade)</p>
+            <p><strong>UniFormat™</strong> - Building elements (by function)</p>
+            <p><strong>OmniClass™</strong> - Comprehensive classification</p>
+        </div>
+
+        <h3>1.3 Who Uses CSI?</h3>
+        <table class="comparison-table">
+            <tr>
+                <th>Stakeholder</th>
+                <th>How They Use CSI</th>
+            </tr>
+            <tr>
+                <td><strong>Architects</strong></td>
+                <td>Organize specifications, coordinate with engineers</td>
+            </tr>
+            <tr>
+                <td><strong>Engineers</strong></td>
+                <td>Write technical requirements, coordinate systems</td>
+            </tr>
+            <tr>
+                <td><strong>Estimators</strong></td>
+                <td>Organize takeoff, build cost databases</td>
+            </tr>
+            <tr>
+                <td><strong>Contractors</strong></td>
+                <td>Understand scope, prepare bids, manage subcontracts</td>
+            </tr>
+            <tr>
+                <td><strong>Quantity Surveyors</strong></td>
+                <td>Cost planning, budget control, BOQ preparation</td>
+            </tr>
+            <tr>
+                <td><strong>Facility Managers</strong></td>
+                <td>Organize O&M data, maintenance planning</td>
+            </tr>
+        </table>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 2 -->
+        <h2 id="module-2"><span class="lesson-number">2</span> Module 2: MasterFormat™ Deep Dive</h2>
+        
+        <h3>2.1 MasterFormat Structure</h3>
+        <p>MasterFormat organizes construction information by <strong>work results</strong> (what gets installed), not by who installs it.</p>
+        
+        <h3>2.2 Numbering System</h3>
+        <p>MasterFormat uses a 6-digit hierarchical code:</p>
+        <div class="example-box">
+            <strong>Example:</strong> <span class="division-code">03 30 53</span><br>
+            • <strong>03</strong> = Division (Concrete)<br>
+            • <strong>30</strong> = Level 2 (Cast-in-Place Concrete)<br>
+            • <strong>53</strong> = Level 3 (Miscellaneous Cast-in-Place Concrete)
+        </div>
+
+        <h3>2.3 The 50 Divisions</h3>
+        
+        <h4>📦 Procurement & Contracting (Division 00)</h4>
+        <ul>
+            <li><span class="division-code">00 01 00</span> - Project Title Page</li>
+            <li><span class="division-code">00 21 00</span> - Instructions to Bidders</li>
+            <li><span class="division-code">00 72 00</span> - General Conditions</li>
         </ul>
 
-        <h2>🎯 Why Use CSI Standards?</h2>
-        <p>
-            Using CSI standards offers numerous benefits for all project stakeholders:
-        </p>
+        <h4>📋 General Requirements (Divisions 01-09)</h4>
+        <table class="comparison-table">
+            <tr>
+                <th>Division</th>
+                <th>Title</th>
+                <th>Examples</th>
+            </tr>
+            <tr>
+                <td><strong>01</strong></td>
+                <td>General Requirements</td>
+                <td>Submittals, quality control, temporary facilities</td>
+            </tr>
+        </table>
 
-        <h3>For Engineers and Designers:</h3>
+        <h4>🏗️ Facility Construction (Divisions 03-19)</h4>
+        <table class="comparison-table">
+            <tr>
+                <th>Div</th>
+                <th>Title</th>
+                <th>Key Items</th>
+            </tr>
+            <tr>
+                <td><strong>03</strong></td>
+                <td>Concrete</td>
+                <td>Formwork, rebar, concrete placement</td>
+            </tr>
+            <tr>
+                <td><strong>04</strong></td>
+                <td>Masonry</td>
+                <td>Brick, CMU, stone</td>
+            </tr>
+            <tr>
+                <td><strong>05</strong></td>
+                <td>Metals</td>
+                <td>Structural steel, metal decking</td>
+            </tr>
+            <tr>
+                <td><strong>06</strong></td>
+                <td>Wood, Plastics, Composites</td>
+                <td>Rough carpentry, finish carpentry</td>
+            </tr>
+            <tr>
+                <td><strong>07</strong></td>
+                <td>Thermal & Moisture Protection</td>
+                <td>Insulation, roofing, waterproofing</td>
+            </tr>
+            <tr>
+                <td><strong>08</strong></td>
+                <td>Openings</td>
+                <td>Doors, windows, glazing</td>
+            </tr>
+            <tr>
+                <td><strong>09</strong></td>
+                <td>Finishes</td>
+                <td>Drywall, flooring, painting, ceilings</td>
+            </tr>
+            <tr>
+                <td><strong>10</strong></td>
+                <td>Specialties</td>
+                <td>Toilet partitions, signage, lockers</td>
+            </tr>
+            <tr>
+                <td><strong>11</strong></td>
+                <td>Equipment</td>
+                <td>Kitchen equipment, laboratory equipment</td>
+            </tr>
+            <tr>
+                <td><strong>12</strong></td>
+                <td>Furnishings</td>
+                <td>Casework, furniture, window treatments</td>
+            </tr>
+            <tr>
+                <td><strong>13</strong></td>
+                <td>Special Construction</td>
+                <td>Pre-engineered structures, pools</td>
+            </tr>
+            <tr>
+                <td><strong>14</strong></td>
+                <td>Conveying Equipment</td>
+                <td>Elevators, escalators, lifts</td>
+            </tr>
+        </table>
+
+        <h4>⚙️ Facility Services (Divisions 21-28)</h4>
+        <table class="comparison-table">
+            <tr>
+                <th>Div</th>
+                <th>Title</th>
+                <th>Systems</th>
+            </tr>
+            <tr>
+                <td><strong>21</strong></td>
+                <td>Fire Suppression</td>
+                <td>Sprinklers, standpipes, fire pumps</td>
+            </tr>
+            <tr>
+                <td><strong>22</strong></td>
+                <td>Plumbing</td>
+                <td>Piping, fixtures, water heaters</td>
+            </tr>
+            <tr>
+                <td><strong>23</strong></td>
+                <td>HVAC</td>
+                <td>Air handling, ductwork, chillers</td>
+            </tr>
+            <tr>
+                <td><strong>26</strong></td>
+                <td>Electrical</td>
+                <td>Power distribution, lighting, devices</td>
+            </tr>
+            <tr>
+                <td><strong>27</strong></td>
+                <td>Communications</td>
+                <td>Data, telecom, AV systems</td>
+            </tr>
+            <tr>
+                <td><strong>28</strong></td>
+                <td>Electronic Safety & Security</td>
+                <td>CCTV, access control, alarms</td>
+            </tr>
+        </table>
+
+        <h4>🌳 Site & Infrastructure (Divisions 31-35)</h4>
+        <table class="comparison-table">
+            <tr>
+                <th>Div</th>
+                <th>Title</th>
+            </tr>
+            <tr>
+                <td><strong>31</strong></td>
+                <td>Earthwork</td>
+            </tr>
+            <tr>
+                <td><strong>32</strong></td>
+                <td>Exterior Improvements</td>
+            </tr>
+            <tr>
+                <td><strong>33</strong></td>
+                <td>Utilities</td>
+            </tr>
+        </table>
+
+        <div class="pro-tip">
+            Divisions <strong>03, 05, 09, 22, 23, 26</strong> typically account for 70-80% of building construction costs. Master these first!
+        </div>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 3 -->
+        <h2 id="module-3"><span class="lesson-number">3</span> Module 3: UniFormat™ for Elemental Costs</h2>
+        
+        <h3>3.1 What is UniFormat?</h3>
+        <p>UniFormat classifies by <strong>building element</strong> (function), not trade. Ideal for:</p>
         <ul>
-            <li><strong>Unified Language:</strong> Everyone uses the same terminology</li>
-            <li><strong>Easier Coordination:</strong> Between different disciplines (architectural, structural, electrical)</li>
-            <li><strong>Accurate Documentation:</strong> Clear and organized specifications</li>
+            <li>Early-stage cost estimates</li>
+            <li>Conceptual budgets</li>
+            <li>Design alternative comparisons</li>
+            <li>Benchmarking projects</li>
         </ul>
 
-        <h3>For Contractors:</h3>
-        <ul>
-            <li><strong>Faster Understanding:</strong> Of technical requirements</li>
-            <li><strong>Accurate Estimations:</strong> For costs and timelines</li>
-            <li><strong>Reduced Errors:</strong> In execution</li>
-        </ul>
+        <h3>3.2 UniFormat Structure</h3>
+        <table class="comparison-table">
+            <tr>
+                <th>Code</th>
+                <th>Element</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td><strong>A</strong></td>
+                <td>Substructure</td>
+                <td>Foundations, basement walls</td>
+            </tr>
+            <tr>
+                <td><strong>B</strong></td>
+                <td>Shell</td>
+                <td>Superstructure, exterior closure, roofing</td>
+            </tr>
+            <tr>
+                <td><strong>C</strong></td>
+                <td>Interiors</td>
+                <td>Interior construction, stairs, finishes</td>
+            </tr>
+            <tr>
+                <td><strong>D</strong></td>
+                <td>Services</td>
+                <td>Conveying, plumbing, HVAC, fire, electrical</td>
+            </tr>
+            <tr>
+                <td><strong>E</strong></td>
+                <td>Equipment & Furnishings</td>
+                <td>Special equipment, furniture</td>
+            </tr>
+            <tr>
+                <td><strong>F</strong></td>
+                <td>Special Construction</td>
+                <td>Pre-engineered, special facilities</td>
+            </tr>
+            <tr>
+                <td><strong>G</strong></td>
+                <td>Building Sitework</td>
+                <td>Site prep, utilities, landscaping</td>
+            </tr>
+            <tr>
+                <td><strong>Z</strong></td>
+                <td>General</td>
+                <td>Design fees, permits, insurance</td>
+            </tr>
+        </table>
 
-        <h3>For Owners:</h3>
-        <ul>
-            <li><strong>Transparency:</strong> In specifications and costs</li>
-            <li><strong>Easier Comparison:</strong> Between different bids</li>
-            <li><strong>Quality Assurance:</strong> Through clear requirements</li>
-        </ul>
+        <h3>3.3 Example Breakdown</h3>
+        <div class="example-box">
+            <strong>Element B: Shell</strong><br>
+            • <strong>B10</strong> - Superstructure<br>
+            &nbsp;&nbsp;• B1010 - Floor Construction<br>
+            &nbsp;&nbsp;• B1020 - Roof Construction<br>
+            • <strong>B20</strong> - Exterior Enclosure<br>
+            &nbsp;&nbsp;• B2010 - Exterior Walls<br>
+            &nbsp;&nbsp;• B2020 - Exterior Windows<br>
+            • <strong>B30</strong> - Roofing<br>
+            &nbsp;&nbsp;• B3010 - Roof Coverings<br>
+            &nbsp;&nbsp;• B3020 - Roof Openings
+        </div>
 
-        <h2>📚 Main CSI Systems</h2>
+        <h3>3.4 MasterFormat vs UniFormat</h3>
+        <table class="comparison-table">
+            <tr>
+                <th>Aspect</th>
+                <th>MasterFormat</th>
+                <th>UniFormat</th>
+            </tr>
+            <tr>
+                <td>Organization</td>
+                <td>By trade/work result</td>
+                <td>By building element/function</td>
+            </tr>
+            <tr>
+                <td>Best For</td>
+                <td>Detailed specs, final estimates</td>
+                <td>Early estimates, budgeting</td>
+            </tr>
+            <tr>
+                <td>Level of Detail</td>
+                <td>Very detailed</td>
+                <td>High-level</td>
+            </tr>
+            <tr>
+                <td>When Used</td>
+                <td>Design development onward</td>
+                <td>Schematic design</td>
+            </tr>
+        </table>
 
-        <h3>1. MasterFormat™</h3>
-        <p>
-            The most widely used system for organizing specifications and cost estimates. It divides construction work into <strong>50 Divisions</strong> distributed across <strong>5 Major Groups</strong>:
-        </p>
+        <hr style="margin: 3rem 0;">
 
-        <h4>Major Groups:</h4>
-        <ul>
-            <li><strong>Group 00:</strong> Procurement and Contracting Requirements</li>
-            <li><strong>Group 01-09:</strong> General Requirements</li>
-            <li><strong>Group 10-19:</strong> Facility Construction</li>
-            <li><strong>Group 20-29:</strong> Facility Services</li>
-            <li><strong>Group 30-39:</strong> Site and Infrastructure</li>
-            <li><strong>Group 40-49:</strong> Process Equipment</li>
-        </ul>
+        <!-- MODULE 4 -->
+        <h2 id="module-4"><span class="lesson-number">4</span> Module 4: OmniClass™ and Other Standards</h2>
+        
+        <h3>4.1 OmniClass™</h3>
+        <p>A comprehensive classification system with <strong>15 tables</strong>:</p>
+        <table class="comparison-table">
+            <tr>
+                <th>Table</th>
+                <th>Subject</th>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>Construction Entities by Function</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>Spaces by Function</td>
+            </tr>
+            <tr>
+                <td>21</td>
+                <td>Elements (UniFormat)</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>Work Results (MasterFormat)</td>
+            </tr>
+            <tr>
+                <td>23</td>
+                <td>Products</td>
+            </tr>
+            <tr>
+                <td>49</td>
+                <td>Properties</td>
+            </tr>
+        </table>
 
-        <h4>Most Used Divisions:</h4>
-        <ul>
-            <li><strong>Division 03:</strong> Concrete</li>
-            <li><strong>Division 04:</strong> Masonry</li>
-            <li><strong>Division 05:</strong> Metals</li>
-            <li><strong>Division 06:</strong> Wood, Plastics, and Composites</li>
-            <li><strong>Division 07:</strong> Thermal and Moisture Protection</li>
-            <li><strong>Division 09:</strong> Finishes</li>
-        </ul>
-
-        <blockquote>
-            <strong>💡 Practical Example:</strong> The code "03 30 00" refers to "Cast-in-Place Concrete", which can be further divided into "03 31 00" for Structural Concrete.
-        </blockquote>
-
-        <h3>2. UniFormat™</h3>
-        <p>
-            A system for classifying building elements by <strong>function</strong> rather than material type. Useful for:
-        </p>
-        <ul>
-            <li>Preliminary cost estimates</li>
-            <li>Economic feasibility studies</li>
-            <li>Comparing design alternatives</li>
-        </ul>
-
-        <h4>Major Categories:</h4>
-        <ul>
-            <li><strong>A:</strong> Substructure</li>
-            <li><strong>B:</strong> Shell</li>
-            <li><strong>C:</strong> Interiors</li>
-            <li><strong>D:</strong> Services</li>
-            <li><strong>E:</strong> Equipment & Furnishings</li>
-            <li><strong>F:</strong> Special Construction</li>
-            <li><strong>G:</strong> Building Sitework</li>
-        </ul>
-
-        <h3>3. SectionFormat™</h3>
-        <p>
-            A standard for organizing the content of each specification section, ensuring:
-        </p>
-        <ul>
-            <li>Consistent information organization</li>
-            <li>Easy retrieval of requirements</li>
-            <li>Avoidance of duplication and conflict</li>
-        </ul>
-
-        <h2>🔧 How to Apply CSI Standards in Your Project</h2>
-
-        <h3>Step 1: Organize Specifications</h3>
-        <p>
-            Use MasterFormat to organize technical specifications:
-        </p>
+        <h3>4.2 SectionFormat™</h3>
+        <p>Standard organization for specification sections:</p>
         <ol>
-            <li>Identify the required divisions for the project</li>
-            <li>Write specifications under each division</li>
-            <li>Use standard numbering (6 digits)</li>
+            <li><strong>Part 1 - General</strong>
+                <ul>
+                    <li>Summary</li>
+                    <li>References</li>
+                    <li>Submittals</li>
+                    <li>Quality Assurance</li>
+                </ul>
+            </li>
+            <li><strong>Part 2 - Products</strong>
+                <ul>
+                    <li>Materials</li>
+                    <li>Equipment</li>
+                    <li>Mixes/Fabrication</li>
+                </ul>
+            </li>
+            <li><strong>Part 3 - Execution</strong>
+                <ul>
+                    <li>Installation</li>
+                    <li>Field Quality Control</li>
+                    <li>Protection</li>
+                </ul>
+            </li>
         </ol>
 
-        <h3>Step 2: Cost Estimation</h3>
-        <p>
-            Use the same classification for cost estimation:
-        </p>
-        <ul>
-            <li>Take off quantities by division</li>
-            <li>Calculate costs for each separate division</li>
-            <li>Aggregate costs to get the total estimate</li>
-        </ul>
+        <hr style="margin: 3rem 0;">
 
-        <h3>Step 3: Project Management</h3>
-        <p>
-            Use the classification to track progress:
-        </p>
-        <ul>
-            <li>Monitor actual vs. estimated costs per division</li>
-            <li>Track completion for each activity</li>
-            <li>Issue organized and understandable reports</li>
-        </ul>
+        <!-- MODULE 5 -->
+        <h2 id="module-5"><span class="lesson-number">5</span> Module 5: Writing Specifications</h2>
+        
+        <h3>5.1 Specification Types</h3>
+        <table class="comparison-table">
+            <tr>
+                <th>Type</th>
+                <th>Description</th>
+                <th>Example</th>
+            </tr>
+            <tr>
+                <td><strong>Prescriptive</strong></td>
+                <td>Exact product/method specified</td>
+                <td>"Use Portland Cement Type I per ASTM C150"</td>
+            </tr>
+            <tr>
+                <td><strong>Performance</strong></td>
+                <td>Required performance, not method</td>
+                <td>"Concrete compressive strength: 4000 psi at 28 days"</td>
+            </tr>
+            <tr>
+                <td><strong>Proprietary</strong></td>
+                <td>Specific manufacturer/product</td>
+                <td>"Use Hilti HIT-HY 200 epoxy anchor"</td>
+            </tr>
+            <tr>
+                <td><strong>"Or Equal"</strong></td>
+                <td>Brand + approved alternatives</td>
+                <td>"Hilti HIT-HY 200 or approved equal"</td>
+            </tr>
+        </table>
 
-        <h2>⚠️ Common Mistakes When Using CSI</h2>
-
-        <h3>1. Incorrect Coding</h3>
-        <p>
-            <strong>Mistake:</strong> Using non-standard or invented numbers.<br>
-            <strong>Solution:</strong> Stick to standard numbers from the official MasterFormat.
-        </p>
-
-        <h3>2. Mixing Systems</h3>
-        <p>
-            <strong>Mistake:</strong> Mixing MasterFormat with UniFormat in the same document.<br>
-            <strong>Solution:</strong> Define the system being used and stick to it.
-        </p>
-
-
-
-        <h2>💡 Tips for Optimal Use</h2>
-        <ul>
-            <li><strong>Start Simple:</strong> Don't try to use every detail at once.</li>
-            <li><strong>Standardize Internally:</strong> Make all projects in your company use the same system.</li>
-            <li><strong>Train the Team:</strong> Training is an investment that saves time and money.</li>
-            <li><strong>Use Software:</strong> Many programs support CSI standards automatically.</li>
-        </ul>
-
-        <h2>🚀 Our Tools Support CSI</h2>
-        <p>
-            The CSI Calculator website is built entirely on CSI standards:
-        </p>
-        <ul>
-            <li><a href="../../crew-calculator.html" style="color: var(--primary-color); font-weight: 600;">📚 CSI Database</a>: Browse thousands of activities and rates</li>
-            <li><a href="../../crew-calculator.html" style="color: var(--primary-color); font-weight: 600;">🧮 Calculator</a>: Unified classification for all activities</li>
-            <li><a href="../../ai-planner.html" style="color: var(--primary-color); font-weight: 600;">🤖 AI Planner</a>: Understands and applies CSI standards automatically</li>
-        </ul>
-
-        <h2>📝 Conclusion</h2>
-        <p>
-            CSI standards are not just numbers and codes; they are a <strong>unified language</strong> that facilitates communication between all project parties. Using them leads to:
-        </p>
-        <ul>
-            <li>Reduced errors and extra costs</li>
-            <li>Improved communication and coordination</li>
-            <li>Increased professionalism and credibility</li>
-            <li>Easier management of large and complex projects</li>
-        </ul>
-
-        <p style="margin-top: 2rem; padding: 1.5rem; background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%); border-radius: var(--radius-md); border-right: 4px solid var(--primary-color);">
-            <strong>👨‍💼 Start Estimating Correctly Now!</strong><br>
-            Try <a href="../../crew-calculator.html" style="color: var(--primary-color); font-weight: 600;">Crew Calculator</a> now and get instant results for your project!
-            <br><br>
-            <strong>🙋‍♂️ Have Questions?</strong> Contact me on Facebook: <a href="https://www.facebook.com/Sameh.Badawy.Sayed" target="_blank" style="color: var(--primary-color); text-decoration: underline;">Sameh Badawy Sayed</a>
-        </p>
-    </div>
-
-    <!-- Share Section -->
-    <div class="share-section">
-        <h3>Share this article</h3>
-        <div class="share-buttons">
-            <button class="share-btn twitter" onclick="shareOnTwitter()">
-                🐦 Twitter
-            </button>
-            <button class="share-btn facebook" onclick="shareOnFacebook()">
-                📘 Facebook
-            </button>
-            <button class="share-btn linkedin" onclick="shareOnLinkedIn()">
-                💼 LinkedIn
-            </button>
-            <button class="share-btn email" onclick="shareViaEmail()">
-                📧 Email
-            </button>
+        <h3>5.2 Sample Specification Section</h3>
+        <div class="example-box">
+            <strong>Section 03 30 00 - Cast-in-Place Concrete</strong><br><br>
+            <strong>PART 1 - GENERAL</strong><br>
+            1.1 SUMMARY<br>
+            &nbsp;&nbsp;A. Section Includes:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;1. Concrete for foundations<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;2. Concrete for slabs on grade<br><br>
+            1.2 REFERENCES<br>
+            &nbsp;&nbsp;A. ACI 301 - Structural Concrete<br>
+            &nbsp;&nbsp;B. ASTM C150 - Portland Cement<br><br>
+            <strong>PART 2 - PRODUCTS</strong><br>
+            2.1 CONCRETE MIX<br>
+            &nbsp;&nbsp;A. Compressive Strength: 4000 psi at 28 days<br>
+            &nbsp;&nbsp;B. Slump: 4 inches maximum<br><br>
+            <strong>PART 3 - EXECUTION</strong><br>
+            3.1 PLACEMENT<br>
+            &nbsp;&nbsp;A. Place concrete in continuous operation
         </div>
-    </div>
 
-    <!-- Related Articles -->
-    <div class="related-articles">
-        <h2>Related Articles</h2>
-        <div class="articles-grid">
-            <a href="crew-calculation-guide-en.html" class="article-card">
-                <div class="article-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
-                <div class="article-content">
-                    <span class="article-category">Cost Estimation</span>
-                    <h2 class="article-title">How to Calculate Crew Requirements</h2>
-                    <p class="article-excerpt">Comprehensive guide to calculating labor and equipment requirements</p>
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 6 -->
+        <h2 id="module-6"><span class="lesson-number">6</span> Module 6: CSI for Cost Estimating</h2>
+        
+        <h3>6.1 Estimating Workflow with CSI</h3>
+        <div class="workflow-container">
+            <div class="workflow-step">
+                <div class="workflow-number">1</div>
+                <div class="workflow-content">
+                    <h4>Organize Takeoff by Division</h4>
+                    <p>Group quantities under CSI divisions</p>
                 </div>
-            </a>
-            <a href="cost-estimation-mistakes-en.html" class="article-card">
-                <div class="article-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
-                <div class="article-content">
-                    <span class="article-category">Cost Estimation</span>
-                    <h2 class="article-title">Common Cost Estimation Mistakes</h2>
-                    <p class="article-excerpt">Learn how to avoid costly errors</p>
+            </div>
+            <div class="workflow-step">
+                <div class="workflow-number">2</div>
+                <div class="workflow-content">
+                    <h4>Use Standard Item Codes</h4>
+                    <p>Reference MasterFormat numbers</p>
                 </div>
-            </a>
+            </div>
+            <div class="workflow-step">
+                <div class="workflow-number">3</div>
+                <div class="workflow-content">
+                    <h4>Price Each Division</h4>
+                <p>Apply unit costs to quantities</p>
+                </div>
+            </div>
+            <div class="workflow-step">
+                <div class="workflow-number">4</div>
+                <div class="workflow-content">
+                    <h4>Summarize by Division</h4>
+                    <p>Roll up costs for reporting</p>
+                </div>
+            </div>
         </div>
+
+        <h3>6.2 Benefits for Estimating</h3>
+        <ul>
+            <li>✅ <strong>Consistency:</strong> All estimators use same structure</li>
+            <li>✅ <strong>Historical data:</strong> Build cost databases by division</li>
+            <li>✅ <strong>Bid comparison:</strong> Apples-to-apples analysis</li>
+            <li>✅ <strong>Scope gaps:</strong> Easier to spot missing items</li>
+        </ul>
+
+        <h3>6.3 How CSI Calculator Uses CSI</h3>
+        <p>Our database is organized by MasterFormat:</p>
+        <ul>
+            <li>📚 <strong>12,000+ activities</strong> coded to CSI divisions</li>
+            <li>🔍 <strong>Search by division</strong> or keyword</li>
+            <li>📊 <strong>Export estimates</strong> in CSI format</li>
+            <li>🤖 <strong>AI understands</strong> CSI classification</li>
+        </ul>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 7 -->
+        <h2 id="module-7"><span class="lesson-number">7</span> Module 7: Best Practices & Implementation</h2>
+
+        <h3>7.1 Do's ✅</h3>
+        <ul>
+            <li>✅ <strong>Use official CSI numbers:</strong> Don't invent codes</li>
+            <li>✅ <strong>Be consistent:</strong> Same system across all projects</li>
+            <li>✅ <strong>Train your team:</strong> Everyone must understand</li>
+            <li>✅ <strong>Update regularly:</strong> CSI releases updates every few years</li>
+            <li>✅ <strong>Cross-reference:</strong> Link specs to drawings</li>
+        </ul>
+
+        <h3>7.2 Don'ts ❌</h3>
+        <ul>
+            <li>❌ <strong>Don't mix systems:</strong> MasterFormat vs UniFormat in same document</li>
+            <li>❌ <strong>Don't skip levels:</strong> Use full 6-digit codes</li>
+            <li>❌ <strong>Don't duplicate:</strong> Put items in one division only</li>
+            <li>❌ <strong>Don't customize numbers:</strong> Confuses everyone</li>
+        </ul>
+
+        <div class="pro-tip">
+            <strong>Pro Strategy:</strong> Create a project-specific "Table of Contents" listing which CSI divisions apply to your project. Share with all team members at kickoff.
+        </div>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- QUIZ -->
+        <h2 id="quiz">🎯 Final Quiz</h2>
+        
+        <div class="lesson-card" style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.05), rgba(217, 119, 6, 0.05));">
+            <h4>🧪 Test Your CSI Knowledge</h4>
+            
+            <p><strong>1. Which division covers concrete?</strong></p>
+            <label><input type="radio" name="q1" value="a"> Division 02</label><br>
+            <label><input type="radio" name="q1" value="b"> Division 03</label><br>
+            <label><input type="radio" name="q1" value="c"> Division 04</label><br>
+            <br>
+            
+            <p><strong>2. What does UniFormat classify by?</strong></p>
+            <label><input type="radio" name="q2" value="a"> Trade/Work Result</label><br>
+            <label><input type="radio" name="q2" value="b"> Building Element/Function</label><br>
+            <label><input type="radio" name="q2" value="c"> Material Type</label><br>
+            <br>
+            
+            <p><strong>3. Which is best for early-stage budgeting?</strong></p>
+            <label><input type="radio" name="q3" value="a"> MasterFormat</label><br>
+            <label><input type="radio" name="q3" value="b"> UniFormat</label><br>
+            <label><input type="radio" name="q3" value="c"> OmniClass</label><br>
+            <br>
+            
+            <p><strong>4. How many parts are in a SectionFormat spec section?</strong></p>
+            <label><input type="radio" name="q4" value="a"> 2</label><br>
+            <label><input type="radio" name="q4" value="b"> 3</label><br>
+            <label><input type="radio" name="q4" value="c"> 4</label><br>
+            <br>
+            
+            <button onclick="checkQuizCSI()" style="background: linear-gradient(135deg, #f59e0b, #d97706); color: white; border: none; padding: 1rem 2rem; border-radius: 8px; font-weight: 600; cursor: pointer;">Check Answers</button>
+            <div id="quiz-result" style="margin-top: 1rem; font-weight: 600;"></div>
+        </div>
+
+        <script>
+        function checkQuizCSI() {
+            const answers = {q1: 'b', q2: 'b', q3: 'b', q4: 'b'};
+            let score = 0;
+            for (let q in answers) {
+                const selected = document.querySelector(`input[name="${q}"]:checked`);
+                if (selected && selected.value === answers[q]) score++;
+            }
+            const result = document.getElementById('quiz-result');
+            if (score === 4) {
+                result.innerHTML = '🎉 Perfect! You mastered CSI standards!';
+                result.style.color = '#f59e0b';
+            } else if (score >= 3) {
+                result.innerHTML = '👍 Great job! Review the topics you missed.';
+                result.style.color = '#d97706';
+            } else {
+                result.innerHTML = '📚 Keep learning! Review the course modules.';
+                result.style.color = '#dc2626';
+            }
+        }
+        </script>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- CTA -->
+        <div class="key-takeaway">
+            <h4>🚀 Start Using CSI Standards Now!</h4>
+            <p>Try our <a href="../../crew-calculator.html" style="color: white; text-decoration: underline;">CSI Calculator</a> with 12,000+ activities organized by MasterFormat</p>
+        </div>
+
+        <!-- Share Buttons -->
+        <div class="share-buttons" style="margin-top: 3rem;">
+            <span class="share-buttons-label">Share this course:</span>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-btn facebook" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">Facebook</a>
+            <a href="https://twitter.com/intent/tweet?url=" class="share-btn twitter" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">Twitter</a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=" class="share-btn linkedin" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">LinkedIn</a>
+            <a href="https://wa.me/?text=" class="share-btn whatsapp" target="_blank" onclick="this.href+=encodeURIComponent(document.title + ' ' + window.location.href)">WhatsApp</a>
+            <button class="share-btn copy" onclick="navigator.clipboard.writeText(window.location.href);alert('Link copied!')">Copy Link</button>
+        </div>
+        
     </div>
 
-    <!-- Footer -->
     <footer class="site-footer">
         <div class="footer-content">
-            <p class="footer-text">
-                CSI Crew Calculator • Built with <span class="footer-heart">❤️</span> by <span class="footer-author">Sameh Badawy Sayed</span>
-            </p>
+            <p class="footer-text">CSI Calculator • Built with <span class="footer-heart">❤️</span> by <span class="footer-author">Sameh Badawy Sayed</span></p>
         </div>
     </footer>
-
-    <script>
-        const pageTitle = encodeURIComponent(document.title);
-        const pageUrl = encodeURIComponent(window.location.href);
-
-        function shareOnTwitter() {
-            window.open(`https://twitter.com/intent/tweet?text=${pageTitle}&url=${pageUrl}`, '_blank');
-        }
-
-        function shareOnFacebook() {
-            window.open(`https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`, '_blank');
-        }
-
-        function shareOnLinkedIn() {
-            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${pageUrl}`, '_blank');
-        }
-
-        function shareViaEmail() {
-            window.location.href = `mailto:?subject=${pageTitle}&body=${pageUrl}`;
-        }
-    </script>
 </body>
 </html>
