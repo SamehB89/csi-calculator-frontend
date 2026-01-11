@@ -3,14 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FIDIC Contracts: Red, Yellow, and Silver Books - CSI Calculator</title>
-    <meta name="description" content="Comprehensive guide to understanding FIDIC international contracts: Red Book, Yellow Book, and Silver Book, with differences and use cases.">
-    <meta name="keywords" content="FIDIC, Red Book, Yellow Book, Silver Book, International Contracts, EPC">
+    <title>FIDIC Complete Course: Master International Construction Contracts | CSI Calculator</title>
+    <meta name="description" content="Complete FIDIC course: Learn Red Book, Yellow Book, Silver Book, contract administration, claims, variations, dispute resolution, and practical implementation.">
+    <meta name="keywords" content="FIDIC, Red Book, Yellow Book, Silver Book, EPC, Construction Contracts, Claims, Variations, DAB, International Contracts">
     
-    <meta property="og:title" content="FIDIC Contracts: Red, Yellow, and Silver Books">
-    <meta property="og:description" content="Which FIDIC book suits your project?">
+    <meta property="og:title" content="FIDIC Complete Course: Master International Contracts">
+    <meta property="og:description" content="Learn FIDIC contracts from basics to advanced claims">
     <meta property="og:type" content="article">
-    <meta property="og:image" content="../assets/fidic-contracts.jpg">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "FIDIC Contracts Complete Course",
+      "description": "Master international construction contracts with FIDIC"
+    }
+    </script>
     
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5429423113977975" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../css/theme.css">
@@ -24,19 +32,148 @@
     <script src="../../js/i18n.js"></script>
     <script src="../../js/theme.js"></script>
     <script src="../../js/blog-i18n.js"></script>
+    
+    <style>
+        .course-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #0ea5e9, #0284c7);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .lesson-card {
+            background: var(--bg-secondary);
+            border: 2px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            transition: all 0.3s ease;
+        }
+        
+        .lesson-card:hover {
+            border-color: #0ea5e9;
+            box-shadow: 0 8px 30px rgba(14, 165, 233, 0.15);
+        }
+        
+        .lesson-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #0ea5e9, #0284c7);
+            color: white;
+            border-radius: 50%;
+            font-weight: 700;
+            margin-left: 1rem;
+        }
+        
+        .pro-tip {
+            background: linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(14, 165, 233, 0.05));
+            border-left: 4px solid #0ea5e9;
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.5rem 0;
+        }
+        
+        .pro-tip::before {
+            content: "⚖️ Contract Tip";
+            display: block;
+            font-weight: 700;
+            color: #0ea5e9;
+            margin-bottom: 0.5rem;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .comparison-table th {
+            background: linear-gradient(135deg, #0ea5e9, #0284c7);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .comparison-table td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            background: var(--bg-secondary);
+        }
+        
+        .key-takeaway {
+            background: linear-gradient(135deg, #0ea5e9, #0284c7);
+            color: white;
+            padding: 1.5rem 2rem;
+            border-radius: 16px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .book-card {
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .book-card.red { background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(239, 68, 68, 0.05)); border-left: 5px solid #ef4444; }
+        .book-card.yellow { background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(245, 158, 11, 0.05)); border-left: 5px solid #f59e0b; }
+        .book-card.silver { background: linear-gradient(135deg, rgba(148, 163, 184, 0.1), rgba(148, 163, 184, 0.05)); border-left: 5px solid #94a3b8; }
+        .book-card.green { background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(34, 197, 94, 0.05)); border-left: 5px solid #22c55e; }
+        .book-card.gold { background: linear-gradient(135deg, rgba(234, 179, 8, 0.1), rgba(234, 179, 8, 0.05)); border-left: 5px solid #eab308; }
+        
+        .warning-box {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(239, 68, 68, 0.05));
+            border-left: 4px solid #ef4444;
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.5rem 0;
+        }
+        
+        .warning-box::before {
+            content: "⚠️ Critical Warning";
+            display: block;
+            font-weight: 700;
+            color: #ef4444;
+            margin-bottom: 0.5rem;
+        }
+        
+        .clause-ref {
+            display: inline-block;
+            background: #1e293b;
+            color: #38bdf8;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.85rem;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
         <div class="container">
             <a href="../../index.html" class="logo-container">
-                <img src="../../assets/logo.png" alt="SAMEH Logo" class="logo-image">
+                <img src="../../assets/logo.png" alt="CSI Logo" class="logo-image">
                 <span class="logo-text">CSI Calculator</span>
             </a>
             <div class="nav-links">
                 <a href="../../index.html" data-i18n="home" data-icon="🏠"><span>Home</span></a>
                 <a href="../../crew-calculator.html" data-i18n="crewCalculator" data-icon="🧮"><span>Calculator</span></a>
                 <a href="../../ai-planner.html" data-i18n="aiPlanner" data-icon="🤖"><span>AI Planner</span></a>
-                <a href="../index-en.html" class="active" data-i18n="blog" data-icon="📚"><span>Manual & Tips</span></a>
+                <a href="../../evm-calculator.html" data-i18n="evmCalculator" data-icon="📊"><span>EVM Calculator</span></a>
+                <a href="../index-en.html" class="active" data-i18n="blog" data-icon="📚"><span>Knowledge Bites</span></a>
                 <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">🌙</button>
                 <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()"><span id="langIcon">AR</span></button>
             </div>
@@ -44,123 +181,522 @@
     </nav>
 
     <div class="article-header">
+        <span class="course-badge">📜 Complete Course</span>
         <span class="article-category">Contracts</span>
-        <h1>FIDIC Contracts: Red, Yellow, and Silver Books</h1>
+        <h1>FIDIC Contracts: Master International Construction Law</h1>
+        <p style="font-size: 1.2rem; opacity: 0.9; margin-top: 1rem;">Red, Yellow, Silver Books & Claims Management</p>
         <div class="article-meta">
-            <span class="article-date">January 8, 2026</span>
-            <span class="article-read-time">14 min read</span>
+            <span class="article-date">Updated: January 2026</span>
+            <span class="article-read-time">55 min course</span>
         </div>
     </div>
 
-    <div class="article-body">
-        <div class="article-image-container">
-            <img src="../assets/fidic-contracts.jpg" alt="FIDIC Contracts" class="img-fluid rounded shadow mb-4">
+    <div class="article-body" style="max-width: 900px;">
+        
+        <!-- Hero Image -->
+        <div class="article-hero-wrapper" style="margin: 2rem 0;">
+            <img src="../assets/fidic-contracts.jpg" alt="FIDIC Contract Books" style="width: 100%; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.15);">
         </div>
 
-        <h2>🌍 What is FIDIC?</h2>
+        <!-- Introduction -->
+        <div class="alert alert-info" style="background: linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(2, 132, 199, 0.1)); border: none; border-radius: 16px; padding: 2rem;">
+            <h3 style="margin-bottom: 1rem;">🎯 What You'll Learn in This Course</h3>
+            <ul style="margin: 0; line-height: 2;">
+                <li>✅ FIDIC history and structure</li>
+                <li>✅ Red, Yellow, Silver Book differences</li>
+                <li>✅ Key clauses and their application</li>
+                <li>✅ Variations and claims management</li>
+                <li>✅ Time extension procedures</li>
+                <li>✅ Dispute resolution (DAB, Arbitration)</li>
+                <li>✅ Particular Conditions drafting</li>
+            </ul>
+        </div>
+
+        <!-- Table of Contents -->
+        <h2>📋 Course Contents</h2>
+        <div class="lesson-card">
+            <ol style="line-height: 2.2;">
+                <li><a href="#module-1">Module 1: What is FIDIC?</a></li>
+                <li><a href="#module-2">Module 2: Red Book (Employer's Design)</a></li>
+                <li><a href="#module-3">Module 3: Yellow Book (Design-Build)</a></li>
+                <li><a href="#module-4">Module 4: Silver Book (EPC/Turnkey)</a></li>
+                <li><a href="#module-5">Module 5: Other FIDIC Books</a></li>
+                <li><a href="#module-6">Module 6: Key Clauses</a></li>
+                <li><a href="#module-7">Module 7: Claims & Variations</a></li>
+                <li><a href="#module-8">Module 8: Dispute Resolution</a></li>
+                <li><a href="#quiz">Final Quiz</a></li>
+            </ol>
+        </div>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 1 -->
+        <h2 id="module-1"><span class="lesson-number">1</span> Module 1: What is FIDIC?</h2>
+        
+        <h3>1.1 Definition</h3>
         <p>
-            FIDIC stands for Fédération Internationale Des Ingénieurs-Conseils (International Federation of Consulting Engineers), headquartered in Switzerland. FIDIC contracts are the gold standard for international construction contracts, used by international banks, governments, and multinational corporations.
+            <strong>FIDIC</strong> (Fédération Internationale Des Ingénieurs-Conseils) is the International Federation of Consulting Engineers, founded in 1913 in Geneva, Switzerland.
         </p>
-
-        <h2>📚 The FIDIC Family of Books</h2>
-        <p>FIDIC contracts are classified by cover color, each suitable for specific project types:</p>
-
-        <h2>🔴 Red Book</h2>
-        <h3>Official Name:</h3>
-        <p>Conditions of Contract for Construction (Employer's Design)</p>
-
-        <h3>Usage:</h3>
-        <p>Projects where the employer provides complete design and contractor only executes.</p>
-
-        <h3>Characteristics:</h3>
-        <ul>
-            <li>Design is the responsibility of employer/consultant.</li>
-            <li>Contractor executes according to drawings and specifications.</li>
-            <li>An "Engineer" manages the contract and issues certificates.</li>
-            <li>Risk distribution is relatively balanced.</li>
-            <li>Payment method: Usually re-measurement.</li>
-        </ul>
-
-        <h3>When to Use:</h3>
-        <div class="alert alert-danger">
-            ✅ Traditional infrastructure projects<br>
-            ✅ When employer wants full control over design<br>
-            ✅ Internationally funded government projects
+        
+        <div class="key-takeaway">
+            <h4>🌍 Global Standard</h4>
+            <p>FIDIC contracts are used worldwide by international banks, governments, and major contractors as the gold standard for construction contracts.</p>
         </div>
 
-        <h2>🟡 Yellow Book</h2>
-        <h3>Official Name:</h3>
-        <p>Conditions of Contract for Plant and Design-Build</p>
-
-        <h3>Usage:</h3>
-        <p>Projects where contractor handles both design and construction.</p>
-
-        <h3>Characteristics:</h3>
+        <h3>1.2 Why FIDIC?</h3>
         <ul>
-            <li>Design is contractor's responsibility.</li>
-            <li>Employer provides performance requirements (Employer's Requirements).</li>
-            <li>Contractor submits technical proposal (Contractor's Proposal).</li>
-            <li>Payment method: Usually lump sum.</li>
-            <li>Greater risk transfer to contractor.</li>
+            <li>✅ <strong>International acceptance:</strong> World Bank, AfDB, ADB, EBRD</li>
+            <li>✅ <strong>Balanced risk allocation:</strong> Fair to both parties</li>
+            <li>✅ <strong>Comprehensive:</strong> Covers most scenarios</li>
+            <li>✅ <strong>Tested:</strong> Decades of case law and interpretation</li>
         </ul>
 
-        <h3>When to Use:</h3>
-        <div class="alert alert-warning">
-            ✅ Building and plant projects<br>
-            ✅ When employer wants an integrated solution<br>
-            ✅ Projects requiring specialized design expertise
-        </div>
-
-        <h2>⚪ Silver Book</h2>
-        <h3>Official Name:</h3>
-        <p>Conditions of Contract for EPC/Turnkey Projects</p>
-
-        <h3>Usage:</h3>
-        <p>Turnkey projects where contractor bears complete responsibility.</p>
-
-        <h3>Characteristics:</h3>
-        <ul>
-            <li>Contractor responsible for everything: design, procurement, construction.</li>
-            <li>No "Engineer" - employer manages contract directly.</li>
-            <li>Very high risks on contractor.</li>
-            <li>Fixed price and determined delivery date.</li>
-            <li>Very limited price adjustments.</li>
-        </ul>
-
-        <h3>When to Use:</h3>
-        <div class="alert alert-secondary">
-            ✅ Industrial projects and power plants<br>
-            ✅ When employer wants price and schedule certainty<br>
-            ✅ Contractor has complete experience with similar projects
-        </div>
-
-        <h2>📊 Comparison Table</h2>
-        <table class="pricing-table">
-            <tr><th>Element</th><th>Red 🔴</th><th>Yellow 🟡</th><th>Silver ⚪</th></tr>
-            <tr><td>Design Responsibility</td><td>Employer</td><td>Contractor</td><td>Contractor</td></tr>
-            <tr><td>Engineer Presence</td><td>Yes</td><td>Yes</td><td>No</td></tr>
-            <tr><td>Payment Method</td><td>Re-measurement</td><td>Lump Sum</td><td>Fixed Price</td></tr>
-            <tr><td>Contractor Risk</td><td>Medium</td><td>High</td><td>Very High</td></tr>
-            <tr><td>Change Flexibility</td><td>High</td><td>Medium</td><td>Low</td></tr>
-            <tr><td>Optimal Project Type</td><td>Infrastructure</td><td>Buildings/Plants</td><td>Industrial/Power</td></tr>
+        <h3>1.3 Contract Structure</h3>
+        <table class="comparison-table">
+            <tr>
+                <th>Document</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td><strong>General Conditions</strong></td>
+                <td>Standard clauses (don't modify)</td>
+            </tr>
+            <tr>
+                <td><strong>Particular Conditions</strong></td>
+                <td>Project-specific amendments</td>
+            </tr>
+            <tr>
+                <td><strong>Employer's Requirements</strong></td>
+                <td>Scope, specifications (Yellow/Silver)</td>
+            </tr>
+            <tr>
+                <td><strong>Contractor's Proposal</strong></td>
+                <td>Technical and financial offer</td>
+            </tr>
+            <tr>
+                <td><strong>Schedules</strong></td>
+                <td>Rates, program, bonds</td>
+            </tr>
         </table>
 
-        <h2>📖 Other FIDIC Books</h2>
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 2 -->
+        <h2 id="module-2"><span class="lesson-number">2</span> Module 2: Red Book (Employer's Design)</h2>
+        
+        <div class="book-card red">
+            <h3>🔴 Conditions of Contract for Construction</h3>
+            <p><strong>Full Name:</strong> For Building and Engineering Works Designed by the Employer</p>
+            <p><strong>Edition:</strong> 2017 (2nd Edition)</p>
+        </div>
+
+        <h3>2.1 Design Responsibility</h3>
         <ul>
-            <li><strong>Green Book:</strong> For small, simple projects.</li>
-            <li><strong>Pink Book:</strong> For World Bank projects.</li>
-            <li><strong>Gold Book:</strong> For long-term operation and maintenance contracts.</li>
+            <li>Employer provides <strong>complete design</strong></li>
+            <li>Contractor executes per drawings and specifications</li>
+            <li>Contractor responsible for workmanship and materials</li>
+            <li>Limited design liability (only for temporary works)</li>
         </ul>
 
-        <h2>⚠️ Implementation Tips</h2>
+        <h3>2.2 Key Features</h3>
+        <table class="comparison-table">
+            <tr>
+                <th>Feature</th>
+                <th>Red Book Approach</th>
+            </tr>
+            <tr>
+                <td><strong>Payment</strong></td>
+                <td>Re-measurement (BOQ-based) or Lump Sum</td>
+            </tr>
+            <tr>
+                <td><strong>Engineer</strong></td>
+                <td>Yes - administers contract, issues certificates</td>
+            </tr>
+            <tr>
+                <td><strong>Risk Level</strong></td>
+                <td>Balanced (medium for both parties)</td>
+            </tr>
+            <tr>
+                <td><strong>Variations</strong></td>
+                <td>Engineer can issue instructions</td>
+            </tr>
+            <tr>
+                <td><strong>Project Type</strong></td>
+                <td>Infrastructure, civil works</td>
+            </tr>
+        </table>
+
+        <h3>2.3 When to Use Red Book</h3>
         <ul>
-            <li>Use FIDIC general conditions as base, then add particular conditions.</li>
-            <li>Avoid excessive modifications that unbalance the contract.</li>
-            <li>Engage lawyers specialized in FIDIC contracts.</li>
-            <li>Train project team on understanding procedures and timelines.</li>
-        </ul>        <!-- Share Buttons -->
-        <div class="share-buttons">
-            <span class="share-buttons-label">Share this article:</span>
+            <li>✅ Traditional infrastructure (roads, bridges, dams)</li>
+            <li>✅ Employer/consultant has complete design</li>
+            <li>✅ Flexibility for changes during construction</li>
+            <li>✅ Government/internationally funded projects</li>
+        </ul>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 3 -->
+        <h2 id="module-3"><span class="lesson-number">3</span> Module 3: Yellow Book (Design-Build)</h2>
+        
+        <div class="book-card yellow">
+            <h3>🟡 Conditions of Contract for Plant and Design-Build</h3>
+            <p><strong>Full Name:</strong> For Electrical and Mechanical Plant and Design-Build</p>
+            <p><strong>Edition:</strong> 2017 (2nd Edition)</p>
+        </div>
+
+        <h3>3.1 Design Responsibility</h3>
+        <ul>
+            <li>Contractor responsible for <strong>design and construction</strong></li>
+            <li>Employer provides <strong>Employer's Requirements</strong> (performance specs)</li>
+            <li>Contractor submits <strong>Contractor's Proposal</strong></li>
+            <li>Contractor's design must meet performance criteria</li>
+        </ul>
+
+        <h3>3.2 Key Features</h3>
+        <table class="comparison-table">
+            <tr>
+                <th>Feature</th>
+                <th>Yellow Book Approach</th>
+            </tr>
+            <tr>
+                <td><strong>Payment</strong></td>
+                <td>Lump Sum (milestone or schedule-based)</td>
+            </tr>
+            <tr>
+                <td><strong>Engineer</strong></td>
+                <td>Yes - but less design review</td>
+            </tr>
+            <tr>
+                <td><strong>Risk Level</strong></td>
+                <td>Higher for Contractor (design risk)</td>
+            </tr>
+            <tr>
+                <td><strong>Variations</strong></td>
+                <td>Engineer can vary Employer's Requirements</td>
+            </tr>
+            <tr>
+                <td><strong>Project Type</strong></td>
+                <td>Buildings, industrial plants, M&E-heavy</td>
+            </tr>
+        </table>
+
+        <h3>3.3 When to Use Yellow Book</h3>
+        <ul>
+            <li>✅ Complex buildings with integrated systems</li>
+            <li>✅ Industrial plants and process facilities</li>
+            <li>✅ Employer wants single-point responsibility</li>
+            <li>✅ Contractor has specialized design expertise</li>
+        </ul>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 4 -->
+        <h2 id="module-4"><span class="lesson-number">4</span> Module 4: Silver Book (EPC/Turnkey)</h2>
+        
+        <div class="book-card silver">
+            <h3>⚪ Conditions of Contract for EPC/Turnkey Projects</h3>
+            <p><strong>Full Name:</strong> Engineering, Procurement, and Construction Contracts</p>
+            <p><strong>Edition:</strong> 2017 (2nd Edition)</p>
+        </div>
+
+        <h3>4.1 Key Differences</h3>
+        <ul>
+            <li>❌ <strong>No Engineer</strong> - Employer manages directly</li>
+            <li>Contractor bears <strong>maximum risk</strong></li>
+            <li><strong>Fixed price</strong> with very limited adjustments</li>
+            <li>Contractor responsible for <strong>everything</strong> (design, procure, construct)</li>
+        </ul>
+
+        <h3>4.2 Risk Allocation</h3>
+        <table class="comparison-table">
+            <tr>
+                <th>Risk</th>
+                <th>Silver Book</th>
+            </tr>
+            <tr>
+                <td>Design errors</td>
+                <td>100% Contractor</td>
+            </tr>
+            <tr>
+                <td>Unforeseeable ground conditions</td>
+                <td>Contractor (limited relief)</td>
+            </tr>
+            <tr>
+                <td>Price escalation</td>
+                <td>Contractor (no adjustment)</td>
+            </tr>
+            <tr>
+                <td>Delays (most causes)</td>
+                <td>Contractor risk</td>
+            </tr>
+        </table>
+
+        <div class="warning-box">
+            <strong>Silver Book is NOT for inexperienced contractors!</strong> The risk transfer is extreme. Only use when contractor has complete expertise and can price risks adequately.
+        </div>
+
+        <h3>4.3 When to Use Silver Book</h3>
+        <ul>
+            <li>✅ Power plants and process plants</li>
+            <li>✅ Private financing (lenders want certainty)</li>
+            <li>✅ Experienced EPC contractors</li>
+            <li>✅ Employer wants fixed price and date</li>
+        </ul>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 5 -->
+        <h2 id="module-5"><span class="lesson-number">5</span> Module 5: Other FIDIC Books</h2>
+        
+        <div class="book-card green">
+            <h4>🟢 Green Book (Short Form)</h4>
+            <p>For simple, low-value projects. Simplified conditions for contracts under $500K.</p>
+        </div>
+
+        <div class="book-card" style="border-left: 5px solid #ec4899;">
+            <h4>🩷 Pink Book (MDB Harmonized)</h4>
+            <p>Multilateral Development Bank version. Required by World Bank, ADB, AfDB, EBRD.</p>
+        </div>
+
+        <div class="book-card gold">
+            <h4>🟡 Gold Book (DBO)</h4>
+            <p>Design-Build-Operate. For projects with long-term operation phase (20+ years).</p>
+        </div>
+
+        <div class="book-card" style="border-left: 5px solid #6366f1;">
+            <h4>🟣 Emerald Book (Underground)</h4>
+            <p>For tunneling and underground works. Accounts for geotechnical uncertainty.</p>
+        </div>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 6 -->
+        <h2 id="module-6"><span class="lesson-number">6</span> Module 6: Key Clauses</h2>
+        
+        <h3>6.1 Critical Clauses (2017 Edition)</h3>
+        <table class="comparison-table">
+            <tr>
+                <th>Clause</th>
+                <th>Subject</th>
+                <th>Importance</th>
+            </tr>
+            <tr>
+                <td><span class="clause-ref">1.1</span></td>
+                <td>Definitions</td>
+                <td>Understand all terms used</td>
+            </tr>
+            <tr>
+                <td><span class="clause-ref">3.7</span></td>
+                <td>Engineer's Determinations</td>
+                <td>How disputes are initially resolved</td>
+            </tr>
+            <tr>
+                <td><span class="clause-ref">4.12</span></td>
+                <td>Unforeseeable Physical Conditions</td>
+                <td>Ground risk allocation</td>
+            </tr>
+            <tr>
+                <td><span class="clause-ref">8.5</span></td>
+                <td>Extension of Time</td>
+                <td>Delay claims procedure</td>
+            </tr>
+            <tr>
+                <td><span class="clause-ref">13.3</span></td>
+                <td>Variation Procedure</td>
+                <td>How changes are valued</td>
+            </tr>
+            <tr>
+                <td><span class="clause-ref">14.3</span></td>
+                <td>Interim Payments</td>
+                <td>Monthly payment mechanism</td>
+            </tr>
+            <tr>
+                <td><span class="clause-ref">20.1</span></td>
+                <td>Claims Procedure</td>
+                <td>28-day notice requirement</td>
+            </tr>
+            <tr>
+                <td><span class="clause-ref">21</span></td>
+                <td>Disputes and Arbitration</td>
+                <td>DAB and arbitration process</td>
+            </tr>
+        </table>
+
+        <div class="pro-tip">
+            <strong>Clause 20.1 is critical!</strong> Missing the 28-day notice deadline can result in losing your entire claim entitlement. Track all potential claims from day one.
+        </div>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 7 -->
+        <h2 id="module-7"><span class="lesson-number">7</span> Module 7: Claims & Variations</h2>
+        
+        <h3>7.1 Variations (Clause 13)</h3>
+        <p>A Variation is any change to the Works instructed by the Engineer.</p>
+        <ul>
+            <li>Changes in quantities</li>
+            <li>Changes in quality or specifications</li>
+            <li>Changes in levels, positions, dimensions</li>
+            <li>Omission of work</li>
+            <li>Additional work</li>
+        </ul>
+
+        <h3>7.2 Claims Procedure (Clause 20)</h3>
+        <div class="workflow-container">
+            <div class="workflow-step">
+                <div class="workflow-number">1</div>
+                <div class="workflow-content">
+                    <h4>Notice (28 days)</h4>
+                    <p>Contractor gives notice of claim within 28 days of awareness</p>
+                </div>
+            </div>
+            <div class="workflow-step">
+                <div class="workflow-number">2</div>
+                <div class="workflow-content">
+                    <h4>Fully Detailed Claim (84 days)</h4>
+                    <p>Submit complete claim with supporting documents</p>
+                </div>
+            </div>
+            <div class="workflow-step">
+                <div class="workflow-number">3</div>
+                <div class="workflow-content">
+                    <h4>Engineer's Response (42 days)</h4>
+                    <p>Engineer reviews and makes determination</p>
+                </div>
+            </div>
+            <div class="workflow-step">
+                <div class="workflow-number">4</div>
+                <div class="workflow-content">
+                    <h4>NOD (28 days)</h4>
+                    <p>Notice of Dissatisfaction if disagreeing</p>
+                </div>
+            </div>
+        </div>
+
+        <h3>7.3 Common Claim Grounds</h3>
+        <ul>
+            <li>🏗️ <strong>Unforeseeable physical conditions</strong> (Clause 4.12)</li>
+            <li>⏰ <strong>Employer-caused delays</strong> (Clause 8.5)</li>
+            <li>📋 <strong>Late drawings/instructions</strong> (Clause 1.9)</li>
+            <li>🔄 <strong>Variations</strong> (Clause 13)</li>
+            <li>⚠️ <strong>Force Majeure</strong> (Clause 18)</li>
+        </ul>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 8 -->
+        <h2 id="module-8"><span class="lesson-number">8</span> Module 8: Dispute Resolution</h2>
+        
+        <h3>8.1 Dispute Resolution Tiers</h3>
+        <div class="workflow-container">
+            <div class="workflow-step">
+                <div class="workflow-number">1</div>
+                <div class="workflow-content">
+                    <h4>Engineer's Determination</h4>
+                    <p>First attempt at resolution (Clause 3.7)</p>
+                </div>
+            </div>
+            <div class="workflow-step">
+                <div class="workflow-number">2</div>
+                <div class="workflow-content">
+                    <h4>DAAB (Dispute Avoidance/Adjudication Board)</h4>
+                    <p>Standing board or ad-hoc panel (Clause 21)</p>
+                </div>
+            </div>
+            <div class="workflow-step">
+                <div class="workflow-number">3</div>
+                <div class="workflow-content">
+                    <h4>Amicable Settlement</h4>
+                    <p>28-day negotiation period</p>
+                </div>
+            </div>
+            <div class="workflow-step">
+                <div class="workflow-number">4</div>
+                <div class="workflow-content">
+                    <h4>Arbitration</h4>
+                    <p>Final binding resolution (ICC rules)</p>
+                </div>
+            </div>
+        </div>
+
+        <h3>8.2 DAAB (Dispute Avoidance/Adjudication Board)</h3>
+        <ul>
+            <li>3 members (or 1 for smaller projects)</li>
+            <li>Standing board visits site regularly</li>
+            <li>Decision within 84 days</li>
+            <li>Binding unless referred to arbitration</li>
+        </ul>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- QUIZ -->
+        <h2 id="quiz">🎯 Final Quiz</h2>
+        
+        <div class="lesson-card" style="background: linear-gradient(135deg, rgba(14, 165, 233, 0.05), rgba(2, 132, 199, 0.05));">
+            <h4>🧪 Test Your FIDIC Knowledge</h4>
+            
+            <p><strong>1. Which FIDIC book has NO Engineer?</strong></p>
+            <label><input type="radio" name="q1" value="a"> Red Book</label><br>
+            <label><input type="radio" name="q1" value="b"> Yellow Book</label><br>
+            <label><input type="radio" name="q1" value="c"> Silver Book</label><br>
+            <br>
+            
+            <p><strong>2. Claims notice must be given within:</strong></p>
+            <label><input type="radio" name="q2" value="a"> 14 days</label><br>
+            <label><input type="radio" name="q2" value="b"> 28 days</label><br>
+            <label><input type="radio" name="q2" value="c"> 42 days</label><br>
+            <br>
+            
+            <p><strong>3. Which book is used for Design-Build?</strong></p>
+            <label><input type="radio" name="q3" value="a"> Red Book</label><br>
+            <label><input type="radio" name="q3" value="b"> Yellow Book</label><br>
+            <label><input type="radio" name="q3" value="c"> Green Book</label><br>
+            <br>
+            
+            <p><strong>4. Pink Book is required by:</strong></p>
+            <label><input type="radio" name="q4" value="a"> Private investors</label><br>
+            <label><input type="radio" name="q4" value="b"> World Bank and MDBs</label><br>
+            <label><input type="radio" name="q4" value="c"> Local governments</label><br>
+            <br>
+            
+            <button onclick="checkQuizFIDIC()" style="background: linear-gradient(135deg, #0ea5e9, #0284c7); color: white; border: none; padding: 1rem 2rem; border-radius: 8px; font-weight: 600; cursor: pointer;">Check Answers</button>
+            <div id="quiz-result" style="margin-top: 1rem; font-weight: 600;"></div>
+        </div>
+
+        <script>
+        function checkQuizFIDIC() {
+            const answers = {q1: 'c', q2: 'b', q3: 'b', q4: 'b'};
+            let score = 0;
+            for (let q in answers) {
+                const selected = document.querySelector(`input[name="${q}"]:checked`);
+                if (selected && selected.value === answers[q]) score++;
+            }
+            const result = document.getElementById('quiz-result');
+            if (score === 4) {
+                result.innerHTML = '🎉 Perfect! You mastered FIDIC contracts!';
+                result.style.color = '#0ea5e9';
+            } else if (score >= 3) {
+                result.innerHTML = '👍 Great job! Review the topics you missed.';
+                result.style.color = '#f59e0b';
+            } else {
+                result.innerHTML = '📚 Keep learning! Review the course modules.';
+                result.style.color = '#ef4444';
+            }
+        }
+        </script>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- Next Steps -->
+        <div class="key-takeaway">
+            <h4>📚 Continue Learning</h4>
+            <p>Next: <a href="epc-contracts-en.html" style="color: white; text-decoration: underline;">EPC Contracts in Large-Scale Projects</a></p>
+        </div>
+
+        <!-- Share Buttons -->
+        <div class="share-buttons" style="margin-top: 3rem;">
+            <span class="share-buttons-label">Share this course:</span>
             <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-btn facebook" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">Facebook</a>
             <a href="https://twitter.com/intent/tweet?url=" class="share-btn twitter" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">Twitter</a>
             <a href="https://www.linkedin.com/shareArticle?mini=true&url=" class="share-btn linkedin" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">LinkedIn</a>
@@ -168,14 +704,11 @@
             <button class="share-btn copy" onclick="navigator.clipboard.writeText(window.location.href);alert('Link copied!')">Copy Link</button>
         </div>
         
-        
-        <hr>
-        <p><strong>Next Article:</strong> <a href="epc-contracts-en.html">EPC Contracts in Large-Scale Projects</a></p>
     </div>
 
     <footer class="site-footer">
         <div class="footer-content">
-            <p class="footer-text">CSI Crew Calculator • Built with <span class="footer-heart">❤️</span> by <span class="footer-author">Sameh Badawy Sayed</span></p>
+            <p class="footer-text">CSI Calculator • Built with <span class="footer-heart">❤️</span> by <span class="footer-author">Sameh Badawy Sayed</span></p>
         </div>
     </footer>
 </body>
