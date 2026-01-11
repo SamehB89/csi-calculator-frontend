@@ -3,97 +3,620 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>6D BIM: Sustainability and Energy Analysis - CSI Calculator</title>
-    <meta name="description" content="Complete guide to 6D BIM: energy analysis and sustainability from BIM model">
+    <title>6D BIM Complete Course: Master Sustainability & Energy Analysis | CSI Calculator</title>
+    <meta name="description" content="Complete 6D BIM course: Learn energy analysis, sustainability certification (LEED, BREEAM), lifecycle assessment, and green building design with BIM.">
+    <meta name="keywords" content="6D BIM, Energy Analysis, Sustainability, LEED, BREEAM, Green Building, BIM Energy, Lifecycle Cost, Carbon Footprint">
+    
+    <meta property="og:title" content="6D BIM Complete Course: Master Sustainability & Energy Analysis">
+    <meta property="og:description" content="Learn sustainable building design with BIM">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="images/6d-bim-concept.png">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "6D BIM Complete Course",
+      "description": "Master sustainability and energy analysis with BIM"
+    }
+    </script>
+    
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5429423113977975" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../css/theme.css">
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/lang-toggle.css">
     <link rel="stylesheet" href="../../css/blog.css">
+    <link rel="stylesheet" href="../../css/ads.css">
     <link rel="stylesheet" href="../../css/share-buttons.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="../../js/ads.js"></script>
     <script src="../../js/i18n.js"></script>
     <script src="../../js/theme.js"></script>
+    <script src="../../js/blog-i18n.js"></script>
+    
+    <style>
+        .course-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .lesson-card {
+            background: var(--bg-secondary);
+            border: 2px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            transition: all 0.3s ease;
+        }
+        
+        .lesson-card:hover {
+            border-color: #22c55e;
+            box-shadow: 0 8px 30px rgba(34, 197, 94, 0.15);
+        }
+        
+        .lesson-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: white;
+            border-radius: 50%;
+            font-weight: 700;
+            margin-left: 1rem;
+        }
+        
+        .pro-tip {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(34, 197, 94, 0.05));
+            border-left: 4px solid #22c55e;
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.5rem 0;
+        }
+        
+        .pro-tip::before {
+            content: "🌱 Green Tip";
+            display: block;
+            font-weight: 700;
+            color: #22c55e;
+            margin-bottom: 0.5rem;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .comparison-table th {
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .comparison-table td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            background: var(--bg-secondary);
+        }
+        
+        .key-takeaway {
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: white;
+            padding: 1.5rem 2rem;
+            border-radius: 16px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .certification-box {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(59, 130, 246, 0.05));
+            border: 2px solid #3b82f6;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+        }
+        
+        .certification-box h4 {
+            color: #3b82f6;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .energy-metric {
+            display: inline-block;
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            color: #22c55e;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-family: 'Fira Code', monospace;
+            font-weight: 600;
+            margin: 0.25rem;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
         <div class="container">
             <a href="../../index.html" class="logo-container">
-                <img src="../../assets/logo.png" alt="Logo" class="logo-image">
+                <img src="../../assets/logo.png" alt="CSI Logo" class="logo-image">
                 <span class="logo-text">CSI Calculator</span>
             </a>
             <div class="nav-links">
-                <a href="../../index.html"><span>Home</span></a>
-                <a href="../../crew-calculator.html"><span>Calculator</span></a>
-                <a href="../index-en.html" class="active"><span>Blog</span></a>
-                <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()">🌙</button>
-                <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()"><span>AR</span></button>
+                <a href="../../index.html" data-i18n="home" data-icon="🏠"><span>Home</span></a>
+                <a href="../../crew-calculator.html" data-i18n="crewCalculator" data-icon="🧮"><span>Calculator</span></a>
+                <a href="../../ai-planner.html" data-i18n="aiPlanner" data-icon="🤖"><span>AI Planner</span></a>
+                <a href="../../evm-calculator.html" data-i18n="evmCalculator" data-icon="📊"><span>EVM Calculator</span></a>
+                <a href="../index-en.html" class="active" data-i18n="blog" data-icon="📚"><span>Knowledge Bites</span></a>
+                <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">🌙</button>
+                <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()"><span id="langIcon">AR</span></button>
             </div>
         </div>
     </nav>
 
     <div class="article-header">
+        <span class="course-badge">🌍 Complete Course</span>
         <span class="article-category">BIM Dimensions</span>
-        <h1>6D BIM: Sustainability and Energy Analysis</h1>
+        <h1>6D BIM: Master Sustainability & Energy Analysis</h1>
+        <p style="font-size: 1.2rem; opacity: 0.9; margin-top: 1rem;">Green Building Design with BIM - LEED, BREEAM & Beyond</p>
         <div class="article-meta">
-            <span class="article-date">January 8, 2026</span>
-            <span class="article-read-time">16 min read</span>
+            <span class="article-date">Updated: January 2026</span>
+            <span class="article-read-time">35 min course</span>
         </div>
     </div>
 
-    <div class="article-body">
-        <img src="../assets/6d-bim.jpg" alt="6D BIM">
+    <div class="article-body" style="max-width: 900px;">
+        
+        <!-- Hero Image -->
+        <div class="concept-image-wrapper" style="margin: 2rem 0;">
+            <img src="images/6d-bim-concept.png" alt="6D BIM = 5D BIM + Sustainability (Energy, Carbon, Lifecycle)" style="width: 100%; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.15);">
+        </div>
 
-        <h2>🌱 What is 6D BIM?</h2>
-        <p><strong>6D BIM = 3D + Time + Cost + Energy/Sustainability</strong></p>
-        <p>Analyzing building sustainability and energy consumption from the model.</p>
+        <!-- Introduction -->
+        <div class="alert alert-info" style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(22, 163, 74, 0.1)); border: none; border-radius: 16px; padding: 2rem;">
+            <h3 style="margin-bottom: 1rem;">🎯 What You'll Learn in This Course</h3>
+            <ul style="margin: 0; line-height: 2;">
+                <li>✅ What 6D BIM is and why it matters for sustainability</li>
+                <li>✅ Energy analysis fundamentals with BIM</li>
+                <li>✅ LEED & BREEAM certification support</li>
+                <li>✅ Software tools: Green Building Studio, IES VE, Sefaira</li>
+                <li>✅ Lifecycle assessment (LCA) and carbon footprint</li>
+                <li>✅ Real-world green building case studies</li>
+            </ul>
+        </div>
 
-        <h2>🎯 Uses</h2>
+        <!-- Table of Contents -->
+        <h2>📋 Course Contents</h2>
+        <div class="lesson-card">
+            <ol style="line-height: 2.2;">
+                <li><a href="#module-1">Module 1: Understanding 6D BIM</a></li>
+                <li><a href="#module-2">Module 2: Energy Analysis Basics</a></li>
+                <li><a href="#module-3">Module 3: Sustainability Certifications</a></li>
+                <li><a href="#module-4">Module 4: Software & Tools</a></li>
+                <li><a href="#module-5">Module 5: Lifecycle Assessment (LCA)</a></li>
+                <li><a href="#module-6">Module 6: Best Practices</a></li>
+                <li><a href="#quiz">Final Quiz</a></li>
+            </ol>
+        </div>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 1 -->
+        <h2 id="module-1"><span class="lesson-number">1</span> Module 1: Understanding 6D BIM</h2>
+        
+        <h3>1.1 What is 6D BIM?</h3>
+        <p>
+            <strong>6D BIM</strong> adds <em>sustainability and energy data</em> to your BIM model. It enables analysis of a building's environmental impact, energy consumption, and lifecycle costs before construction begins.
+        </p>
+        
+        <div class="key-takeaway">
+            <h4>🔑 Key Formula</h4>
+            <p style="font-size: 1.3rem; margin: 0;"><strong>6D BIM = 5D BIM + Sustainability Analysis</strong></p>
+        </div>
+
+        <h3>1.2 Why 6D BIM Matters</h3>
+        <p>Buildings account for:</p>
         <ul>
-            <li><strong>Energy Analysis:</strong> Heating/Cooling consumption</li>
-            <li><strong>Natural Lighting:</strong> Daylighting Analysis</li>
-            <li><strong>Sustainability Certifications:</strong> LEED, BREEAM</li>
-            <li><strong>Life Cycle Cost</strong></li>
+            <li><span class="energy-metric">40%</span> of global energy consumption</li>
+            <li><span class="energy-metric">36%</span> of CO₂ emissions</li>
+            <li><span class="energy-metric">50%</span> of raw material extraction</li>
+        </ul>
+        <p>6D BIM helps design buildings that minimize these impacts from day one.</p>
+
+        <h3>1.3 6D BIM Capabilities</h3>
+        <table class="comparison-table">
+            <tr>
+                <th>Analysis Type</th>
+                <th>What It Measures</th>
+                <th>Unit</th>
+            </tr>
+            <tr>
+                <td><strong>Energy Simulation</strong></td>
+                <td>Heating, cooling, lighting load</td>
+                <td>kWh/m²/year</td>
+            </tr>
+            <tr>
+                <td><strong>Daylighting</strong></td>
+                <td>Natural light penetration</td>
+                <td>Lux, sDA</td>
+            </tr>
+            <tr>
+                <td><strong>Carbon Footprint</strong></td>
+                <td>Embodied + operational carbon</td>
+                <td>kgCO₂e/m²</td>
+            </tr>
+            <tr>
+                <td><strong>Lifecycle Cost</strong></td>
+                <td>Total cost over building life</td>
+                <td>$/m² over 30-60 years</td>
+            </tr>
+            <tr>
+                <td><strong>Water Usage</strong></td>
+                <td>Consumption and recycling</td>
+                <td>liters/day</td>
+            </tr>
+        </table>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 2 -->
+        <h2 id="module-2"><span class="lesson-number">2</span> Module 2: Energy Analysis Basics</h2>
+        
+        <h3>2.1 The Energy Analysis Workflow</h3>
+        <div class="workflow-container">
+            <div class="workflow-step">
+                <div class="workflow-number">1</div>
+                <div class="workflow-content">
+                    <h4>Prepare Energy Model</h4>
+                    <p>Export gbXML from Revit/ArchiCAD</p>
+                </div>
+            </div>
+            <div class="workflow-step">
+                <div class="workflow-number">2</div>
+                <div class="workflow-content">
+                    <h4>Set Location & Weather</h4>
+                    <p>Define site, orientation, climate zone</p>
+                </div>
+            </div>
+            <div class="workflow-step">
+                <div class="workflow-number">3</div>
+                <div class="workflow-content">
+                    <h4>Define Materials</h4>
+                    <p>Assign thermal properties (U-value, R-value)</p>
+                </div>
+            </div>
+            <div class="workflow-step">
+                <div class="workflow-number">4</div>
+                <div class="workflow-content">
+                    <h4>Run Simulation</h4>
+                    <p>Calculate annual energy use, peak loads</p>
+                </div>
+            </div>
+            <div class="workflow-step">
+                <div class="workflow-number">5</div>
+                <div class="workflow-content">
+                    <h4>Analyze & Optimize</h4>
+                    <p>Compare design alternatives, iterate</p>
+                </div>
+            </div>
+        </div>
+
+        <h3>2.2 Key Energy Metrics</h3>
+        <table class="comparison-table">
+            <tr>
+                <th>Metric</th>
+                <th>Description</th>
+                <th>Target (Office)</th>
+            </tr>
+            <tr>
+                <td><strong>EUI</strong></td>
+                <td>Energy Use Intensity (kWh/m²/year)</td>
+                <td>< 100-150</td>
+            </tr>
+            <tr>
+                <td><strong>Peak Load</strong></td>
+                <td>Maximum HVAC demand (kW)</td>
+                <td>Minimize</td>
+            </tr>
+            <tr>
+                <td><strong>SHGC</strong></td>
+                <td>Solar Heat Gain Coefficient</td>
+                <td>0.25-0.40 (hot climate)</td>
+            </tr>
+            <tr>
+                <td><strong>WWR</strong></td>
+                <td>Window-to-Wall Ratio</td>
+                <td>30-40% optimal</td>
+            </tr>
+        </table>
+
+        <div class="pro-tip">
+            Early-stage energy analysis (at LOD 200) can identify <strong>80% of energy-saving opportunities</strong> with only <strong>20% of the effort</strong> compared to detailed analysis later.
+        </div>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 3 -->
+        <h2 id="module-3"><span class="lesson-number">3</span> Module 3: Sustainability Certifications</h2>
+        
+        <h3>3.1 Major Green Building Certifications</h3>
+        
+        <div class="certification-box">
+            <h4>🏆 LEED (Leadership in Energy & Environmental Design)</h4>
+            <ul>
+                <li><strong>Origin:</strong> USA (US Green Building Council)</li>
+                <li><strong>Levels:</strong> Certified, Silver, Gold, Platinum</li>
+                <li><strong>Points:</strong> 110 possible, need 40+ for Certified</li>
+                <li><strong>BIM Contribution:</strong> Energy modeling, daylight analysis, water efficiency</li>
+            </ul>
+        </div>
+
+        <div class="certification-box">
+            <h4>🌍 BREEAM (Building Research Establishment Environmental Assessment Method)</h4>
+            <ul>
+                <li><strong>Origin:</strong> UK (BRE)</li>
+                <li><strong>Levels:</strong> Pass, Good, Very Good, Excellent, Outstanding</li>
+                <li><strong>Categories:</strong> Management, Health, Energy, Transport, Water, Materials, Waste, Land Use, Pollution</li>
+                <li><strong>BIM Contribution:</strong> Material tracking, lifecycle assessment, thermal analysis</li>
+            </ul>
+        </div>
+
+        <h3>3.2 How 6D BIM Supports Certifications</h3>
+        <table class="comparison-table">
+            <tr>
+                <th>LEED Credit</th>
+                <th>BIM Support</th>
+                <th>Tools</th>
+            </tr>
+            <tr>
+                <td>EA Prerequisite: Minimum Energy Performance</td>
+                <td>Energy modeling from BIM</td>
+                <td>Green Building Studio, IES VE</td>
+            </tr>
+            <tr>
+                <td>EA Credit: Optimize Energy Performance</td>
+                <td>Parametric analysis</td>
+                <td>Sefaira, cove.tool</td>
+            </tr>
+            <tr>
+                <td>EQ Credit: Daylight</td>
+                <td>Daylighting simulation</td>
+                <td>Insight, Radiance</td>
+            </tr>
+            <tr>
+                <td>MR Credit: Building LCA</td>
+                <td>Material quantities for LCA</td>
+                <td>Tally, One Click LCA</td>
+            </tr>
+        </table>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 4 -->
+        <h2 id="module-4"><span class="lesson-number">4</span> Module 4: Software & Tools</h2>
+        
+        <h3>4.1 Software Comparison</h3>
+        <table class="comparison-table">
+            <tr>
+                <th>Software</th>
+                <th>Company</th>
+                <th>Best For</th>
+                <th>BIM Integration</th>
+            </tr>
+            <tr>
+                <td><strong>Green Building Studio</strong></td>
+                <td>Autodesk</td>
+                <td>Quick cloud analysis</td>
+                <td>Revit native</td>
+            </tr>
+            <tr>
+                <td><strong>Insight</strong></td>
+                <td>Autodesk</td>
+                <td>Early-stage optimization</td>
+                <td>Revit native</td>
+            </tr>
+            <tr>
+                <td><strong>IES VE</strong></td>
+                <td>IES</td>
+                <td>Detailed simulation</td>
+                <td>gbXML import</td>
+            </tr>
+            <tr>
+                <td><strong>DesignBuilder</strong></td>
+                <td>DesignBuilder</td>
+                <td>EnergyPlus GUI</td>
+                <td>gbXML import</td>
+            </tr>
+            <tr>
+                <td><strong>Sefaira</strong></td>
+                <td>Trimble</td>
+                <td>Real-time feedback</td>
+                <td>Revit/SketchUp</td>
+            </tr>
+            <tr>
+                <td><strong>cove.tool</strong></td>
+                <td>cove.tool</td>
+                <td>Compliance checking</td>
+                <td>Revit/Rhino</td>
+            </tr>
+        </table>
+
+        <h3>4.2 Autodesk Insight Deep Dive</h3>
+        <div class="lesson-card">
+            <h4>☀️ Autodesk Insight</h4>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li>✅ Real-time energy feedback in Revit</li>
+                <li>✅ Solar radiation analysis</li>
+                <li>✅ Parametric analysis (100s of options)</li>
+                <li>✅ Lighting analysis (sDA, ASE)</li>
+                <li>✅ ASHRAE 90.1 compliance</li>
+            </ul>
+            <p><strong>Workflow:</strong> Create energy model in Revit → Generate Insight → Adjust parameters → Compare options</p>
+        </div>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 5 -->
+        <h2 id="module-5"><span class="lesson-number">5</span> Module 5: Lifecycle Assessment (LCA)</h2>
+        
+        <h3>5.1 What is LCA?</h3>
+        <p>Lifecycle Assessment evaluates environmental impacts across the entire building life:</p>
+        <ul>
+            <li><strong>A1-A3:</strong> Product stage (material extraction, manufacturing)</li>
+            <li><strong>A4-A5:</strong> Construction (transport, installation)</li>
+            <li><strong>B1-B7:</strong> Use stage (energy, maintenance, replacements)</li>
+            <li><strong>C1-C4:</strong> End of life (demolition, disposal, recycling)</li>
+            <li><strong>D:</strong> Beyond building life (reuse potential)</li>
         </ul>
 
-        <h2>💻 Software</h2>
+        <h3>5.2 LCA Tools with BIM</h3>
+        <table class="comparison-table">
+            <tr>
+                <th>Tool</th>
+                <th>Features</th>
+                <th>BIM Integration</th>
+            </tr>
+            <tr>
+                <td><strong>Tally</strong></td>
+                <td>Revit plugin for embodied carbon</td>
+                <td>Native Revit</td>
+            </tr>
+            <tr>
+                <td><strong>One Click LCA</strong></td>
+                <td>Comprehensive LCA + EPD library</td>
+                <td>Revit, IFC, Excel</td>
+            </tr>
+            <tr>
+                <td><strong>EC3</strong></td>
+                <td>Carbon comparison database</td>
+                <td>Web-based</td>
+            </tr>
+        </table>
+
+        <h3>5.3 Carbon Reduction Strategies</h3>
         <ul>
-            <li><strong>Green Building Studio</strong> - Autodesk</li>
-            <li><strong>IES VE</strong> - Advanced energy analysis</li>
-            <li><strong>DesignBuilder</strong> - Energy simulation</li>
-            <li><strong>Sefaira</strong> - Revit integration</li>
+            <li>🌿 <strong>Reduce structure:</strong> Optimize columns, beams, slabs</li>
+            <li>🌿 <strong>Low-carbon concrete:</strong> Fly ash, slag, recycled aggregates</li>
+            <li>🌿 <strong>Timber structure:</strong> CLT, glulam where possible</li>
+            <li>🌿 <strong>Local materials:</strong> Reduce transport emissions</li>
+            <li>🌿 <strong>Design for disassembly:</strong> Enable material reuse</li>
         </ul>
 
-        <h2>📊 Outputs</h2>
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 6 -->
+        <h2 id="module-6"><span class="lesson-number">6</span> Module 6: Best Practices</h2>
+
+        <h3>6.1 Do's ✅</h3>
         <ul>
-            <li>Annual energy consumption (kWh/m²)</li>
-            <li>Carbon emissions (CO₂)</li>
-            <li>LEED Points assessment</li>
-            <li>Design alternatives comparison</li>
+            <li>✅ <strong>Analyze early:</strong> Energy analysis at conceptual stage</li>
+            <li>✅ <strong>Set targets:</strong> Define EUI goals upfront</li>
+            <li>✅ <strong>Verify inputs:</strong> Check weather data, occupancy schedules</li>
+            <li>✅ <strong>Compare options:</strong> Run multiple design alternatives</li>
+            <li>✅ <strong>Document assumptions:</strong> Record all analysis parameters</li>
+            <li>✅ <strong>Coordinate with MEP:</strong> Share loads with engineers</li>
         </ul>
 
-        <h2>💡 Best Practices</h2>
+        <h3>6.2 Don'ts ❌</h3>
         <ul>
-            <li>✅ Define project location accurately (for weather)</li>
-            <li>✅ Use realistic materials</li>
-            <li>✅ Review HVAC inputs</li>
-            <li>✅ Compare with local standards</li>
+            <li>❌ <strong>Skip model prep:</strong> Poor geometry = poor results</li>
+            <li>❌ <strong>Use default materials:</strong> Always assign real properties</li>
+            <li>❌ <strong>Ignore orientation:</strong> Building rotation matters!</li>
+            <li>❌ <strong>Trust blindly:</strong> Validate with benchmarks</li>
         </ul>
 
-        <div class="share-buttons">
-            <span class="share-buttons-label">Share:</span>
+        <hr style="margin: 3rem 0;">
+
+        <!-- QUIZ -->
+        <h2 id="quiz">🎯 Final Quiz</h2>
+        
+        <div class="lesson-card" style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.05), rgba(22, 163, 74, 0.05));">
+            <h4>🧪 Test Your Knowledge</h4>
+            
+            <p><strong>1. What does 6D BIM add to 5D?</strong></p>
+            <label><input type="radio" name="q1" value="a"> Schedule</label><br>
+            <label><input type="radio" name="q1" value="b"> Cost</label><br>
+            <label><input type="radio" name="q1" value="c"> Sustainability/Energy</label><br>
+            <br>
+            
+            <p><strong>2. What does EUI stand for?</strong></p>
+            <label><input type="radio" name="q2" value="a"> Energy Use Intensity</label><br>
+            <label><input type="radio" name="q2" value="b"> Environmental Unit Index</label><br>
+            <label><input type="radio" name="q2" value="c"> Efficiency Use Indicator</label><br>
+            <br>
+            
+            <p><strong>3. Which certification originated in the UK?</strong></p>
+            <label><input type="radio" name="q3" value="a"> LEED</label><br>
+            <label><input type="radio" name="q3" value="b"> BREEAM</label><br>
+            <label><input type="radio" name="q3" value="c"> WELL</label><br>
+            <br>
+            
+            <button onclick="checkQuiz6D()" style="background: linear-gradient(135deg, #22c55e, #16a34a); color: white; border: none; padding: 1rem 2rem; border-radius: 8px; font-weight: 600; cursor: pointer;">Check Answers</button>
+            <div id="quiz-result" style="margin-top: 1rem; font-weight: 600;"></div>
+        </div>
+
+        <script>
+        function checkQuiz6D() {
+            const answers = {q1: 'c', q2: 'a', q3: 'b'};
+            let score = 0;
+            for (let q in answers) {
+                const selected = document.querySelector(`input[name="${q}"]:checked`);
+                if (selected && selected.value === answers[q]) score++;
+            }
+            const result = document.getElementById('quiz-result');
+            if (score === 3) {
+                result.innerHTML = '🎉 Perfect! You are ready for green building!';
+                result.style.color = '#22c55e';
+            } else if (score >= 2) {
+                result.innerHTML = '👍 Good job! Review the modules you missed.';
+                result.style.color = '#f59e0b';
+            } else {
+                result.innerHTML = '📚 Keep learning! Review the course again.';
+                result.style.color = '#ef4444';
+            }
+        }
+        </script>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- Next Steps -->
+        <div class="key-takeaway">
+            <h4>🚀 What's Next?</h4>
+            <p>Continue your BIM journey with <a href="7d-bim-en.html" style="color: white; text-decoration: underline;">7D BIM: Facility Management</a></p>
+        </div>
+
+        <!-- Share Buttons -->
+        <div class="share-buttons" style="margin-top: 3rem;">
+            <span class="share-buttons-label">Share this course:</span>
             <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-btn facebook" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">Facebook</a>
             <a href="https://twitter.com/intent/tweet?url=" class="share-btn twitter" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">Twitter</a>
             <a href="https://www.linkedin.com/shareArticle?mini=true&url=" class="share-btn linkedin" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">LinkedIn</a>
-            <button class="share-btn copy" onclick="navigator.clipboard.writeText(window.location.href);alert('Link copied!')">Copy</button>
+            <a href="https://wa.me/?text=" class="share-btn whatsapp" target="_blank" onclick="this.href+=encodeURIComponent(document.title + ' ' + window.location.href)">WhatsApp</a>
+            <button class="share-btn copy" onclick="navigator.clipboard.writeText(window.location.href);alert('Link copied!')">Copy Link</button>
         </div>
         
-        <hr>
-        <p><strong>Next Article:</strong> <a href="7d-bim-en.html">7D BIM: Facility Management</a></p>
     </div>
 
     <footer class="site-footer">
         <div class="footer-content">
-            <p>CSI Calculator • Built with ❤️ by Sameh Badawy Sayed</p>
+            <p class="footer-text">CSI Calculator • Built with <span class="footer-heart">❤️</span> by <span class="footer-author">Sameh Badawy Sayed</span></p>
         </div>
     </footer>
 </body>
