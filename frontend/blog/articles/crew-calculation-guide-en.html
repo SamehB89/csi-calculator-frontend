@@ -3,43 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How to Calculate Crew Requirements for Construction Projects - CSI Calculator</title>
-    <meta name="description" content="Comprehensive guide to calculating labor and equipment requirements for any construction project using CSI standards and best international practices">
-    <meta name="keywords" content="crew calculation, labor estimation, CSI, construction standards, worker productivity, labor cost">
+    <title>Crew Calculation: Complete Guide to Labor & Equipment Estimation - CSI Calculator</title>
+    <meta name="description" content="Comprehensive 8-module course on crew calculation using CSI standards. Learn labor requirements, productivity rates, resource optimization, cost analysis, and project scheduling. Includes worked examples and case studies.">
+    <meta name="keywords" content="crew calculation, labor estimation, CSI standards, productivity rates, construction planning, resource optimization, construction crew">
     
-    <!-- Open Graph -->
-    <meta property="og:title" content="How to Calculate Crew Requirements for Construction Projects">
-    <meta property="og:description" content="Comprehensive guide to calculating labor and equipment requirements for construction projects">
+    <meta property="og:title" content="Crew Calculation: Complete Labor Estimation Course">
+    <meta property="og:description" content="Master crew calculation with 8 comprehensive modules covering CSI standards, productivity analysis, and resource planning">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://csi-calc.vercel.app/blog/articles/crew-calculation-guide-en.html">
     
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="How to Calculate Crew Requirements for Construction Projects">
-    <meta name="twitter:description" content="Comprehensive guide to calculating labor and equipment requirements">
-    
-    <!-- Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "How to Calculate Crew Requirements for Construction Projects",
-      "author": {
-        "@type": "Person",
-        "name": "Sameh Badawy Sayed"
-      },
-      "datePublished": "2026-01-02",
-      "dateModified": "2026-01-02",
-      "description": "Comprehensive guide to calculating labor and equipment requirements using CSI standards",
-      "articleSection": "Cost Estimation",
-      "keywords": "crew calculation, labor estimation, CSI"
+      "@type": "Course",
+      "name": "Crew Calculation: Complete Labor Estimation Course",
+      "description": "Comprehensive guide to calculating labor and equipment requirements for construction projects using CSI standards",
+      "provider": {
+        "@type": "Organization",
+        "name": "CSI Calculator",
+        "sameAs": "https://csi-calc.vercel.app"
+      }
     }
     </script>
     
-    <!-- AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5429423113977975" crossorigin="anonymous"></script>
-    
-    <!-- Stylesheets -->
     <link rel="stylesheet" href="../../css/theme.css">
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/lang-toggle.css">
@@ -48,14 +34,151 @@
     <link rel="stylesheet" href="../../css/share-buttons.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Scripts -->
     <script src="../../js/ads.js"></script>
     <script src="../../js/i18n.js"></script>
     <script src="../../js/theme.js"></script>
     <script src="../../js/blog-i18n.js"></script>
+
+    <style>
+        .course-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .lesson-card {
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0.05), rgba(249, 115, 22, 0.1));
+            border-left: 4px solid #f97316;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+
+        .lesson-number {
+            color: #f97316;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .formula-box {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            color: #fff;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .pro-tip {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(34, 197, 94, 0.05));
+            border-left: 4px solid #22c55e;
+            padding: 1rem 1.5rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(239, 68, 68, 0.05));
+            border-left: 4px solid #ef4444;
+            padding: 1rem 1.5rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .comparison-table th {
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .comparison-table td {
+            padding: 0.875rem 1rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .comparison-table tr:hover {
+            background: rgba(249, 115, 22, 0.05);
+        }
+
+        .key-takeaway {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(99, 102, 241, 0.05));
+            border: 2px solid #6366f1;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 12px;
+        }
+
+        .crew-card {
+            background: white;
+            border: 2px solid #f97316;
+            padding: 1.25rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+            box-shadow: 0 4px 8px rgba(249, 115, 22, 0.1);
+        }
+
+        .metric-box {
+            display: inline-block;
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 700;
+            margin: 0.5rem 0.5rem 0.5rem 0;
+        }
+
+        .quiz-container {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(168, 85, 247, 0.05));
+            padding: 2rem;
+            border-radius: 16px;
+            margin: 2rem 0;
+            border: 2px solid #a855f7;
+        }
+
+        .quiz-question {
+            margin: 1.5rem 0;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+        }
+
+        .quiz-options {
+            list-style: none;
+            padding: 0;
+        }
+
+        .quiz-option {
+            padding: 0.75rem;
+            margin: 0.5rem 0;
+            background: #f3f4f6;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .quiz-option:hover {
+            background: #e5e7eb;
+            transform: translateX(5px);
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <a href="../../index.html" class="logo-container">
@@ -63,273 +186,1064 @@
                 <span class="logo-text">CSI Calculator</span>
             </a>
             <div class="nav-links">
-                <a href="../../index.html" data-i18n="home" data-icon="🏠">
-                    <span>Home</span>
-                </a>
-                <a href="../../crew-calculator.html" data-i18n="crewCalculator" data-icon="🧮">
-                    <span>Calculator</span>
-                </a>
-                <a href="../../ai-planner.html" data-i18n="aiPlanner" data-icon="🤖">
-                    <span>AI Planner</span>
-                </a>
-                <a href="../index.html" class="active" data-i18n="blog" data-icon="📚">
-                    <span>Manual+Knowledge Bites</span>
-                </a>
-                <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">
-                    🌙
-                </button>
-                <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()">
-                    <span id="langIcon">AR</span>
-                </button>
+                <a href="../../index.html" data-i18n="home" data-icon="🏠"><span>Home</span></a>
+                <a href="../../crew-calculator.html" data-i18n="crewCalculator" data-icon="🧮"><span>Calculator</span></a>
+                <a href="../../ai-planner.html" data-i18n="aiPlanner" data-icon="🤖"><span>AI Planner</span></a>
+                <a href="../index-en.html" class="active" data-i18n="blog" data-icon="📚"><span>Knowledge Bites</span></a>
+                <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">🌙</button>
+                <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()"><span id="langIcon">AR</span></button>
             </div>
         </div>
     </nav>
 
-    <!-- Article Header -->
     <div class="article-header">
+        <span class="course-badge">📚 COMPLETE COURSE</span>
         <span class="article-category">Cost Estimation</span>
-        <h1>How to Calculate Crew Requirements for Construction Projects</h1>
+        <h1>Crew Calculation: Complete Labor Estimation Course</h1>
         <div class="article-meta">
-            <span class="article-date">January 2, 2026</span>
-            <span class="article-read-time">10 min read</span>
+            <span class="article-date">January 11, 2026</span>
+            <span class="article-read-time">35 min read</span>
+            <span>8 Modules</span>
         </div>
     </div>
 
-    <!-- Article Body -->
     <div class="article-body">
-        <h2>📋 Introduction</h2>
-        <p>
-            Calculating the required crew for any construction project is one of the most critical factors determining project success in terms of time and cost. Accurate estimation of labor and equipment helps achieve:
-        </p>
-        <ul>
-            <li><strong>On-time project completion</strong> without delays</li>
-            <li><strong>Cost control</strong> and preventing labor waste</li>
-            <li><strong>Improved productivity</strong> and work quality</li>
-            <li><strong>Avoiding overcrowding</strong> that reduces work efficiency</li>
-        </ul>
+        <div class="key-takeaway">
+            <h3>🎯 Course Overview</h3>
+            <p>Master the art and science of crew calculation for construction projects. This comprehensive 8-module course covers CSI standards, productivity analysis, labor planning, cost estimation, and resource optimization with real-world examples.</p>
+            <p><strong>Prerequisites:</strong> Basic construction knowledge</p>
+            <p><strong>Level:</strong> Intermediate to Advanced</p>
+        </div>
 
-        <h2>🎯 What are CSI Standards?</h2>
-        <p>
-            <strong>Construction Specifications Institute (CSI)</strong> standards are a global system for classifying and organizing construction information. These standards provide accurate data on:
-        </p>
-        <ul>
-            <li>Unified classification of construction work (16 main divisions)</li>
-            <li>Structuring specifications and technical drawings</li>
-            <li>Standard productivity rates for various activities</li>
-            <li>Expected daily output</li>
-        </ul>
-
-        <blockquote>
-            <strong>💡 Pro Tip:</strong> Using CSI standards ensures reliable and globally proven estimates, reducing estimation-related risks.
-        </blockquote>
-
-        <h2>🧮 How to Calculate Crew Requirements Step-by-Step</h2>
-        
-        <h3>Step 1: Define Work Type and Quantity</h3>
-        <p>
-            The first step is to accurately define the required work type and quantity. For example:
-        </p>
-        <ul>
-            <li>Plain concrete pour: 100 cubic meters</li>
-            <li>Brick masonry work: 500 square meters</li>
-            <li>Reinforcement steel work: 10 tons</li>
-        </ul>
-
-        <h3>Step 2: Use the CSI Calculator</h3>
-        <p>
-            Use our <a href="../../crew-calculator.html" style="color: var(--primary-color); font-weight: 600;">Crew Calculator</a>:
-        </p>
+        <h2>📋 Course Modules</h2>
         <ol>
-            <li>Select the activity type from the list (e.g., "Plain concrete pour")</li>
-            <li>Enter the required quantity</li>
-            <li>You'll automatically see:
-                <ul>
-                    <li>Required number of workers</li>
-                    <li>Daily output</li>
-                    <li>Expected completion duration</li>
-                </ul>
-            </li>
+            <li><a href="#module1">Introduction to Crew Calculation</a></li>
+            <li><a href="#module2">Understanding CSI Standards and Daily Output</a></li>
+            <li><a href="#module3">Crew Composition and Structure</a></li>
+            <li><a href="#module4">Productivity Rates and Factors</a></li>
+            <li><a href="#module5">Calculation Methods and Formulas</a></li>
+            <li><a href="#module6">Cost Analysis and Budget Control</a></li>
+            <li><a href="#module7">Advanced Topics and Optimization</a></li>
+            <li><a href="#module8">Complete Case Study</a></li>
         </ol>
 
-        <h3>Step 3: Understanding the Results</h3>
-        <p>
-            When using the calculator, you'll get information such as:
-        </p>
-        <ul>
-            <li><strong>Daily Output:</strong> Expected daily production (in specified unit/day)</li>
-            <li><strong>Labor-Hours:</strong> Total required work hours</li>
-            <li><strong>Crew Composition:</strong> Team structure (workers, carpenters, ironworkers, equipment)</li>
-        </ul>
+        <hr>
 
-        <h2>📊 Practical Example: Residential Villa Project</h2>
-        <p>
-            Suppose you have a residential villa project with the following specifications:
-        </p>
-        <ul>
-            <li>Plain concrete for Foundation: 50 m³</li>
-            <li>Reinforced concrete for columns and slabs: 80 m³</li>
-            <li>Brick masonry work: 300 m²</li>
-        </ul>
+        <div class="lesson-card" id="module1">
+            <div class="lesson-number">📖 MODULE 1: Introduction to Crew Calculation</div>
+            <h2>Why Crew Calculation Matters</h2>
+            
+            <p>Crew calculation is the process of determining the optimal number and type of workers, equipment, and time required to complete construction activities. It's the foundation of:</p>
+            
+            <ul>
+                <li><strong>Project scheduling</strong> - Accurate duration estimates</li>
+                <li><strong>Cost estimation</strong> - Labor and equipment budgets</li>
+                <li><strong>Resource planning</strong> - Procurement and allocation</li>
+                <li><strong>Cash flow management</strong> - Payment schedules</li>
+                <li><strong>Productivity tracking</strong> - Performance monitoring</li>
+            </ul>
 
-        <h3>Required Calculations:</h3>
-        
-        <p><strong>1. Foundations (Plain Concrete):</strong></p>
-        <ul>
-            <li>Typical crew: 1 crew of (1 concrete foreman + 4 concrete workers)</li>
-            <li>Daily output: 15-20 m³/day (depending on conditions)</li>
-            <li>Duration: 50 ÷ 17.5 = 2.9 days ≈ 3 days</li>
-        </ul>
+            <h3>1.1 The Impact of Poor Crew Planning</h3>
+            <table class="comparison-table">
+                <tr>
+                    <th>Problem</th>
+                    <th>Impact</th>
+                    <th>Typical Cost</th>
+                </tr>
+                <tr>
+                    <td>Understaffing</td>
+                    <td>Schedule delays, overtime, rushed work</td>
+                    <td>+15-25%</td>
+                </tr>
+                <tr>
+                    <td>Overstaffing</td>
+                    <td>Wasted labor, congestion, inefficiency</td>
+                    <td>+10-20%</td>
+                </tr>
+                <tr>
+                    <td>Wrong skill mix</td>
+                    <td>Rework, quality issues, safety risks</td>
+                    <td>+20-30%</td>
+                </tr>
+                <tr>
+                    <td>Poor sequencing</td>
+                    <td>Idle time, equipment downtime</td>
+                    <td>+5-15%</td>
+                </tr>
+            </table>
 
-        <p><strong>2. Columns and Slabs (Reinforced Concrete):</strong></p>
-        <ul>
-            <li>Typical crew: Carpentry gang (1 carpenter + 2 helpers) + Rebar gang (1 ironworker + 2 helpers) + Concrete gang (1 supervisor + 3 workers)</li>
-            <li>Daily output: 10-12 m³/day</li>
-            <li>Duration: 80 ÷ 11 = 7.3 days ≈ 8 days</li>
-        </ul>
+            <div class="pro-tip">
+                <strong>💡 Expert Insight:</strong> Studies show that proper crew planning can reduce project costs by 12-18% and schedule duration by 10-15% compared to ad-hoc staffing approaches.
+            </div>
 
-        <p><strong>3. Masonry Work:</strong></p>
-        <ul>
-            <li>Typical crew: 1 mason + 1 helper</li>
-            <li>Daily output: 35-45 m²/day (depending on brick type)</li>
-            <li>Duration: 300 ÷ 40 = 7.5 days ≈ 8 days</li>
-        </ul>
+            <h3>1.2 Key Objectives of Crew Calculation</h3>
+            <ol>
+                <li><strong>Determine crew size</strong> - How many workers needed?</li>
+                <li><strong>Define crew composition</strong> - What skills and trades?</li>
+                <li><strong>Estimate duration</strong> - How long will it take?</li>
+                <li><strong>Calculate cost</strong> - Total labor and equipment cost?</li>
+                <li><strong>Optimize productivity</strong> - Maximum efficiency?</li>
+                <li><strong>Plan logistics</strong> - Materials, tools, access?</li>
+            </ol>
+        </div>
 
-        <h2>⚠️ Common Mistakes to Avoid</h2>
-        
-        <h3>1. Ignoring Local Conditions</h3>
-        <p>
-            Productivity rates vary based on:
-        </p>
-        <ul>
-            <li>Local worker skill and training level</li>
-            <li>Weather conditions (heat, rain, humidity)</li>
-            <li>Material and equipment availability on site</li>
-            <li>Site accessibility difficulty</li>
-        </ul>
+        <hr>
 
-        <h3>2. Neglecting Downtime and Preparation</h3>
-        <p>
-            Add 10-15% additional time for:
-        </p>
-        <ul>
-            <li>Site preparation and material transportation</li>
-            <li>Breaks and prayer times</li>
-            <li>Regular equipment maintenance</li>
-            <li>Handling emergency issues</li>
-        </ul>
+        <div class="lesson-card" id="module2">
+            <div class="lesson-number">📊 MODULE 2: Understanding CSI Standards and Daily Output</div>
+            <h2>CSI MasterFormat and Productivity Data</h2>
 
-        <h3>3. Not Planning for Activity Overlap</h3>
-        <p>
-            Some activities can be executed in parallel, saving time and cost. Use CPM or PERT charts to optimize scheduling.
-        </p>
+            <h3>2.1 What is CSI?</h3>
+            <p><strong>Construction Specifications Institute (CSI)</strong> provides standardized classification systems for construction information, including:</p>
+            <ul>
+                <li><strong>MasterFormat®</strong> - Work results classification (50 Divisions)</li>
+                <li><strong>Productivity data</strong> - Historical performance rates</li>
+                <li><strong>Crew compositions</strong> - Standard team structures</li>
+                <li><strong>Unit costs</strong> - Labor, material, equipment</li>
+            </ul>
 
-        <h2>💡 Productivity Improvement Tips</h2>
-        <ul>
-            <li><strong>Use skilled labor:</strong> A skilled worker accomplishes twice as much as an average worker with better quality</li>
-            <li><strong>Provide proper equipment:</strong> Good tools increase productivity by 30-40%</li>
-            <li><strong>Plan the schedule:</strong> Avoid worker downtime due to material shortages</li>
-            <li><strong>Monitor daily performance:</strong> Compare actual to planned progress and take immediate corrective actions</li>
-            <li><strong>Maintain safety:</strong> A safe work environment increases worker productivity</li>
-        </ul>
+            <h3>2.2 Daily Output Concept</h3>
+            <div class="formula-box">
+                <strong>Daily Output =</strong> Quantity of work a standard crew completes in 8-hour day
+                <br><br>
+                <strong>Unit:</strong> Depends on activity (m³/day, m²/day, ton/day, EA/day)
+            </div>
 
-        <h2>🚀 Use Our Free Tools</h2>
-        <p>
-            CSI Calculator provides free tools to facilitate your work:
-        </p>
-        <ul>
-            <li><a href="../../crew-calculator.html" style="color: var(--primary-color); font-weight: 600;">🧮 Crew Calculator</a>: Calculate crew size and duration for any activity</li>
-            <li><a href="../../ai-planner.html" style="color: var(--primary-color); font-weight: 600;">🤖 AI Planner</a>: Plan your project digitally with artificial intelligence</li>
-            <li><a href="../../crew-calculator.html" style="color: var(--primary-color); font-weight: 600;">📚 CSI Database</a>: Browse thousands of activities and rates</li>
-        </ul>
+            <h3>2.3 Major CSI Divisions for Labor</h3>
+            <table class="comparison-table">
+                <tr>
+                    <th>Division</th>
+                    <th>Description</th>
+                    <th>Typical Activities</th>
+                </tr>
+                <tr>
+                    <td>03 - Concrete</td>
+                    <td>Concrete work</td>
+                    <td>Formwork, rebar, placement, finishing</td>
+                </tr>
+                <tr>
+                    <td>04 - Masonry</td>
+                    <td>Masonry units</td>
+                    <td>Brickwork, blockwork, stone</td>
+                </tr>
+                <tr>
+                    <td>05 - Metals</td>
+                    <td>Structural steel</td>
+                    <td>Steel erection, welding, bolting</td>
+                </tr>
+                <tr>
+                    <td>06 - Wood/Plastics</td>
+                    <td>Carpentry</td>
+                    <td>Framing, sheathing, trim</td>
+                </tr>
+                <tr>
+                    <td>07 - Thermal/Moisture</td>
+                    <td>Insulation, roofing</td>
+                    <td>Waterproofing, insulation, roofing</td>
+                </tr>
+                <tr>
+                    <td>08 - Openings</td>
+                    <td>Doors, windows</td>
+                    <td>Installation, hardware, glazing</td>
+                </tr>
+                <tr>
+                    <td>09 - Finishes</td>
+                    <td>Interior finishes</td>
+                    <td>Drywall, flooring, painting, ceilings</td>
+                </tr>
+                <tr>
+                    <td>21-23 - MEP</td>
+                    <td>Mechanical/Electrical</td>
+                    <td>HVAC, plumbing, electrical, fire protection</td>
+                </tr>
+            </table>
 
-        <h2>📝 Conclusion</h2>
-        <p>
-            Accurate crew calculation is the foundation of any successful construction project. Using CSI standards and our free tools, you can:
-        </p>
-        <ul>
-            <li>Estimate costs with high accuracy</li>
-            <li>Complete projects on schedule</li>
-            <li>Avoid waste in labor and materials</li>
-            <li>Improve productivity and quality</li>
-        </ul>
+            <h3>2.4 Understanding Daily Output Values</h3>
+            <p><strong>Example: Concrete Slab Placement</strong></p>
+            <div class="crew-card">
+                <strong>Activity:</strong> Cast-in-place concrete slab, 150mm thick<br>
+                <strong>Daily Output:</strong> 45 m³/day<br>
+                <strong>Standard Crew:</strong> C-20 (1 foreman + 7 laborers + 1 cement finisher + 1 concrete pump operator)<br>
+                <strong>Labor-Hours per Unit:</strong> 1.78 hrs/m³<br>
+                <strong>Interpretation:</strong> This crew can place 45 m³ of slab concrete in one 8-hour day
+            </div>
 
-        <p style="margin-top: 2rem; padding: 1.5rem; background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%); border-radius: var(--radius-md); border-right: 4px solid var(--primary-color);">
-            <strong>👨‍💼 Start Estimating Correctly Now!</strong><br>
-            Try <a href="../../crew-calculator.html" style="color: var(--primary-color); font-weight: 600;">Crew Calculator</a> now and get instant results for your project!
-            <br><br>
-            <strong>🙋‍♂️ Have Questions?</strong> Contact me on Facebook: <a href="https://www.facebook.com/Sameh.Badawy.Sayed" target="_blank" style="color: var(--primary-color); text-decoration: underline;">Sameh Badawy Sayed</a>
-        </p>
-    </div>
+            <div class="warning-box">
+                <strong>⚠️ Important Note:</strong> CSI daily output values are based on ideal conditions. Actual productivity may vary ±20% based on site conditions, weather, worker skill, equipment condition, and project complexity.
+            </div>
+        </div>
 
-    <!-- Share Section -->
-    <div class="share-section">
-        <h3>Share this Article</h3>
+        <hr>
+
+        <div class="lesson-card" id="module3">
+            <div class="lesson-number">👷 MODULE 3: Crew Composition and Structure</div>
+            <h2>Building the Right Team</h2>
+
+            <h3>3.1 Standard Crew Codes</h3>
+            <p>CSI uses standard crew codes to define team composition:</p>
+            <ul>
+                <li><strong>A-Series:</strong> General construction crews</li>
+                <li><strong>B-Series:</strong> Equipment operators</li>
+                <li><strong>C-Series:</strong> Concrete crews</li>
+                <li><strong>E-Series:</strong> Electrical crews</li>
+                <li><strong>M-Series:</strong> Mechanical/plumbing crews</li>
+            </ul>
+
+            <h3>3.2 Sample Crew Compositions</h3>
+            
+            <div class="crew-card">
+                <h4>Crew C-14C: Column Formwork</h4>
+                <span class="metric-box">4 Workers</span>
+                <ul style="margin-top: 1rem;">
+                    <li>1 Carpenter foreman</li>
+                    <li>3 Carpenters</li>
+                </ul>
+                <strong>Daily Output:</strong> 110 SFCA (Square Feet Contact Area)
+            </div>
+
+            <div class="crew-card">
+                <h4>Crew C-2: Reinforcement Steel</h4>
+                <span class="metric-box">5 Workers</span>
+                <ul style="margin-top: 1rem;">
+                    <li>1 Rodman foreman</li>
+                    <li>2 Rodmen (ironworkers)</li>
+                    <li>2 Rodmen helpers</li>
+                </ul>
+                <strong>Daily Output:</strong> 1.6 Tons
+            </div>
+
+            <div class="crew-card">
+                <h4>Crew D-3: Masonry</h4>
+                <span class="metric-box">3 Workers</span>
+                <ul style="margin-top: 1rem;">
+                    <li>1 Bricklayer</li>
+                    <li>2 Bricklayer helpers</li>
+                </ul>
+                <strong>Daily Output:</strong> 750 bricks (varies by type)
+            </div>
+
+            <div class="crew-card">
+                <h4>Crew E-2: Electrical Installation</h4>
+                <span class="metric-box">2-3 Workers</span>
+                <ul style="margin-top: 1rem;">
+                    <li>1 Electrician</li>
+                    <li>1-2 Electrician helpers</li>
+                </ul>
+                <strong>Daily Output:</strong> Varies by activity
+            </div>
+
+            <h3>3.3 Skill Levels and Productivity</h3>
+            <table class="comparison-table">
+                <tr>
+                    <th>Skill Level</th>
+                    <th>Productivity Factor</th>
+                    <th>Hourly Rate (approx)</th>
+                    <th>Quality</th>
+                </tr>
+                <tr>
+                    <td>Expert (10+ years)</td>
+                    <td>1.30x</td>
+                    <td>$35-50</td>
+                    <td>Excellent</td>
+                </tr>
+                <tr>
+                    <td>Skilled (5-10 years)</td>
+                    <td>1.10x</td>
+                    <td>$28-38</td>
+                    <td>Very Good</td>
+                </tr>
+                <tr>
+                    <td>Average (2-5 years)</td>
+                    <td>1.00x (baseline)</td>
+                    <td>$22-30</td>
+                    <td>Good</td>
+                </tr>
+                <tr>
+                    <td>Apprentice (1-2 years)</td>
+                    <td>0.80x</td>
+                    <td>$18-24</td>
+                    <td>Fair</td>
+                </tr>
+                <tr>
+                    <td>Laborer (< 1 year)</td>
+                    <td>0.60x</td>
+                    <td>$15-20</td>
+                    <td>Variable</td>
+                </tr>
+            </table>
+
+            <div class="pro-tip">
+                <strong>💡 Pro Tip:</strong> The optimal crew composition balances cost and productivity. A crew of 1 expert + 2 apprentices often outperforms and costs less than 3 average workers, while also providing training benefits.
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="lesson-card" id="module4">
+            <div class="lesson-number">⚡ MODULE 4: Productivity Rates and Factors</div>
+            <h2>What Affects Worker Performance?</h2>
+
+            <h3>4.1 Base Productivity Factors</h3>
+            <ol>
+                <li><strong>Worker Skill</strong> - Training, experience, certification</li>
+                <li><strong>Physical Condition</strong> - Fatigue, health, morale</li>
+                <li><strong>Weather</strong> - Temperature, rain, wind</li>
+                <li><strong>Site Conditions</strong> - Access, congestion, safety</li>
+                <li><strong>Tools & Equipment</strong> - Quality, availability, maintenance</li>
+                <li><strong>Management</strong> - Supervision, planning, coordination</li>
+                <li><strong>Project Complexity</strong> - Repetition vs. one-time work</li>
+            </ol>
+
+            <h3>4.2 Weather Impact on Productivity</h3>
+            <table class="comparison-table">
+                <tr>
+                    <th>Condition</th>
+                    <th>Productivity Factor</th>
+                    <th>Recommended Action</th>
+                </tr>
+                <tr>
+                    <td>Ideal (20-25°C, clear)</td>
+                    <td>1.00x</td>
+                    <td>Normal operations</td>
+                </tr>
+                <tr>
+                    <td>Hot (30-35°C)</td>
+                    <td>0.85-0.90x</td>
+                    <td>More breaks, hydration</td>
+                </tr>
+                <tr>
+                    <td>Very hot (>35°C)</td>
+                    <td>0.70-0.80x</td>
+                    <td>Adjust hours, shelters</td>
+                </tr>
+                <tr>
+                    <td>Cold (0-10°C)</td>
+                    <td>0.80-0.90x</td>
+                    <td>Warm clothing, breaks</td>
+                </tr>
+                <tr>
+                    <td>Light rain</td>
+                    <td>0.75-0.85x</td>
+                    <td>Cover, protection</td>
+                </tr>
+                <tr>
+                    <td>Heavy rain</td>
+                    <td>0.30-0.50x or stop</td>
+                    <td>Consider suspension</td>
+                </tr>
+            </table>
+
+            <h3>4.3 Learning Curve Effect</h3>
+            <p>Productivity improves with repetition. This is especially important for repetitive work like high-rise construction:</p>
+            
+            <div class="formula-box">
+                <strong>Learning Curve Theory:</strong><br>
+                Unit Time = First Unit Time × (Cumulative Units)^(-b)<br><br>
+                Where b = learning factor (typically 0.1 to 0.3 for construction)
+            </div>
+
+            <p><strong>Example: Floor Slab Repetition</strong></p>
+            <ul>
+                <li>Floor 1: 12 days (base)</li>
+                <li>Floor 2: 10.5 days (12% faster)</li>
+                <li>Floor 3: 9.8 days</li>
+                <li>Floor 4-10: 9.0 days (steady state)</li>
+            </ul>
+
+            <div class="pro-tip">
+                <strong>💡 Planning Tip:</strong> For high-rise projects, use conservative estimates for initial floors and apply learning curve benefits to later floors. A 10-15% productivity improvement is realistic after 3-4 floor cycles.
+            </div>
+
+            <h3>4.4 Overtime Effects</h3>
+            <p>Working beyond standard 40-hour weeks reduces productivity:</p>
+            <table class="comparison-table">
+                <tr>
+                    <th>Weekly Hours</th>
+                    <th>Week 1</th>
+                    <th>Week 2-3</th>
+                    <th>Week 4+</th>
+                </tr>
+                <tr>
+                    <td>40 (standard)</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                </tr>
+                <tr>
+                    <td>50 hours</td>
+                    <td>95%</td>
+                    <td>90%</td>
+                    <td>85%</td>
+                </tr>
+                <tr>
+                    <td>60 hours</td>
+                    <td>85%</td>
+                    <td>75%</td>
+                    <td>65%</td>
+                </tr>
+                <tr>
+                    <td>70 hours</td>
+                    <td>75%</td>
+                    <td>60%</td>
+                    <td>50%</td>
+                </tr>
+            </table>
+
+            <div class="warning-box">
+                <strong>⚠️ Critical Warning:</strong> Extended overtime (>50 hrs/week for >4 weeks) can result in NEGATIVE productivity - workers accomplish less than if working 40 hours, while costing 1.5x more. Use overtime sparingly and strategically.
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="lesson-card" id="module5">
+            <div class="lesson-number">🧮 MODULE 5: Calculation Methods and Formulas</div>
+            <h2>Core Calculation Equations</h2>
+
+            <h3>5.1 Fundamental Formulas</h3>
+            
+            <div class="formula-box">
+                <strong>1. Duration Calculation:</strong><br>
+                Duration (days) = Total Quantity ÷ Daily Output<br>
+                Duration (days) = (Total Quantity × Labor-Hours per Unit) ÷ (Crew Size × 8 hours/day)
+            </div>
+
+            <div class="formula-box">
+                <strong>2. Crew Size Calculation:</strong><br>
+                Crew Size = (Total Quantity × Labor-Hours per Unit) ÷ (Available Days × 8 hours/day)
+            </div>
+
+            <div class="formula-box">
+                <strong>3. Total Labor-Hours:</strong><br>
+                Total Labor-Hours = Total Quantity × Labor-Hours per Unit
+            </div>
+
+            <div class="formula-box">
+                <strong>4. Labor Cost:</strong><br>
+                Labor Cost = Total Labor-Hours × Weighted Average Hourly Rate<br>
+                OR<br>
+                Labor Cost = ∑(Worker Count × Hourly Rate × Hours Worked) for each trade
+            </div>
+
+            <div class="formula-box">
+                <strong>5. Productivity Rate:</strong><br>
+                Productivity = Actual Output ÷ Planned Output × 100%<br>
+                Efficiency = Planned Labor-Hours ÷ Actual Labor-Hours × 100%
+            </div>
+
+            <h3>5.2 Worked Example 1: Concrete Column Forms</h3>
+            <p><strong>Given:</strong></p>
+            <ul>
+                <li>Total contact area: 550 SFCA (square feet contact area)</li>
+                <li>Daily output (Crew C-14C): 110 SFCA/day</li>
+                <li>Labor-hours per unit: 0.291 hrs/SFCA</li>
+                <li>Crew size: 4 workers (1 foreman @ $32/hr + 3 carpenters @ $28/hr)</li>
+            </ul>
+
+            <p><strong>Calculate:</strong></p>
+            <div class="crew-card">
+                <strong>Duration:</strong><br>
+                Duration = 550 SFCA ÷ 110 SFCA/day = 5.0 days
+                <br><br>
+                <strong>Total Labor-Hours:</strong><br>
+                Total Hours = 550 × 0.291 = 160 labor-hours
+                <br><br>
+                <strong>Labor Cost:</strong><br>
+                Weighted rate = (1×$32 + 3×$28) ÷ 4 = $29/hr<br>
+                Labor Cost = 160 hrs × $29/hr = $4,640
+                <br><br>
+                <strong>Verification:</strong><br>
+                160 hrs ÷ (4 workers × 5 days) = 8 hours/day ✓
+            </div>
+
+            <h3>5.3 Worked Example 2: Brick Masonry</h3>
+            <p><strong>Given:</strong></p>
+            <ul>
+                <li>Wall area: 450 m²</li>
+                <li>Brick type: Standard 200×100×60mm (60 bricks/m²)</li>
+                <li>Total bricks: 450 × 60 = 27,000 bricks</li>
+                <li>Daily output (Crew D-3): 750 bricks/day</li>
+                <li>Crew: 1 mason @ $26/hr + 2 helpers @ $18/hr</li>
+            </ul>
+
+            <p><strong>Calculate:</strong></p>
+            <div class="crew-card">
+                <strong>Duration:</strong><br>
+                Duration = 27,000 bricks ÷ 750 bricks/day = 36 days
+                <br><br>
+                <strong>Daily Labor Cost:</strong><br>
+                Daily cost = (1×$26 + 2×$18) × 8 hrs = $704/day
+                <br><br>
+                <strong>Total Labor Cost:</strong><br>
+                Total = $704/day × 36 days = $25,344
+                <br><br>
+                <strong>Unit Cost:</strong><br>
+                Cost per m² = $25,344 ÷ 450 m² = $56.32/m²<br>
+                Cost per brick = $25,344 ÷ 27,000 = $0.94/brick (labor only)
+            </div>
+
+            <h3>5.4 Multiple Crew Optimization</h3>
+            <p>When can you use multiple crews to accelerate work?</p>
+            <div class="formula-box">
+                <strong>Maximum Crews:</strong><br>
+                Max Crews = Available Work Area ÷ Crew Work Area<br>
+                OR<br>
+                Max Crews = Total Duration (1 crew) ÷ Target Duration
+            </div>
+
+            <div class="warning-box">
+                <strong>⚠️ Stacking Penalty:</strong> Adding crews has diminishing returns due to congestion, coordination overhead, and material handling conflicts. Use factor:<br>
+                • 2 crews: 1.85x productivity (not 2.0x)<br>
+                • 3 crews: 2.6x productivity (not 3.0x)<br>
+                • 4+ crews: Usually counterproductive
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="lesson-card" id="module6">
+            <div class="lesson-number">💰 MODULE 6: Cost Analysis and Budget Control</div>
+            <h2>From Crews to Costs</h2>
+
+            <h3>6.1 Labor Cost Components</h3>
+            <table class="comparison-table">
+                <tr>
+                    <th>Component</th>
+                    <th>% of Base Wage</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Base hourly wage</td>
+                    <td>100%</td>
+                    <td>Direct payment to worker</td>
+                </tr>
+                <tr>
+                    <td>Payroll taxes</td>
+                    <td>7-10%</td>
+                    <td>Social security, Medicare, etc.</td>
+                </tr>
+                <tr>
+                    <td>Insurance (WC, liability)</td>
+                    <td>10-20%</td>
+                    <td>Workers' compensation, general liability</td>
+                </tr>
+                <tr>
+                    <td>Benefits (health, vacation)</td>
+                    <td>15-25%</td>
+                    <td>Health insurance, paid time off</td>
+                </tr>
+                <tr>
+                    <td>Pension/retirement</td>
+                    <td>5-10%</td>
+                    <td>401k match, pension contributions</td>
+                </tr>
+                <tr>
+                    <td><strong>TOTAL Burden</strong></td>
+                    <td><strong>137-165%</strong></td>
+                    <td><strong>Loaded labor rate</strong></td>
+                </tr>
+            </table>
+
+            <div class="formula-box">
+                <strong>Loaded Labor Rate =</strong> Base Wage × (1 + Burden %)<br><br>
+                Example: $25/hr base × 1.50 burden = $37.50/hr loaded rate
+            </div>
+
+            <h3>6.2 Equipment Costs</h3>
+            <p>Equipment costs include:</p>
+            <ul>
+                <li><strong>Ownership costs:</strong> Depreciation, interest, insurance, storage</li>
+                <li><strong>Operating costs:</strong> Fuel, maintenance, repairs, operator</li>
+                <li><strong>Rental costs:</strong> Daily/weekly/monthly rates</li>
+            </ul>
+
+            <p><strong>Example: Concrete Pump</strong></p>
+            <div class="crew-card">
+                <strong>Equipment:</strong> Trailer-mounted concrete pump, 100m³/hr<br>
+                <strong>Daily rental:</strong> $850/day<br>
+                <strong>Operator:</strong> $35/hr × 8 hrs = $280/day<br>
+                <strong>Fuel & setup:</strong> $150/day<br>
+                <strong>Total daily cost:</strong> $1,280/day
+                <br><br>
+                <strong>For 80m³ pour:</strong><br>
+                Duration: 80m³ ÷ 45m³/day = 1.78 days<br>
+                Equipment cost: $1,280 × 2 days = $2,560<br>
+                Unit cost: $2,560 ÷ 80m³ = $32/m³
+            </div>
+
+            <h3>6.3 Productivity Tracking and Control</h3>
+            <p>Monitor actual vs. planned performance:</p>
+            <div class="formula-box">
+                <strong>Performance Index (PI) =</strong> Earned Labor-Hours ÷ Actual Labor-Hours<br><br>
+                PI > 1.0 = Better than planned (good)<br>
+                PI = 1.0 = On target<br>
+                PI < 1.0 = Worse than planned (investigate!)
+            </div>
+
+            <p><strong>Example Tracking:</strong></p>
+            <table class="comparison-table">
+                <tr>
+                    <th>Week</th>
+                    <th>Planned Output</th>
+                    <th>Actual Output</th>
+                    <th>Actual Hours</th>
+                    <th>PI</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>200 m²</td>
+                    <td>185 m²</td>
+                    <td>168 hrs</td>
+                    <td>0.92</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>200 m²</td>
+                    <td>210 m²</td>
+                    <td>162 hrs</td>
+                    <td>1.08</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>200 m²</td>
+                    <td>205 m²</td>
+                    <td>158 hrs</td>
+                    <td>1.08</td>
+                </tr>
+            </table>
+
+            <div class="pro-tip">
+                <strong>💡 Best Practice:</strong> Track productivity weekly. PI declining over 2+ weeks signals problems requiring immediate investigation: skill issues, material delays, equipment problems, or poor supervision.
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="lesson-card" id="module7">
+            <div class="lesson-number">🚀 MODULE 7: Advanced Topics and Optimization</div>
+            <h2>Maximizing Crew Efficiency</h2>
+
+            <h3>7.1 Resource Leveling</h3>
+            <p>Balance crew demand across the project timeline to avoid peaks and valleys:</p>
+            <ul>
+                <li>Reduces hiring/firing costs</li>
+                <li>Maintains skilled workforce</li>
+                <li>Improves morale and productivity</li>
+                <li>Optimizes cash flow</li>
+            </ul>
+
+            <div class="pro-tip">
+                <strong>💡 Strategy:</strong> Use float in non-critical activities to shift work into periods with lower crew demand. Scheduling software like Primavera P6 can automate thisdissonance
+            </div>
+
+            <h3>7.2 Crew Balance and Work Flow</h3>
+            <p>Optimize crew composition for continuous workflow. For reinforced concrete work:</p>
+            
+            <div class="crew-card">
+                <h4>Balanced Sequence (Column Example):</h4>
+                <strong>Day 1-2:</strong> Carpentry crew installs formwork<br>
+                <strong>Day 3:</strong> Rebar crew places reinforcement<br>
+                <strong>Day 4:</strong> Concrete crew pours concrete<br>
+                <strong>Day 5-6:</strong> Curing (minimal labor)<br>
+                <strong>Day 7:</strong> Carpentry crew strips forms, moves to next column
+                <br><br>
+                <strong>Optimization:</strong> Overlap activities - while crew pours column A, formwork crew prepares column B
+            </div>
+
+            <h3>7.3 Make vs. Buy Decisions</h3>
+            <p>When to use own crews vs. subcontractors?</p>
+            <table class="comparison-table">
+                <tr>
+                    <th>Factor</th>
+                    <th>Use Own Crew</th>
+                    <th>Subcontract</th>
+                </tr>
+                <tr>
+                    <td>Work volume</td>
+                    <td>Large, continuous</td>
+                    <td>Small, intermittent</td>
+                </tr>
+                <tr>
+                    <td>Specialization</td>
+                    <td>Core competency</td>
+                    <td>Specialty trade</td>
+                </tr>
+                <tr>
+                    <td>Quality control</td>
+                    <td>Critical, unique</td>
+                    <td>Standard, proven</td>
+                </tr>
+                <tr>
+                    <td>Schedule control</td>
+                    <td>Tight timeline</td>
+                    <td>Flexible</td>
+                </tr>
+                <tr>
+                    <td>Cost</td>
+                    <td>Lower (if utilized)</td>
+                    <td>Predictable, fixed</td>
+                </tr>
+            </table>
+
+            <h3>7.4 Incentive Programs</h3>
+            <p>Structured incentives can boost productivity 15-25%:</p>
+            <ul>
+                <li><strong>Task bonuses:</strong> $X per unit above baseline</li>
+                <li><strong>Schedule bonuses:</strong> $X for early completion</li>
+                <li><strong>Safety bonuses:</strong> No lost-time accidents = bonus</li>
+                <li><strong>Quality bonuses:</strong> First-time quality metrics</li>
+            </ul>
+
+            <div class="warning-box">
+                <strong>⚠️ Caution:</strong> Poorly designed incentives can backfire - encouraging speed over quality or safety. Always pair productivity incentives with quality and safety metrics.
+            </div>
+
+            <h3>7.5 Technology and Tools Impact</h3>
+            <p>Modern tools significantly improve productivity:</p>
+            <table class="comparison-table">
+                <tr>
+                    <th>Technology</th>
+                    <th>Application</th>
+                    <th>Productivity Gain</th>
+                </tr>
+                <tr>
+                    <td>Laser levels</td>
+                    <td>Layout, grading</td>
+                    <td>+30-40%</td>
+                </tr>
+                <tr>
+                    <td>Power tools vs. hand</td>
+                    <td>Cutting, drilling</td>
+                    <td>+50-200%</td>
+                </tr>
+                <tr>
+                    <td>Prefabrication</td>
+                    <td>MEP, structural</td>
+                    <td>+40-60%</td>
+                </tr>
+                <tr>
+                    <td>BIM coordination</td>
+                    <td>Clash detection</td>
+                    <td>Avoid 80% rework</td>
+                </tr>
+                <tr>
+                    <td>Mobile apps</td>
+                    <td>Time tracking, QC</td>
+                    <td>+10-15% (admin time)</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <div class="lesson-card" id="module8">
+            <div class="lesson-number">📂 MODULE 8: Complete Case Study</div>
+            <h2>Residential Villa - Full Crew Planning</h2>
+
+            <h3>8.1 Project Details</h3>
+            <div class="crew-card">
+                <strong>Project:</strong> Two-story residential villa<br>
+                <strong>Total area:</strong> 350 m² (175 m² per floor)<br>
+                <strong>Target duration:</strong> 6 months<br>
+                <strong>Main structure:</strong> Reinforced concrete + masonry infill
+            </div>
+
+            <h3>8.2 Quantity Takeoff</h3>
+            <table class="comparison-table">
+                <tr>
+                    <th>Item</th>
+                    <th>Quantity</th>
+                    <th>Unit</th>
+                </tr>
+                <tr>
+                    <td>Excavation</td>
+                    <td>180</td>
+                    <td>m³</td>
+                </tr>
+                <tr>
+                    <td>Lean concrete (sub-base)</td>
+                    <td>20</td>
+                    <td>m³</td>
+                </tr>
+                <tr>
+                    <td>Foundation concrete</td>
+                    <td>45</td>
+                    <td>m³</td>
+                </tr>
+                <tr>
+                    <td>Columns concrete</td>
+                    <td>35</td>
+                    <td>m³</td>
+                </tr>
+                <tr>
+                    <td>Slab concrete (2 floors)</td>
+                    <td>90</td>
+                    <td>m³</td>
+                </tr>
+                <tr>
+                    <td>Brick masonry</td>
+                    <td>380</td>
+                    <td>m²</td>
+                </tr>
+                <tr>
+                    <td>Plastering</td>
+                    <td>760</td>
+                    <td>m² (both sides)</td>
+                </tr>
+                <tr>
+                    <td>Floor tile</td>
+                    <td>350</td>
+                    <td>m²</td>
+                </tr>
+                <tr>
+                    <td>Painting</td>
+                    <td>1,200</td>
+                    <td>m²</td>
+                </tr>
+            </table>
+
+            <h3>8.3 Crew Calculation Summary</h3>
+
+            <div class="crew-card">
+                <h4>Phase 1: Foundations (Weeks 1-3)</h4>
+                <strong>Excavation:</strong><br>
+                • Crew: 1 operator + backhoe<br>
+                • Output: 60 m³/day<br>
+                • Duration: 180 ÷ 60 = 3 days<br>
+                • Cost: $1,200/day × 3 = $3,600
+                <br><br>
+                <strong>Foundation Concrete:</strong><br>
+                • Formwork crew: 4 workers × 5 days = $4,500<br>
+                • Rebar crew: 3 workers × 3 days = $1,900<br>
+                • Concrete crew: 5 workers × 3 days = $3,400<br>
+                • Subtotal: $9,800
+            </div>
+
+            <div class="crew-card">
+                <h4>Phase 2: Structure (Weeks 4-12)</h4>
+                <strong>Columns + Slabs (Ground Floor):</strong><br>
+                • Formwork: 6 workers × 15 days = $20,160<br>
+                • Rebar: 4 workers × 10 days = $8,480<br>
+                • Concrete: 5 workers × 8 days = $9,040<br>
+                • Subtotal GF: $37,680
+                <br><br>
+                <strong>Columns + Slabs (First Floor):</strong><br>
+                • Learning curve: 15% faster<br>
+                • Subtotal FF: $32,028
+                <br><br>
+                <strong>Total Structure Phase: $69,708</strong>
+            </div>
+
+            <div class="crew-card">
+                <h4>Phase 3: Masonry & Finishes (Weeks 13-24)</h4>
+                <strong>Brick Masonry (380 m²):</strong><br>
+                • Crew D-3: 3 workers<br>
+                • Output: 12 m²/day<br>
+                • Duration: 380 ÷ 12 = 32 days<br>
+                • Cost: $704/day × 32 = $22,528
+                <br><br>
+                <strong>Plastering (760 m²):</strong><br>
+                • Crew: 2 plasterers + 2 helpers<br>
+                • Output: 25 m²/day<br>
+                • Duration: 760 ÷ 25 = 31 days<br>
+                • Cost: $640/day × 31 = $19,840
+                <br><br>
+                <strong>Finishes Phase Total: $42,368</strong>
+            </div>
+
+            <h3>8.4 Final Summary</h3>
+            <div class="key-takeaway">
+                <h3>💰 Project Labor Cost Breakdown</h3>
+                <table class="comparison-table">
+                    <tr>
+                        <th>Phase</th>
+                        <th>Labor Cost</th>
+                        <th>% of Total</th>
+                        <th>Duration</th>
+                    </tr>
+                    <tr>
+                        <td>Foundations</td>
+                        <td>$13,400</td>
+                        <td>10%</td>
+                        <td>3 weeks</td>
+                    </tr>
+                    <tr>
+                        <td>Structure</td>
+                        <td>$69,708</td>
+                        <td>52%</td>
+                        <td>9 weeks</td>
+                    </tr>
+                    <tr>
+                        <td>Masonry & Finishes</td>
+                        <td>$42,368</td>
+                        <td>32%</td>
+                        <td>12 weeks</td>
+                    </tr>
+                    <tr>
+                        <td>MEP (est.)</td>
+                        <td>$8,000</td>
+                        <td>6%</td>
+                        <td>4 weeks (overlap)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>TOTAL</strong></td>
+                        <td><strong>$133,476</strong></td>
+                        <td><strong>100%</strong></td>
+                        <td><strong>24 weeks</strong></td>
+                    </tr>
+                </table>
+                <br>
+                <strong>Labor cost per m²:</strong> $133,476 ÷ 350 m² = <span class="metric-box">$381/m²</span>
+                <br><br>
+                <strong>Peak crew size:</strong> 18 workers (during structure phase)<br>
+                <strong>Average crew size:</strong> 10 workers
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="quiz-container">
+            <h2>🎓 Course Quiz</h2>
+            <p>Test your understanding of crew calculation concepts:</p>
+
+            <div class="quiz-question">
+                <strong>Q1: A crew can place 50 m³ of concrete per day. How long to complete 180 m³?</strong>
+                <ul class="quiz-options">
+                    <li class="quiz-option" onclick="checkAnswer(this, false)">3.0 days</li>
+                    <li class="quiz-option" onclick="checkAnswer(this, true)">3.6 days → round to 4 days</li>
+                    <li class="quiz-option" onclick="checkAnswer(this, false)">5.0 days</li>
+                    <li class="quiz-option" onclick="checkAnswer(this, false)">2.5 days</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question">
+                <strong>Q2: If base wage is $25/hr and burden is 50%, what's the loaded rate?</strong>
+                <ul class="quiz-options">
+                    <li class="quiz-option" onclick="checkAnswer(this, false)">$30.00/hr</li>
+                    <li class="quiz-option" onclick="checkAnswer(this, false)">$32.50/hr</li>
+                    <li class="quiz-option" onclick="checkAnswer(this, true)">$37.50/hr</li>
+                    <li class="quiz-option" onclick="checkAnswer(this, false)">$40.00/hr</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question">
+                <strong>Q3: Performance Index (PI) = 0.85. What does this mean?</strong>
+                <ul class="quiz-options">
+                    <li class="quiz-option" onclick="checkAnswer(this, false)">Better than planned - good performance</li>
+                    <li class="quiz-option" onclick="checkAnswer(this, true)">Worse than planned - investigate issues</li>
+                    <li class="quiz-option" onclick="checkAnswer(this, false)">Exactly on target</li>
+                    <li class="quiz-option" onclick="checkAnswer(this, false)">Not enough data</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question">
+                <strong>Q4: What's the main risk of extended overtime (70+ hrs/week)?</strong>
+                <ul class="quiz-options">
+                    <li class="quiz-option" onclick="checkAnswer(this, false)">Higher labor costs only</li>
+                    <li class="quiz-option" onclick="checkAnswer(this, true)">Declining productivity + safety risks + higher costs</li>
+                    <li class="quiz-option" onclick="checkAnswer(this, false)">Worker satisfaction decreases</li>
+                    <li class="quiz-option" onclick="checkAnswer(this, false)">No significant risks</li>
+                </ul>
+            </div>
+
+            <div id="quiz-result" style="margin-top: 1.5rem; padding: 1rem; border-radius: 8px; display: none;"></div>
+        </div>
+
+        <div class="key-takeaway">
+            <h3>🎯 Course Takeaways</h3>
+            <ol>
+                <li><strong>Use standardized data:</strong> CSI standards provide reliable baseline productivity rates</li>
+                <li><strong>Adjust for reality:</strong> Apply local factors for weather, skill, site conditions</li>
+                <li><strong>Calculate loaded rates:</strong> Include burden (taxes, insurance, benefits) in labor costs</li>
+                <li><strong>Track productivity:</strong> Monitor Performance Index (PI) weekly to identify issues early</li>
+                <li><strong>Optimize crew balance:</strong> Right mix of skills, continuous workflow, avoid congestion</li>
+                <li><strong>Consider learning curves:</strong> Productivity improves with repetition</li>
+                <li><strong>Use overtime sparingly:</strong> Extended overtime reduces productivity while increasing costs</li>
+                <li><strong>Invest in tools:</strong> Proper equipment can boost productivity 30-50%</li>
+            </ol>
+        </div>
+
+        <div class="pro-tip" style="background: linear-gradient(135deg, rgba(249, 115, 22, 0.1), rgba(249, 115, 22, 0.05));">
+            <h3>🧮 Try Our Free Calculator!</h3>
+            <p>Put your knowledge into practice with our <a href="../../crew-calculator.html" style="color: #f97316; font-weight: 700;">Crew Calculator</a>. It provides instant crew size, duration, and cost estimates for over 15,000 construction activities based on CSI standards.</p>
+            <p><a href="../../ai-planner.html" style="color: #f97316; font-weight: 700;">AI Planner</a> can help you build complete project schedules with optimized crew assignments.</p>
+        </div>
+
+        <!-- Share Buttons -->
         <div class="share-buttons">
-            <button class="share-btn twitter" onclick="shareOnTwitter()">
-                🐦 Twitter
-            </button>
-            <button class="share-btn facebook" onclick="shareOnFacebook()">
-                📘 Facebook
-            </button>
-            <button class="share-btn linkedin" onclick="shareOnLinkedIn()">
-                💼 LinkedIn
-            </button>
-            <button class="share-btn email" onclick="shareViaEmail()">
-                📧 Email
-            </button>
+            <span class="share-buttons-label">Share this article:</span>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-btn facebook" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">Facebook</a>
+            <a href="https://twitter.com/intent/tweet?url=" class="share-btn twitter" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">Twitter</a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=" class="share-btn linkedin" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">LinkedIn</a>
+            <a href="https://wa.me/?text=" class="share-btn whatsapp" target="_blank" onclick="this.href+=encodeURIComponent(document.title + ' ' + window.location.href)">WhatsApp</a>
+            <button class="share-btn copy" onclick="navigator.clipboard.writeText(window.location.href);alert('Link copied!')">Copy Link</button>
         </div>
     </div>
 
-    <!-- Related Articles -->
-    <div class="related-articles">
-        <h2>Related Articles</h2>
-        <div class="articles-grid">
-            <a href="csi-standards-guide-en.html" class="article-card">
-                <div class="article-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
-                <div class="article-content">
-                    <span class="article-category">CSI Standards</span>
-                    <h2 class="article-title">Comprehensive Guide to CSI Standards</h2>
-                    <p class="article-excerpt">Learn about CSI standards history, components, and application</p>
-                </div>
-            </a>
-            <a href="cost-estimation-mistakes-en.html" class="article-card">
-                <div class="article-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
-                <div class="article-content">
-                    <span class="article-category">Cost Estimation</span>
-                    <h2 class="article-title">Common Cost Estimation Mistakes</h2>
-                    <p class="article-excerpt">Learn how to avoid mistakes that lead to cost overruns</p>
-                </div>
-            </a>
-        </div>
-    </div>
-
-    <!-- Footer -->
     <footer class="site-footer">
         <div class="footer-content">
-            <p class="footer-text">
-                CSI Crew Calculator • Built with <span class="footer-heart">❤️</span> by <span class="footer-author">Sameh Badawy Sayed</span>
-            </p>
+            <p class="footer-text">CSI Crew Calculator • Built with <span class="footer-heart">❤️</span> by <span class="footer-author">Sameh Badawy Sayed</span></p>
         </div>
     </footer>
 
     <script>
-        const pageTitle = encodeURIComponent(document.title);
-        const pageUrl = encodeURIComponent(window.location.href);
+        let correctAnswers = 0;
+        let totalQuestions = 4;
 
-        function shareOnTwitter() {
-            window.open(`https://twitter.com/intent/tweet?text=${pageTitle}&url=${pageUrl}`, '_blank');
+        function checkAnswer(element, isCorrect) {
+            // Disable all options in this question
+            const options = element.parentElement.getElementsByClassName('quiz-option');
+            for (let opt of options) {
+                opt.style.pointerEvents = 'none';
+            }
+
+            if (isCorrect) {
+                element.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
+                element.style.color = 'white';
+                element.innerHTML += ' ✅';
+                correctAnswers++;
+            } else {
+                element.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+                element.style.color = 'white';
+                element.innerHTML += ' ❌';
+            }
+
+            // Check if all questions answered
+            const allAnswered = document.querySelectorAll('.quiz-option[style*="linear-gradient"]').length >= totalQuestions;
+            if (allAnswered) {
+                showResult();
+            }
         }
 
-        function shareOnFacebook() {
-            window.open(`https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`, '_blank');
-        }
-
-        function shareOnLinkedIn() {
-            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${pageUrl}`, '_blank');
-        }
-
-        function shareViaEmail() {
-            window.location.href = `mailto:?subject=${pageTitle}&body=${pageUrl}`;
+        function
+ showResult() {
+            const resultDiv = document.getElementById('quiz-result');
+            const percentage = (correctAnswers / totalQuestions) * 100;
+            
+            resultDiv.style.display = 'block';
+            
+            if (percentage >= 75) {
+                resultDiv.style.background = 'linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(34, 197, 94, 0.1))';
+                resultDiv.style.borderLeft = '4px solid #22c55e';
+                resultDiv.innerHTML = `
+                    <h3 style="color: #22c55e;">?? Excellent! Score: ${correctAnswers}/${totalQuestions} (${percentage}%)</h3>
+                    <p>You've mastered crew calculation fundamentals! Ready to estimate your next project.</p>
+                `;
+            } else if (percentage >= 50) {
+                resultDiv.style.background = 'linear-gradient(135deg, rgba(249, 115, 22, 0.2), rgba(249, 115, 22, 0.1))';
+                resultDiv.style.borderLeft = '4px solid #f97316';
+                resultDiv.innerHTML = `
+                    <h3 style="color: #f97316;">?? Good! Score: ${correctAnswers}/${totalQuestions} (${percentage}%)</h3>
+                    <p>Solid understanding. Review the modules for topics you missed.</p>
+                `;
+            } else {
+                resultDiv.style.background = 'linear-gradient(135deg, rgba(239, 68, 68, 0.2), rgba(239, 68, 68, 0.1))';
+                resultDiv.style.borderLeft = '4px solid #ef4444';
+                resultDiv.innerHTML = `
+                    <h3 style="color: #ef4444;">?? Keep Learning! Score: ${correctAnswers}/${totalQuestions} (${percentage}%)</h3>
+                    <p>Review the course modules and try the calculator for hands-on practice.</p>
+                `;
+            }
         }
     </script>
 </body>
