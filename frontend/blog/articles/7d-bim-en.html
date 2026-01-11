@@ -3,99 +3,698 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>7D BIM: Facility Management - CSI Calculator</title>
-    <meta name="description" content="Complete guide to 7D BIM: facility management and maintenance from BIM model">
+    <title>7D BIM Complete Course: Master Facility Management with BIM | CSI Calculator</title>
+    <meta name="description" content="Complete 7D BIM course: Learn facility management, asset tracking, COBie data, CAFM/IWMS integration, preventive maintenance, and operations optimization with BIM.">
+    <meta name="keywords" content="7D BIM, Facility Management, FM, COBie, CAFM, IWMS, Asset Management, Preventive Maintenance, BIM Operations">
+    
+    <meta property="og:title" content="7D BIM Complete Course: Master Facility Management with BIM">
+    <meta property="og:description" content="Learn FM operations with BIM - from handover to maintenance">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="images/7d-bim-concept.png">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "7D BIM Complete Course",
+      "description": "Master facility management with BIM"
+    }
+    </script>
+    
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5429423113977975" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../css/theme.css">
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/lang-toggle.css">
     <link rel="stylesheet" href="../../css/blog.css">
+    <link rel="stylesheet" href="../../css/ads.css">
     <link rel="stylesheet" href="../../css/share-buttons.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="../../js/ads.js"></script>
     <script src="../../js/i18n.js"></script>
     <script src="../../js/theme.js"></script>
+    <script src="../../js/blog-i18n.js"></script>
+    
+    <style>
+        .course-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #6366f1, #4f46e5);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .lesson-card {
+            background: var(--bg-secondary);
+            border: 2px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            transition: all 0.3s ease;
+        }
+        
+        .lesson-card:hover {
+            border-color: #6366f1;
+            box-shadow: 0 8px 30px rgba(99, 102, 241, 0.15);
+        }
+        
+        .lesson-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #6366f1, #4f46e5);
+            color: white;
+            border-radius: 50%;
+            font-weight: 700;
+            margin-left: 1rem;
+        }
+        
+        .pro-tip {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(99, 102, 241, 0.05));
+            border-left: 4px solid #6366f1;
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.5rem 0;
+        }
+        
+        .pro-tip::before {
+            content: "🔧 FM Tip";
+            display: block;
+            font-weight: 700;
+            color: #6366f1;
+            margin-bottom: 0.5rem;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .comparison-table th {
+            background: linear-gradient(135deg, #6366f1, #4f46e5);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .comparison-table td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            background: var(--bg-secondary);
+        }
+        
+        .key-takeaway {
+            background: linear-gradient(135deg, #6366f1, #4f46e5);
+            color: white;
+            padding: 1.5rem 2rem;
+            border-radius: 16px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .cobie-box {
+            background: linear-gradient(135deg, rgba(234, 88, 12, 0.1), rgba(234, 88, 12, 0.05));
+            border: 2px solid #ea580c;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+        }
+        
+        .cobie-box h4 {
+            color: #ea580c;
+            margin-bottom: 1rem;
+        }
+        
+        .roi-metric {
+            display: inline-block;
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            color: #6366f1;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-family: 'Fira Code', monospace;
+            font-weight: 600;
+            margin: 0.25rem;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
         <div class="container">
             <a href="../../index.html" class="logo-container">
-                <img src="../../assets/logo.png" alt="Logo" class="logo-image">
+                <img src="../../assets/logo.png" alt="CSI Logo" class="logo-image">
                 <span class="logo-text">CSI Calculator</span>
             </a>
             <div class="nav-links">
-                <a href="../../index.html"><span>Home</span></a>
-                <a href="../../crew-calculator.html"><span>Calculator</span></a>
-                <a href="../index-en.html" class="active"><span>Blog</span></a>
-                <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()">🌙</button>
-                <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()"><span>AR</span></button>
+                <a href="../../index.html" data-i18n="home" data-icon="🏠"><span>Home</span></a>
+                <a href="../../crew-calculator.html" data-i18n="crewCalculator" data-icon="🧮"><span>Calculator</span></a>
+                <a href="../../ai-planner.html" data-i18n="aiPlanner" data-icon="🤖"><span>AI Planner</span></a>
+                <a href="../../evm-calculator.html" data-i18n="evmCalculator" data-icon="📊"><span>EVM Calculator</span></a>
+                <a href="../index-en.html" class="active" data-i18n="blog" data-icon="📚"><span>Knowledge Bites</span></a>
+                <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">🌙</button>
+                <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()"><span id="langIcon">AR</span></button>
             </div>
         </div>
     </nav>
 
     <div class="article-header">
+        <span class="course-badge">🏢 Complete Course</span>
         <span class="article-category">BIM Dimensions</span>
-        <h1>7D BIM: Facility Management and Maintenance</h1>
+        <h1>7D BIM: Master Facility Management with BIM</h1>
+        <p style="font-size: 1.2rem; opacity: 0.9; margin-top: 1rem;">From Construction Handover to Operations Excellence</p>
         <div class="article-meta">
-            <span class="article-date">January 8, 2026</span>
-            <span class="article-read-time">18 min read</span>
+            <span class="article-date">Updated: January 2026</span>
+            <span class="article-read-time">40 min course</span>
         </div>
     </div>
 
-    <div class="article-body">
-        <img src="../assets/7d-bim.jpg" alt="7D BIM">
+    <div class="article-body" style="max-width: 900px;">
+        
+        <!-- Hero Image -->
+        <div class="concept-image-wrapper" style="margin: 2rem 0;">
+            <img src="images/7d-bim-concept.png" alt="7D BIM = 6D BIM + Facility Management (Assets, Maintenance, Operations)" style="width: 100%; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.15);">
+        </div>
 
-        <h2>🏢 What is 7D BIM?</h2>
-        <p><strong>7D BIM = 3D + Time + Cost + Energy + Facility Management</strong></p>
-        <p>Using BIM model to manage building operations and maintenance after construction.</p>
+        <!-- Introduction -->
+        <div class="alert alert-info" style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(79, 70, 229, 0.1)); border: none; border-radius: 16px; padding: 2rem;">
+            <h3 style="margin-bottom: 1rem;">🎯 What You'll Learn in This Course</h3>
+            <ul style="margin: 0; line-height: 2;">
+                <li>✅ What 7D BIM is and the FM lifecycle</li>
+                <li>✅ COBie data standard and handover requirements</li>
+                <li>✅ CAFM/IWMS software integration</li>
+                <li>✅ Asset management and preventive maintenance</li>
+                <li>✅ Space management and move planning</li>
+                <li>✅ Real-world ROI and implementation strategies</li>
+            </ul>
+        </div>
 
-        <h2>🎯 Uses</h2>
+        <!-- Table of Contents -->
+        <h2>📋 Course Contents</h2>
+        <div class="lesson-card">
+            <ol style="line-height: 2.2;">
+                <li><a href="#module-1">Module 1: Understanding 7D BIM</a></li>
+                <li><a href="#module-2">Module 2: The FM Handover Process</a></li>
+                <li><a href="#module-3">Module 3: COBie Data Standard</a></li>
+                <li><a href="#module-4">Module 4: CAFM & IWMS Software</a></li>
+                <li><a href="#module-5">Module 5: Asset Management</a></li>
+                <li><a href="#module-6">Module 6: Space Management</a></li>
+                <li><a href="#module-7">Module 7: ROI & Best Practices</a></li>
+                <li><a href="#quiz">Final Quiz</a></li>
+            </ol>
+        </div>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 1 -->
+        <h2 id="module-1"><span class="lesson-number">1</span> Module 1: Understanding 7D BIM</h2>
+        
+        <h3>1.1 What is 7D BIM?</h3>
+        <p>
+            <strong>7D BIM</strong> extends the BIM model for <em>facility management and operations</em>. It transforms construction data into an operational asset database that FM teams use throughout the building's lifecycle.
+        </p>
+        
+        <div class="key-takeaway">
+            <h4>🔑 Key Formula</h4>
+            <p style="font-size: 1.3rem; margin: 0;"><strong>7D BIM = 6D BIM + Facility Management & Operations</strong></p>
+        </div>
+
+        <h3>1.2 The Building Lifecycle</h3>
+        <p>A building spends:</p>
         <ul>
-            <li><strong>Asset Management</strong></li>
-            <li><strong>Preventive Maintenance</strong></li>
-            <li><strong>Space Management</strong></li>
-            <li><strong>Equipment Tracking</strong></li>
-            <li><strong>Emergency Planning</strong></li>
+            <li><span class="roi-metric">1-3 years</span> in Design & Construction</li>
+            <li><span class="roi-metric">30-50+ years</span> in Operations</li>
+        </ul>
+        <p>7D BIM ensures that BIM investment continues delivering value during the longest phase of a building's life.</p>
+
+        <h3>1.3 7D BIM Capabilities</h3>
+        <table class="comparison-table">
+            <tr>
+                <th>Capability</th>
+                <th>Description</th>
+                <th>Example</th>
+            </tr>
+            <tr>
+                <td><strong>Asset Tracking</strong></td>
+                <td>Manage all equipment data</td>
+                <td>HVAC units, elevators, pumps</td>
+            </tr>
+            <tr>
+                <td><strong>Preventive Maintenance</strong></td>
+                <td>Scheduled maintenance plans</td>
+                <td>Filter changes, inspections</td>
+            </tr>
+            <tr>
+                <td><strong>Space Management</strong></td>
+                <td>Track room usage and allocation</td>
+                <td>Occupancy, move planning</td>
+            </tr>
+            <tr>
+                <td><strong>Work Orders</strong></td>
+                <td>Manage maintenance requests</td>
+                <td>Repair tickets, service calls</td>
+            </tr>
+            <tr>
+                <td><strong>Emergency Planning</strong></td>
+                <td>Access building data for response</td>
+                <td>Fire routes, shut-off valves</td>
+            </tr>
+            <tr>
+                <td><strong>Warranty Tracking</strong></td>
+                <td>Monitor equipment warranties</td>
+                <td>Claim before expiration</td>
+            </tr>
+        </table>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 2 -->
+        <h2 id="module-2"><span class="lesson-number">2</span> Module 2: The FM Handover Process</h2>
+        
+        <h3>2.1 Handover Workflow</h3>
+        <div class="workflow-container">
+            <div class="workflow-step">
+                <div class="workflow-number">1</div>
+                <div class="workflow-content">
+                    <h4>Define FM Requirements (EIR)</h4>
+                    <p>Owner specifies what data is needed for operations</p>
+                </div>
+            </div>
+            <div class="workflow-step">
+                <div class="workflow-number">2</div>
+                <div class="workflow-content">
+                    <h4>Build with FM in Mind</h4>
+                    <p>Contractors populate asset data during construction</p>
+                </div>
+            </div>
+            <div class="workflow-step">
+                <div class="workflow-number">3</div>
+                <div class="workflow-content">
+                    <h4>Verify COBie Data</h4>
+                    <p>QC check before handover acceptance</p>
+                </div>
+            </div>
+            <div class="workflow-step">
+                <div class="workflow-number">4</div>
+                <div class="workflow-content">
+                    <h4>Export to CAFM/IWMS</h4>
+                    <p>Transfer data to FM software platform</p>
+                </div>
+            </div>
+            <div class="workflow-step">
+                <div class="workflow-number">5</div>
+                <div class="workflow-content">
+                    <h4>Train FM Team</h4>
+                    <p>Handover to operations personnel</p>
+                </div>
+            </div>
+            <div class="workflow-step">
+                <div class="workflow-number">6</div>
+                <div class="workflow-content">
+                    <h4>Operate & Maintain</h4>
+                    <p>Use BIM data for ongoing operations</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="pro-tip">
+            The #1 reason FM handovers fail is starting too late. Begin FM data collection at <strong>design stage</strong>, not at substantial completion!
+        </div>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 3 -->
+        <h2 id="module-3"><span class="lesson-number">3</span> Module 3: COBie Data Standard</h2>
+        
+        <h3>3.1 What is COBie?</h3>
+        <div class="cobie-box">
+            <h4>📊 COBie (Construction Operations Building Information Exchange)</h4>
+            <p>A standardized spreadsheet format (or IFC extension) for delivering building data to owners/FM teams. It extracts non-graphical data from BIM models into a structured format.</p>
+        </div>
+
+        <h3>3.2 COBie Worksheets</h3>
+        <table class="comparison-table">
+            <tr>
+                <th>Worksheet</th>
+                <th>Contains</th>
+                <th>Example Data</th>
+            </tr>
+            <tr>
+                <td><strong>Facility</strong></td>
+                <td>Building information</td>
+                <td>Name, address, area</td>
+            </tr>
+            <tr>
+                <td><strong>Floor</strong></td>
+                <td>Level information</td>
+                <td>Floor names, elevations</td>
+            </tr>
+            <tr>
+                <td><strong>Space</strong></td>
+                <td>Room data</td>
+                <td>Room names, areas, usage</td>
+            </tr>
+            <tr>
+                <td><strong>Type</strong></td>
+                <td>Equipment types</td>
+                <td>Manufacturer, model, specs</td>
+            </tr>
+            <tr>
+                <td><strong>Component</strong></td>
+                <td>Individual assets</td>
+                <td>Serial number, install date</td>
+            </tr>
+            <tr>
+                <td><strong>System</strong></td>
+                <td>Systems grouping</td>
+                <td>HVAC Zone 1, Fire System A</td>
+            </tr>
+            <tr>
+                <td><strong>Job</strong></td>
+                <td>Maintenance tasks</td>
+                <td>Annual inspection, filter change</td>
+            </tr>
+            <tr>
+                <td><strong>Resource</strong></td>
+                <td>Spare parts, materials</td>
+                <td>Replacement filters, belts</td>
+            </tr>
+            <tr>
+                <td><strong>Document</strong></td>
+                <td>Linked documents</td>
+                <td>O&M manuals, warranties</td>
+            </tr>
+        </table>
+
+        <h3>3.3 COBie in Revit</h3>
+        <p>To export COBie from Revit:</p>
+        <ol>
+            <li>Install <strong>COBie Extension for Revit</strong></li>
+            <li>Populate required parameters during modeling</li>
+            <li>Map Revit parameters to COBie fields</li>
+            <li>Export to COBie spreadsheet or IFC with COBie</li>
+            <li>Validate using COBie QC tools</li>
+        </ol>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 4 -->
+        <h2 id="module-4"><span class="lesson-number">4</span> Module 4: CAFM & IWMS Software</h2>
+        
+        <h3>4.1 CAFM vs IWMS</h3>
+        <table class="comparison-table">
+            <tr>
+                <th>Type</th>
+                <th>Full Name</th>
+                <th>Focus</th>
+            </tr>
+            <tr>
+                <td><strong>CAFM</strong></td>
+                <td>Computer-Aided Facility Management</td>
+                <td>Space, assets, maintenance</td>
+            </tr>
+            <tr>
+                <td><strong>IWMS</strong></td>
+                <td>Integrated Workplace Management System</td>
+                <td>CAFM + Real Estate + Sustainability</td>
+            </tr>
+            <tr>
+                <td><strong>CMMS</strong></td>
+                <td>Computerized Maintenance Management</td>
+                <td>Maintenance-focused only</td>
+            </tr>
+        </table>
+
+        <h3>4.2 Leading FM Software</h3>
+        <table class="comparison-table">
+            <tr>
+                <th>Software</th>
+                <th>Company</th>
+                <th>Best For</th>
+                <th>BIM Integration</th>
+            </tr>
+            <tr>
+                <td><strong>Archibus</strong></td>
+                <td>Eptura</td>
+                <td>Large enterprises</td>
+                <td>Revit, AutoCAD</td>
+            </tr>
+            <tr>
+                <td><strong>IBM Maximo</strong></td>
+                <td>IBM</td>
+                <td>Asset-intensive industries</td>
+                <td>BIM 360, Tandem</td>
+            </tr>
+            <tr>
+                <td><strong>Planon</strong></td>
+                <td>Planon</td>
+                <td>Integrated real estate</td>
+                <td>IFC, COBie</td>
+            </tr>
+            <tr>
+                <td><strong>FM:Systems</strong></td>
+                <td>FM:Systems</td>
+                <td>Space management</td>
+                <td>Revit, AutoCAD</td>
+            </tr>
+            <tr>
+                <td><strong>Autodesk Tandem</strong></td>
+                <td>Autodesk</td>
+                <td>Digital twin</td>
+                <td>Native Revit</td>
+            </tr>
+            <tr>
+                <td><strong>Nemetschek Spacewell</strong></td>
+                <td>Nemetschek</td>
+                <td>European market</td>
+                <td>IFC, COBie</td>
+            </tr>
+        </table>
+
+        <h3>4.3 Autodesk Tandem Deep Dive</h3>
+        <div class="lesson-card">
+            <h4>🔷 Autodesk Tandem (Digital Twin)</h4>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li>✅ Direct connection from Revit/ACC</li>
+                <li>✅ Real-time sensor data integration (IoT)</li>
+                <li>✅ Web-based 3D navigation</li>
+                <li>✅ Asset classification and tracking</li>
+                <li>✅ Document linking (O&M manuals)</li>
+            </ul>
+            <p><strong>Workflow:</strong> Create model in Revit → Publish to Autodesk Construction Cloud → Create Digital Twin in Tandem → Connect to CAFM</p>
+        </div>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 5 -->
+        <h2 id="module-5"><span class="lesson-number">5</span> Module 5: Asset Management</h2>
+        
+        <h3>5.1 Asset Data Requirements</h3>
+        <p>Critical data for each maintainable asset:</p>
+        <table class="comparison-table">
+            <tr>
+                <th>Category</th>
+                <th>Data Fields</th>
+            </tr>
+            <tr>
+                <td><strong>Identification</strong></td>
+                <td>Tag number, serial number, barcode/QR</td>
+            </tr>
+            <tr>
+                <td><strong>Location</strong></td>
+                <td>Building, floor, room, coordinates</td>
+            </tr>
+            <tr>
+                <td><strong>Specifications</strong></td>
+                <td>Manufacturer, model, capacity, power</td>
+            </tr>
+            <tr>
+                <td><strong>Dates</strong></td>
+                <td>Install date, warranty expiry, expected life</td>
+            </tr>
+            <tr>
+                <td><strong>Maintenance</strong></td>
+                <td>PM schedule, service history, spare parts</td>
+            </tr>
+            <tr>
+                <td><strong>Documents</strong></td>
+                <td>O&M manual, specifications, warranties</td>
+            </tr>
+        </table>
+
+        <h3>5.2 Maintenance Types</h3>
+        <ul>
+            <li><strong>Reactive (Corrective):</strong> Fix when broken - most expensive</li>
+            <li><strong>Preventive (Scheduled):</strong> Regular maintenance per schedule</li>
+            <li><strong>Predictive (Condition-based):</strong> Maintain based on sensor data</li>
+            <li><strong>Prescriptive:</strong> AI recommends optimal maintenance</li>
         </ul>
 
-        <h2>💻 CAFM Systems</h2>
+        <div class="pro-tip">
+            Moving from <strong>Reactive to Preventive</strong> maintenance can reduce maintenance costs by <strong>12-18%</strong>. Moving to <strong>Predictive</strong> adds another <strong>8-12%</strong> savings.
+        </div>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 6 -->
+        <h2 id="module-6"><span class="lesson-number">6</span> Module 6: Space Management</h2>
+        
+        <h3>6.1 Space Management Uses</h3>
         <ul>
-            <li><strong>Archibus</strong> - Comprehensive FM</li>
-            <li><strong>IBM Maximo</strong> - Asset management</li>
-            <li><strong>FM:Systems</strong> - Space management</li>
-            <li><strong>Planon</strong> - Integrated IWMS</li>
+            <li>📊 <strong>Occupancy tracking:</strong> Who uses which space</li>
+            <li>📊 <strong>Utilization analysis:</strong> How efficiently space is used</li>
+            <li>📊 <strong>Move management:</strong> Plan and execute relocations</li>
+            <li>📊 <strong>Lease management:</strong> Track leased vs owned space</li>
+            <li>📊 <strong>Wayfinding:</strong> Indoor navigation for visitors</li>
         </ul>
 
-        <h2>📊 Required Data</h2>
+        <h3>6.2 Key Space Metrics</h3>
+        <table class="comparison-table">
+            <tr>
+                <th>Metric</th>
+                <th>Description</th>
+                <th>Typical Target</th>
+            </tr>
+            <tr>
+                <td><strong>Usable SF per Person</strong></td>
+                <td>Allocated space per employee</td>
+                <td>100-150 SF (pre-COVID)</td>
+            </tr>
+            <tr>
+                <td><strong>Utilization Rate</strong></td>
+                <td>Actual use vs capacity</td>
+                <td>60-80%</td>
+            </tr>
+            <tr>
+                <td><strong>Vacancy Rate</strong></td>
+                <td>Unoccupied assigned space</td>
+                <td>< 10%</td>
+            </tr>
+            <tr>
+                <td><strong>Cost per SF</strong></td>
+                <td>Operating cost per area</td>
+                <td>Varies by market</td>
+            </tr>
+        </table>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- MODULE 7 -->
+        <h2 id="module-7"><span class="lesson-number">7</span> Module 7: ROI & Best Practices</h2>
+
+        <h3>7.1 7D BIM ROI</h3>
+        <p>Documented benefits from 7D BIM implementations:</p>
         <ul>
-            <li>Equipment information (Serial No., Warranty)</li>
-            <li>Maintenance schedules</li>
-            <li>Spare parts</li>
-            <li>O&M manuals</li>
-            <li>COBie data</li>
+            <li><span class="roi-metric">15-30%</span> reduction in maintenance costs</li>
+            <li><span class="roi-metric">20-40%</span> faster emergency response</li>
+            <li><span class="roi-metric">50%+</span> reduction in data lookup time</li>
+            <li><span class="roi-metric">10-15%</span> improvement in space utilization</li>
         </ul>
 
-        <h2>💡 Benefits</h2>
+        <h3>7.2 Do's ✅</h3>
         <ul>
-            <li>✅ Reduce operating costs by 15-30%</li>
-            <li>✅ Proactive vs reactive maintenance</li>
-            <li>✅ Longer equipment life</li>
-            <li>✅ Faster emergency response</li>
+            <li>✅ <strong>Start early:</strong> Define FM requirements in EIR</li>
+            <li>✅ <strong>Involve FM team:</strong> During design, not just handover</li>
+            <li>✅ <strong>Use COBie:</strong> Standard format for data exchange</li>
+            <li>✅ <strong>Validate data:</strong> QC before accepting handover</li>
+            <li>✅ <strong>Train staff:</strong> FM team must know how to use BIM</li>
+            <li>✅ <strong>Keep updated:</strong> Maintain as-operated model</li>
         </ul>
 
-        <div class="share-buttons">
-            <span class="share-buttons-label">Share:</span>
+        <h3>7.3 Don'ts ❌</h3>
+        <ul>
+            <li>❌ <strong>Wait until handover:</strong> Too late to collect data</li>
+            <li>❌ <strong>Accept incomplete data:</strong> Garbage in = garbage out</li>
+            <li>❌ <strong>Forget training:</strong> Tools are useless without skills</li>
+            <li>❌ <strong>Let model become stale:</strong> Update with changes</li>
+        </ul>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- QUIZ -->
+        <h2 id="quiz">🎯 Final Quiz</h2>
+        
+        <div class="lesson-card" style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(79, 70, 229, 0.05));">
+            <h4>🧪 Test Your Knowledge</h4>
+            
+            <p><strong>1. What does 7D BIM add to 6D?</strong></p>
+            <label><input type="radio" name="q1" value="a"> Cost data</label><br>
+            <label><input type="radio" name="q1" value="b"> Facility Management</label><br>
+            <label><input type="radio" name="q1" value="c"> Energy analysis</label><br>
+            <br>
+            
+            <p><strong>2. What does COBie stand for?</strong></p>
+            <label><input type="radio" name="q2" value="a"> Construction Operations Building Information Exchange</label><br>
+            <label><input type="radio" name="q2" value="b"> Computer Operated Building Interface Export</label><br>
+            <label><input type="radio" name="q2" value="c"> Construction Object Building Integration Exchange</label><br>
+            <br>
+            
+            <p><strong>3. Which maintenance type uses sensor data?</strong></p>
+            <label><input type="radio" name="q3" value="a"> Reactive</label><br>
+            <label><input type="radio" name="q3" value="b"> Preventive</label><br>
+            <label><input type="radio" name="q3" value="c"> Predictive</label><br>
+            <br>
+            
+            <button onclick="checkQuiz7D()" style="background: linear-gradient(135deg, #6366f1, #4f46e5); color: white; border: none; padding: 1rem 2rem; border-radius: 8px; font-weight: 600; cursor: pointer;">Check Answers</button>
+            <div id="quiz-result" style="margin-top: 1rem; font-weight: 600;"></div>
+        </div>
+
+        <script>
+        function checkQuiz7D() {
+            const answers = {q1: 'b', q2: 'a', q3: 'c'};
+            let score = 0;
+            for (let q in answers) {
+                const selected = document.querySelector(`input[name="${q}"]:checked`);
+                if (selected && selected.value === answers[q]) score++;
+            }
+            const result = document.getElementById('quiz-result');
+            if (score === 3) {
+                result.innerHTML = '🎉 Perfect! You are ready for FM with BIM!';
+                result.style.color = '#6366f1';
+            } else if (score >= 2) {
+                result.innerHTML = '👍 Good job! Review the modules you missed.';
+                result.style.color = '#f59e0b';
+            } else {
+                result.innerHTML = '📚 Keep learning! Review the course again.';
+                result.style.color = '#ef4444';
+            }
+        }
+        </script>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- BIM Dimensions Complete -->
+        <div class="key-takeaway">
+            <h4>🎓 BIM Dimensions Series Complete!</h4>
+            <p>You've learned: <a href="4d-bim-en.html" style="color: white;">4D</a> → <a href="5d-bim-en.html" style="color: white;">5D</a> → <a href="6d-bim-en.html" style="color: white;">6D</a> → <strong style="color: #fcd34d;">7D</strong></p>
+            <p style="margin-top: 1rem;">Continue learning with <a href="cobie-guide-en.html" style="color: white; text-decoration: underline;">COBie Data Standard Guide</a></p>
+        </div>
+
+        <!-- Share Buttons -->
+        <div class="share-buttons" style="margin-top: 3rem;">
+            <span class="share-buttons-label">Share this course:</span>
             <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-btn facebook" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">Facebook</a>
             <a href="https://twitter.com/intent/tweet?url=" class="share-btn twitter" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">Twitter</a>
             <a href="https://www.linkedin.com/shareArticle?mini=true&url=" class="share-btn linkedin" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">LinkedIn</a>
-            <button class="share-btn copy" onclick="navigator.clipboard.writeText(window.location.href);alert('Link copied!')">Copy</button>
+            <a href="https://wa.me/?text=" class="share-btn whatsapp" target="_blank" onclick="this.href+=encodeURIComponent(document.title + ' ' + window.location.href)">WhatsApp</a>
+            <button class="share-btn copy" onclick="navigator.clipboard.writeText(window.location.href);alert('Link copied!')">Copy Link</button>
         </div>
         
-        <hr>
-        <p><strong>BIM Dimensions series complete!</strong> See <a href="../index-en.html">all articles</a></p>
     </div>
 
     <footer class="site-footer">
         <div class="footer-content">
-            <p>CSI Calculator • Built with ❤️ by Sameh Badawy Sayed</p>
+            <p class="footer-text">CSI Calculator • Built with <span class="footer-heart">❤️</span> by <span class="footer-author">Sameh Badawy Sayed</span></p>
         </div>
     </footer>
 </body>
