@@ -3,37 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Top 5 Cost Estimation Methods in Construction Projects - CSI Calculator</title>
-    <meta name="description" content="Discover the different methods of construction cost estimation, from fast Analogous Estimating to precise Bottom-up Estimating. When should you use each method?">
-    <meta name="keywords" content="Cost Estimation, Parametric Estimating, Bottom-up Estimating, Project Management, Construction Cost">
+    <title>Cost Estimation Methods: Complete Guide with Accuracy Levels - CSI Calculator</title>
+    <meta name="description" content="Master 6 construction cost estimation methods: Analogous, Parametric, Bottom-up, Three-Point, Vendor Bid Analysis, and Reserve Analysis. Includes formulas, examples, and selection guide.">
+    <meta name="keywords" content="Cost Estimation, Parametric Estimating, Bottom-up Estimating, PERT, Project Management, Construction Cost, AACE">
     
-    <!-- Open Graph -->
-    <meta property="og:title" content="Top 5 Cost Estimation Methods in Construction Projects">
-    <meta property="og:description" content="Your comprehensive guide to choosing the right estimation method for your project phase">
+    <meta property="og:title" content="Cost Estimation Methods: Complete Guide">
+    <meta property="og:description" content="Choose the right estimation method for each project phase with accuracy analysis">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://csi-calc.vercel.app/blog/articles/cost-estimation-methods-en.html">
     <meta property="og:image" content="../assets/cost-estimation-methods.jpg">
     
-    <!-- Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "headline": "Top 5 Cost Estimation Methods in Construction Projects",
-      "author": {
-        "@type": "Person",
-        "name": "Sameh Badawy Sayed"
-      },
-      "datePublished": "2026-01-07",
-      "image": "../assets/cost-estimation-methods.jpg",
-      "articleSection": "Cost Estimation"
+      "name": "Cost Estimation Methods Guide",
+      "description": "Complete analysis of construction cost estimation methods"
     }
     </script>
     
-    <!-- AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5429423113977975" crossorigin="anonymous"></script>
-    
-    <!-- Stylesheets -->
     <link rel="stylesheet" href="../../css/theme.css">
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/lang-toggle.css">
@@ -41,15 +29,145 @@
     <link rel="stylesheet" href="../../css/ads.css">
     <link rel="stylesheet" href="../../css/share-buttons.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Scripts -->
     <script src="../../js/ads.js"></script>
     <script src="../../js/i18n.js"></script>
     <script src="../../js/theme.js"></script>
     <script src="../../js/blog-i18n.js"></script>
+
+    <style>
+        .estimation-hero {
+            background: linear-gradient(135deg, #059669, #10b981);
+            color: white;
+            padding: 2rem;
+            border-radius: 16px;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        .method-card {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            transition: all 0.3s;
+        }
+        .method-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        .method-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        .method-number {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        .accuracy-bar {
+            background: #f1f5f9;
+            border-radius: 8px;
+            height: 30px;
+            position: relative;
+            overflow: hidden;
+            margin: 1rem 0;
+        }
+        .accuracy-fill {
+            height: 100%;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            padding: 0 1rem;
+            color: white;
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+        .accuracy-low { background: linear-gradient(135deg, #ef4444, #dc2626); width: 30%; }
+        .accuracy-med { background: linear-gradient(135deg, #f59e0b, #d97706); width: 55%; }
+        .accuracy-high { background: linear-gradient(135deg, #22c55e, #16a34a); width: 85%; }
+        .accuracy-very-high { background: linear-gradient(135deg, #3b82f6, #1d4ed8); width: 95%; }
+        .formula-box {
+            background: linear-gradient(135deg, #1e293b, #334155);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            text-align: center;
+            font-family: 'Courier New', monospace;
+        }
+        .example-box {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(59, 130, 246, 0.05));
+            border: 2px solid #3b82f6;
+            border-radius: 12px;
+            padding: 1.25rem;
+            margin: 1rem 0;
+        }
+        .when-box {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(34, 197, 94, 0.05));
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1rem 0;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .comparison-table th {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        .comparison-table td {
+            padding: 0.875rem;
+            border-bottom: 1px solid #e5e7eb;
+            text-align: center;
+        }
+        .pro-tip {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(34, 197, 94, 0.05));
+            border-left: 4px solid #22c55e;
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.5rem 0;
+        }
+        .warning-box {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(239, 68, 68, 0.05));
+            border-left: 4px solid #ef4444;
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.5rem 0;
+        }
+        .aace-table {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+        }
+        .key-takeaway {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 2rem;
+            border-radius: 16px;
+            margin: 2rem 0;
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <a href="../../index.html" class="logo-container">
@@ -60,71 +178,375 @@
                 <a href="../../index.html" data-i18n="home" data-icon="🏠"><span>Home</span></a>
                 <a href="../../crew-calculator.html" data-i18n="crewCalculator" data-icon="🧮"><span>Calculator</span></a>
                 <a href="../../ai-planner.html" data-i18n="aiPlanner" data-icon="🤖"><span>AI Planner</span></a>
-                <a href="../index-en.html" class="active" data-i18n="blog" data-icon="📚"><span>Manual & Tips</span></a>
+                <a href="../index-en.html" class="active" data-i18n="blog" data-icon="📚"><span>Knowledge Bites</span></a>
                 <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">🌙</button>
                 <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()"><span id="langIcon">AR</span></button>
             </div>
         </div>
     </nav>
 
-    <!-- Article Header -->
     <div class="article-header">
         <span class="article-category">Cost Estimation</span>
-        <h1>Top 5 Cost Estimation Methods in Construction Projects</h1>
+        <h1>Cost Estimation Methods: Complete Guide with Accuracy Levels</h1>
         <div class="article-meta">
-            <span class="article-date">January 7, 2026</span>
-            <span class="article-read-time">10 min read</span>
+            <span class="article-date">January 11, 2026</span>
+            <span class="article-read-time">20 min read</span>
         </div>
     </div>
 
-    <!-- Article Body -->
     <div class="article-body">
-        <div class="article-image-container">
-            <img src="../assets/cost-estimation-methods.jpg" alt="Construction Cost Estimation" class="img-fluid rounded shadow mb-4">
+        <div class="estimation-hero">
+            <h2 style="margin-top: 0;">🏗️ Estimation is Not Guessing</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 0;">The difference between a successful contractor and a failing one often lies in estimation accuracy</p>
         </div>
 
-        <h2>🏗️ Estimation is Not Guessing</h2>
-        <p>
-            The difference between a successful contractor and a failing one often lies in the accuracy of their pricing. If you price too low, you lose money. If you price too high, you lose the bid. Therefore, choosing the right estimation method depends on the project phase and the accuracy of available information.
-        </p>
-
-        <h2>1. Analogous Estimating</h2>
-        <p>
-            <strong>When to use?</strong> In the very early stages when information is scarce.<br>
-            <strong>How it works?</strong> We use the actual cost of a previous "similar" project as a basis for estimation. For example: We built a hospital for 10 million last year, and this hospital is similar, so the cost is around 10 million.<br>
-            <strong>Accuracy:</strong> Low (-25% to +75%).
-        </p>
-
-        <h2>2. Parametric Estimating</h2>
-        <p>
-            <strong>When to use?</strong> In feasibility studies and preliminary stages.<br>
-            <strong>How it works?</strong> We use a statistical relationship between historical data and other variables. For example: Cost per square meter for residential buildings = $500. The building is 1000 sqm. So estimating cost = 500 * 1000 = $500,000.<br>
-            <strong>Accuracy:</strong> Medium (-10% to +25%).
-        </p>
-
-        <h2>3. Bottom-up Estimating</h2>
-        <p>
-            <strong>When to use?</strong> When submitting the final bid (Tendering).<br>
-            <strong>How it works?</strong> This is the most accurate and time-consuming method. We price every item in the Bill of Quantities (BOQ) or Work Breakdown Structure (WBS) in detail (materials, labor, equipment), then sum up the costs from the bottom up to reach the total.<br>
-            <strong>Accuracy:</strong> Very High (-5% to +10%).
-        </p>
-
-        <h2>4. Three-Point Estimating</h2>
-        <p>
-            <strong>When to use?</strong> When there is high uncertainty and risk in some items.<br>
-            <strong>How it works?</strong> We define 3 values for each activity:
-        </p>
+        <h2>🎯 Why Estimation Method Matters</h2>
+        <p>If you price <strong>too low</strong>, you lose money. If you price <strong>too high</strong>, you lose the bid. Choosing the right estimation method depends on:</p>
         <ul>
-            <li>(O) Optimistic: Best case scenario.</li>
-            <li>(M) Most Likely: Realistic scenario.</li>
-            <li>(P) Pessimistic: Worst case scenario.</li>
+            <li><strong>Project phase</strong> — conception, design, or tender</li>
+            <li><strong>Available information</strong> — sketches vs. complete drawings</li>
+            <li><strong>Time constraints</strong> — hours vs. weeks</li>
+            <li><strong>Required accuracy</strong> — order of magnitude vs. definitive</li>
         </ul>
-        <p>Then we use the weighted average formula (PERT): <strong>(O + 4M + P) / 6</strong></p>
 
-        <h2>💡 Conclusion</h2>
-        <p>
-            There is no absolute "best" method. The best method depends on the time available for estimation and the level of detail in the engineering drawings. A professional starts with a quick analogous estimate and progresses in accuracy to a detailed Bottom-up estimate before signing the contract.
-        </p>        <!-- Share Buttons -->
+        <h2>📋 The 6 Core Estimation Methods</h2>
+        <ol>
+            <li><a href="#analogous">Analogous (Top-Down) Estimating</a></li>
+            <li><a href="#parametric">Parametric Estimating</a></li>
+            <li><a href="#bottomup">Bottom-Up (Detailed) Estimating</a></li>
+            <li><a href="#threepoint">Three-Point (PERT) Estimating</a></li>
+            <li><a href="#vendor">Vendor Bid Analysis</a></li>
+            <li><a href="#reserve">Reserve Analysis</a></li>
+        </ol>
+
+        <hr>
+
+        <div class="method-card" id="analogous">
+            <div class="method-header">
+                <div class="method-number">1</div>
+                <h2 style="margin: 0;">📊 Analogous (Top-Down) Estimating</h2>
+            </div>
+
+            <p><strong>Definition:</strong> Uses actual cost of previous similar projects as the basis for the new estimate. Expert judgment adjusts for differences.</p>
+
+            <div class="accuracy-bar">
+                <div class="accuracy-fill accuracy-low">-25% to +75%</div>
+            </div>
+
+            <div class="example-box">
+                <h4 style="color: #3b82f6; margin-top: 0;">💡 Example:</h4>
+                <p>Last year we built a 50-bed hospital for <strong>$10 million</strong>.<br>
+                This hospital is similar but 60 beds (20% larger).<br>
+                <strong>Estimate:</strong> $10M × 1.20 = <strong>$12 million</strong></p>
+            </div>
+
+            <div class="when-box">
+                <strong>🎯 When to Use:</strong> Very early stages (feasibility), scarce information, quick decisions needed, conceptual budgeting.
+            </div>
+
+            <table class="comparison-table">
+                <tr>
+                    <th>✅ Pros</th>
+                    <th>❌ Cons</th>
+                </tr>
+                <tr>
+                    <td>Very fast (hours)</td>
+                    <td>Low accuracy</td>
+                </tr>
+                <tr>
+                    <td>Minimal information required</td>
+                    <td>Depends on similar project availability</td>
+                </tr>
+                <tr>
+                    <td>Good for go/no-go decisions</td>
+                    <td>Subjective adjustments</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="method-card" id="parametric">
+            <div class="method-header">
+                <div class="method-number">2</div>
+                <h2 style="margin: 0;">📐 Parametric Estimating</h2>
+            </div>
+
+            <p><strong>Definition:</strong> Uses statistical relationships between historical data and project parameters (size, capacity, etc.) to calculate estimates.</p>
+
+            <div class="accuracy-bar">
+                <div class="accuracy-fill accuracy-med">-10% to +25%</div>
+            </div>
+
+            <div class="formula-box">
+                <strong>Cost = Unit Rate × Quantity</strong><br><br>
+                Example: $500/m² × 1,000 m² = $500,000
+            </div>
+
+            <div class="example-box">
+                <h4 style="color: #3b82f6; margin-top: 0;">💡 Example Rates:</h4>
+                <table class="comparison-table" style="margin: 0;">
+                    <tr><th>Building Type</th><th>Cost/m² (USD)</th></tr>
+                    <tr><td>Residential - Standard</td><td>$400-600</td></tr>
+                    <tr><td>Residential - Luxury</td><td>$800-1,500</td></tr>
+                    <tr><td>Office Building</td><td>$600-1,000</td></tr>
+                    <tr><td>Hospital</td><td>$1,500-3,000</td></tr>
+                    <tr><td>School</td><td>$800-1,200</td></tr>
+                    <tr><td>Industrial/Warehouse</td><td>$300-500</td></tr>
+                </table>
+            </div>
+
+            <div class="when-box">
+                <strong>🎯 When to Use:</strong> Feasibility studies, preliminary design, budget approvals, portfolio planning.
+            </div>
+
+            <div class="pro-tip">
+                <strong>💡 Pro Tip:</strong> Parametric data is most reliable when from similar location, time period, and building type. Always adjust for inflation and location factors.
+            </div>
+        </div>
+
+        <div class="method-card" id="bottomup">
+            <div class="method-header">
+                <div class="method-number">3</div>
+                <h2 style="margin: 0;">🔍 Bottom-Up (Detailed) Estimating</h2>
+            </div>
+
+            <p><strong>Definition:</strong> Estimates cost of every individual work item (BOQ line or WBS element) in detail — materials, labor, equipment. All items are summed from bottom to top.</p>
+
+            <div class="accuracy-bar">
+                <div class="accuracy-fill accuracy-very-high">-5% to +10%</div>
+            </div>
+
+            <div class="formula-box">
+                <strong>Item Cost = (Material × Qty) + (Labor × Hours) + (Equipment × Hours) + OH&P</strong>
+            </div>
+
+            <div class="example-box">
+                <h4 style="color: #3b82f6; margin-top: 0;">💡 Example: Foundation Concrete</h4>
+                <table class="comparison-table" style="margin: 0;">
+                    <tr><th>Component</th><th>Quantity</th><th>Rate</th><th>Amount</th></tr>
+                    <tr><td>Concrete C30</td><td>150 m³</td><td>$100/m³</td><td>$15,000</td></tr>
+                    <tr><td>Rebar</td><td>12,000 kg</td><td>$1.2/kg</td><td>$14,400</td></tr>
+                    <tr><td>Formwork</td><td>200 m²</td><td>$25/m²</td><td>$5,000</td></tr>
+                    <tr><td>Labor</td><td>400 hrs</td><td>$15/hr</td><td>$6,000</td></tr>
+                    <tr><td>Equipment</td><td>LS</td><td>-</td><td>$2,500</td></tr>
+                    <tr style="background: rgba(34, 197, 94, 0.1);"><td><strong>Direct Cost</strong></td><td></td><td></td><td><strong>$42,900</strong></td></tr>
+                    <tr><td>OH&P (15%)</td><td></td><td></td><td>$6,435</td></tr>
+                    <tr style="background: rgba(59, 130, 246, 0.2);"><td><strong>Total</strong></td><td></td><td></td><td><strong>$49,335</strong></td></tr>
+                </table>
+            </div>
+
+            <div class="when-box">
+                <strong>🎯 When to Use:</strong> Final tender submission, contract bidding, detailed budgeting, cost control baseline.
+            </div>
+
+            <div class="warning-box">
+                <strong>⚠️ Warning:</strong> Bottom-up requires complete drawings and specifications. Using it prematurely wastes time and gives false precision.
+            </div>
+        </div>
+
+        <div class="method-card" id="threepoint">
+            <div class="method-header">
+                <div class="method-number">4</div>
+                <h2 style="margin: 0;">🎲 Three-Point (PERT) Estimating</h2>
+            </div>
+
+            <p><strong>Definition:</strong> Accounts for uncertainty by using three estimates for each item: Optimistic (O), Most Likely (M), and Pessimistic (P). Uses weighted average.</p>
+
+            <div class="accuracy-bar">
+                <div class="accuracy-fill accuracy-high">-10% to +15%</div>
+            </div>
+
+            <div class="formula-box">
+                <strong>PERT Estimate = (O + 4M + P) / 6</strong><br><br>
+                <strong>Standard Deviation = (P - O) / 6</strong>
+            </div>
+
+            <div class="example-box">
+                <h4 style="color: #3b82f6; margin-top: 0;">💡 Example: Excavation Work</h4>
+                <p>
+                <strong>Optimistic (O):</strong> $50,000 (good soil, no water)<br>
+                <strong>Most Likely (M):</strong> $75,000 (typical conditions)<br>
+                <strong>Pessimistic (P):</strong> $120,000 (rock, dewatering needed)
+                </p>
+                <p><strong>PERT = (50,000 + 4×75,000 + 120,000) / 6 = $78,333</strong></p>
+                <p><strong>Standard Deviation = (120,000 - 50,000) / 6 = $11,667</strong></p>
+            </div>
+
+            <div class="when-box">
+                <strong>🎯 When to Use:</strong> High-risk items, uncertain conditions (ground works, renovation), Monte Carlo analysis input.
+            </div>
+        </div>
+
+        <div class="method-card" id="vendor">
+            <div class="method-header">
+                <div class="method-number">5</div>
+                <h2 style="margin: 0;">📋 Vendor Bid Analysis</h2>
+            </div>
+
+            <p><strong>Definition:</strong> Obtains actual quotes from suppliers and subcontractors for specific work packages. Uses competitive pricing from market.</p>
+
+            <div class="accuracy-bar">
+                <div class="accuracy-fill accuracy-very-high">-3% to +5%</div>
+            </div>
+
+            <div class="when-box">
+                <strong>🎯 When to Use:</strong> Specialized work (MEP, elevators), major equipment procurement, subcontractor packages.
+            </div>
+
+            <div class="pro-tip">
+                <strong>💡 Pro Tip:</strong> Get minimum 3 quotes per package. Include same scope in all RFQs. Allow time for quote validity period alignment with your bid.
+            </div>
+        </div>
+
+        <div class="method-card" id="reserve">
+            <div class="method-header">
+                <div class="method-number">6</div>
+                <h2 style="margin: 0;">🛡️ Reserve Analysis</h2>
+            </div>
+
+            <p><strong>Definition:</strong> Adds contingency reserves to cover identified risks (known unknowns) and management reserves for unidentified risks (unknown unknowns).</p>
+
+            <div class="formula-box">
+                <strong>Total Estimate = Base Estimate + Contingency Reserve + Management Reserve</strong>
+            </div>
+
+            <table class="comparison-table">
+                <tr>
+                    <th>Reserve Type</th>
+                    <th>Typical Range</th>
+                    <th>Purpose</th>
+                </tr>
+                <tr>
+                    <td>Contingency (Known Risks)</td>
+                    <td>5-15%</td>
+                    <td>Identified risks in risk register</td>
+                </tr>
+                <tr>
+                    <td>Management Reserve</td>
+                    <td>3-10%</td>
+                    <td>Unknown or unforeseen events</td>
+                </tr>
+                <tr>
+                    <td>Escalation</td>
+                    <td>2-5%/year</td>
+                    <td>Inflation over project duration</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <h2>📊 AACE Estimate Classification</h2>
+        <div class="aace-table">
+            <p>The Association for the Advancement of Cost Engineering (AACE) defines 5 estimate classes:</p>
+            <table class="comparison-table">
+                <tr>
+                    <th>Class</th>
+                    <th>Design Level</th>
+                    <th>Method</th>
+                    <th>Accuracy</th>
+                    <th>Purpose</th>
+                </tr>
+                <tr>
+                    <td><strong>Class 5</strong></td>
+                    <td>0-2%</td>
+                    <td>Analogous/Parametric</td>
+                    <td>-50% to +100%</td>
+                    <td>Concept screening</td>
+                </tr>
+                <tr>
+                    <td><strong>Class 4</strong></td>
+                    <td>1-15%</td>
+                    <td>Parametric</td>
+                    <td>-30% to +50%</td>
+                    <td>Feasibility study</td>
+                </tr>
+                <tr>
+                    <td><strong>Class 3</strong></td>
+                    <td>10-40%</td>
+                    <td>Mixed</td>
+                    <td>-20% to +30%</td>
+                    <td>Budget authorization</td>
+                </tr>
+                <tr>
+                    <td><strong>Class 2</strong></td>
+                    <td>30-75%</td>
+                    <td>Bottom-up</td>
+                    <td>-15% to +20%</td>
+                    <td>Control baseline</td>
+                </tr>
+                <tr>
+                    <td><strong>Class 1</strong></td>
+                    <td>65-100%</td>
+                    <td>Bottom-up + Vendor</td>
+                    <td>-10% to +15%</td>
+                    <td>Tender/Bid</td>
+                </tr>
+            </table>
+        </div>
+
+        <h2>📊 Complete Comparison Matrix</h2>
+        
+        <table class="comparison-table">
+            <tr>
+                <th>Method</th>
+                <th>Speed</th>
+                <th>Accuracy</th>
+                <th>Info Required</th>
+                <th>Best For</th>
+            </tr>
+            <tr>
+                <td>Analogous</td>
+                <td>⚡ Hours</td>
+                <td>-25% to +75%</td>
+                <td>Minimal</td>
+                <td>Feasibility</td>
+            </tr>
+            <tr>
+                <td>Parametric</td>
+                <td>⚡ Days</td>
+                <td>-10% to +25%</td>
+                <td>Size/scope</td>
+                <td>Budget</td>
+            </tr>
+            <tr>
+                <td>Bottom-up</td>
+                <td>🐢 Weeks</td>
+                <td>-5% to +10%</td>
+                <td>Full design</td>
+                <td>Tender</td>
+            </tr>
+            <tr>
+                <td>Three-Point</td>
+                <td>⚡ Days</td>
+                <td>Risk-adjusted</td>
+                <td>Expert input</td>
+                <td>Risky items</td>
+            </tr>
+            <tr>
+                <td>Vendor Bid</td>
+                <td>🐢 Weeks</td>
+                <td>-3% to +5%</td>
+                <td>Specifications</td>
+                <td>Specialized</td>
+            </tr>
+        </table>
+
+        <div class="key-takeaway">
+            <h3 style="margin-top: 0;">🎯 Key Takeaways</h3>
+            <ol style="margin-bottom: 0;">
+                <li><strong>No "best" method</strong> — use the one matching your project phase</li>
+                <li><strong>Progress through methods</strong> — start analogous, end bottom-up</li>
+                <li><strong>Match accuracy to decisions</strong> — don't over-engineer early estimates</li>
+                <li><strong>Include reserves</strong> — every estimate needs contingency</li>
+                <li><strong>Document assumptions</strong> — critical for defending your numbers</li>
+            </ol>
+        </div>
+
+        <div class="pro-tip" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(16, 185, 129, 0.05));">
+            <h3>🧮 Use CSI Productivity Data!</h3>
+            <p>Our <a href="../../crew-calculator.html" style="color: #10b981; font-weight: 700;">Crew Calculator</a> provides industry-standard CSI productivity rates for bottom-up estimating. Combine with your quantities for accurate labor and equipment estimates.</p>
+        </div>
+
         <div class="share-buttons">
             <span class="share-buttons-label">Share this article:</span>
             <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-btn facebook" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">Facebook</a>
@@ -134,12 +556,10 @@
             <button class="share-btn copy" onclick="navigator.clipboard.writeText(window.location.href);alert('Link copied!')">Copy Link</button>
         </div>
         
-        
         <hr>
-        <p><strong>Read Also:</strong> <a href="cost-estimation-mistakes-en.html">Common Cost Estimation Mistakes</a></p>
+        <p><strong>Related:</strong> <a href="cost-estimation-mistakes-en.html">Common Cost Estimation Mistakes</a> | <a href="quantity-surveying-intro-en.html">Introduction to Quantity Surveying</a></p>
     </div>
 
-    <!-- Footer -->
     <footer class="site-footer">
         <div class="footer-content">
             <p class="footer-text">CSI Crew Calculator • Built with <span class="footer-heart">❤️</span> by <span class="footer-author">Sameh Badawy Sayed</span></p>
