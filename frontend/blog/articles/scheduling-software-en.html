@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Construction Scheduling Software Comparison - CSI Calculator</title>
-    <meta name="description" content="Comprehensive comparison of Primavera P6, MS Project, and Asta Powerproject: features, pros, cons, and when to use each.">
-    <meta name="keywords" content="Primavera P6, MS Project, Asta Powerproject, Scheduling Software, Comparison">
+    <title>Construction Scheduling Software Comparison: P6 vs MS Project vs Asta - CSI Calculator</title>
+    <meta name="description" content="Complete comparison of Primavera P6, MS Project, Asta Powerproject, and emerging tools. Includes pricing, features, learning curve, and selection guide for your project.">
+    <meta name="keywords" content="Primavera P6, MS Project, Asta Powerproject, Scheduling Software, Comparison, Project Planning">
     
     <meta property="og:title" content="Construction Scheduling Software Comparison">
-    <meta property="og:description" content="Which scheduling software suits your project?">
+    <meta property="og:description" content="Which scheduling software suits your project? Complete comparison guide">
     <meta property="og:type" content="article">
     <meta property="og:image" content="../assets/scheduling-software.jpg">
     
@@ -18,20 +18,156 @@
     <link rel="stylesheet" href="../../css/lang-toggle.css">
     <link rel="stylesheet" href="../../css/blog.css">
     <link rel="stylesheet" href="../../css/ads.css">
+    <link rel="stylesheet" href="../../css/share-buttons.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="../../js/ads.js"></script>
     <script src="../../js/i18n.js"></script>
     <script src="../../js/theme.js"></script>
     <script src="../../js/blog-i18n.js"></script>
+
     <style>
-        .share-buttons { display: flex; gap: 10px; margin: 20px 0; flex-wrap: wrap; }
-        .share-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 8px; text-decoration: none; color: white; font-weight: 500; transition: transform 0.2s, opacity 0.2s; }
-        .share-btn:hover { transform: translateY(-2px); opacity: 0.9; }
-        .share-btn.facebook { background: #1877f2; }
-        .share-btn.twitter { background: #1da1f2; }
-        .share-btn.linkedin { background: #0a66c2; }
-        .share-btn.whatsapp { background: #25d366; }
-        .share-btn.copy { background: #6c757d; cursor: pointer; border: none; }
+        .software-hero {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            color: white;
+            padding: 2rem;
+            border-radius: 16px;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        .software-card {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            transition: all 0.3s;
+        }
+        .software-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        .p6-card { border-left: 5px solid #ef4444; }
+        .msp-card { border-left: 5px solid #3b82f6; }
+        .asta-card { border-left: 5px solid #22c55e; }
+        .emerging-card { border-left: 5px solid #8b5cf6; }
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        .software-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+        }
+        .rating-bar {
+            display: flex;
+            gap: 0.5rem;
+            margin: 0.5rem 0;
+        }
+        .rating-item {
+            flex: 1;
+            text-align: center;
+        }
+        .rating-label {
+            font-size: 0.8rem;
+            color: #64748b;
+            margin-bottom: 0.25rem;
+        }
+        .rating-stars {
+            font-size: 1.1rem;
+            color: #f59e0b;
+        }
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        @media (max-width: 768px) {
+            .two-column { grid-template-columns: 1fr; }
+        }
+        .pros-box {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(34, 197, 94, 0.05));
+            border: 2px solid #22c55e;
+            border-radius: 12px;
+            padding: 1rem;
+        }
+        .cons-box {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(239, 68, 68, 0.05));
+            border: 2px solid #ef4444;
+            border-radius: 12px;
+            padding: 1rem;
+        }
+        .use-case-box {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(59, 130, 246, 0.05));
+            border-left: 4px solid #3b82f6;
+            padding: 1rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1rem 0;
+        }
+        .pricing-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-weight: 600;
+            margin: 0.5rem 0;
+        }
+        .price-high { background: linear-gradient(135deg, rgba(239, 68, 68, 0.2), rgba(239, 68, 68, 0.1)); color: #dc2626; }
+        .price-med { background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(245, 158, 11, 0.1)); color: #d97706; }
+        .price-low { background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(34, 197, 94, 0.1)); color: #16a34a; }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .comparison-table th {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        .comparison-table td {
+            padding: 0.875rem;
+            border-bottom: 1px solid #e5e7eb;
+            text-align: center;
+        }
+        .decision-tree {
+            background: linear-gradient(135deg, #1e293b, #334155);
+            color: white;
+            padding: 2rem;
+            border-radius: 16px;
+            margin: 1.5rem 0;
+        }
+        .decision-node {
+            background: rgba(255,255,255,0.1);
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 0.75rem 0;
+        }
+        .pro-tip {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(34, 197, 94, 0.05));
+            border-left: 4px solid #22c55e;
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.5rem 0;
+        }
+        .key-takeaway {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            color: white;
+            padding: 2rem;
+            border-radius: 16px;
+            margin: 2rem 0;
+        }
     </style>
 </head>
 <body>
@@ -45,7 +181,7 @@
                 <a href="../../index.html" data-i18n="home" data-icon="🏠"><span>Home</span></a>
                 <a href="../../crew-calculator.html" data-i18n="crewCalculator" data-icon="🧮"><span>Calculator</span></a>
                 <a href="../../ai-planner.html" data-i18n="aiPlanner" data-icon="🤖"><span>AI Planner</span></a>
-                <a href="../index-en.html" class="active" data-i18n="blog" data-icon="📚"><span>Manual & Tips</span></a>
+                <a href="../index-en.html" class="active" data-i18n="blog" data-icon="📚"><span>Knowledge Bites</span></a>
                 <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">🌙</button>
                 <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()"><span id="langIcon">AR</span></button>
             </div>
@@ -54,100 +190,385 @@
 
     <div class="article-header">
         <span class="article-category">Planning & Scheduling</span>
-        <h1>Construction Scheduling Software Comparison</h1>
+        <h1>Construction Scheduling Software: Complete Comparison Guide</h1>
         <div class="article-meta">
-            <span class="article-date">January 8, 2026</span>
-            <span class="article-read-time">12 min read</span>
+            <span class="article-date">January 11, 2026</span>
+            <span class="article-read-time">20 min read</span>
         </div>
     </div>
 
     <div class="article-body">
-        <div class="article-image-container">
-            <img src="../assets/scheduling-software.jpg" alt="Scheduling Software Comparison" class="img-fluid rounded shadow mb-4">
+        <div class="software-hero">
+            <h2 style="margin-top: 0;">🖥️ Choose the Right Tool for Your Projects</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 0;">A comprehensive comparison to help you select the best scheduling software</p>
         </div>
 
-        <h2>🖥️ Popular Scheduling Software</h2>
-        <p>Several specialized construction scheduling programs exist, each with its advantages and use cases:</p>
+        <h2>📋 Software Overview</h2>
+        <ol>
+            <li><a href="#p6">Oracle Primavera P6</a> — Enterprise standard</li>
+            <li><a href="#msp">Microsoft Project</a> — Business mainstream</li>
+            <li><a href="#asta">Asta Powerproject</a> — UK/ME favorite</li>
+            <li><a href="#emerging">Emerging Tools</a> — Modern alternatives</li>
+        </ol>
 
-        <h2>🔴 Oracle Primavera P6</h2>
-        <h3>Overview:</h3>
-        <p>Most widely used program for large, complex projects globally, especially in oil & gas and infrastructure sectors.</p>
+        <hr>
 
-        <h3>Advantages:</h3>
-        <ul>
-            <li>Handles thousands of activities</li>
-            <li>Advanced Resource Management</li>
-            <li>Multi-project and Portfolio management</li>
-            <li>Detailed customizable reports</li>
-            <li>ERP integration</li>
-            <li>Central Enterprise database</li>
-        </ul>
+        <div class="software-card p6-card" id="p6">
+            <div class="card-header">
+                <div class="software-icon" style="background: linear-gradient(135deg, #ef4444, #dc2626);">🔴</div>
+                <div>
+                    <h2 style="margin: 0; color: #dc2626;">Oracle Primavera P6</h2>
+                    <span class="pricing-badge price-high">$2,500-4,000/year/user</span>
+                </div>
+            </div>
 
-        <h3>Disadvantages:</h3>
-        <ul>
-            <li>Steep learning curve</li>
-            <li>High licensing cost</li>
-            <li>Requires specialized training</li>
-        </ul>
+            <p><strong>The industry standard</strong> for large, complex projects. Dominant in oil & gas, infrastructure, and mega-projects globally.</p>
 
-        <h2>🔵 Microsoft Project</h2>
-        <h3>Overview:</h3>
-        <p>Most popular choice for medium projects, user-friendly and integrated with Microsoft products.</p>
+            <div class="rating-bar">
+                <div class="rating-item">
+                    <div class="rating-label">Project Size</div>
+                    <div class="rating-stars">⭐⭐⭐⭐⭐</div>
+                </div>
+                <div class="rating-item">
+                    <div class="rating-label">Learning</div>
+                    <div class="rating-stars">⭐⭐</div>
+                </div>
+                <div class="rating-item">
+                    <div class="rating-label">Resources</div>
+                    <div class="rating-stars">⭐⭐⭐⭐⭐</div>
+                </div>
+                <div class="rating-item">
+                    <div class="rating-label">Reports</div>
+                    <div class="rating-stars">⭐⭐⭐⭐⭐</div>
+                </div>
+            </div>
 
-        <h3>Advantages:</h3>
-        <ul>
-            <li>Familiar interface for Office users</li>
-            <li>Easy to learn and use</li>
-            <li>Excel and SharePoint integration</li>
-            <li>Reasonable cost</li>
-            <li>Suitable for medium projects</li>
-        </ul>
+            <div class="two-column">
+                <div class="pros-box">
+                    <h4 style="color: #16a34a; margin-top: 0;">✅ Strengths</h4>
+                    <ul style="margin-bottom: 0;">
+                        <li>Handles 100,000+ activities</li>
+                        <li>Advanced resource leveling</li>
+                        <li>Multi-project portfolios</li>
+                        <li>Enterprise database (EPPM)</li>
+                        <li>ERP integration (SAP, Oracle)</li>
+                        <li>Industry-standard reports</li>
+                        <li>Detailed baseline tracking</li>
+                    </ul>
+                </div>
+                <div class="cons-box">
+                    <h4 style="color: #dc2626; margin-top: 0;">❌ Weaknesses</h4>
+                    <ul style="margin-bottom: 0;">
+                        <li>Steep learning curve (6+ months)</li>
+                        <li>High licensing cost</li>
+                        <li>Complex server setup</li>
+                        <li>Overkill for small projects</li>
+                        <li>Requires dedicated admin</li>
+                        <li>Limited visual presentation</li>
+                    </ul>
+                </div>
+            </div>
 
-        <h3>Disadvantages:</h3>
-        <ul>
-            <li>Limited for very large projects</li>
-            <li>Less advanced resource management</li>
-            <li>No central database as powerful as P6</li>
-        </ul>
+            <div class="use-case-box">
+                <strong>🎯 Best For:</strong> Oil & gas, infrastructure, mega-projects ($100M+), government contracts requiring P6 submission, organizations managing 10+ concurrent projects.
+            </div>
 
-        <h2>🟢 Asta Powerproject</h2>
-        <h3>Overview:</h3>
-        <p>Popular in UK and Middle East, features easy interface and advanced capabilities.</p>
+            <table class="comparison-table">
+                <tr>
+                    <th>P6 Version</th>
+                    <th>Deployment</th>
+                    <th>Best For</th>
+                </tr>
+                <tr>
+                    <td>P6 Professional</td>
+                    <td>Desktop (standalone or client)</td>
+                    <td>Planners, detailed scheduling</td>
+                </tr>
+                <tr>
+                    <td>P6 EPPM</td>
+                    <td>Web-based server</td>
+                    <td>Enterprise, portfolio management</td>
+                </tr>
+                <tr>
+                    <td>P6 Cloud</td>
+                    <td>Oracle Cloud</td>
+                    <td>Quick deployment, SaaS model</td>
+                </tr>
+            </table>
+        </div>
 
-        <h3>Advantages:</h3>
-        <ul>
-            <li>Excellent visual interface</li>
-            <li>Strong resource management</li>
-            <li>BIM integration</li>
-            <li>Line of Balance for repetitive projects</li>
-            <li>Mid-range pricing</li>
-        </ul>
+        <div class="software-card msp-card" id="msp">
+            <div class="card-header">
+                <div class="software-icon" style="background: linear-gradient(135deg, #3b82f6, #1d4ed8);">🔵</div>
+                <div>
+                    <h2 style="margin: 0; color: #1d4ed8;">Microsoft Project</h2>
+                    <span class="pricing-badge price-med">$30-55/month/user</span>
+                </div>
+            </div>
 
-        <h2>📊 Comprehensive Comparison Table</h2>
-        <table class="pricing-table">
-            <tr><th>Criteria</th><th>P6</th><th>MS Project</th><th>Asta</th></tr>
-            <tr><td>Project Size</td><td>Large/Mega</td><td>Small/Medium</td><td>Medium/Large</td></tr>
-            <tr><td>Learning Ease</td><td>⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐</td></tr>
-            <tr><td>Resource Mgmt</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐</td><td>⭐⭐⭐⭐</td></tr>
-            <tr><td>Reports</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐</td><td>⭐⭐⭐⭐</td></tr>
-            <tr><td>Cost</td><td>High</td><td>Medium</td><td>Medium</td></tr>
-            <tr><td>Multi-Project</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐</td><td>⭐⭐⭐⭐</td></tr>
+            <p><strong>The business mainstream choice</strong> for small to medium projects. Familiar interface, Office integration, and reasonable cost.</p>
+
+            <div class="rating-bar">
+                <div class="rating-item">
+                    <div class="rating-label">Project Size</div>
+                    <div class="rating-stars">⭐⭐⭐</div>
+                </div>
+                <div class="rating-item">
+                    <div class="rating-label">Learning</div>
+                    <div class="rating-stars">⭐⭐⭐⭐</div>
+                </div>
+                <div class="rating-item">
+                    <div class="rating-label">Resources</div>
+                    <div class="rating-stars">⭐⭐⭐</div>
+                </div>
+                <div class="rating-item">
+                    <div class="rating-label">Integration</div>
+                    <div class="rating-stars">⭐⭐⭐⭐⭐</div>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="pros-box">
+                    <h4 style="color: #16a34a; margin-top: 0;">✅ Strengths</h4>
+                    <ul style="margin-bottom: 0;">
+                        <li>Familiar Office interface</li>
+                        <li>Easy to learn (days)</li>
+                        <li>Excel/SharePoint integration</li>
+                        <li>Affordable pricing</li>
+                        <li>Cloud version (Project Online)</li>
+                        <li>Good for internal projects</li>
+                    </ul>
+                </div>
+                <div class="cons-box">
+                    <h4 style="color: #dc2626; margin-top: 0;">❌ Weaknesses</h4>
+                    <ul style="margin-bottom: 0;">
+                        <li>Limited for 1,000+ activities</li>
+                        <li>Basic resource leveling</li>
+                        <li>No true enterprise database</li>
+                        <li>Weak multi-project features</li>
+                        <li>Not industry standard for claims</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="use-case-box">
+                <strong>🎯 Best For:</strong> Building projects under $50M, small teams (1-5 planners), internal project management, organizations already using Microsoft 365.
+            </div>
+        </div>
+
+        <div class="software-card asta-card" id="asta">
+            <div class="card-header">
+                <div class="software-icon" style="background: linear-gradient(135deg, #22c55e, #16a34a);">🟢</div>
+                <div>
+                    <h2 style="margin: 0; color: #16a34a;">Asta Powerproject</h2>
+                    <span class="pricing-badge price-med">$1,500-2,500/year/user</span>
+                </div>
+            </div>
+
+            <p><strong>Popular in UK and Middle East</strong> construction. Excellent visual interface with strong resource and cost features.</p>
+
+            <div class="rating-bar">
+                <div class="rating-item">
+                    <div class="rating-label">Project Size</div>
+                    <div class="rating-stars">⭐⭐⭐⭐</div>
+                </div>
+                <div class="rating-item">
+                    <div class="rating-label">Learning</div>
+                    <div class="rating-stars">⭐⭐⭐</div>
+                </div>
+                <div class="rating-item">
+                    <div class="rating-label">Visual</div>
+                    <div class="rating-stars">⭐⭐⭐⭐⭐</div>
+                </div>
+                <div class="rating-item">
+                    <div class="rating-label">BIM</div>
+                    <div class="rating-stars">⭐⭐⭐⭐</div>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="pros-box">
+                    <h4 style="color: #16a34a; margin-top: 0;">✅ Strengths</h4>
+                    <ul style="margin-bottom: 0;">
+                        <li>Excellent visual Gantt charts</li>
+                        <li>Strong resource management</li>
+                        <li>BIM integration (4D)</li>
+                        <li>Line of Balance for repetitive</li>
+                        <li>Good cost loading</li>
+                        <li>Mid-range pricing</li>
+                    </ul>
+                </div>
+                <div class="cons-box">
+                    <h4 style="color: #dc2626; margin-top: 0;">❌ Weaknesses</h4>
+                    <ul style="margin-bottom: 0;">
+                        <li>Less global market share</li>
+                        <li>Fewer training resources</li>
+                        <li>Not as strong for mega-projects</li>
+                        <li>Steeper curve than MS Project</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="use-case-box">
+                <strong>🎯 Best For:</strong> UK/ME construction projects, residential developments (Line of Balance), 4D BIM visualization, contractors wanting strong visuals.
+            </div>
+        </div>
+
+        <div class="software-card emerging-card" id="emerging">
+            <div class="card-header">
+                <div class="software-icon" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">🟣</div>
+                <h2 style="margin: 0; color: #7c3aed;">Emerging & Alternative Tools</h2>
+            </div>
+
+            <table class="comparison-table">
+                <tr>
+                    <th>Tool</th>
+                    <th>Best For</th>
+                    <th>Price</th>
+                    <th>Key Feature</th>
+                </tr>
+                <tr>
+                    <td><strong>Smartsheet</strong></td>
+                    <td>Team collaboration</td>
+                    <td>$25-32/user/mo</td>
+                    <td>Spreadsheet-like interface</td>
+                </tr>
+                <tr>
+                    <td><strong>Monday.com</strong></td>
+                    <td>Agile teams</td>
+                    <td>$10-20/user/mo</td>
+                    <td>Visual workflows</td>
+                </tr>
+                <tr>
+                    <td><strong>Procore</strong></td>
+                    <td>Construction mgmt</td>
+                    <td>Custom pricing</td>
+                    <td>All-in-one platform</td>
+                </tr>
+                <tr>
+                    <td><strong>Synchro</strong></td>
+                    <td>4D BIM</td>
+                    <td>$3,000+/year</td>
+                    <td>Advanced 4D simulation</td>
+                </tr>
+                <tr>
+                    <td><strong>ProjectLibre</strong></td>
+                    <td>Budget projects</td>
+                    <td>Free (open source)</td>
+                    <td>MS Project alternative</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <h2>📊 Complete Feature Comparison</h2>
+        
+        <table class="comparison-table">
+            <tr>
+                <th>Feature</th>
+                <th>P6</th>
+                <th>MS Project</th>
+                <th>Asta</th>
+            </tr>
+            <tr>
+                <td><strong>Max Activities</strong></td>
+                <td>100,000+</td>
+                <td>~3,000</td>
+                <td>~50,000</td>
+            </tr>
+            <tr>
+                <td><strong>Learning Time</strong></td>
+                <td>6-12 months</td>
+                <td>1-2 weeks</td>
+                <td>2-3 months</td>
+            </tr>
+            <tr>
+                <td><strong>Resource Leveling</strong></td>
+                <td>⭐⭐⭐⭐⭐</td>
+                <td>⭐⭐⭐</td>
+                <td>⭐⭐⭐⭐</td>
+            </tr>
+            <tr>
+                <td><strong>Multi-Project</strong></td>
+                <td>⭐⭐⭐⭐⭐</td>
+                <td>⭐⭐</td>
+                <td>⭐⭐⭐⭐</td>
+            </tr>
+            <tr>
+                <td><strong>BIM Integration</strong></td>
+                <td>⭐⭐⭐</td>
+                <td>⭐⭐</td>
+                <td>⭐⭐⭐⭐</td>
+            </tr>
+            <tr>
+                <td><strong>Visual Quality</strong></td>
+                <td>⭐⭐⭐</td>
+                <td>⭐⭐⭐</td>
+                <td>⭐⭐⭐⭐⭐</td>
+            </tr>
+            <tr>
+                <td><strong>Claims Analysis</strong></td>
+                <td>⭐⭐⭐⭐⭐</td>
+                <td>⭐⭐</td>
+                <td>⭐⭐⭐</td>
+            </tr>
+            <tr>
+                <td><strong>Industry Standard</strong></td>
+                <td>Yes (globally)</td>
+                <td>No</td>
+                <td>Yes (UK/ME)</td>
+            </tr>
         </table>
 
-        <h2>🎯 When to Use Each?</h2>
-        <div class="alert alert-danger">
-            <strong>Use P6:</strong> Infrastructure projects, oil & gas, projects with thousands of activities, strict baseline requirements.
-        </div>
-        <div class="alert alert-info">
-            <strong>Use MS Project:</strong> Medium building projects, small team, limited budget, Office integration needed.
-        </div>
-        <div class="alert alert-success">
-            <strong>Use Asta:</strong> UK/ME construction projects, repetitive projects (Line of Balance), BIM integration required.
+        <div class="decision-tree">
+            <h3 style="margin-top: 0; text-align: center;">🛤️ Software Selection Decision Guide</h3>
+            
+            <div class="decision-node">
+                <strong>Q1: What's your project size?</strong><br>
+                → Mega-project ($100M+): <strong>Primavera P6</strong><br>
+                → Medium ($10-100M): <strong>P6 or Asta</strong><br>
+                → Small (<$10M): <strong>MS Project or Asta</strong>
+            </div>
+            
+            <div class="decision-node">
+                <strong>Q2: Is P6 required by contract?</strong><br>
+                → Yes (many infrastructure): <strong>Must use P6</strong><br>
+                → No: Consider alternatives
+            </div>
+            
+            <div class="decision-node">
+                <strong>Q3: Region/industry?</strong><br>
+                → Oil & Gas, Infrastructure: <strong>P6</strong><br>
+                → UK/ME Construction: <strong>Asta or P6</strong><br>
+                → Corporate/Internal: <strong>MS Project</strong>
+            </div>
+            
+            <div class="decision-node">
+                <strong>Q4: Need 4D BIM?</strong><br>
+                → Yes, advanced: <strong>Synchro or Asta</strong><br>
+                → Yes, basic: <strong>Navisworks + P6</strong><br>
+                → No: Any option
+            </div>
         </div>
 
-        <!-- Share Buttons -->
+        <div class="pro-tip">
+            <strong>💡 Pro Tip:</strong> Many organizations use multiple tools: P6 for external client-facing schedules and claims, MS Project for internal tracking, and Asta for 4D visualization. Consider your ecosystem, not just one project.
+        </div>
+
+        <div class="key-takeaway">
+            <h3 style="margin-top: 0;">🎯 Key Takeaways</h3>
+            <ol style="margin-bottom: 0;">
+                <li><strong>P6</strong> = Enterprise standard, required for large infrastructure</li>
+                <li><strong>MS Project</strong> = Business mainstream, easy to learn</li>
+                <li><strong>Asta</strong> = UK/ME favorite, best visuals and 4D</li>
+                <li><strong>Match tool to project</strong> — don't over-engineer small projects</li>
+                <li><strong>Consider contract requirements</strong> — some clients mandate P6</li>
+            </ol>
+        </div>
+
         <div class="share-buttons">
-            <span style="font-weight: bold; margin-right: 10px;">Share this article:</span>
+            <span class="share-buttons-label">Share this article:</span>
             <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-btn facebook" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">Facebook</a>
             <a href="https://twitter.com/intent/tweet?url=" class="share-btn twitter" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">Twitter</a>
             <a href="https://www.linkedin.com/shareArticle?mini=true&url=" class="share-btn linkedin" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">LinkedIn</a>
@@ -156,7 +577,7 @@
         </div>
         
         <hr>
-        <p><strong>Next Article:</strong> <a href="primavera-p6-guide-en.html">Oracle Primavera P6: Complete Guide</a></p>
+        <p><strong>Related:</strong> <a href="primavera-p6-guide-en.html">Primavera P6 Complete Guide</a> | <a href="scheduling-fundamentals-en.html">Scheduling Fundamentals</a></p>
     </div>
 
     <footer class="site-footer">

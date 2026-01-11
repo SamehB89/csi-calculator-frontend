@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Material Take-off and Cost Calculation - CSI Calculator</title>
-    <meta name="description" content="Practical guide to quantity take-off from engineering drawings and accurate cost calculation, including methods, precautions, and wastage rates.">
-    <meta name="keywords" content="Quantity Take-off, Material Estimation, BOQ, Construction Quantities">
+    <title>Material Take-off Guide: Complete Course with Formulas & Tools - CSI Calculator</title>
+    <meta name="description" content="Master quantity take-off: methods, formulas, wastage rates, digital tools, and professional tips. Complete guide for accurate BOQ preparation and construction estimating.">
+    <meta name="keywords" content="Quantity Take-off, Material Estimation, BOQ, Construction Quantities, Bluebeam, CostX">
     
-    <meta property="og:title" content="Material Take-off and Cost Calculation">
-    <meta property="og:description" content="How to accurately take off quantities from drawings?">
+    <meta property="og:title" content="Material Take-off Guide: Complete Course">
+    <meta property="og:description" content="Master quantity take-off with formulas, wastage rates, and digital tools">
     <meta property="og:type" content="article">
     <meta property="og:image" content="../assets/material-takeoff.jpg">
     
@@ -24,6 +24,142 @@
     <script src="../../js/i18n.js"></script>
     <script src="../../js/theme.js"></script>
     <script src="../../js/blog-i18n.js"></script>
+
+    <style>
+        .takeoff-hero {
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            color: white;
+            padding: 2rem;
+            border-radius: 16px;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        .method-card {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .accuracy-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-weight: 600;
+            margin: 0.5rem 0;
+        }
+        .accuracy-low { background: rgba(239, 68, 68, 0.2); color: #dc2626; }
+        .accuracy-high { background: rgba(34, 197, 94, 0.2); color: #16a34a; }
+        .formula-box {
+            background: linear-gradient(135deg, #1e293b, #334155);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+        }
+        .example-box {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(59, 130, 246, 0.05));
+            border: 2px solid #3b82f6;
+            border-radius: 12px;
+            padding: 1.25rem;
+            margin: 1rem 0;
+        }
+        .wastage-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .wastage-table th {
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        .wastage-table td {
+            padding: 0.875rem;
+            border-bottom: 1px solid #e5e7eb;
+            text-align: center;
+        }
+        .step-card {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+            background: #f8fafc;
+            border-radius: 12px;
+            margin: 0.75rem 0;
+        }
+        .step-number {
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .tool-card {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        .tool-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .pro-tip {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(34, 197, 94, 0.05));
+            border-left: 4px solid #22c55e;
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.5rem 0;
+        }
+        .warning-box {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(239, 68, 68, 0.05));
+            border-left: 4px solid #ef4444;
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.5rem 0;
+        }
+        .key-takeaway {
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            color: white;
+            padding: 2rem;
+            border-radius: 16px;
+            margin: 2rem 0;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .comparison-table th {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            color: white;
+            padding: 1rem;
+        }
+        .comparison-table td {
+            padding: 0.75rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -36,7 +172,7 @@
                 <a href="../../index.html" data-i18n="home" data-icon="🏠"><span>Home</span></a>
                 <a href="../../crew-calculator.html" data-i18n="crewCalculator" data-icon="🧮"><span>Calculator</span></a>
                 <a href="../../ai-planner.html" data-i18n="aiPlanner" data-icon="🤖"><span>AI Planner</span></a>
-                <a href="../index-en.html" class="active" data-i18n="blog" data-icon="📚"><span>Manual & Tips</span></a>
+                <a href="../index-en.html" class="active" data-i18n="blog" data-icon="📚"><span>Knowledge Bites</span></a>
                 <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">🌙</button>
                 <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()"><span id="langIcon">AR</span></button>
             </div>
@@ -45,93 +181,378 @@
 
     <div class="article-header">
         <span class="article-category">Quantity Surveying</span>
-        <h1>Material Take-off and Cost Calculation</h1>
+        <h1>Material Take-off: Complete Guide with Formulas & Tools</h1>
         <div class="article-meta">
-            <span class="article-date">January 7, 2026</span>
-            <span class="article-read-time">12 min read</span>
+            <span class="article-date">January 11, 2026</span>
+            <span class="article-read-time">20 min read</span>
         </div>
     </div>
 
     <div class="article-body">
-        <div class="article-image-container">
-            <img src="../assets/material-takeoff.jpg" alt="Quantity Take-off" class="img-fluid rounded shadow mb-4">
+        <div class="takeoff-hero">
+            <h2 style="margin-top: 0;">📐 Master the Art of Quantity Take-off</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 0;">The foundation of accurate estimating — get it right, and everything else follows</p>
         </div>
 
-        <h2>📐 What is Quantity Take-off?</h2>
-        <p>
-            Quantity Take-off (or Material Take-off) is the process of extracting material quantities and work items from engineering drawings and specifications. This process is fundamental for preparing the Bill of Quantities (BOQ) and accurately pricing the project.
-        </p>
+        <h2>🎯 What is Quantity Take-off?</h2>
+        <p><strong>Quantity Take-off (QTO)</strong> or <strong>Material Take-off (MTO)</strong> is the process of extracting material quantities and work items from engineering drawings and specifications. This process is fundamental for:</p>
+        <ul>
+            <li>Preparing the <strong>Bill of Quantities (BOQ)</strong></li>
+            <li>Accurate project <strong>cost estimates</strong></li>
+            <li><strong>Material procurement</strong> planning</li>
+            <li><strong>Progress measurement</strong> during construction</li>
+        </ul>
 
         <h2>📊 Types of Take-off</h2>
-        <h3>1. Approximate Take-off</h3>
-        <p>Used in early project stages to estimate total cost:</p>
-        <ul>
-            <li>Based on gross areas and estimation factors.</li>
-            <li>Low accuracy (±25-30%).</li>
-            <li>Fast and doesn't require detailed drawings.</li>
-        </ul>
 
-        <h3>2. Detailed Take-off</h3>
-        <p>Used when submitting bids and executing projects:</p>
-        <ul>
-            <li>Based on careful reading of every drawing.</li>
-            <li>High accuracy (±5-10%).</li>
-            <li>Takes considerable time and requires expertise.</li>
-        </ul>
-
-        <h2>🔧 Detailed Take-off Steps</h2>
-        <ol>
-            <li><strong>Study Drawings:</strong> Understand the entire project before starting.</li>
-            <li><strong>Identify Items:</strong> Divide work according to BOQ or WBS.</li>
-            <li><strong>Measure:</strong> Use scale rulers or software (AutoCAD, Bluebeam).</li>
-            <li><strong>Calculate:</strong> Apply correct engineering formulas.</li>
-            <li><strong>Review:</strong> Check calculations at least twice.</li>
-        </ol>
-
-        <h2>📏 Basic Take-off Formulas</h2>
-        <h3>Concrete:</h3>
-        <div class="formula-box">
-            Volume (m³) = Length × Width × Height
+        <div class="method-card" style="border-left: 5px solid #ef4444;">
+            <h3 style="color: #dc2626;">1. Approximate Take-off</h3>
+            <span class="accuracy-badge accuracy-low">Accuracy: ±25-30%</span>
+            <p>Used in early project stages to estimate total cost:</p>
+            <ul>
+                <li>Based on gross areas and estimation factors</li>
+                <li>Fast and doesn't require detailed drawings</li>
+                <li>Uses parametric data ($/m², $/bed, etc.)</li>
+            </ul>
+            <p><strong>Best for:</strong> Feasibility studies, conceptual budgeting, early go/no-go decisions</p>
         </div>
 
-        <h3>Reinforcement:</h3>
-        <div class="formula-box">
-            Weight (kg) = Volume × Density (7850 kg/m³)<br>
-            Or: Weight = Bar Length × Unit Weight per Meter
+        <div class="method-card" style="border-left: 5px solid #22c55e;">
+            <h3 style="color: #16a34a;">2. Detailed Take-off</h3>
+            <span class="accuracy-badge accuracy-high">Accuracy: ±5-10%</span>
+            <p>Used when submitting bids and executing projects:</p>
+            <ul>
+                <li>Based on careful reading of every drawing</li>
+                <li>Measures each element individually</li>
+                <li>Takes considerable time and requires expertise</li>
+            </ul>
+            <p><strong>Best for:</strong> Tender submission, contract bidding, cost control baseline</p>
         </div>
 
-        <h3>Formwork:</h3>
-        <div class="formula-box">
-            Area (m²) = Element Perimeter × Height + Bottom Area
+        <hr>
+
+        <h2>🔧 Detailed Take-off Process</h2>
+
+        <div class="step-card">
+            <div class="step-number">1</div>
+            <div>
+                <strong>Study Drawings</strong><br>
+                Understand the entire project before starting. Review architectural, structural, and MEP drawings together.
+            </div>
         </div>
 
-        <h2>⚠️ Wastage Rates</h2>
-        <p>Add wastage percentage for each material:</p>
-        <table class="pricing-table">
-            <tr><th>Material</th><th>Wastage Rate</th></tr>
-            <tr><td>Concrete</td><td>3-5%</td></tr>
-            <tr><td>Reinforcement</td><td>3-5%</td></tr>
-            <tr><td>Bricks</td><td>5-7%</td></tr>
-            <tr><td>Tiles</td><td>8-12%</td></tr>
-            <tr><td>Paint</td><td>10-15%</td></tr>
-            <tr><td>Timber</td><td>10-15%</td></tr>
+        <div class="step-card">
+            <div class="step-number">2</div>
+            <div>
+                <strong>Identify Items</strong><br>
+                Divide work according to BOQ structure or WBS. Use standard measurement rules (SMM, NRM, POMI).
+            </div>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">3</div>
+            <div>
+                <strong>Measure</strong><br>
+                Use scale rulers (manual) or software (AutoCAD, Bluebeam). Record all dimensions systematically.
+            </div>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">4</div>
+            <div>
+                <strong>Calculate</strong><br>
+                Apply correct engineering formulas. Keep track of units (m, m², m³, kg, etc.).
+            </div>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">5</div>
+            <div>
+                <strong>Add Wastage</strong><br>
+                Apply appropriate wastage factors for each material based on site conditions.
+            </div>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">6</div>
+            <div>
+                <strong>Review</strong><br>
+                Check calculations at least twice. Use different method for validation (e.g., reverse calculation).
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>📏 Essential Take-off Formulas</h2>
+
+        <h3>Concrete</h3>
+        <div class="formula-box">
+            <strong>Volume (m³) = Length × Width × Depth</strong><br><br>
+            Foundation: V = L × B × D<br>
+            Column: V = Section Area × Height<br>
+            Beam: V = B × D × Length<br>
+            Slab: V = Area × Thickness
+        </div>
+
+        <div class="example-box">
+            <h4 style="color: #3b82f6; margin-top: 0;">💡 Example: Isolated Footing</h4>
+            <p>Footing size: 2.0m × 2.0m × 0.5m deep</p>
+            <p><strong>Volume = 2.0 × 2.0 × 0.5 = 2.0 m³</strong></p>
+            <p>With 3% wastage: 2.0 × 1.03 = <strong>2.06 m³</strong></p>
+        </div>
+
+        <h3>Reinforcement</h3>
+        <div class="formula-box">
+            <strong>Weight (kg) = Bar Length × Unit Weight</strong><br><br>
+            Unit Weights:<br>
+            Ø8: 0.395 kg/m | Ø10: 0.617 kg/m | Ø12: 0.888 kg/m<br>
+            Ø16: 1.578 kg/m | Ø20: 2.466 kg/m | Ø25: 3.853 kg/m
+        </div>
+
+        <div class="example-box">
+            <h4 style="color: #3b82f6; margin-top: 0;">💡 Example: Column Rebar</h4>
+            <p>8 nos Ø16 bars, 4m each + 0.5m lap</p>
+            <p>Total length: 8 × 4.5 = 36 m</p>
+            <p><strong>Weight = 36 × 1.578 = 56.8 kg</strong></p>
+            <p>With 5% wastage: 56.8 × 1.05 = <strong>59.6 kg</strong></p>
+        </div>
+
+        <h3>Formwork</h3>
+        <div class="formula-box">
+            <strong>Area (m²) = Contact Surface Area</strong><br><br>
+            Column: 4 × Side × Height (rectangular)<br>
+            Beam: 2 × Depth × Length + Width × Length (soffit)<br>
+            Slab: Plan Area (soffit only)<br>
+            Footing: Perimeter × Depth + Base (if required)
+        </div>
+
+        <h3>Brickwork</h3>
+        <div class="formula-box">
+            <strong>Bricks = Wall Area × Bricks per m²</strong><br><br>
+            Standard brick (230×110×75mm):<br>
+            Half-brick wall: ~55 bricks/m²<br>
+            Full-brick wall: ~110 bricks/m²
+        </div>
+
+        <hr>
+
+        <h2>⚠️ Wastage Rates by Material</h2>
+
+        <table class="wastage-table">
+            <tr>
+                <th>Material</th>
+                <th>Normal</th>
+                <th>Good Conditions</th>
+                <th>Poor Conditions</th>
+            </tr>
+            <tr>
+                <td><strong>Concrete (Ready-mix)</strong></td>
+                <td>3-5%</td>
+                <td>2-3%</td>
+                <td>5-8%</td>
+            </tr>
+            <tr>
+                <td><strong>Reinforcement</strong></td>
+                <td>3-5%</td>
+                <td>2-3%</td>
+                <td>5-7%</td>
+            </tr>
+            <tr>
+                <td><strong>Formwork (Plywood)</strong></td>
+                <td>Based on uses</td>
+                <td>5-6 uses</td>
+                <td>3-4 uses</td>
+            </tr>
+            <tr>
+                <td><strong>Bricks/Blocks</strong></td>
+                <td>5-7%</td>
+                <td>3-5%</td>
+                <td>8-10%</td>
+            </tr>
+            <tr>
+                <td><strong>Tiles (Floor)</strong></td>
+                <td>8-12%</td>
+                <td>5-8%</td>
+                <td>15-20%</td>
+            </tr>
+            <tr>
+                <td><strong>Paint</strong></td>
+                <td>10-15%</td>
+                <td>8-10%</td>
+                <td>15-20%</td>
+            </tr>
+            <tr>
+                <td><strong>Timber</strong></td>
+                <td>10-15%</td>
+                <td>8-10%</td>
+                <td>15-20%</td>
+            </tr>
+            <tr>
+                <td><strong>Waterproofing</strong></td>
+                <td>5-10%</td>
+                <td>3-5%</td>
+                <td>10-15%</td>
+            </tr>
+            <tr>
+                <td><strong>Insulation</strong></td>
+                <td>5-8%</td>
+                <td>3-5%</td>
+                <td>10-12%</td>
+            </tr>
         </table>
 
-        <h2>💻 Modern Take-off Tools</h2>
-        <ul>
-            <li><strong>Bluebeam Revu:</strong> For measuring from PDF files.</li>
-            <li><strong>PlanSwift:</strong> Specialized take-off software.</li>
-            <li><strong>CostX:</strong> 2D and 3D take-off.</li>
-            <li><strong>Revit:</strong> Automatic take-off from BIM models.</li>
-        </ul>
+        <div class="warning-box">
+            <strong>⚠️ Wastage Factors to Consider:</strong>
+            <ul style="margin-bottom: 0;">
+                <li>Site accessibility and handling</li>
+                <li>Material quality and dimensions</li>
+                <li>Complexity of design (curves, cuts)</li>
+                <li>Weather conditions</li>
+                <li>Worker skill level</li>
+            </ul>
+        </div>
 
-        <h2>💡 Tips for Accurate Take-off</h2>
-        <ul>
-            <li>Use the same units throughout all calculations.</li>
-            <li>Document the source of every number (sheet number, detail).</li>
-            <li>Check take-off using different method (e.g., calculate from two directions).</li>
-            <li>Don't forget hidden elements (foundations, installations).</li>
-        </ul>        <!-- Share Buttons -->
+        <hr>
+
+        <h2>💻 Modern Take-off Tools</h2>
+
+        <div class="tool-grid">
+            <div class="tool-card">
+                <h4 style="color: #3b82f6;">📄 Bluebeam Revu</h4>
+                <p>PDF markup and measurement. Industry standard for 2D take-off from PDFs.</p>
+                <p><strong>$400-600/year</strong></p>
+            </div>
+            <div class="tool-card">
+                <h4 style="color: #22c55e;">📐 PlanSwift</h4>
+                <p>Specialized take-off software. Assembly-based for speed.</p>
+                <p><strong>$1,500 perpetual</strong></p>
+            </div>
+            <div class="tool-card">
+                <h4 style="color: #f97316;">🏗️ CostX</h4>
+                <p>2D PDF and 3D BIM take-off. Powerful for complex projects.</p>
+                <p><strong>$3,000+/year</strong></p>
+            </div>
+            <div class="tool-card">
+                <h4 style="color: #8b5cf6;">🔷 Revit Schedules</h4>
+                <p>Automatic take-off from BIM models. Real-time quantity updates.</p>
+                <p><strong>Included with Revit</strong></p>
+            </div>
+            <div class="tool-card">
+                <h4 style="color: #ec4899;">📊 Excel</h4>
+                <p>Manual take-off with formulas. Still widely used for final compilation.</p>
+                <p><strong>$100-150/year</strong></p>
+            </div>
+            <div class="tool-card">
+                <h4 style="color: #06b6d4;">✏️ AutoCAD</h4>
+                <p>Built-in measurement tools. Good for CAD-based take-off.</p>
+                <p><strong>$1,900/year</strong></p>
+            </div>
+        </div>
+
+        <table class="comparison-table">
+            <tr>
+                <th>Tool</th>
+                <th>Best For</th>
+                <th>Learning Curve</th>
+            </tr>
+            <tr>
+                <td>Bluebeam</td>
+                <td>PDF drawings</td>
+                <td>Easy (1 week)</td>
+            </tr>
+            <tr>
+                <td>PlanSwift</td>
+                <td>Repeat take-offs</td>
+                <td>Medium (2-4 weeks)</td>
+            </tr>
+            <tr>
+                <td>CostX</td>
+                <td>Complex/BIM projects</td>
+                <td>Steep (1-2 months)</td>
+            </tr>
+            <tr>
+                <td>Revit</td>
+                <td>BIM model quantities</td>
+                <td>Already using Revit</td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <h2>💡 Professional Tips for Accurate Take-off</h2>
+
+        <div class="pro-tip">
+            <h4 style="margin-top: 0;">📋 Organization Tips</h4>
+            <ul style="margin-bottom: 0;">
+                <li>Use consistent units throughout all calculations</li>
+                <li>Document the source of every number (sheet, detail)</li>
+                <li>Create standard templates for repetitive work</li>
+                <li>Use color coding for different trades</li>
+            </ul>
+        </div>
+
+        <div class="pro-tip">
+            <h4 style="margin-top: 0;">✅ Verification Techniques</h4>
+            <ul style="margin-bottom: 0;">
+                <li>Check take-off using different method (reverse calc)</li>
+                <li>Compare with historical data from similar projects</li>
+                <li>Have independent person review critical items</li>
+                <li>Use ratio checks (kg rebar/m³ concrete)</li>
+            </ul>
+        </div>
+
+        <div class="pro-tip">
+            <h4 style="margin-top: 0;">⚠️ Common Mistakes to Avoid</h4>
+            <ul style="margin-bottom: 0;">
+                <li>Forgetting hidden elements (foundations, MEP)</li>
+                <li>Confusing net and gross areas</li>
+                <li>Ignoring specification requirements</li>
+                <li>Not reading all addenda and revisions</li>
+                <li>Using wrong scale on drawings</li>
+            </ul>
+        </div>
+
+        <h3>🔢 Typical Ratios for Verification</h3>
+        <table class="comparison-table">
+            <tr>
+                <th>Element</th>
+                <th>Ratio</th>
+                <th>Check If Outside</th>
+            </tr>
+            <tr>
+                <td>Rebar in RC building</td>
+                <td>80-120 kg/m³ concrete</td>
+                <td>Investigate design</td>
+            </tr>
+            <tr>
+                <td>Formwork to concrete</td>
+                <td>5-7 m²/m³ concrete</td>
+                <td>Check measurements</td>
+            </tr>
+            <tr>
+                <td>Bricks to mortar</td>
+                <td>1 m³ mortar per 400-450 bricks</td>
+                <td>Review joint thickness</td>
+            </tr>
+        </table>
+
+        <div class="key-takeaway">
+            <h3 style="margin-top: 0;">🎯 Key Takeaways</h3>
+            <ol style="margin-bottom: 0;">
+                <li><strong>Take-off is foundation</strong> — accuracy here affects everything else</li>
+                <li><strong>Use appropriate method</strong> — approximate early, detailed for tender</li>
+                <li><strong>Don't forget wastage</strong> — varies by material and conditions</li>
+                <li><strong>Document everything</strong> — traceability is critical</li>
+                <li><strong>Verify using ratios</strong> — catch errors before submission</li>
+                <li><strong>Use modern tools</strong> — invest in software for efficiency</li>
+            </ol>
+        </div>
+
+        <div class="pro-tip" style="background: linear-gradient(135deg, rgba(249, 115, 22, 0.1), rgba(249, 115, 22, 0.05));">
+            <h3>🧮 Calculate Productivity!</h3>
+            <p>After taking off quantities, use our <a href="../../crew-calculator.html" style="color: #f97316; font-weight: 700;">CSI Crew Calculator</a> to determine labor, equipment, and duration based on industry-standard productivity rates.</p>
+        </div>
+
         <div class="share-buttons">
             <span class="share-buttons-label">Share this article:</span>
             <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-btn facebook" target="_blank" onclick="this.href+=encodeURIComponent(window.location.href)">Facebook</a>
@@ -141,9 +562,8 @@
             <button class="share-btn copy" onclick="navigator.clipboard.writeText(window.location.href);alert('Link copied!')">Copy Link</button>
         </div>
         
-        
         <hr>
-        <p><strong>Next Article:</strong> <a href="overhead-profit-en.html">Overhead and Profit in Construction Pricing</a></p>
+        <p><strong>Related:</strong> <a href="quantity-surveying-intro-en.html">Introduction to Quantity Surveying</a> | <a href="overhead-profit-en.html">Overhead and Profit Guide</a></p>
     </div>
 
     <footer class="site-footer">
